@@ -261,6 +261,11 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 #gastometro .gentrega .gl div{min-width:130px}
 #gastometro .gentrega b{display:block;font-family:var(--disp);font-weight:400;font-size:30px;line-height:1.05;color:#fff}
 #gastometro .gentrega span{font-size:14px}
+#gastometro .gsl{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+#gastometro .gsl li{display:grid;grid-template-columns:minmax(120px,32%) 1fr auto;gap:10px;align-items:center;font-size:14.5px}
+#gastometro .gsb{background:rgba(241,232,214,.15);height:14px}
+#gastometro .gsb i{display:block;height:100%;background:#D93A1E}
+@media(max-width:560px){#gastometro .gsl li{grid-template-columns:1fr auto}#gastometro .gsb{grid-column:1/3;order:3}}
 #gastometro .gnota{max-width:72ch;font-size:14.5px;margin:18px 0 0;color:#E9E0CC}
 #gastometro .gnota a{color:#F5A08F}
 #gastometro .gnota details{margin-top:8px}
@@ -301,6 +306,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <h2>Gastômetro</h2>
   <p class="gintro">Os contadores abaixo somam o que a Prefeitura e a Câmara de Maricá pagaram desde 1º de janeiro de 2025 e seguem crescendo no ritmo médio dos pagamentos. Ao lado, o que a Câmara entregou no mesmo período. Os números são fatos com fonte; a leitura é de quem vota.</p>
   <div class="gcards" id="gcards" aria-label="Contadores de gasto"></div>
+  <div class="gentrega gsec" id="gsec"></div>
   <div class="gentrega" id="gentrega"></div>
   <div class="gnota" id="gnota"></div>
 </div></section>
@@ -746,26 +752,30 @@ try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#hero
       const f=Math.min(1,(agora-a)/(b-a));tot+=mensal*f;m++;if(m>11){m=0;y++}if(y>2030)break}
     return tot};
   const subs={titulo:'Subsídio dos '+G.cadeiras+' vereadores',sub:'Só a remuneração dos vereadores: '+G.cadeiras+' cadeiras × '+brl2(G.subsidio,2)+' por mês. Todos recebem o mesmo. Sem 13º, encargos, assessores e gabinetes.',dec:2,total:null,fonteHtml:'Fonte: <a href="'+G.fonteSubsidio+'" target="_blank" rel="noopener">Portal da Transparência da Câmara Municipal de Maricá (folha, conferida em 14/11/2026)</a>',taxa:mensal/(30.4375*86400e3),calc:()=>subsAte(new Date())};
-  const cards=[camara,subs,pref,muni];
+  const SC=window.DADOS.secretarias;
+  const sec=SC?{titulo:'Secretarias somadas (só 2026)',sub:'Soma do que '+SC.n+' secretarias de Maricá pagaram em 2026, a partir de 01/01/2026. Inclui Saúde, Assistência Social e Meio Ambiente, que operam por fundo. Já está dentro do cartão da Prefeitura e dos fundos: não soma com eles.',total:SC.totalPago,taxa:SC.totalPago/G.diasAno2026/86400e3,dec:0,desde:'01/01/2026',fonteHtml:'Fonte: <a href="'+SC.fonte+'" target="_blank" rel="noopener">Portal da Transparência da Prefeitura, Despesas por órgão</a>'}:null;
+  const cards=[camara,subs,pref].concat(sec?[sec]:[]).concat([muni]);
   const baseVal=c=>c.calc?c.calc():c.total+c.taxa*projMs();
   const box=document.getElementById('gcards');
   box.innerHTML=cards.map((c,i)=>`<article class="gc"><h3>${c.titulo}</h3><p class="gsub">${c.sub}</p><div class="gnum" id="gn${i}" aria-hidden="true"></div><p class="gtaxa" id="gt${i}"></p><p class="gmor" id="gm${i}"></p><p class="gfonte">${c.fonteHtml}</p></article>`).join('');
   const draw=()=>{cards.forEach((c,i)=>{const v=baseVal(c);document.getElementById('gn'+i).textContent=brl2(v,c.dec)})};
   cards.forEach((c,i)=>{const v=baseVal(c);const dia=c.taxa*86400e3,seg=c.taxa*1000;
     document.getElementById('gt'+i).textContent='+ '+brl2(seg,2)+' por segundo · '+(dia>=1e6?brl2(dia/1e6,2)+' milhões':brl2(dia/1e3,0)+' mil')+' por dia';
-    document.getElementById('gm'+i).textContent='= '+brl2(v/G.populacao,0)+' por morador, desde 01/01/2025 (população do Censo 2022: '+fmt(G.populacao)+')'});
+    document.getElementById('gm'+i).textContent='= '+brl2(v/G.populacao,0)+' por morador, desde '+(c.desde||'01/01/2025')+' (população do Censo 2022: '+fmt(G.populacao)+')'});
   draw();
   const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
   setInterval(draw,reduz?10000:250);
   const periodo=dt(G.dataBase);
   /* o que entregaram */
   const mes=window.DADOS.mensal||[];const sm=k=>mes.reduce((a,x)=>a+(x[k]||0),0);const M2=window.DADOS.meta;
+  if(SC){const mx=SC.itens[0].pago;const top=SC.itens.slice(0,10);
+   document.getElementById('gsec').innerHTML='<h3>Secretarias de Maricá que mais pagaram em 2026 (01/01 a '+dt(SC.dataBase)+')</h3><ol class="gsl">'+top.map(x=>'<li><span class="gsn">'+x.nome+'</span><span class="gsb"><i style="width:'+Math.max(2,x.pago/mx*100).toFixed(1)+'%"></i></span><b>'+brl2(x.pago/1e6,1)+' mi</b></li>').join('')+'</ol><p class="gnota" style="margin-top:10px">Valor pago, não empenhado. Mostra onde o dinheiro passa, não se foi bem ou mal gasto. As '+(SC.n-10)+' demais somam '+brl2((SC.totalPago-top.reduce((a,x)=>a+x.pago,0))/1e6,1)+' mi. Critério: '+SC.regra+' A soma por órgão de 2026 confere com o total de cada instituição (maior diferença R$ '+fmt(SC.conferencia.maiorDiferencia,2)+'). 2025 não é usado aqui porque a visão por órgão não bate com o total e a causa não foi confirmada.</p>';}
   const ent=document.getElementById('gentrega');
   ent.innerHTML='<h3>O que a Câmara entregou no mesmo período (01/2025 a '+dt(M2.coletaAte)+')</h3><div class="gl">'+
    [[fmt(M2.sessoes),'sessões realizadas'],[fmt(M2.proposicoes),'documentos legislativos'],[fmt(sm('lei')),'projetos de lei e afins'],[fmt(sm('bairro')),'pedidos de obra e serviço nos bairros'],[fmt(sm('cobranca')),'cobranças ao Executivo'],[fmt(sm('homenagem')),'homenagens e moções']].map(([n,l])=>'<div><b>'+n+'</b><span>'+l+'</span></div>').join('')+'</div>'+
    '<p class="gnota" style="margin-top:10px">Números do SICAM, o sistema da Câmara. Documentos legislativos incluem projetos, indicações, requerimentos e moções. A classificação por tipo é do Radar e está explicada em "Como lemos os dados".</p>';
   document.getElementById('gnota').innerHTML='<b>Como ler os contadores.</b> Estimativa que avança no ritmo médio de pagamentos de 2026 ('+G.diasAno2026+' dias, até '+dt(G.dataBase)+'). O valor real só muda quando o portal publica um novo pagamento. A última conferência no portal foi em '+periodo+' e, depois de 45 dias sem nova coleta, o contador para de avançar.'+
-   '<details><summary>Limites desta conta</summary><p>1) Usamos o valor <b>pago</b>, não o empenhado. 2) O custo por gabinete (assessores de cada vereador) não é publicado: o portal da Câmara indica o assessor, mas não o gabinete. 3) As secretarias ainda não aparecem separadas: o portal da Prefeitura agrupa por instituição, e a coleta por órgão está em andamento. 4) A soma bruta das instituições conta duas vezes o dinheiro que um órgão público repassa a outro; por isso mostramos o total sem repasses. 5) 2025 e 2026 são os anos do mandato atual; 2026 é ano parcial. 6) O subsídio foi conferido na folha de pagamento da Câmara Municipal de Maricá em 14/11/2026: 21 vereadores ativos, todos com R$ 16.503,19 por mês (há ainda 2 afastados e 4 exonerados, sem pagamento). A lei que fixou o valor ainda será citada aqui.</p><p>População: <a href="'+G.fontePopulacao+'" target="_blank" rel="noopener">IBGE, Censo 2022</a>.</p></details>';
+   '<details><summary>Limites desta conta</summary><p>1) Usamos o valor <b>pago</b>, não o empenhado. 2) O custo por gabinete (assessores de cada vereador) não é publicado: o portal da Câmara indica o assessor, mas não o gabinete. 3) As secretarias aparecem só em 2026, a partir da despesa por órgão do portal; 2025 por órgão não bate com o total e ficou de fora. 4) A soma bruta das instituições conta duas vezes o dinheiro que um órgão público repassa a outro; por isso mostramos o total sem repasses. 5) 2025 e 2026 são os anos do mandato atual; 2026 é ano parcial. 6) O subsídio foi conferido na folha de pagamento da Câmara Municipal de Maricá em 14/11/2026: 21 vereadores ativos, todos com R$ 16.503,19 por mês (há ainda 2 afastados e 4 exonerados, sem pagamento). A lei que fixou o valor ainda será citada aqui.</p><p>População: <a href="'+G.fontePopulacao+'" target="_blank" rel="noopener">IBGE, Censo 2022</a>.</p></details>';
 })();
 
 drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();drawSec();drawSanc();drawObras();drawSit();drawEmp();
