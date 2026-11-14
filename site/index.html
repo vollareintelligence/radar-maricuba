@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radar da Gastança · Maricúba — Câmara e Prefeitura de Maricá em dados abertos</title>
-<meta name="description" content="Presença, pedidos e votos dos vereadores de Maricá, com link para a fonte oficial em cada número.">
+<title>Radar da Gastança · Maricúba — Prefeitura de Maricá (RJ) e Câmara de Vereadores de Maricá em dados abertos</title>
+<meta name="description" content="Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número.">
+<link rel="canonical" href="https://vollareintelligence.github.io/radar-maricuba/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Radar da Gastança · Maricúba — Prefeitura e Câmara de Maricá (RJ)">
+<meta property="og:description" content="Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número.">
+<meta property="og:url" content="https://vollareintelligence.github.io/radar-maricuba/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Radar da Gastança · Maricúba","alternateName":["Maricúba","Radar da Gastança Maricá"],"url":"https://vollareintelligence.github.io/radar-maricuba/","inLanguage":"pt-BR","about":{"@type":"City","name":"Maricá","containedInPlace":{"@type":"State","name":"Rio de Janeiro"}},"description":"Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número."}</script>
 <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="vendor/MarkerCluster.css">
 <style>
 :root{
@@ -263,6 +270,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 .mk.problema span{transform:rotate(45deg)}
 .mk.problema.apx{background:#fff;color:#D32F2F;border-color:#D32F2F}
 .cl.pr{border-color:#D32F2F}
+.hero .escopo{border-left:6px solid #D93A1E;padding:.5rem .8rem;background:rgba(241,232,214,.14)}
 </style>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
 <body>
@@ -277,9 +285,10 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 
 <main id="principal">
 <div class="hero"><div class="wrap">
-  <p class="kick">Maricá · Câmara e Prefeitura · dados oficiais</p>
+  <p class="kick">Maricá · Rio de Janeiro · Prefeitura e Câmara Municipal · dados oficiais</p>
   <h1><span class="a">Radar da</span><span class="b">Gastança</span><span class="c">Maricúba</span></h1>
-  <p>Quanto a Prefeitura pagou, a quem pagou, e o que cada vereador faz: tudo lido direto dos registros públicos, com a fonte oficial em cada número.</p>
+  <p class="escopo"><b>Todos os dados são da cidade de Maricá (RJ):</b> da Prefeitura de Maricá, dos 21 vereadores da Câmara Municipal de Maricá e das empresas que recebem da Prefeitura. “Maricúba” é o apelido da cidade. Fonte: portais de transparência oficiais de Maricá.</p>
+  <p>Quanto a Prefeitura de Maricá pagou, a quem pagou, e o que cada vereador de Maricá faz: tudo lido direto dos registros públicos, com a fonte oficial em cada número.</p>
   <p>O Radar mostra fatos e não faz acusação. A mesma régua vale para todos.</p>
   <div class="atalhos" aria-label="Atalhos"><a href="#gastometro">Gastômetro</a><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
   <div class="bignum" id="bignum" hidden><b id="heroBig"></b><span>pagos pela Prefeitura em 2025 e 2026 (até 14/11)</span></div>
@@ -290,7 +299,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 <section id="gastometro"><div class="wrap">
   <p class="gk">Quanto custa à cidade</p>
   <h2>Gastômetro</h2>
-  <p class="gintro">Os contadores abaixo somam o que foi pago desde 1º de janeiro de 2025 e seguem crescendo no ritmo médio dos pagamentos. Ao lado, o que a Câmara entregou no mesmo período. Os números são fatos com fonte; a leitura é de quem vota.</p>
+  <p class="gintro">Os contadores abaixo somam o que a Prefeitura e a Câmara de Maricá pagaram desde 1º de janeiro de 2025 e seguem crescendo no ritmo médio dos pagamentos. Ao lado, o que a Câmara entregou no mesmo período. Os números são fatos com fonte; a leitura é de quem vota.</p>
   <div class="gcards" id="gcards" aria-label="Contadores de gasto"></div>
   <div class="gentrega" id="gentrega"></div>
   <div class="gnota" id="gnota"></div>
