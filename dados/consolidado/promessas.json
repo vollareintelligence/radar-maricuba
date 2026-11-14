@@ -1,0 +1,202 @@
+{
+ "prefeito": "Washington Quaquá",
+ "mandato": "2025–2028",
+ "conferido": "2026-11-14",
+ "foto": "img/prefeito-quaqua.jpg",
+ "fotoCredito": "",
+ "nota": "Disse em março de 2025 que não prometeu nada na campanha. Por isso separamos o que foi dito em entrevistas do que está no plano de governo registrado no TSE. Esta seção cobre apenas falas públicas com fonte.",
+ "metodo": "Procuramos cada item nos contratos, dispensas e obras do portal da Prefeitura (consulta de 14/11/2026) e em notícias da Prefeitura. \"Cadê?\" significa que não achamos registro nessas fontes. Não é veredito: o mandato vai até o fim de 2028. Se a Prefeitura tiver documento que mostre andamento, o Radar atualiza o item com a fonte.",
+ "itens": [
+  {
+   "id": "foguetes",
+   "titulo": "Base de lançamento de foguetes nas Ilhas Maricás",
+   "dito": "Prefeito eleito disse que em quatro anos a cidade estaria voando, com lançamento de foguetes.",
+   "quando": "Out/2024",
+   "onde": {
+    "rotulo": "Revista Sociedade Militar",
+    "url": "https://www.sociedademilitar.com.br/2024/10/prefeito-do-pt-eleito-em-marica-quer-transformar-ilhas-que-pertencem-a-marinha-do-brasil-em-base-de-lancamento-de-foguetes-sp1.html"
+   },
+   "prazo": "Dentro do mandato (2025–2028), pela fala",
+   "status": "cade",
+   "achado": "Em 2025 houve reunião com a Agência Espacial Brasileira e visita de técnicos da Codemar ao terreno. Nos contratos e dispensas do portal, a palavra \"foguete\" só aparece em inscrições de alunos na Olimpíada Brasileira de Foguetes. Nenhum contrato de base de lançamento encontrado.",
+   "fontes": [
+    {
+     "rotulo": "Prefeitura: visita ao terreno (21/08/2025)",
+     "url": "https://www.marica.rj.gov.br/noticia/marica-avanca-em-projeto-de-construcao-de-base-para-lancamento-de-foguetes"
+    },
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    }
+   ]
+  },
+  {
+   "id": "aviões",
+   "titulo": "Fábrica de aviões (parceria com a Embraer)",
+   "dito": "Anunciou parceria para instalar uma fábrica da Embraer, de aeronaves de pequeno porte.",
+   "quando": "Dez/2024",
+   "onde": {
+    "rotulo": "Maricá Info (entrevista à Band)",
+    "url": "https://maricainfo.com/2024/12/02/quaqua-afirma-que-pretende-reduzir-a-dependencia-de-marica-em-relacao-ao-petroleo-em-um-prazo-de-ate-oito-anos.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "parcial",
+   "achado": "Existe o contrato 7/2026 com a DESAER, de R$ 32.000.000,00, para o projeto de engenharia de um protótipo de aeronave de transporte leve (vigência até 17/03/2027). Isso é projeto de protótipo, não fábrica. Não achamos contrato nem acordo com a Embraer no portal. Fábrica: cadê?",
+   "fontes": [
+    {
+     "rotulo": "Contrato 7/2026 no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "Dispensa 4/2026 (PNCP)",
+     "url": "https://pncp.gov.br/app/editais/compras/36237794000159/2026/5"
+    }
+   ]
+  },
+  {
+   "id": "braco",
+   "titulo": "Braço de pedra de 4 km na praia de Itaipuaçu",
+   "dito": "Disse que construiria um braço de pedra de 4 km na praia de Itaipuaçu.",
+   "quando": "Out/2024",
+   "onde": {
+    "rotulo": "Revista Sociedade Militar",
+    "url": "https://www.sociedademilitar.com.br/2024/10/prefeito-do-pt-eleito-em-marica-quer-transformar-ilhas-que-pertencem-a-marinha-do-brasil-em-base-de-lancamento-de-foguetes-sp1.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "cade",
+   "achado": "Nenhum contrato, obra ou projeto com esse objeto nos dados do portal. A obra de canal na Praia do Recanto, suspensa pela Justiça a pedido do MPRJ, é outra coisa.",
+   "fontes": [
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "MPRJ: obra do canal (outra obra)",
+     "url": "https://www.mprj.mp.br/visualizar?noticiaId=173703"
+    }
+   ]
+  },
+  {
+   "id": "hoteis",
+   "titulo": "Seis hotéis públicos",
+   "dito": "Disse que a cidade teria seis hotéis públicos.",
+   "quando": "Out/2024",
+   "onde": {
+    "rotulo": "Revista Sociedade Militar",
+    "url": "https://www.sociedademilitar.com.br/2024/10/prefeito-do-pt-eleito-em-marica-quer-transformar-ilhas-que-pertencem-a-marinha-do-brasil-em-base-de-lancamento-de-foguetes-sp1.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "parcial",
+   "achado": "Há um: o Hotel Maricá. O contrato 30/2024 (W Costa, R$ 36.262.093,15, vigência até 28/02/2026) é de obra de implantação de hotel, e o contrato 37/2026 (Werk, R$ 3.856.967,00) é de projeto da área ao redor. O contrato do hotel é de 2024, anterior ao mandato atual. Os outros cinco: cadê? O Maraey é privado e não conta como hotel público.",
+   "fontes": [
+    {
+     "rotulo": "Contratos 30/2024 e 37/2026 no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "Maraey: parceria privada (O Povo)",
+     "url": "https://www.opovo.com.br/trends/prefeitura-aprova-construcao-de-3-hoteis-5-estrelas-e-27-mil-vagas-de-empregos-em-marica/"
+    }
+   ]
+  },
+  {
+   "id": "piscina",
+   "titulo": "Maior piscina de água salgada do mundo, com recifes artificiais",
+   "dito": "Anunciou a maior piscina de água salgada do mundo, com recifes artificiais para atrair visitantes.",
+   "quando": "Dez/2024",
+   "onde": {
+    "rotulo": "Maricá Info (entrevista à Band)",
+    "url": "https://maricainfo.com/2024/12/02/quaqua-afirma-que-pretende-reduzir-a-dependencia-de-marica-em-relacao-ao-petroleo-em-um-prazo-de-ate-oito-anos.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "cade",
+   "achado": "Nenhum contrato ou obra com esse objeto. A piscina da Arena Mumbuca (contrato de R$ 4,08 mi) é outra coisa.",
+   "fontes": [
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    }
+   ]
+  },
+  {
+   "id": "catamara",
+   "titulo": "Catamarãs de Itaipuaçu ao Aeroporto Santos Dumont",
+   "dito": "Incluiu no plano uma linha de catamarãs ligando Itaipuaçu ao Santos Dumont.",
+   "quando": "Dez/2024",
+   "onde": {
+    "rotulo": "Maricá Info (entrevista à Band)",
+    "url": "https://maricainfo.com/2024/12/02/quaqua-afirma-que-pretende-reduzir-a-dependencia-de-marica-em-relacao-ao-petroleo-em-um-prazo-de-ate-oito-anos.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "cade",
+   "achado": "Nenhum contrato, licitação ou notícia oficial com esse objeto encontrado.",
+   "fontes": [
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    }
+   ]
+  },
+  {
+   "id": "aeroporto",
+   "titulo": "Novo aeroporto com pista de 2 mil metros",
+   "dito": "Falou em construir um novo aeroporto com pista de 2 mil metros.",
+   "quando": "Dez/2024",
+   "onde": {
+    "rotulo": "Maricá Info (entrevista à Band)",
+    "url": "https://maricainfo.com/2024/12/02/quaqua-afirma-que-pretende-reduzir-a-dependencia-de-marica-em-relacao-ao-petroleo-em-um-prazo-de-ate-oito-anos.html"
+   },
+   "prazo": "Dentro do mandato, pela fala",
+   "status": "parcial",
+   "achado": "O Aeroporto Municipal existe e recebe obras: contratos de 2024 para o pátio 04 e quatro hangares (um deles de R$ 29,76 mi), e uma obra de drenagem e terraplanagem no entorno, paralisada aguardando licença ambiental. Não achamos contrato de uma nova pista de 2 mil metros. Pista nova: cadê?",
+   "fontes": [
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "Obras paralisadas (OS 26040007)",
+     "url": "https://transparencia.marica.rj.gov.br/obras/obras-paralisadas/links-e-arquivos"
+    }
+   ]
+  },
+  {
+   "id": "asfalto",
+   "titulo": "Todas as ruas de Maricá asfaltadas",
+   "dito": "Em janeiro de 2025 anunciou R$ 300 milhões em obras imediatas em Itaipuaçu e asfalto em todas as ruas em três anos. Em novembro de 2026 reforçou a meta para o fim de 2028.",
+   "quando": "Jan/2025 e Nov/2026",
+   "onde": {
+    "rotulo": "Maricá Info",
+    "url": "https://maricainfo.com/obras/quaqua-reforca-meta-de-concluir-pavimentacao-de-todas-as-ruas-de-marica-ate-2028-maior-pacote-de-obras-da-historia/"
+   },
+   "prazo": "Fim de 2028",
+   "status": "prazo",
+   "achado": "Prazo em aberto. O prazo original de três anos já foi reescrito para o fim de 2028. O portal de acompanhamento de obras lista obras de drenagem, calçada e piso intertravado concluídas, mas não informa quantas ruas faltam.",
+   "fontes": [
+    {
+     "rotulo": "Acompanhamento de obras diretas (portal)",
+     "url": "https://transparencia.marica.rj.gov.br/storage/files/subcategory-attachment/1787236752-acompanhamento-de-obras-diretas-10-08-2026-3727b2f63e20d20c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "esgoto",
+   "titulo": "Esgoto: de cerca de 9% para 67% da cidade até 2028",
+   "dito": "Disse que a cobertura de esgoto saiu de cerca de 9% e que a meta é chegar a 67% até 2028, com R$ 450 milhões na primeira etapa.",
+   "quando": "Mai/2026",
+   "onde": {
+    "rotulo": "Maricá Info",
+    "url": "https://maricainfo.com/2026/05/09/quaqua-promete-resetar-a-prefeitura-de-marica-com-cortes-bilionarios-e-foco-em-obras-entenda.html"
+   },
+   "prazo": "2028",
+   "status": "prazo",
+   "achado": "Prazo em aberto. A meta falada (67%) é diferente da de um comunicado da Prefeitura (cerca de 60%). Há obras anunciadas, como a ampliação da ETE de Araçatiba e a ETE de Itaipuaçu.",
+   "fontes": [
+    {
+     "rotulo": "O Cafezinho: expansão da rede de esgoto",
+     "url": "https://www.ocafezinho.com/2026/04/15/marica-expande-rede-de-esgoto-e-projeta-mais-que-triplicar-cobertura-ate-2028/amp/"
+    }
+   ]
+  }
+ ]
+}

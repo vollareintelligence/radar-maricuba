@@ -42,6 +42,8 @@ for x in PM:
     ok(x.get('precisao') in ('rua', 'bairro', 'sem_coordenada') and x.get('ids') and x.get('fonte'), f"problema sem precisão/ids/fonte: {x.get('rua')}")
     if x.get('lat') is not None:
         ok(-23.2 < x['lat'] < -22.7 and -43.1 < x['lng'] < -42.5, f"problema fora de Maricá: {x['rua']}")
+PR = D.get('promessas') or {}
+ok(len(PR.get('itens', [])) >= 9 and all(i.get('onde', {}).get('url', '').startswith('https://') and i.get('fontes') and i.get('status') in ('cade', 'parcial', 'prazo') and i.get('achado') for i in PR.get('itens', [])), 'promessas: item sem fonte, status valido ou achado')
 N = D.get('natal') or {}
 ok(len(N.get('contratos', [])) == 2 and all(c.get('fonte', '').startswith('https://') and c.get('valor', 0) > 1e6 and c.get('processo') for c in N.get('contratos', [])), 'natal: contratos sem fonte, processo ou valor')
 ok(N.get('pagamentos', {}).get('2025', {}).get('pago', 0) > 1e6 and N.get('pagamentos', {}).get('2026', {}).get('pago', 0) > 1e6 and N['pagamentos'].get('fonte', '').startswith('https://'), 'natal: pagamentos ausentes')

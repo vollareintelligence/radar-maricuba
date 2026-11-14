@@ -275,6 +275,8 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 .mk.problema span{transform:rotate(45deg)}
 .mk.problema.apx{background:#fff;color:#D32F2F;border-color:#D32F2F}
 .cl.pr{border-color:#D32F2F}
+.prom-top{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 16px}.prom-top img{width:132px;height:auto;border:3px solid var(--ink);border-radius:10px}.prom-top p{flex:1;min-width:240px;margin:0}
+.prom-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.pcard{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.pcard h3{margin:0;font-size:1.05em}.pq{display:flex;align-items:center;gap:10px}.pq b{font-family:var(--disp);font-size:3.4em;line-height:.9;color:var(--hot-text)}.pq span{font-weight:700;font-size:1.15em}.pcard.parcial .pq b{color:#8A5A00}.pcard.prazo .pq b{color:#475569}.pcard .dito{background:var(--paper);border-radius:8px;padding:8px 10px;font-size:15px}.pcard .quando{font-size:14px;color:var(--muted-fg)}
 .hero .escopo{border-left:6px solid #D93A1E;padding:.5rem .8rem;background:rgba(241,232,214,.14)}
 </style>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
@@ -284,7 +286,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
   <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuNav">Menu</button>
   <nav class="menu" id="menuNav" aria-label="Seções">
-    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#natal">Natal</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
+    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#promessas">Promessas</a><a href="#natal">Natal</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
   </nav>
 </div></header>
 
@@ -401,6 +403,12 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 
   <h3 class="sh">Empresas sancionadas pela Prefeitura</h3>
   <div class="card"><div id="pSanc"></div><p class="source">Lista publicada pela própria Prefeitura. Fonte: <a href="https://transparencia.marica.rj.gov.br/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos" target="_blank" rel="noopener">Sanções administrativas aplicadas</a>.</p></div>
+</div></section>
+
+<section id="promessas"><div class="wrap">
+  <h2>Cadê? As promessas do prefeito</h2>
+  <p class="sub">O que o prefeito Washington Quaquá disse em público para o mandato 2025–2028 e o que encontramos de registro nos contratos e obras da Prefeitura de Maricá. Onde não achamos nada, a pergunta fica: cadê?</p>
+  <div id="promBox"></div>
 </div></section>
 
 <section id="natal"><div class="wrap">
@@ -782,6 +790,14 @@ try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#hero
    '<p class="gnota" style="margin-top:10px">Números do SICAM, o sistema da Câmara. Documentos legislativos incluem projetos, indicações, requerimentos e moções. A classificação por tipo é do Radar e está explicada em "Como lemos os dados".</p>';
   document.getElementById('gnota').innerHTML='<b>Como ler os contadores.</b> Estimativa que avança no ritmo médio de pagamentos de 2026 ('+G.diasAno2026+' dias, até '+dt(G.dataBase)+'). O valor real só muda quando o portal publica um novo pagamento. A última conferência no portal foi em '+periodo+' e, depois de 45 dias sem nova coleta, o contador para de avançar.'+
    '<details><summary>Limites desta conta</summary><p>1) Usamos o valor <b>pago</b>, não o empenhado. 2) O custo por gabinete (assessores de cada vereador) não é publicado: o portal da Câmara indica o assessor, mas não o gabinete. 3) As secretarias aparecem só em 2026, a partir da despesa por órgão do portal; 2025 por órgão não bate com o total e ficou de fora. 4) A soma bruta das instituições conta duas vezes o dinheiro que um órgão público repassa a outro; por isso mostramos o total sem repasses. 5) 2025 e 2026 são os anos do mandato atual; 2026 é ano parcial. 6) O subsídio foi conferido na folha de pagamento da Câmara Municipal de Maricá em 14/11/2026: 21 vereadores ativos, todos com R$ 16.503,19 por mês (há ainda 2 afastados e 4 exonerados, sem pagamento). A lei que fixou o valor ainda será citada aqui.</p><p>População: <a href="'+G.fontePopulacao+'" target="_blank" rel="noopener">IBGE, Censo 2022</a>.</p></details>';
+})();
+
+(function(){const R=window.DADOS.promessas;if(!R)return;
+ const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'),d=x=>x.split('-').reverse().join('/');
+ const rot={cade:['?','Cadê?'],parcial:['?','Parte existe. E o resto?'],prazo:['...','Prazo aberto: acompanhando']};
+ const cont={cade:0,parcial:0,prazo:0};R.itens.forEach(i=>cont[i.status]++);
+ const card=i=>'<article class="pcard '+i.status+'"><div class="pq"><b>'+rot[i.status][0]+'</b><span>'+rot[i.status][1]+'</span></div><h3>'+esc(i.titulo)+'</h3><p class="dito"><b>O que foi dito</b> ('+esc(i.quando)+'): '+esc(i.dito)+' <a href="'+esc(i.onde.url)+'" target="_blank" rel="noopener">'+esc(i.onde.rotulo)+'</a></p><p class="quando">Prazo: '+esc(i.prazo)+'</p><p><b>O que encontramos:</b> '+esc(i.achado)+'</p><p class="source">Fontes: '+i.fontes.map(f=>'<a href="'+esc(f.url)+'" target="_blank" rel="noopener">'+esc(f.rotulo)+'</a>').join(' · ')+'</p></article>';
+ document.getElementById('promBox').innerHTML='<div class="prom-top"><img src="'+esc(R.foto)+'" alt="Prefeito Washington Quaquá" width="132" loading="lazy">'+'<p class="explain"><b>'+cont.cade+' itens sem registro</b>, <b>'+cont.parcial+' com andamento parcial</b> e <b>'+cont.prazo+' com prazo em aberto</b>. '+esc(R.metodo)+'</p></div>'+(R.fotoCredito?'<p class="source">Foto: '+esc(R.fotoCredito)+'</p>':'')+'<div class="prom-grid">'+R.itens.map(card).join('')+'</div><ul><li>'+esc(R.nota)+'</li></ul><p class="source">Conferido em '+d(R.conferido)+'. Direito de resposta: se a Prefeitura tiver documento que mostre andamento de qualquer item, a seção é atualizada com a fonte.</p>';
 })();
 
 (function(){const N=window.DADOS.natal;if(!N)return;
