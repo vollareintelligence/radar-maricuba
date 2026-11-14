@@ -234,6 +234,30 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
  a{text-underline-offset:3px}
  .vcard,.card a{min-height:0}
 }
+
+#gastometro{background:var(--ink);color:var(--paper);border-bottom:3px solid var(--ink);padding:36px 0 40px}
+#gastometro h2{color:var(--paper)}
+#gastometro .gk{font-family:var(--disp);letter-spacing:1px;text-transform:uppercase;color:#F5A08F;margin:0 0 6px;font-size:15px}
+#gastometro .gintro{max-width:62ch;font-size:18px;margin:0 0 20px;color:var(--paper)}
+#gastometro .gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+#gastometro .gc{background:var(--paper);color:var(--ink);padding:16px 16px 14px;box-shadow:6px 6px 0 var(--hot)}
+#gastometro .gc h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:20px;margin:0 0 4px}
+#gastometro .gc .gsub{font-size:14px;margin:0 0 10px;color:#333}
+#gastometro .gc .gnum{font-family:var(--disp);font-weight:400;color:var(--hot-text);font-size:clamp(28px,5.4vw,40px);line-height:1.05;font-variant-numeric:tabular-nums;word-break:break-word}
+#gastometro .gc .gtaxa{font-weight:700;font-size:15px;margin:8px 0 2px}
+#gastometro .gc .gmor{font-size:15px;margin:0 0 8px}
+#gastometro .gc .gfonte{font-size:13px;margin:0}
+#gastometro .gc .gfonte a{color:var(--hot-text)}
+#gastometro .gentrega{margin-top:22px;border:3px solid var(--paper);padding:14px 16px}
+#gastometro .gentrega h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:20px;margin:0 0 8px;color:var(--paper)}
+#gastometro .gentrega .gl{display:flex;flex-wrap:wrap;gap:10px 28px}
+#gastometro .gentrega .gl div{min-width:130px}
+#gastometro .gentrega b{display:block;font-family:var(--disp);font-weight:400;font-size:30px;line-height:1.05;color:#fff}
+#gastometro .gentrega span{font-size:14px}
+#gastometro .gnota{max-width:72ch;font-size:14.5px;margin:18px 0 0;color:#E9E0CC}
+#gastometro .gnota a{color:#F5A08F}
+#gastometro .gnota details{margin-top:8px}
+#gastometro .gnota summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}
 </style>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
 <body>
@@ -242,7 +266,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
   <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuNav">Menu</button>
   <nav class="menu" id="menuNav" aria-label="Seções">
-    <a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
+    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
   </nav>
 </div></header>
 
@@ -252,11 +276,20 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <h1><span class="a">Radar da</span><span class="b">Gastança</span><span class="c">Maricúba</span></h1>
   <p>Quanto a Prefeitura pagou, a quem pagou, e o que cada vereador faz: tudo lido direto dos registros públicos, com a fonte oficial em cada número.</p>
   <p>O Radar mostra fatos e não faz acusação. A mesma régua vale para todos.</p>
-  <div class="atalhos" aria-label="Atalhos"><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
+  <div class="atalhos" aria-label="Atalhos"><a href="#gastometro">Gastômetro</a><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
   <div class="bignum" id="bignum" hidden><b id="heroBig"></b><span>pagos pela Prefeitura em 2025 e 2026 (até 14/11)</span></div>
   <div class="stamp" id="stamp"></div>
 </div></div>
 <div class="wrap"><div class="stats" id="stats" aria-label="Resumo da base"></div></div>
+
+<section id="gastometro"><div class="wrap">
+  <p class="gk">Quanto custa à cidade</p>
+  <h2>Gastômetro</h2>
+  <p class="gintro">Os contadores abaixo somam o que foi pago desde 1º de janeiro de 2025 e seguem crescendo no ritmo médio dos pagamentos. Ao lado, o que a Câmara entregou no mesmo período. Os números são fatos com fonte; a leitura é de quem vota.</p>
+  <div class="gcards" id="gcards" aria-label="Contadores de gasto"></div>
+  <div class="gentrega" id="gentrega"></div>
+  <div class="gnota" id="gnota"></div>
+</div></section>
 
 <section id="vereadores"><div class="wrap">
   <h2>Os vereadores</h2>
@@ -668,6 +701,52 @@ function drawEmp(){
 $('#buscaEmp').addEventListener('input',drawEmp);
 
 try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#heroBig').textContent='R$ '+fmt((a+b)/1000,1)+' bi';$('#bignum').hidden=false}catch(e){}
+
+
+/* ===== Gastômetro ===== */
+(function(){
+  const G=window.DADOS.gastometro,P=window.DADOS.prefeitura;
+  if(!G||!P||!P.despesas||!P.despesas[2025]||!P.despesas[2026])return;
+  const D5=P.despesas[2025],D6=P.despesas[2026],MI=1e6;
+  const inst=(d,re)=>((d.instituicoes.find(i=>re.test(i.nome))||{pago:0}).pago)*MI;
+  const T0=new Date(G.dataBase+'T00:00:00-03:00').getTime()+86400e3; /* projeção começa no dia seguinte à conferência */
+  const MAXPROJ=45*86400e3;
+  const projMs=()=>Math.min(Math.max(0,Date.now()-T0),MAXPROJ);
+  const brl2=(n,d=0)=>'R$ '+fmt(n,d);
+  const cartao=(titulo,sub,base26,total,dec,fonteHtml)=>({titulo,sub,total,dec,fonteHtml,taxa:base26/G.diasAno2026/86400e3});
+  const camara=cartao('Câmara de Maricá','Tudo que a Câmara pagou: vereadores, assessores, servidores e manutenção.',inst(D6,/camara/i),inst(D5,/camara/i)+inst(D6,/camara/i),0,'Fonte: <a href="'+P.fontes.despesas+'" target="_blank" rel="noopener">Portal da Transparência da Prefeitura, Despesas por instituição</a>');
+  const pref=cartao('Prefeitura (administração direta)','Valor pago pela instituição "Prefeitura Municipal de Maricá", onde ficam as secretarias. Inclui os repasses que ela faz a fundos, estatais e à Câmara, então os cartões não se somam.',inst(D6,/^prefeitura municipal/i),inst(D5,/^prefeitura municipal/i)+inst(D6,/^prefeitura municipal/i),0,'Fonte: <a href="'+P.fontes.despesas+'" target="_blank" rel="noopener">Portal da Transparência da Prefeitura, Despesas por instituição</a>');
+  const brutoT=(D5.total.pago+D6.total.pago)*MI, liqT=(D5.total.pago-D5.porClasse.ente.pago+D6.total.pago-D6.porClasse.ente.pago)*MI;
+  const liq6=(D6.total.pago-D6.porClasse.ente.pago)*MI;
+  const muni=cartao('Município inteiro, sem repasses internos','Prefeitura, fundos, estatais e Câmara, descontados os repasses de um órgão público para outro, que seriam contados duas vezes.',liq6,liqT,0,'Fonte: <a href="'+P.fontes.despesas+'" target="_blank" rel="noopener">Portal da Transparência da Prefeitura</a>. Soma bruta das 17 instituições: '+brl2(brutoT/1e9,2)+' bi.');
+  /* subsídio: cálculo por calendário, não depende da data da coleta */
+  const mensal=G.subsidio*G.cadeiras;
+  const subsAte=(agora)=>{let y=2025,m=0,tot=0;const ini=new Date(G.inicio+'T00:00:00-03:00');
+    for(;;){const a=new Date(Date.UTC(y,m,1,3)),b=new Date(Date.UTC(y,m+1,1,3));if(a>agora)break;
+      const f=Math.min(1,(agora-a)/(b-a));tot+=mensal*f;m++;if(m>11){m=0;y++}if(y>2030)break}
+    return tot};
+  const subs={titulo:'Subsídio dos '+G.cadeiras+' vereadores',sub:'Só a remuneração dos vereadores: '+G.cadeiras+' cadeiras × '+brl2(G.subsidio,2)+' por mês. Todos recebem o mesmo. Sem 13º, encargos, assessores e gabinetes.',dec:2,total:null,fonteHtml:'Fonte: <a href="'+G.fonteSubsidio+'" target="_blank" rel="noopener">Portal da Transparência da Câmara (folha)</a>',taxa:mensal/(30.4375*86400e3),calc:()=>subsAte(new Date())};
+  const cards=[camara,subs,pref,muni];
+  const baseVal=c=>c.calc?c.calc():c.total+c.taxa*projMs();
+  const box=document.getElementById('gcards');
+  box.innerHTML=cards.map((c,i)=>`<article class="gc"><h3>${c.titulo}</h3><p class="gsub">${c.sub}</p><div class="gnum" id="gn${i}" aria-hidden="true"></div><p class="gtaxa" id="gt${i}"></p><p class="gmor" id="gm${i}"></p><p class="gfonte">${c.fonteHtml}</p></article>`).join('');
+  const draw=()=>{cards.forEach((c,i)=>{const v=baseVal(c);document.getElementById('gn'+i).textContent=brl2(v,c.dec)})};
+  cards.forEach((c,i)=>{const v=baseVal(c);const dia=c.taxa*86400e3,seg=c.taxa*1000;
+    document.getElementById('gt'+i).textContent='+ '+brl2(seg,2)+' por segundo · '+(dia>=1e6?brl2(dia/1e6,2)+' milhões':brl2(dia/1e3,0)+' mil')+' por dia';
+    document.getElementById('gm'+i).textContent='= '+brl2(v/G.populacao,0)+' por morador, desde 01/01/2025 (população do Censo 2022: '+fmt(G.populacao)+')'});
+  draw();
+  const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setInterval(draw,reduz?10000:250);
+  const periodo=dt(G.dataBase);
+  /* o que entregaram */
+  const mes=window.DADOS.mensal||[];const sm=k=>mes.reduce((a,x)=>a+(x[k]||0),0);const M2=window.DADOS.meta;
+  const ent=document.getElementById('gentrega');
+  ent.innerHTML='<h3>O que a Câmara entregou no mesmo período (01/2025 a '+dt(M2.coletaAte)+')</h3><div class="gl">'+
+   [[fmt(M2.sessoes),'sessões realizadas'],[fmt(M2.proposicoes),'documentos legislativos'],[fmt(sm('lei')),'projetos de lei e afins'],[fmt(sm('bairro')),'pedidos de obra e serviço nos bairros'],[fmt(sm('cobranca')),'cobranças ao Executivo'],[fmt(sm('homenagem')),'homenagens e moções']].map(([n,l])=>'<div><b>'+n+'</b><span>'+l+'</span></div>').join('')+'</div>'+
+   '<p class="gnota" style="margin-top:10px">Números do SICAM, o sistema da Câmara. Documentos legislativos incluem projetos, indicações, requerimentos e moções. A classificação por tipo é do Radar e está explicada em "Como lemos os dados".</p>';
+  document.getElementById('gnota').innerHTML='<b>Como ler os contadores.</b> Estimativa que avança no ritmo médio de pagamentos de 2026 ('+G.diasAno2026+' dias, até '+dt(G.dataBase)+'). O valor real só muda quando o portal publica um novo pagamento. A última conferência no portal foi em '+periodo+' e, depois de 45 dias sem nova coleta, o contador para de avançar.'+
+   '<details><summary>Limites desta conta</summary><p>1) Usamos o valor <b>pago</b>, não o empenhado. 2) O custo por gabinete (assessores de cada vereador) não é publicado: o portal da Câmara indica o assessor, mas não o gabinete. 3) As secretarias ainda não aparecem separadas: o portal da Prefeitura agrupa por instituição, e a coleta por órgão está em andamento. 4) A soma bruta das instituições conta duas vezes o dinheiro que um órgão público repassa a outro; por isso mostramos o total sem repasses. 5) 2025 e 2026 são os anos do mandato atual; 2026 é ano parcial. 6) O valor do subsídio vem da folha publicada pela Câmara; a lei que o fixou ainda será conferida e citada aqui.</p><p>População: <a href="'+G.fontePopulacao+'" target="_blank" rel="noopener">IBGE, Censo 2022</a>.</p></details>';
+})();
 
 drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();drawSec();drawSanc();drawObras();drawSit();drawEmp();
 })();

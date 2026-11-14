@@ -92,7 +92,13 @@ meta = dict(
 )
 out.sort(key=lambda r: r['nome'])
 (S).mkdir(exist_ok=True)
-js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF), ensure_ascii=False, separators=(',', ':')) + ';'
+gastometro = dict(
+    subsidio=16503.19, cadeiras=21, inicio='2025-01-01',
+    fonteSubsidio='https://cmmarica.eloweb.net/portaltransparencia',
+    populacao=197277, fontePopulacao='https://www.ibge.gov.br/cidades-e-estados/rj/marica.html',
+    dataBase='2026-11-14', diasAno2026=318,
+)
+js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro), ensure_ascii=False, separators=(',', ':')) + ';'
 (S / 'dados.js').write_text(js, encoding='utf-8')
 print('vereadores', len(out), 'com foto', sum(1 for r in out if r['foto']), '| dados.js', len(js) // 1024, 'KB')
 print('sem foto:', [r['nome'] for r in out if not r['foto']])

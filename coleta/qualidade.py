@@ -29,6 +29,13 @@ for o in P.get('obrasMapa', {}).get('obras', []):
     ok(-23.2 < o['lat'] < -22.7 and -43.1 < o['lng'] < -42.5, f"coordenada fora de Maricá: obra {o['id']}")
     ok(o.get('fonte', '').startswith('https://'), f"obra sem fonte: {o['id']}")
 ok(len(P.get('empresas', {}).get('empresas', P.get('empresas', []))) >= 50, 'ranking de empresas incompleto')
+G = D.get('gastometro') or {}
+ok(abs(G.get('subsidio', 0) * G.get('cadeiras', 0) - 346566.99) < 1, 'gastômetro: subsídio × cadeiras fora do esperado')
+ok(G.get('populacao', 0) > 150000 and G.get('fontePopulacao', '').startswith('https://') and G.get('fonteSubsidio', '').startswith('https://'), 'gastômetro: população ou fontes ausentes')
+for a in ('2025', '2026'):
+    DA = (P.get('despesas') or {}).get(a) or {}
+    ok(any('mara' in i['nome'].lower() and i['pago'] > 10 for i in DA.get('instituicoes', [])), f'gastômetro: pago da Câmara ausente em {a}')
+    ok(DA.get('porClasse', {}).get('ente', {}).get('pago', 0) > 0, f'gastômetro: repasses entre entes ausentes em {a}')
 def tem_nan(x):
     if isinstance(x, float): return math.isnan(x) or math.isinf(x)
     if isinstance(x, dict): return any(tem_nan(i) for i in x.values())
