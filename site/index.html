@@ -284,7 +284,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
   <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuNav">Menu</button>
   <nav class="menu" id="menuNav" aria-label="Seções">
-    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
+    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#natal">Natal</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
   </nav>
 </div></header>
 
@@ -401,6 +401,12 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 
   <h3 class="sh">Empresas sancionadas pela Prefeitura</h3>
   <div class="card"><div id="pSanc"></div><p class="source">Lista publicada pela própria Prefeitura. Fonte: <a href="https://transparencia.marica.rj.gov.br/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos" target="_blank" rel="noopener">Sanções administrativas aplicadas</a>.</p></div>
+</div></section>
+
+<section id="natal"><div class="wrap">
+  <h2>Natal Brasilidade: quanto custou e quanto está previsto</h2>
+  <p class="sub">Contratos da Codemar com a Skena para o Natal de 2025 e de 2026, e o que o portal registra como pago. São fatos com fonte. O Radar não diz se o gasto foi bom ou ruim.</p>
+  <div id="natalBox"></div>
 </div></section>
 
 <section id="empresas"><div class="wrap">
@@ -776,6 +782,18 @@ try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#hero
    '<p class="gnota" style="margin-top:10px">Números do SICAM, o sistema da Câmara. Documentos legislativos incluem projetos, indicações, requerimentos e moções. A classificação por tipo é do Radar e está explicada em "Como lemos os dados".</p>';
   document.getElementById('gnota').innerHTML='<b>Como ler os contadores.</b> Estimativa que avança no ritmo médio de pagamentos de 2026 ('+G.diasAno2026+' dias, até '+dt(G.dataBase)+'). O valor real só muda quando o portal publica um novo pagamento. A última conferência no portal foi em '+periodo+' e, depois de 45 dias sem nova coleta, o contador para de avançar.'+
    '<details><summary>Limites desta conta</summary><p>1) Usamos o valor <b>pago</b>, não o empenhado. 2) O custo por gabinete (assessores de cada vereador) não é publicado: o portal da Câmara indica o assessor, mas não o gabinete. 3) As secretarias aparecem só em 2026, a partir da despesa por órgão do portal; 2025 por órgão não bate com o total e ficou de fora. 4) A soma bruta das instituições conta duas vezes o dinheiro que um órgão público repassa a outro; por isso mostramos o total sem repasses. 5) 2025 e 2026 são os anos do mandato atual; 2026 é ano parcial. 6) O subsídio foi conferido na folha de pagamento da Câmara Municipal de Maricá em 14/11/2026: 21 vereadores ativos, todos com R$ 16.503,19 por mês (há ainda 2 afastados e 4 exonerados, sem pagamento). A lei que fixou o valor ainda será citada aqui.</p><p>População: <a href="'+G.fontePopulacao+'" target="_blank" rel="noopener">IBGE, Censo 2022</a>.</p></details>';
+})();
+
+(function(){const N=window.DADOS.natal;if(!N)return;
+ const c=N.contratos,a=c[0],b=c[1],P=N.pagamentos,brl=n=>'R$ '+n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}),mi=n=>'R$ '+(n/1e6).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+' mi',d=x=>x.split('-').reverse().join('/');
+ const var_=Math.round((b.valor/a.valor-1)*100);
+ const bloco=(t,x,pg,rotPago,destaque,extra)=>'<article class="card"><h3>'+t+'</h3><p class="gnum" style="font-size:2.2em;margin:.2em 0">'+mi(destaque[1])+'</p><p><b>'+destaque[0]+'</b></p><ul><li>Contrato '+x.contrato+' (processo '+x.processo+'): <b>'+brl(x.valor)+'</b>, assinado em '+d(x.assinatura)+'</li><li>'+rotPago+': <b>'+brl(pg.pago)+'</b></li><li>Empenhado: '+brl(pg.empenhado)+(pg.anulado?'; anulado: '+brl(pg.anulado):'')+'</li><li>Base legal: '+x.base+'</li><li>Vigência: '+x.vigencia+'</li></ul><p class="source">Fontes: <a href="'+x.fonte+'" target="_blank" rel="noopener">'+x.fonteRotulo+'</a> · <a href="'+P.fonte+'" target="_blank" rel="noopener">'+P.fonteRotulo+'</a></p>'+extra+'</article>';
+ const outras='<h3 class="sh">Outras empresas e contratos ligados ao Natal</h3><div class="card"><ul>'+N.outras.map(o=>'<li><b>'+o.ano+'</b>: '+o.obj+'. Empresa: '+o.empresa+'. Valor: '+brl(o.valor)+'. <a href="'+o.fonte+'" target="_blank" rel="noopener">'+o.fonteRotulo+'</a></li>').join('')+'</ul></div>';
+ document.getElementById('natalBox').innerHTML='<p class="explain"><b>Empresa:</b> '+N.empresa.nome+' · CNPJ '+N.empresa.cnpj+' · Contratante: '+N.contratante+'. <a href="#empresas" id="natalFicha">Ver a ficha da empresa</a></p><div class="gcards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">'+
+  bloco('Natal Brasilidade 2025: o que foi gasto',a,P['2025'],'Pago à Skena em 2025',['Pago em 2025',P['2025'].pago],'')+
+  bloco('Natal Brasilidade 2026: previsão de gasto',b,P['2026'],'Já pago à Skena em 2026, até '+d(P.ate),['Previsto no contrato de 2026',b.valor],'<p>O contrato de 2026 é <b>'+var_+'% maior</b> que o de 2025.</p>')+'</div>'+outras+
+  '<ul>'+N.notas.map(t=>'<li>'+t+'</li>').join('')+'</ul><p class="source">Conferido em '+d(N.conferido)+' nos PDFs do Diário Oficial de Maricá e no portal da Prefeitura.</p>';
+ const f=document.getElementById('natalFicha');if(f)f.addEventListener('click',()=>{const i=document.getElementById('buscaEmp');if(i){i.value='skena';i.dispatchEvent(new Event('input',{bubbles:true}))}});
 })();
 
 drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();drawSec();drawSanc();drawObras();drawSit();drawEmp();

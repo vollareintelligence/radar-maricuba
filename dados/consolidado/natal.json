@@ -1,0 +1,73 @@
+{
+ "titulo": "Natal Brasilidade: contratos da Codemar com a Skena",
+ "empresa": {
+  "nome": "Skena Cenografia e Projetos Especiais Ltda.",
+  "cnpj": "40.306.378/0001-32"
+ },
+ "contratante": "Companhia de Desenvolvimento de Maricá (Codemar)",
+ "conferido": "2026-11-14",
+ "contratos": [
+  {
+   "ano": 2025,
+   "contrato": "47/2025",
+   "processo": "18140/2025",
+   "valor": 24667976.29,
+   "assinatura": "2025-10-03",
+   "base": "Lei federal 13.303/2016 (extrato não cita o artigo)",
+   "vigencia": "4 meses a partir da publicação do extrato",
+   "fonte": "https://www.marica.rj.gov.br/wp-content/uploads/2025/10/JOM_1792_08-10-2025.pdf",
+   "fonteRotulo": "Jornal Oficial de Maricá nº 1792, 08/10/2025"
+  },
+  {
+   "ano": 2026,
+   "contrato": "43/2026",
+   "processo": "16700/2026",
+   "valor": 51890000.0,
+   "assinatura": "2026-10-28",
+   "base": "Inexigibilidade: art. 30, II, alíneas \"a\" e \"d\", da Lei federal 13.303/2016",
+   "vigencia": "4 meses a partir da publicação; evento de 21/11/2026 a 06/01/2027",
+   "fonte": "https://www.marica.rj.gov.br/wp-content/uploads/2026/10/DOM_153_29-10-2026_.pdf",
+   "fonteRotulo": "Diário Oficial de Maricá nº 153, 29/10/2026"
+  }
+ ],
+ "notas": [
+  "Contratado é o valor do extrato no Diário Oficial. Pago é o que o portal da Prefeitura registra como pago ao CNPJ da Skena no ano, até 13/11/2026.",
+  "O pago de 2026 pode incluir saldo do contrato de 2025: o portal agrupa por credor e não separa por contrato.",
+  "Os valores são só da Skena. Outras empresas do Natal (águas dançantes, shows, parque) não estão somadas e entram aqui quando houver contrato publicado.",
+  "Os extratos não permitem afirmar que os dois contratos cobrem o mesmo escopo.",
+  "Inexigibilidade é uma hipótese prevista na lei das estatais. Se foi bem aplicada é decisão do Tribunal de Contas ou da Justiça, não do Radar."
+ ],
+ "pagamentos": {
+  "fonte": "https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao",
+  "fonteRotulo": "Portal da Transparência da Prefeitura, despesas por credor",
+  "ate": "2026-11-13",
+  "2025": {
+   "empenhado": 24667976.29,
+   "anulado": 2788553.83,
+   "pago": 19734381.04
+  },
+  "2026": {
+   "empenhado": 39111553.83,
+   "anulado": 0.0,
+   "pago": 28733553.83
+  }
+ },
+ "outras": [
+  {
+   "ano": 2024,
+   "obj": "Águas dançantes, decoração e iluminação do 7º Natal Iluminado",
+   "empresa": "Interfogos Comércio, Importação e Exportação",
+   "valor": 8489500.0,
+   "fonte": "https://maricainfo.com/noticias/natal-brasilidade-2026-aguas-dancantes-devem-voltar-a-lagoa-de-aracatiba/",
+   "fonteRotulo": "Maricá Info (contrato 405/2024)"
+  },
+  {
+   "ano": 2026,
+   "obj": "Águas dançantes, decoração e iluminação do 9º Natal Iluminado (pregão, valor estimado)",
+   "empresa": "vencedora ainda não divulgada nas fontes consultadas",
+   "valor": 11601165.5,
+   "fonte": "https://maricainfo.com/noticias/natal-brasilidade-2026-aguas-dancantes-devem-voltar-a-lagoa-de-aracatiba/",
+   "fonteRotulo": "Maricá Info, dados do PNCP"
+  }
+ ]
+}

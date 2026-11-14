@@ -27,6 +27,7 @@ PREF = json.load(open(C / 'prefeitura.json')) if (C / 'prefeitura.json').exists(
 if PREF and (C / 'empresas.json').exists():
     PREF['empresas'] = json.load(open(C / 'empresas.json'))
 SECR = json.load(open(C / 'secretarias.json')) if (C / 'secretarias.json').exists() else None
+NATAL = json.load(open(C / 'natal.json')) if (C / 'natal.json').exists() else None
 PMAPA = json.load(open(C / 'problemas_mapa.json')) if (C / 'problemas_mapa.json').exists() else []
 if PREF and (C / 'obras_mapa.json').exists():
     PREF['obrasMapa'] = json.load(open(C / 'obras_mapa.json'))
@@ -100,7 +101,7 @@ gastometro = dict(
     populacao=197277, fontePopulacao='https://www.ibge.gov.br/cidades-e-estados/rj/marica.html',
     dataBase='2026-11-14', diasAno2026=318,
 )
-js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro, problemasMapa=PMAPA, secretarias=SECR), ensure_ascii=False, separators=(',', ':')) + ';'
+js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro, problemasMapa=PMAPA, secretarias=SECR, natal=NATAL), ensure_ascii=False, separators=(',', ':')) + ';'
 (S / 'dados.js').write_text(js, encoding='utf-8')
 print('vereadores', len(out), 'com foto', sum(1 for r in out if r['foto']), '| dados.js', len(js) // 1024, 'KB')
 print('sem foto:', [r['nome'] for r in out if not r['foto']])
