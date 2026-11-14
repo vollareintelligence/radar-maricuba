@@ -1,0 +1,2804 @@
+[
+  {
+    "rua": "Avenida Carlos Mariguella",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 10,
+    "autores": 6,
+    "d0": "2025-05-12",
+    "d1": "2026-09-29",
+    "ids": [
+      "1341/2025",
+      "1161/2026",
+      "2549/2025",
+      "2552/2025",
+      "2546/2025",
+      "2547/2025",
+      "2548/2025",
+      "2334/2025",
+      "2773/2026",
+      "3034/2025"
+    ],
+    "lat": -22.958071,
+    "lng": -42.981293,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Carlos Mariguella, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": null,
+    "tema": "transito",
+    "n": 10,
+    "autores": 7,
+    "d0": "2025-05-13",
+    "d1": "2026-07-27",
+    "ids": [
+      "3542/2025",
+      "1992/2026",
+      "1991/2026",
+      "1993/2026",
+      "1290/2026",
+      "1316/2026",
+      "154/2026",
+      "4419/2025",
+      "1393/2026",
+      "1399/2025"
+    ],
+    "lat": -22.899756,
+    "lng": -42.951173,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rodovia Amaral Peixoto, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Roberto Silveira",
+    "macro": "Flamengo",
+    "tema": "transito",
+    "n": 8,
+    "autores": 7,
+    "d0": "2025-01-31",
+    "d1": "2026-11-10",
+    "ids": [
+      "112/2025",
+      "3284/2026",
+      "2406/2025",
+      "3966/2025",
+      "3239/2025",
+      "2015/2026",
+      "3360/2025",
+      "880/2025"
+    ],
+    "lat": -22.914555,
+    "lng": -42.806407,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Roberto Silveira, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Mangueiras",
+    "macro": "Inoã",
+    "tema": "asfalto",
+    "n": 7,
+    "autores": 5,
+    "d0": "2025-03-26",
+    "d1": "2026-09-22",
+    "ids": [
+      "2169/2025",
+      "1850/2025",
+      "734/2025",
+      "2717/2026",
+      "1641/2026",
+      "1137/2026",
+      "679/2026"
+    ],
+    "lat": -22.916565,
+    "lng": -42.941136,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Mangueiras, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Nero Da Silva Bittencourt",
+    "macro": null,
+    "tema": "outros",
+    "n": 6,
+    "autores": 1,
+    "d0": "2025-03-27",
+    "d1": "2025-07-31",
+    "ids": [
+      "2346/2025",
+      "2257/2025",
+      "2124/2025",
+      "939/2025",
+      "940/2025",
+      "761/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Nero Da Silva Bittencourt, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Carlos Marighella",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 6,
+    "autores": 4,
+    "d0": "2025-04-15",
+    "d1": "2026-10-27",
+    "ids": [
+      "1053/2025",
+      "3124/2026",
+      "1792/2026",
+      "314/2026",
+      "2962/2025",
+      "1844/2026"
+    ],
+    "lat": -22.958071,
+    "lng": -42.981293,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Carlos Marighella, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Bananeiras",
+    "macro": "Inoã",
+    "tema": "iluminacao",
+    "n": 6,
+    "autores": 2,
+    "d0": "2025-03-26",
+    "d1": "2026-05-28",
+    "ids": [
+      "1449/2026",
+      "1455/2026",
+      "3006/2025",
+      "735/2025",
+      "2652/2025",
+      "2610/2025"
+    ],
+    "lat": -22.903,
+    "lng": -42.92892,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Bananeiras, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Nero Da Silva Bittencourt",
+    "macro": null,
+    "tema": "transito",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-03-24",
+    "d1": "2026-11-06",
+    "ids": [
+      "697/2025",
+      "3225/2026",
+      "2433/2026",
+      "1166/2026",
+      "2130/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Nero Da Silva Bittencourt, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 100",
+    "macro": "Araçatiba",
+    "tema": "limpeza",
+    "n": 5,
+    "autores": 1,
+    "d0": "2025-05-09",
+    "d1": "2026-08-18",
+    "ids": [
+      "2298/2026",
+      "1735/2026",
+      "4284/2025",
+      "2387/2025",
+      "1316/2025"
+    ],
+    "lat": -22.938454,
+    "lng": -42.82689,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 100, Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio De Souza",
+    "macro": "Itaipuaçu",
+    "tema": "iluminacao",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-03-27",
+    "d1": "2026-08-13",
+    "ids": [
+      "2212/2026",
+      "1035/2025",
+      "3232/2025",
+      "2097/2026",
+      "752/2025"
+    ],
+    "lat": -22.963036,
+    "lng": -43.004024,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Antonio De Souza, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Jardel Filho",
+    "macro": "Itaipuaçu",
+    "tema": "outros",
+    "n": 5,
+    "autores": 2,
+    "d0": "2025-03-06",
+    "d1": "2025-12-10",
+    "ids": [
+      "4482/2025",
+      "3672/2025",
+      "484/2025",
+      "485/2025",
+      "424/2025"
+    ],
+    "lat": -22.958498,
+    "lng": -42.973042,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Jardel Filho, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Waldir Lopes Duarte",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 5,
+    "autores": 3,
+    "d0": "2025-04-29",
+    "d1": "2026-09-21",
+    "ids": [
+      "3556/2025",
+      "2693/2026",
+      "2646/2026",
+      "1973/2026",
+      "1143/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Professor Cardoso De Menezes",
+    "macro": "Itaipuaçu",
+    "tema": "outros",
+    "n": 5,
+    "autores": 5,
+    "d0": "2025-01-13",
+    "d1": "2026-05-12",
+    "ids": [
+      "827/2025",
+      "1174/2026",
+      "31/2025",
+      "1216/2026",
+      "3584/2025"
+    ],
+    "lat": -22.965907,
+    "lng": -42.962133,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Professor Cardoso De Menezes, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Nossa Senhora Da Conceicao",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-09-02",
+    "d1": "2026-05-12",
+    "ids": [
+      "1015/2026",
+      "4154/2025",
+      "3844/2025",
+      "2816/2025",
+      "1204/2026"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Luiz Fernando Dos Santos Caetano",
+    "macro": null,
+    "tema": "transito",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-04-14",
+    "d1": "2026-05-05",
+    "ids": [
+      "1750/2025",
+      "1100/2026",
+      "1671/2025",
+      "3250/2025",
+      "1021/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Luiz Fernando Dos Santos Caetano, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Colibris",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-06-26",
+    "d1": "2026-06-30",
+    "ids": [
+      "1867/2026",
+      "263/2026",
+      "4203/2025",
+      "465/2026",
+      "2100/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Georgilei Rodrigues",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 5,
+    "autores": 4,
+    "d0": "2025-03-12",
+    "d1": "2026-08-18",
+    "ids": [
+      "2312/2026",
+      "2072/2026",
+      "79/2026",
+      "602/2026",
+      "510/2025"
+    ],
+    "lat": -22.961936,
+    "lng": -42.937916,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Georgilei Rodrigues, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Madressilvas",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-06-03",
+    "d1": "2026-03-12",
+    "ids": [
+      "3492/2025",
+      "4182/2025",
+      "1755/2025",
+      "417/2026"
+    ],
+    "lat": -22.959422,
+    "lng": -42.977658,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Madressilvas, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Jaqueiras",
+    "macro": "Inoã",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-03-26",
+    "d1": "2026-05-28",
+    "ids": [
+      "1461/2026",
+      "1348/2026",
+      "3156/2025",
+      "732/2025"
+    ],
+    "lat": -22.902268,
+    "lng": -42.930164,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Jaqueiras, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Begonias",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-01-09",
+    "d1": "2026-10-06",
+    "ids": [
+      "2846/2026",
+      "9/2025",
+      "2617/2025",
+      "2790/2025"
+    ],
+    "lat": -22.962384,
+    "lng": -42.976757,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Begonias, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Campos Do Jordao",
+    "macro": "Pindobal",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-03-19",
+    "d1": "2026-04-09",
+    "ids": [
+      "3857/2025",
+      "748/2026",
+      "835/2026",
+      "616/2025"
+    ],
+    "lat": -22.9223,
+    "lng": -42.751646,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Romulo Cavina",
+    "macro": "Araçatiba",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-04-25",
+    "d1": "2026-05-20",
+    "ids": [
+      "1121/2026",
+      "1141/2026",
+      "1120/2025",
+      "1370/2026"
+    ],
+    "lat": -22.934964,
+    "lng": -42.829352,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Romulo Cavina, Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Pereira Neves",
+    "macro": "Centro",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-09-23",
+    "d1": "2026-03-13",
+    "ids": [
+      "433/2026",
+      "61/2026",
+      "3573/2025",
+      "3197/2025"
+    ],
+    "lat": -22.920925,
+    "lng": -42.813368,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Pereira Neves, Centro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Van Lerbergue",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 2,
+    "d0": "2025-09-23",
+    "d1": "2026-05-27",
+    "ids": [
+      "1433/2026",
+      "796/2026",
+      "4117/2025",
+      "3200/2025"
+    ],
+    "lat": -22.964677,
+    "lng": -42.968001,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Van Lerbergue, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Braulino Venancio Da Costa",
+    "macro": "Bambuí",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-04-11",
+    "d1": "2026-08-11",
+    "ids": [
+      "2155/2026",
+      "2107/2026",
+      "996/2025",
+      "2265/2025"
+    ],
+    "lat": -22.939218,
+    "lng": -42.749002,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Bambuí, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Maysa",
+    "macro": "Guaratiba",
+    "tema": "drenagem",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-03-24",
+    "d1": "2026-10-19",
+    "ids": [
+      "669/2025",
+      "3120/2025",
+      "3002/2026",
+      "1420/2025"
+    ],
+    "lat": -22.958357,
+    "lng": -42.778755,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Maysa, Guaratiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Itaipuacu",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-07-29",
+    "d1": "2026-10-13",
+    "ids": [
+      "4027/2025",
+      "2328/2025",
+      "2950/2026",
+      "2513/2025"
+    ],
+    "lat": -22.969485,
+    "lng": -42.924139,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Itaipuacu, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Sao Jorge",
+    "macro": "Morada das Águias",
+    "tema": "outros",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-11-07",
+    "d1": "2026-08-25",
+    "ids": [
+      "758/2026",
+      "539/2026",
+      "3983/2025",
+      "2383/2026"
+    ],
+    "lat": -22.953214,
+    "lng": -43.00065,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Morada das Águias, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Tenente Joaquim Da Silveira",
+    "macro": "Araçatiba",
+    "tema": "limpeza",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-03-26",
+    "d1": "2026-10-22",
+    "ids": [
+      "3048/2026",
+      "144/2026",
+      "1851/2025",
+      "741/2025"
+    ],
+    "lat": -22.92799,
+    "lng": -42.821882,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Zilto Monteiro De Abreu",
+    "macro": null,
+    "tema": "transito",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-04-04",
+    "d1": "2026-06-30",
+    "ids": [
+      "1859/2026",
+      "2453/2025",
+      "1981/2025",
+      "882/2025"
+    ],
+    "lat": -22.912896,
+    "lng": -42.765325,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Zilto Monteiro De Abreu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Dos Pescadores Em Guaratiba",
+    "macro": "Guaratiba",
+    "tema": "outros",
+    "n": 4,
+    "autores": 2,
+    "d0": "2025-04-04",
+    "d1": "2026-10-05",
+    "ids": [
+      "893/2025",
+      "2832/2026",
+      "2196/2025",
+      "2061/2025"
+    ],
+    "lat": -22.958348,
+    "lng": -42.787416,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Guaratiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": "Itapeba",
+    "tema": "outros",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-03-31",
+    "d1": "2026-04-29",
+    "ids": [
+      "1019/2026",
+      "55/2026",
+      "784/2025",
+      "1470/2025"
+    ],
+    "lat": -22.911712,
+    "lng": -42.842912,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rodovia Amaral Peixoto, Itapeba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 41",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-06-02",
+    "d1": "2026-09-21",
+    "ids": [
+      "869/2026",
+      "1979/2026",
+      "2690/2026",
+      "1722/2025"
+    ],
+    "lat": -22.949265,
+    "lng": -42.952364,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 41, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 32",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-04-14",
+    "d1": "2026-08-18",
+    "ids": [
+      "3323/2025",
+      "2449/2025",
+      "2315/2026",
+      "1016/2025"
+    ],
+    "lat": -22.959389,
+    "lng": -42.936594,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 32, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 44",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-04-02",
+    "d1": "2026-11-12",
+    "ids": [
+      "4298/2025",
+      "3325/2026",
+      "1448/2026",
+      "851/2025"
+    ],
+    "lat": -22.951873,
+    "lng": -42.961314,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 44, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Limoeiros",
+    "macro": "Inoã",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-03-26",
+    "d1": "2026-06-01",
+    "ids": [
+      "1469/2026",
+      "1451/2026",
+      "2998/2025",
+      "721/2025"
+    ],
+    "lat": -22.903252,
+    "lng": -42.931456,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Dos Limoeiros, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Kaweh Machado Diniz",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-05-13",
+    "d1": "2026-05-20",
+    "ids": [
+      "1391/2025",
+      "1372/2026",
+      "353/2026",
+      "1234/2026"
+    ],
+    "lat": -22.960607,
+    "lng": -42.952288,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Kaweh Machado Diniz, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Fernando Mendes",
+    "macro": "Inoã",
+    "tema": "outros",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-05-13",
+    "d1": "2026-09-10",
+    "ids": [
+      "2552/2026",
+      "2746/2025",
+      "1364/2025",
+      "3798/2025"
+    ],
+    "lat": -22.913574,
+    "lng": -42.9339,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Fernando Mendes, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Abacateiros",
+    "macro": "Inoã",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 1,
+    "d0": "2026-03-25",
+    "d1": "2026-04-27",
+    "ids": [
+      "977/2026",
+      "810/2026",
+      "689/2026",
+      "626/2026"
+    ],
+    "lat": -22.904395,
+    "lng": -42.933423,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Dos Abacateiros, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Equipada",
+    "macro": null,
+    "tema": "outros",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-03-19",
+    "d1": "2025-05-28",
+    "ids": [
+      "1643/2025",
+      "1642/2025",
+      "883/2025",
+      "592/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Praça Equipada, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Ana Ferreira",
+    "macro": "Barra de Maricá",
+    "tema": "saude",
+    "n": 4,
+    "autores": 1,
+    "d0": "2025-02-20",
+    "d1": "2026-09-16",
+    "ids": [
+      "2617/2026",
+      "2388/2026",
+      "185/2026",
+      "282/2025"
+    ],
+    "lat": -22.959095,
+    "lng": -42.819995,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Barra de Maricá, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": null,
+    "tema": "outros",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-09-15",
+    "d1": "2026-10-08",
+    "ids": [
+      "881/2026",
+      "2897/2026",
+      "582/2026",
+      "3017/2025"
+    ],
+    "lat": -22.899756,
+    "lng": -42.951173,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rodovia Amaral Peixoto, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 107",
+    "macro": "Cordeirinho",
+    "tema": "transito",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-06-27",
+    "d1": "2026-06-17",
+    "ids": [
+      "2426/2025",
+      "2195/2025",
+      "2109/2025",
+      "1720/2026"
+    ],
+    "lat": -22.950278,
+    "lng": -42.74987,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 107, Cordeirinho, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": "Inoã",
+    "tema": "transito",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-05-28",
+    "d1": "2026-10-05",
+    "ids": [
+      "1927/2025",
+      "1617/2025",
+      "765/2026",
+      "2830/2026"
+    ],
+    "lat": -22.899756,
+    "lng": -42.951173,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rodovia Amaral Peixoto, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Zilto Monteiro De Abreu",
+    "macro": null,
+    "tema": "outros",
+    "n": 4,
+    "autores": 2,
+    "d0": "2025-03-21",
+    "d1": "2026-06-22",
+    "ids": [
+      "1784/2026",
+      "655/2025",
+      "941/2025",
+      "942/2025"
+    ],
+    "lat": -22.912896,
+    "lng": -42.765325,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Zilto Monteiro De Abreu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Do Retiro",
+    "macro": "Retiro",
+    "tema": "iluminacao",
+    "n": 4,
+    "autores": 2,
+    "d0": "2026-03-04",
+    "d1": "2026-07-07",
+    "ids": [
+      "1906/2026",
+      "1694/2026",
+      "528/2026",
+      "269/2026"
+    ],
+    "lat": -22.910904,
+    "lng": -42.868746,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Do Retiro, Retiro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Henfil",
+    "macro": "Pindobas",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2025-04-09",
+    "d1": "2026-08-11",
+    "ids": [
+      "966/2025",
+      "1712/2025",
+      "804/2026",
+      "2171/2026"
+    ],
+    "lat": -22.884616,
+    "lng": -42.834921,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobas, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Limoeiros",
+    "macro": "Inoã",
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 3,
+    "d0": "2025-03-26",
+    "d1": "2026-06-01",
+    "ids": [
+      "2168/2025",
+      "1468/2026",
+      "723/2025",
+      "815/2026"
+    ],
+    "lat": -22.903252,
+    "lng": -42.931456,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Dos Limoeiros, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Joao Da Cunha Abreu",
+    "macro": null,
+    "tema": "asfalto",
+    "n": 4,
+    "autores": 4,
+    "d0": "2026-03-23",
+    "d1": "2026-11-13",
+    "ids": [
+      "1059/2026",
+      "586/2026",
+      "3182/2026",
+      "3355/2026"
+    ],
+    "lat": -22.92184,
+    "lng": -42.88836,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Joao Da Cunha Abreu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Abacateiros",
+    "macro": "Inoã",
+    "tema": "limpeza",
+    "n": 4,
+    "autores": 2,
+    "d0": "2025-11-26",
+    "d1": "2026-06-26",
+    "ids": [
+      "627/2026",
+      "150/2026",
+      "1851/2026",
+      "4269/2025"
+    ],
+    "lat": -22.904395,
+    "lng": -42.933423,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Dos Abacateiros, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Nero Da Silva Bittencourt",
+    "macro": null,
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-06-24",
+    "d1": "2025-07-31",
+    "ids": [
+      "2043/2025",
+      "2347/2025",
+      "2078/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Nero Da Silva Bittencourt, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Dr. Antonio Marques Mathias",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-04-25",
+    "d1": "2026-06-22",
+    "ids": [
+      "1100/2025",
+      "1794/2026",
+      "819/2026"
+    ],
+    "lat": -22.967159,
+    "lng": -42.984017,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Dr. Antonio Marques Mathias, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Carlos Maringuella",
+    "macro": "Inoã",
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-10-06",
+    "d1": "2025-10-08",
+    "ids": [
+      "3491/2025",
+      "3490/2025",
+      "3437/2025"
+    ],
+    "lat": -22.914416,
+    "lng": -42.930575,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Central",
+    "macro": "Cajueiros",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-18",
+    "d1": "2025-12-08",
+    "ids": [
+      "4452/2025",
+      "2967/2025",
+      "2557/2025"
+    ],
+    "lat": -22.94207,
+    "lng": -42.928163,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Central, Cajueiros, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Do Contorno",
+    "macro": "Bambuí",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-05-22",
+    "d1": "2026-09-22",
+    "ids": [
+      "1589/2025",
+      "2392/2025",
+      "2720/2026"
+    ],
+    "lat": -22.942802,
+    "lng": -42.76595,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Do Contorno, Bambuí, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Carlos Mariguella",
+    "macro": "Inoã",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-07-29",
+    "d1": "2026-09-16",
+    "ids": [
+      "1319/2026",
+      "2330/2025",
+      "2609/2026"
+    ],
+    "lat": -22.93816,
+    "lng": -42.956495,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Carlos Mariguella, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Marques De",
+    "macro": "Marquês de Maricá",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-11-05",
+    "d1": "2026-10-07",
+    "ids": [
+      "2877/2026",
+      "1755/2026",
+      "3947/2025"
+    ],
+    "lat": -22.909026,
+    "lng": -42.795372,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Marques De, Marquês de Maricá, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Joaquim Rodrigues",
+    "macro": "Pindobal",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-04",
+    "d1": "2026-08-10",
+    "ids": [
+      "886/2026",
+      "2391/2025",
+      "2116/2026"
+    ],
+    "lat": -22.921891,
+    "lng": -42.742351,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Joaquim Rodrigues, Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Joao Manoel Ribeiro",
+    "macro": "Manoel Ribeiro",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-02",
+    "d1": "2025-07-28",
+    "ids": [
+      "2012/2025",
+      "850/2025",
+      "2312/2025"
+    ],
+    "lat": -22.90597,
+    "lng": -42.740967,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Manoel Ribeiro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Ana Ferreira",
+    "macro": "Barra de Maricá",
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-02-24",
+    "d1": "2026-08-18",
+    "ids": [
+      "3833/2025",
+      "338/2025",
+      "2300/2026"
+    ],
+    "lat": -22.959095,
+    "lng": -42.819995,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Barra de Maricá, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Do Retiro",
+    "macro": "Retiro",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-07-10",
+    "d1": "2026-11-11",
+    "ids": [
+      "2208/2025",
+      "3305/2026",
+      "1559/2026"
+    ],
+    "lat": -22.910904,
+    "lng": -42.868746,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Do Retiro, Retiro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Zilto Monteiro",
+    "macro": null,
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-05-07",
+    "d1": "2026-08-13",
+    "ids": [
+      "2220/2026",
+      "2219/2026",
+      "1282/2025"
+    ],
+    "lat": -22.912896,
+    "lng": -42.765325,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Zilto Monteiro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Henfil",
+    "macro": "Pindobas",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2026-01-27",
+    "d1": "2026-07-31",
+    "ids": [
+      "2022/2026",
+      "794/2026",
+      "62/2026"
+    ],
+    "lat": -22.884616,
+    "lng": -42.834921,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobas, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": "Inoã",
+    "tema": "saude",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-08",
+    "d1": "2025-12-04",
+    "ids": [
+      "956/2025",
+      "959/2025",
+      "4410/2025"
+    ],
+    "lat": -22.899756,
+    "lng": -42.951173,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rodovia Amaral Peixoto, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Dos Gavioes",
+    "macro": "Itaipuaçu",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-03-11",
+    "d1": "2025-06-30",
+    "ids": [
+      "1609/2025",
+      "471/2025",
+      "2131/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Do Ferreirinha",
+    "macro": "Itaipuaçu",
+    "tema": "outros",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-05-20",
+    "d1": "2026-11-04",
+    "ids": [
+      "2567/2026",
+      "3196/2026",
+      "1527/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Praça Do Ivan",
+    "macro": null,
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-07-16",
+    "d1": "2025-08-01",
+    "ids": [
+      "2386/2025",
+      "2291/2025",
+      "2238/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Praça Do Ivan, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Antonio Callado",
+    "macro": "Pindobal",
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-10-22",
+    "d1": "2026-08-03",
+    "ids": [
+      "2055/2026",
+      "1950/2026",
+      "3693/2025"
+    ],
+    "lat": -22.9223,
+    "lng": -42.751646,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Antonio Calado",
+    "macro": "Pindobal",
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-11",
+    "d1": "2026-09-10",
+    "ids": [
+      "2546/2026",
+      "2554/2025",
+      "990/2025"
+    ],
+    "lat": -22.9223,
+    "lng": -42.751646,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada De Ponta Negra",
+    "macro": "Ponta Negra",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-12-09",
+    "d1": "2026-09-22",
+    "ids": [
+      "2721/2026",
+      "1155/2026",
+      "4465/2025"
+    ],
+    "lat": -22.914444,
+    "lng": -42.743834,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada De Ponta Negra, Ponta Negra, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Da Varginha",
+    "macro": "Itapeba",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-06-03",
+    "d1": "2025-11-05",
+    "ids": [
+      "1783/2025",
+      "3847/2025",
+      "3927/2025"
+    ],
+    "lat": -22.912842,
+    "lng": -42.856123,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Da Varginha, Itapeba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Do Camburi",
+    "macro": "Camburi",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-06-17",
+    "d1": "2026-06-23",
+    "ids": [
+      "1815/2026",
+      "1749/2026",
+      "1962/2025"
+    ],
+    "lat": -22.891654,
+    "lng": -42.844267,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Camburi, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Do Camburi",
+    "macro": "Camburi",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-05-06",
+    "d1": "2026-03-04",
+    "ids": [
+      "267/2026",
+      "1867/2025",
+      "1252/2025"
+    ],
+    "lat": -22.891654,
+    "lng": -42.844267,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Camburi, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Roberto Silveira",
+    "macro": "Flamengo",
+    "tema": "outros",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-02-14",
+    "d1": "2026-07-02",
+    "ids": [
+      "1888/2026",
+      "177/2025",
+      "434/2026"
+    ],
+    "lat": -22.914555,
+    "lng": -42.806407,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Roberto Silveira, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Nirvana",
+    "macro": "Inoã",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-06-25",
+    "d1": "2025-10-01",
+    "ids": [
+      "3366/2025",
+      "2089/2025",
+      "2564/2025"
+    ],
+    "lat": -22.914416,
+    "lng": -42.930575,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Prefeito Odenir Francisco Da Costa",
+    "macro": "Araçatiba",
+    "tema": "limpeza",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-06-11",
+    "d1": "2026-09-21",
+    "ids": [
+      "2669/2026",
+      "1883/2025",
+      "4502/2025"
+    ],
+    "lat": -22.92505,
+    "lng": -42.820352,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Prefeito Odenir Francisco Da Costa, Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Roberto Silveira",
+    "macro": "Centro",
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-01",
+    "d1": "2026-06-01",
+    "ids": [
+      "826/2025",
+      "1479/2026",
+      "1478/2026"
+    ],
+    "lat": -22.917364,
+    "lng": -42.812982,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Roberto Silveira, Centro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Roberto Silveira",
+    "macro": "Flamengo",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-10-09",
+    "d1": "2026-04-14",
+    "ids": [
+      "888/2026",
+      "278/2026",
+      "3517/2025"
+    ],
+    "lat": -22.914555,
+    "lng": -42.806407,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Avenida Roberto Silveira, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Nirvana",
+    "macro": "Inoã",
+    "tema": "outros",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-20",
+    "d1": "2025-10-01",
+    "ids": [
+      "3367/2025",
+      "2821/2025",
+      "2600/2025"
+    ],
+    "lat": -22.914416,
+    "lng": -42.930575,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Arlete De Alcantara Melo Cep",
+    "macro": "Flamengo",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2026-08-31",
+    "d1": "2026-09-30",
+    "ids": [
+      "2786/2026",
+      "2458/2026",
+      "2435/2026"
+    ],
+    "lat": -22.908798,
+    "lng": -42.804478,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Araguari",
+    "macro": "Itaocaia Valley",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-09-22",
+    "d1": "2025-12-03",
+    "ids": [
+      "4368/2025",
+      "4367/2025",
+      "3174/2025"
+    ],
+    "lat": -22.930975,
+    "lng": -42.964956,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Araguari, Itaocaia Valley, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio Vieira Sobrinho",
+    "macro": "Eldorado",
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-02-17",
+    "d1": "2026-08-13",
+    "ids": [
+      "2234/2026",
+      "2182/2026",
+      "220/2025"
+    ],
+    "lat": -22.916757,
+    "lng": -42.822997,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Eldorado, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio Vieira Sobrinho",
+    "macro": "Centro",
+    "tema": "limpeza",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-11",
+    "d1": "2026-05-05",
+    "ids": [
+      "1087/2026",
+      "3433/2025",
+      "991/2025"
+    ],
+    "lat": -22.916829,
+    "lng": -42.82191,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Antonio Vieira Sobrinho, Centro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio Marques Mathias",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-06-11",
+    "d1": "2026-06-12",
+    "ids": [
+      "1649/2026",
+      "362/2026",
+      "1895/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio Jose Rodrigues",
+    "macro": "Guaratiba",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-01-13",
+    "d1": "2025-09-17",
+    "ids": [
+      "17/2025",
+      "19/2025",
+      "3101/2025"
+    ],
+    "lat": -22.956501,
+    "lng": -42.796279,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Antonio Jose Rodrigues, Guaratiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Antonio Jose Ribeiro",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2026-03-31",
+    "d1": "2026-09-16",
+    "ids": [
+      "2201/2026",
+      "719/2026",
+      "2604/2026"
+    ],
+    "lat": -22.962165,
+    "lng": -43.003129,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Antonio Jose Ribeiro, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Abrahao Tavares De Moraes",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-10-15",
+    "d1": "2026-11-09",
+    "ids": [
+      "1432/2026",
+      "3249/2026",
+      "3585/2025"
+    ],
+    "lat": -22.966247,
+    "lng": -42.930714,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Abrahao Tavares De Moraes, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 54",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-10-17",
+    "d1": "2026-10-06",
+    "ids": [
+      "2594/2026",
+      "2871/2026",
+      "3618/2025"
+    ],
+    "lat": -22.960607,
+    "lng": -42.952288,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 54, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 90",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-11-27",
+    "d1": "2026-07-01",
+    "ids": [
+      "4286/2025",
+      "1875/2026",
+      "776/2026"
+    ],
+    "lat": -22.966862,
+    "lng": -42.91139,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 90, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 82",
+    "macro": "Itaipuaçu",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-04-01",
+    "d1": "2026-03-09",
+    "ids": [
+      "345/2026",
+      "3645/2025",
+      "812/2025"
+    ],
+    "lat": -22.961733,
+    "lng": -42.928052,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 82, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 64",
+    "macro": "Araçatiba",
+    "tema": "limpeza",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-06-24",
+    "d1": "2026-08-26",
+    "ids": [
+      "2398/2026",
+      "1783/2026",
+      "2054/2025"
+    ],
+    "lat": -22.937974,
+    "lng": -42.824543,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 64, Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 46",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-06-12",
+    "d1": "2026-11-03",
+    "ids": [
+      "49/2026",
+      "1902/2025",
+      "3166/2026"
+    ],
+    "lat": -22.951728,
+    "lng": -42.959499,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 46, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 48",
+    "macro": "Jardim Interlagos",
+    "tema": "transito",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-08-27",
+    "d1": "2026-03-18",
+    "ids": [
+      "532/2026",
+      "3702/2025",
+      "2717/2025"
+    ],
+    "lat": -22.934603,
+    "lng": -42.773319,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 48, Jardim Interlagos, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 36",
+    "macro": "Itaipuaçu",
+    "tema": "limpeza",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-03-26",
+    "d1": "2026-02-24",
+    "ids": [
+      "2604/2025",
+      "729/2025",
+      "175/2026"
+    ],
+    "lat": -22.969436,
+    "lng": -42.944584,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 36, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 36",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-07-28",
+    "d1": "2026-10-13",
+    "ids": [
+      "2937/2026",
+      "2309/2025",
+      "3199/2025"
+    ],
+    "lat": -22.969436,
+    "lng": -42.944584,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 36, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 110",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-02-24",
+    "d1": "2025-11-12",
+    "ids": [
+      "4072/2025",
+      "3790/2025",
+      "332/2025"
+    ],
+    "lat": -22.968119,
+    "lng": -42.920804,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 110, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 122",
+    "macro": "Cordeirinho",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-02-21",
+    "d1": "2026-03-13",
+    "ids": [
+      "279/2026",
+      "457/2026",
+      "323/2025"
+    ],
+    "lat": -22.954203,
+    "lng": -42.736296,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 122, Cordeirinho, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 35",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2026-02-23",
+    "d1": "2026-04-30",
+    "ids": [
+      "644/2026",
+      "167/2026",
+      "1047/2026"
+    ],
+    "lat": -22.966927,
+    "lng": -42.922179,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 35, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 13",
+    "macro": "Barra de Maricá",
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-06-23",
+    "d1": "2026-10-05",
+    "ids": [
+      "2831/2026",
+      "318/2026",
+      "2013/2025"
+    ],
+    "lat": -22.960239,
+    "lng": -42.814731,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 13, Barra de Maricá, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rodovia Amaral Peixoto",
+    "macro": "Itaocaia Valley",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-08-04",
+    "d1": "2025-10-01",
+    "ids": [
+      "3356/2025",
+      "2562/2025",
+      "2398/2025"
+    ],
+    "lat": -22.92913,
+    "lng": -42.967169,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaocaia Valley, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua 105",
+    "macro": "Bambuí",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-06-02",
+    "d1": "2026-05-28",
+    "ids": [
+      "1445/2026",
+      "3700/2025",
+      "1741/2025"
+    ],
+    "lat": -22.940978,
+    "lng": -42.756546,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua 105, Bambuí, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Avenida Ruth Ribeiro",
+    "macro": "Jardim Interlagos",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-14",
+    "d1": "2026-03-04",
+    "ids": [
+      "296/2026",
+      "4229/2025",
+      "539/2025"
+    ],
+    "lat": -22.945743,
+    "lng": -42.782337,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Jardim Interlagos, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Estrada Do Caxito",
+    "macro": "Caxito",
+    "tema": "outros",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-04-03",
+    "d1": "2026-11-05",
+    "ids": [
+      "874/2025",
+      "3213/2026",
+      "214/2026"
+    ],
+    "lat": -22.87351,
+    "lng": -42.820542,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Estrada Do Caxito, Caxito, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Cento E Um",
+    "macro": "Cordeirinho",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-06-11",
+    "d1": "2026-08-25",
+    "ids": [
+      "398/2026",
+      "2380/2026",
+      "1893/2025"
+    ],
+    "lat": -22.951655,
+    "lng": -42.752957,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Cento E Um, Cordeirinho, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Cecilia Goncalves Mataruna",
+    "macro": "Caxito",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2026-03-16",
+    "d1": "2026-09-08",
+    "ids": [
+      "482/2026",
+      "2105/2026",
+      "2511/2026"
+    ],
+    "lat": -22.882228,
+    "lng": -42.815463,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Caxito, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Chico Mendes",
+    "macro": "Inoã",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-03-28",
+    "d1": "2026-10-13",
+    "ids": [
+      "2936/2026",
+      "1073/2026",
+      "768/2025"
+    ],
+    "lat": -22.929486,
+    "lng": -42.945447,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Chico Mendes, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Belo Horizonte",
+    "macro": "Ponta Negra",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-03-26",
+    "d1": "2025-10-15",
+    "ids": [
+      "3590/2025",
+      "953/2025",
+      "711/2025"
+    ],
+    "lat": -22.956915,
+    "lng": -42.691765,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Belo Horizonte, Ponta Negra, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Bulgaria",
+    "macro": "Pindobal",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-19",
+    "d1": "2026-04-09",
+    "ids": [
+      "749/2026",
+      "832/2026",
+      "624/2025"
+    ],
+    "lat": -22.9223,
+    "lng": -42.751646,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Cananeia",
+    "macro": "São José do Imbassaí",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-05-14",
+    "d1": "2026-08-12",
+    "ids": [
+      "2190/2026",
+      "1406/2025",
+      "3976/2025"
+    ],
+    "lat": -22.933406,
+    "lng": -42.876252,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Cananeia, São José do Imbassaí, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Capitao Melo",
+    "macro": "Itaipuaçu",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-08-19",
+    "d1": "2026-08-12",
+    "ids": [
+      "2196/2026",
+      "2970/2025",
+      "2585/2025"
+    ],
+    "lat": -22.965355,
+    "lng": -43.002218,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Capitao Melo, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Belo Horizonte",
+    "macro": "Ponta Negra",
+    "tema": "esgoto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-04-08",
+    "d1": "2025-10-13",
+    "ids": [
+      "1409/2025",
+      "955/2025",
+      "3545/2025"
+    ],
+    "lat": -22.956915,
+    "lng": -42.691765,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Belo Horizonte, Ponta Negra, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Jose Carlos Martins",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-09-02",
+    "d1": "2026-10-06",
+    "ids": [
+      "2795/2025",
+      "2864/2026",
+      "3963/2025"
+    ],
+    "lat": -22.964101,
+    "lng": -42.985563,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Jose Carlos Martins, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Ivan Dias Pereira",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-12",
+    "d1": "2026-05-27",
+    "ids": [
+      "1429/2026",
+      "355/2026",
+      "2514/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Elisa Vieira Veras",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-10-13",
+    "d1": "2026-10-27",
+    "ids": [
+      "3553/2025",
+      "3096/2026",
+      "443/2026"
+    ],
+    "lat": -22.951574,
+    "lng": -42.954115,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Elisa Vieira Veras, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Governador Leonel Brizola",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 1,
+    "d0": "2026-02-23",
+    "d1": "2026-11-03",
+    "ids": [
+      "3180/2026",
+      "1435/2026",
+      "159/2026"
+    ],
+    "lat": -22.966927,
+    "lng": -42.922179,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Governador Leonel Brizola, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Das Mangueiras",
+    "macro": "Inoã",
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-02-17",
+    "d1": "2026-11-04",
+    "ids": [
+      "3200/2026",
+      "639/2025",
+      "204/2025"
+    ],
+    "lat": -22.916565,
+    "lng": -42.941136,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Das Mangueiras, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Do Canal",
+    "macro": null,
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-24",
+    "d1": "2025-05-15",
+    "ids": [
+      "1459/2025",
+      "724/2025",
+      "675/2025"
+    ],
+    "lat": -22.940671,
+    "lng": -42.908072,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Do Canal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Dos Cajueiros",
+    "macro": "Cajueiros",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-03-26",
+    "d1": "2026-06-01",
+    "ids": [
+      "1467/2026",
+      "3760/2025",
+      "726/2025"
+    ],
+    "lat": -22.935943,
+    "lng": -42.903381,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Dos Cajueiros, Cajueiros, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Barao De Inoa",
+    "macro": "Centro",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-07",
+    "d1": "2026-06-10",
+    "ids": [
+      "1606/2026",
+      "925/2025",
+      "2503/2025"
+    ],
+    "lat": -22.915512,
+    "lng": -42.820249,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Barao De Inoa, Centro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Capitao Melo",
+    "macro": "Morada das Águias",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2026-03-25",
+    "d1": "2026-09-28",
+    "ids": [
+      "2759/2026",
+      "2758/2026",
+      "645/2026"
+    ],
+    "lat": -22.958479,
+    "lng": -43.002218,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Capitao Melo, Morada das Águias, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Mirene Da Silva Bittencourt",
+    "macro": "Itapeba",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-07",
+    "d1": "2026-10-15",
+    "ids": [
+      "288/2026",
+      "2457/2025",
+      "2986/2026"
+    ],
+    "lat": -22.905572,
+    "lng": -42.834396,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Mirene Da Silva Bittencourt, Itapeba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Mario Pedro Da Silva",
+    "macro": "Flamengo",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-27",
+    "d1": "2026-10-19",
+    "ids": [
+      "3007/2026",
+      "3569/2025",
+      "760/2025"
+    ],
+    "lat": -22.90505,
+    "lng": -42.805321,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Mario Pedro Da Silva, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Mario Pedro Da Silva",
+    "macro": "Flamengo",
+    "tema": "drenagem",
+    "n": 3,
+    "autores": 2,
+    "d0": "2026-05-19",
+    "d1": "2026-11-05",
+    "ids": [
+      "3211/2026",
+      "3012/2026",
+      "1342/2026"
+    ],
+    "lat": -22.90505,
+    "lng": -42.805321,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Mario Pedro Da Silva, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Manoel Jose Da Costa",
+    "macro": "Manoel Ribeiro",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-02-24",
+    "d1": "2025-12-02",
+    "ids": [
+      "562/2025",
+      "354/2025",
+      "4360/2025"
+    ],
+    "lat": -22.90597,
+    "lng": -42.740967,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Manoel Ribeiro, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Leonardo Jose Antunes",
+    "macro": "Inoã",
+    "tema": "outros",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-26",
+    "d1": "2026-04-06",
+    "ids": [
+      "757/2026",
+      "740/2025",
+      "1052/2025"
+    ],
+    "lat": -22.909792,
+    "lng": -42.92831,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Leonardo Jose Antunes, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Lindoia",
+    "macro": "Pindobal",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-09-02",
+    "d1": "2026-04-09",
+    "ids": [
+      "570/2026",
+      "2797/2025",
+      "834/2026"
+    ],
+    "lat": -22.9223,
+    "lng": -42.751646,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Pindobal, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Luiz Fernando Dos Santos Caetano",
+    "macro": null,
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-03-28",
+    "d1": "2025-08-25",
+    "ids": [
+      "2644/2025",
+      "1194/2025",
+      "766/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Luiz Fernando Dos Santos Caetano, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Pioneiro",
+    "macro": "Itaipuaçu",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-11-06",
+    "d1": "2026-04-06",
+    "ids": [
+      "3961/2025",
+      "762/2026",
+      "518/2026"
+    ],
+    "lat": -22.948777,
+    "lng": -42.956808,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Pioneiro, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Pedro Jose Alves",
+    "macro": "Flamengo",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-10-15",
+    "d1": "2026-03-23",
+    "ids": [
+      "3576/2025",
+      "579/2026",
+      "430/2026"
+    ],
+    "lat": -22.905789,
+    "lng": -42.803622,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Pedro Jose Alves, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Nossa Senhora De Fatima",
+    "macro": "São Bento da Lagoa",
+    "tema": "transito",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-04-14",
+    "d1": "2026-03-13",
+    "ids": [
+      "1033/2025",
+      "439/2026",
+      "3164/2025"
+    ],
+    "lat": null,
+    "lng": null,
+    "precisao": "sem_coordenada",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Nossa Senhora De Fatima, São Bento da Lagoa, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Nossa Senhora Do Carmo",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-04-16",
+    "d1": "2026-09-30",
+    "ids": [
+      "1059/2025",
+      "2784/2026",
+      "3995/2025"
+    ],
+    "lat": -22.958975,
+    "lng": -42.99683,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Nossa Senhora Do Carmo, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Mululo Gomes Vieira",
+    "macro": "Itapeba",
+    "tema": "drenagem",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-03-12",
+    "d1": "2026-06-23",
+    "ids": [
+      "1801/2026",
+      "106/2026",
+      "503/2025"
+    ],
+    "lat": -22.910536,
+    "lng": -42.843161,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itapeba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Ruth Ribeiro",
+    "macro": "Jardim Interlagos",
+    "tema": "outros",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-03-14",
+    "d1": "2026-03-30",
+    "ids": [
+      "681/2026",
+      "2467/2025",
+      "548/2025"
+    ],
+    "lat": -22.945743,
+    "lng": -42.782337,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Jardim Interlagos, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Raul Alfredo De Andrade",
+    "macro": "Caxito",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-07-02",
+    "d1": "2025-09-25",
+    "ids": [
+      "2162/2025",
+      "3129/2025",
+      "3261/2025"
+    ],
+    "lat": -22.882228,
+    "lng": -42.815463,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Caxito, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Raimundo Monteiro",
+    "macro": "Itaipuaçu",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-09-09",
+    "d1": "2026-04-28",
+    "ids": [
+      "998/2026",
+      "2946/2025",
+      "2944/2025"
+    ],
+    "lat": -22.96947,
+    "lng": -43.010287,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Raimundo Monteiro, Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Sergio Aguiar De Oliveira",
+    "macro": "Itaipuaçu",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 2,
+    "d0": "2025-07-24",
+    "d1": "2026-03-30",
+    "ids": [
+      "3371/2025",
+      "682/2026",
+      "2298/2025"
+    ],
+    "lat": -22.9667,
+    "lng": -43.0167,
+    "precisao": "bairro",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Itaipuaçu, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Sao Paulo",
+    "macro": "São José do Imbassaí",
+    "tema": "transito",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-09-18",
+    "d1": "2026-08-04",
+    "ids": [
+      "3551/2025",
+      "2079/2026",
+      "3140/2025"
+    ],
+    "lat": -22.932838,
+    "lng": -42.885212,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Sao Paulo, São José do Imbassaí, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Sao Francisco",
+    "macro": null,
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 1,
+    "d0": "2025-09-08",
+    "d1": "2026-03-16",
+    "ids": [
+      "469/2026",
+      "2916/2025",
+      "2912/2025"
+    ],
+    "lat": -22.907961,
+    "lng": -42.931752,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Sao Francisco, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Tiete",
+    "macro": "Inoã",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-08-21",
+    "d1": "2026-08-06",
+    "ids": [
+      "1571/2026",
+      "2618/2025",
+      "2112/2026"
+    ],
+    "lat": -22.916989,
+    "lng": -42.947234,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Tiete, Inoã, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Uirapurus",
+    "macro": "Flamengo",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-04-15",
+    "d1": "2026-09-21",
+    "ids": [
+      "1118/2026",
+      "2667/2026",
+      "1043/2025"
+    ],
+    "lat": -22.911965,
+    "lng": -42.807072,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Uirapurus, Flamengo, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Udinese",
+    "macro": "Araçatiba",
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-05-12",
+    "d1": "2026-11-06",
+    "ids": [
+      "4087/2025",
+      "3224/2026",
+      "1347/2025"
+    ],
+    "lat": -22.925702,
+    "lng": -42.817194,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Udinese, Araçatiba, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Um",
+    "macro": null,
+    "tema": "asfalto",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-05-08",
+    "d1": "2026-10-06",
+    "ids": [
+      "2847/2026",
+      "3413/2025",
+      "1298/2025"
+    ],
+    "lat": -22.937759,
+    "lng": -42.660343,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Um, Maricá, Rio de Janeiro, Brasil"
+  },
+  {
+    "rua": "Rua Vereador Aloisio Rangel De Freitas",
+    "macro": "Itapeba",
+    "tema": "iluminacao",
+    "n": 3,
+    "autores": 3,
+    "d0": "2025-09-25",
+    "d1": "2026-04-27",
+    "ids": [
+      "976/2026",
+      "356/2026",
+      "3242/2025"
+    ],
+    "lat": -22.915502,
+    "lng": -42.840695,
+    "precisao": "rua",
+    "fonte": "OpenStreetMap/Nominatim",
+    "consulta": "Rua Vereador Aloisio Rangel De Freitas, Itapeba, Maricá, Rio de Janeiro, Brasil"
+  }
+]

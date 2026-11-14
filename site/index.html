@@ -258,6 +258,11 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
 #gastometro .gnota a{color:#F5A08F}
 #gastometro .gnota details{margin-top:8px}
 #gastometro .gnota summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}
+
+.mk.problema{background:#D32F2F;color:#fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+.mk.problema span{transform:rotate(45deg)}
+.mk.problema.apx{background:#fff;color:#D32F2F;border-color:#D32F2F}
+.cl.pr{border-color:#D32F2F}
 </style>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
 <body>
@@ -656,6 +661,11 @@ function drawObras(){
 let mSit='todas';
 const SYM={concluida:'✓',andamento:'●',paralisada:'!'},SITNOME={concluida:'Concluída',andamento:'Em andamento',paralisada:'Paralisada'};
 function popObra(o){return `<b>${esc(o.bairro||'Maricá')}</b><br>${esc(o.obj||'Obra')}<br><span class="note">${esc(o.local)}</span><br><b>${SITNOME[o.sit]}</b> (como declarado pela Prefeitura: ${esc(o.situacaoOriginal)})${o.pct?'<br>Executado: '+esc(o.pct)+'%':''}${o.empresa?'<br>Executor: '+esc(o.empresa):''}${o.inicio?'<br>Início: '+esc(o.inicio):''}${o.prev?' · Previsão: '+esc(o.prev):''}${o.motivo?'<br><b>Motivo declarado:</b> '+esc(o.motivo):''}${o.reinicio?'<br>Reinício: '+esc(o.reinicio==='SEM PREVISÃO'?'sem previsão':o.reinicio):''}<br><a href="${esc(o.fonte)}" target="_blank" rel="noopener">Fonte oficial</a>`}
+const PMAP=()=>(window.DADOS.problemasMapa||[]).filter(x=>x.lat!=null&&x.lng!=null);
+const TEMA2=Object.assign({drenagem:'Drenagem',saude:'Saúde',esgoto:'Esgoto'},TEMA);
+function popProb(x){const ap=x.precisao!=='rua';const f=d=>d.split('-').reverse().join('/');
+  const ln=x.ids.slice(0,12).map(i=>`<a href="https://marica.sicam.app/areapublica/processo/${esc(String(i).replace('/','-'))}" target="_blank" rel="noopener">${esc(i)}</a>`).join(' · ');
+  return `<b>${esc(x.rua)}</b>${x.macro?'<br>'+esc(x.macro):''}<br>${esc(TEMA2[x.tema]||x.tema)}<br><b>${x.n} pedidos de ${x.autores} vereador${x.autores>1?'es':''}</b> entre ${f(x.d0)} e ${f(x.d1)}.${ap?'<br><span class="note">Posição aproximada: a rua não foi localizada, o ponto marca o centro do bairro.</span>':''}<br><span class="note">Processos (SICAM): ${ln}${x.ids.length>12?' e mais '+(x.ids.length-12):''}</span><br><span class="note">Posição: ${esc(x.fonte)}</span>`}
 function drawMapa(arr){
   const box=$('#mapa'),M=PF.obrasMapa;if(!M)return;
   const num={};arr.forEach(o=>num[String(o.os)]=o.n);
@@ -663,9 +673,10 @@ function drawMapa(arr){
   const vis=M.obras.filter(o=>(mSit==='todas'||o.sit===mSit)&&(o.sit!=='paralisada'||oFilt==='todos'||gOK.has(o.id)));
   const lab=o=>o.sit==='paralisada'&&num[o.id]?num[o.id]:SYM[o.sit];
   if(window.L){
-    if(!oMap){oMap=L.map(box,{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false}).setView([-22.92,-42.82],11);(location.protocol==='file:'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Tiles © Esri, © OpenStreetMap contributors'}):L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'})).addTo(oMap);oLayer=(L.markerClusterGroup?L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:38,spiderfyOnMaxZoom:true,iconCreateFunction:c=>{const n=c.getChildCount(),par=c.getAllChildMarkers().some(x=>x.options.sit==='paralisada');return L.divIcon({className:'',html:`<span class="cl${par?' par':''}">${n}</span>`,iconSize:[38,38]})}}):L.layerGroup()).addTo(oMap)}
+    if(!oMap){oMap=L.map(box,{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false}).setView([-22.92,-42.82],11);(location.protocol==='file:'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Tiles © Esri, © OpenStreetMap contributors'}):L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'})).addTo(oMap);oLayer=(L.markerClusterGroup?L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:38,spiderfyOnMaxZoom:true,iconCreateFunction:c=>{const n=c.getChildCount(),ks=c.getAllChildMarkers(),par=ks.some(x=>x.options.sit==='paralisada'),pr=!par&&ks.some(x=>x.options.sit==='problema');return L.divIcon({className:'',html:`<span class="cl${par?' par':pr?' pr':''}">${n}</span>`,iconSize:[38,38]})}}):L.layerGroup()).addTo(oMap)}
     oLayer.clearLayers();const pts=[];
     vis.forEach(o=>{const m=L.marker([o.lat,o.lng],{icon:L.divIcon({className:'',html:`<span class="mk ${o.sit}"><span>${lab(o)}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${SITNOME[o.sit]}: ${o.bairro}`,keyboard:true,sit:o.sit,zIndexOffset:o.sit==='paralisada'?1000:o.sit==='andamento'?500:0}).addTo(oLayer);m.bindPopup(popObra(o));m.on('click',()=>{if(o.sit==='paralisada'){oSel=+o.id;markSel()}});pts.push([o.lat,o.lng]);o._m=m});
+    if(mSit==='todas'||mSit==='problema')PMAP().forEach(x=>{const ap=x.precisao!=='rua';const m=L.marker([x.lat,x.lng],{icon:L.divIcon({className:'',html:`<span class="mk problema${ap?' apx':''}"><span>${x.n}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`Pedidos repetidos: ${x.rua}${ap?' (posição aproximada)':''}`,keyboard:true,sit:'problema',zIndexOffset:800}).addTo(oLayer);m.bindPopup(popProb(x));pts.push([x.lat,x.lng])});
     setTimeout(()=>{oMap.invalidateSize();if(pts.length)oMap.fitBounds(pts,{padding:[30,30],maxZoom:14})},60);return;
   }
   const all=M.obras,la=all.map(o=>o.lat),lo=all.map(o=>o.lng);
@@ -675,8 +686,8 @@ function drawMapa(arr){
 }
 function drawSit(){
   const M=PF.obrasMapa;if(!M)return;const c=M.contagem;
-  $('#oSit').innerHTML=[['todas','Todas ('+M.obras.length+')'],['concluida','Concluídas ('+(c.concluida||0)+')'],['andamento','Em andamento ('+(c.andamento||0)+')'],['paralisada','Paralisadas ('+(c.paralisada||0)+')']].map(([k,l])=>`<button data-ms="${k}" aria-pressed="${k===mSit}">${l}</button>`).join('');
-  $('#oLeg').innerHTML=`<span><i class="sw concluida"></i>✓ Concluída</span><span><i class="sw andamento"></i>● Em andamento</span><span><i class="sw paralisada"></i>! Paralisada (número = lista ao lado)</span><span class="note"><i class="sw problema"></i>Pedidos que se repetem sem solução: em preparação</span>`;
+  $('#oSit').innerHTML=[['todas','Todas ('+M.obras.length+')'],['concluida','Concluídas ('+(c.concluida||0)+')'],['andamento','Em andamento ('+(c.andamento||0)+')'],['paralisada','Paralisadas ('+(c.paralisada||0)+')'],['problema','Pedidos repetidos ('+PMAP().length+')']].map(([k,l])=>`<button data-ms="${k}" aria-pressed="${k===mSit}">${l}</button>`).join('');
+  $('#oLeg').innerHTML=`<span><i class="sw concluida"></i>✓ Concluída</span><span><i class="sw andamento"></i>● Em andamento</span><span><i class="sw paralisada"></i>! Paralisada (número = lista ao lado)</span><span><i class="sw problema"></i>Número = pedidos sobre o mesmo tema na mesma rua (3 ou mais). Marca vazada: posição aproximada (bairro)</span>`;
   $('#oSit').onclick=e=>{const b=e.target.closest('[data-ms]');if(!b)return;mSit=b.dataset.ms;drawSit();drawObras()};
 }
 function markSel(){document.querySelectorAll('#oLista button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.os===oSel));const b=document.querySelector(`#oLista button[data-os="${oSel}"]`);if(b)b.scrollIntoView({block:'nearest'})}

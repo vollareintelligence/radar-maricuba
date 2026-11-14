@@ -36,6 +36,12 @@ for a in ('2025', '2026'):
     DA = (P.get('despesas') or {}).get(a) or {}
     ok(any('mara' in i['nome'].lower() and i['pago'] > 10 for i in DA.get('instituicoes', [])), f'gastômetro: pago da Câmara ausente em {a}')
     ok(DA.get('porClasse', {}).get('ente', {}).get('pago', 0) > 0, f'gastômetro: repasses entre entes ausentes em {a}')
+PM = D.get('problemasMapa') or []
+ok(len([x for x in PM if x.get('lat') is not None]) >= 100, 'camada vermelha incompleta')
+for x in PM:
+    ok(x.get('precisao') in ('rua', 'bairro', 'sem_coordenada') and x.get('ids') and x.get('fonte'), f"problema sem precisão/ids/fonte: {x.get('rua')}")
+    if x.get('lat') is not None:
+        ok(-23.2 < x['lat'] < -22.7 and -43.1 < x['lng'] < -42.5, f"problema fora de Maricá: {x['rua']}")
 def tem_nan(x):
     if isinstance(x, float): return math.isnan(x) or math.isinf(x)
     if isinstance(x, dict): return any(tem_nan(i) for i in x.values())
