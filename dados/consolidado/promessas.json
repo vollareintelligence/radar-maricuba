@@ -28,7 +28,8 @@
      "rotulo": "Contratos no portal",
      "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
     }
-   ]
+   ],
+   "curto": "Só reunião e visita ao terreno"
   },
   {
    "id": "aviões",
@@ -51,7 +52,8 @@
      "rotulo": "Dispensa 4/2026 (PNCP)",
      "url": "https://pncp.gov.br/app/editais/compras/36237794000159/2026/5"
     }
-   ]
+   ],
+   "curto": "Protótipo contratado; fábrica sem registro"
   },
   {
    "id": "braco",
@@ -74,7 +76,8 @@
      "rotulo": "MPRJ: obra do canal (outra obra)",
      "url": "https://www.mprj.mp.br/visualizar?noticiaId=173703"
     }
-   ]
+   ],
+   "curto": "Sem registro"
   },
   {
    "id": "hoteis",
@@ -97,7 +100,8 @@
      "rotulo": "Maraey: parceria privada (O Povo)",
      "url": "https://www.opovo.com.br/trends/prefeitura-aprova-construcao-de-3-hoteis-5-estrelas-e-27-mil-vagas-de-empregos-em-marica/"
     }
-   ]
+   ],
+   "curto": "1 de 6: Hotel Maricá (contrato de 2024)"
   },
   {
    "id": "piscina",
@@ -116,7 +120,52 @@
      "rotulo": "Contratos no portal",
      "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
     }
-   ]
+   ],
+   "curto": "Sem registro"
+  },
+  {
+   "id": "roda",
+   "titulo": "Roda-gigante maior que a do Rio",
+   "dito": "Em entrevista ao Jogo do Poder, disse que quer uma roda-gigante de 90 metros, maior que a do Rio (85 metros), e que Maricá vai ter roda-gigante.",
+   "quando": "Abr/2025",
+   "onde": {
+    "rotulo": "O Cafezinho (entrevista de 06/04/2025)",
+    "url": "https://www.ocafezinho.com/2025/04/11/volto-a-prefeitura-com-orcamento-de-7-bilhoes-por-ano/amp/"
+   },
+   "prazo": "Sem prazo dito",
+   "status": "cade",
+   "achado": "Nenhum contrato, licitação ou dispensa com roda-gigante nos dados do portal (consulta de 14/11/2026). Na entrevista ele disse que um auxiliar tinha acabado de reunir com a empresa da roda, mas não achamos registro oficial dessa reunião.",
+   "fontes": [
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    }
+   ],
+   "curto": "Sem registro"
+  },
+  {
+   "id": "vlt",
+   "titulo": "Transporte sobre trilhos: VLT, bondes, teleféricos e MagLev",
+   "dito": "O plano de governo registrado prevê ampliar o transporte público com transporte sobre trilhos, citando VLT, bondes, teleféricos, MagLev e Maria Fumaça.",
+   "quando": "Plano de governo 2024",
+   "onde": {
+    "rotulo": "Plano de Governo Quaquá 2025–2029",
+    "url": "https://maricainfo.com/wp-content/uploads/2024/08/PlanodeGovernoQuaqua.pdf"
+   },
+   "prazo": "Mandato 2025–2028 (plano)",
+   "status": "cade",
+   "achado": "Nenhum contrato, licitação ou dispensa de VLT, bonde, teleférico ou trilhos nos dados do portal (consulta de 14/11/2026), e nenhuma notícia oficial de obra. Este é um item do plano de governo, não de entrevista.",
+   "fontes": [
+    {
+     "rotulo": "Plano de governo (PDF)",
+     "url": "https://maricainfo.com/wp-content/uploads/2024/08/PlanodeGovernoQuaqua.pdf"
+    },
+    {
+     "rotulo": "Contratos no portal",
+     "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    }
+   ],
+   "curto": "Sem registro"
   },
   {
    "id": "catamara",
@@ -135,7 +184,8 @@
      "rotulo": "Contratos no portal",
      "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
     }
-   ]
+   ],
+   "curto": "Sem registro"
   },
   {
    "id": "aeroporto",
@@ -158,7 +208,8 @@
      "rotulo": "Obras paralisadas (OS 26040007)",
      "url": "https://transparencia.marica.rj.gov.br/obras/obras-paralisadas/links-e-arquivos"
     }
-   ]
+   ],
+   "curto": "Aeroporto existe e tem obra; pista nova sem registro"
   },
   {
    "id": "asfalto",
@@ -177,7 +228,8 @@
      "rotulo": "Acompanhamento de obras diretas (portal)",
      "url": "https://transparencia.marica.rj.gov.br/storage/files/subcategory-attachment/1787236752-acompanhamento-de-obras-diretas-10-08-2026-3727b2f63e20d20c.pdf"
     }
-   ]
+   ],
+   "curto": "Prazo: fim de 2028"
   },
   {
    "id": "esgoto",
@@ -196,7 +248,8 @@
      "rotulo": "O Cafezinho: expansão da rede de esgoto",
      "url": "https://www.ocafezinho.com/2026/04/15/marica-expande-rede-de-esgoto-e-projeta-mais-que-triplicar-cobertura-ate-2028/amp/"
     }
-   ]
+   ],
+   "curto": "Prazo: 2028"
   }
  ]
 }
