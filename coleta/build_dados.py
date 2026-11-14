@@ -95,7 +95,7 @@ out.sort(key=lambda r: r['nome'])
 (S).mkdir(exist_ok=True)
 gastometro = dict(
     subsidio=16503.19, cadeiras=21, inicio='2025-01-01',
-    fonteSubsidio='https://cmmarica.eloweb.net/portaltransparencia',
+    fonteSubsidio='https://cmmarica.eloweb.net/portaltransparencia/1/servidores',
     populacao=197277, fontePopulacao='https://www.ibge.gov.br/cidades-e-estados/rj/marica.html',
     dataBase='2026-11-14', diasAno2026=318,
 )
