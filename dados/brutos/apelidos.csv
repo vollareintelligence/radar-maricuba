@@ -1,0 +1,175 @@
+id_sicam,nome_como_aparece,onde_aparece
+25,Adelso Pereira,parlamentares_nome_parlamentar
+25,Adelso Pereira,processos_filtro_autores
+37,Adriana Costa,parlamentares_nome_parlamentar
+37,ADRIANA LUIZA DA COSTA,parlamentares_nome_civil
+37,Adriana Costa,processos_filtro_autores
+1,Aldair Nunes Elias,parlamentares_nome_parlamentar
+1,Aldair Nunes Elias,processos_filtro_autores
+32,Andrea Cunha,parlamentares_nome_parlamentar
+32,Andrea Cunha Da Silva Monken,parlamentares_nome_civil
+32,Andrea Cunha,processos_filtro_autores
+3,Bubute,parlamentares_nome_parlamentar
+3,Adailton Pereira Da Costa Filho,parlamentares_nome_civil
+3,Bubute,processos_filtro_autores
+5,Chiquinho,parlamentares_nome_parlamentar
+5,Valdevino Costa da Silva,parlamentares_nome_civil
+5,Chiquinho,processos_filtro_autores
+40,Chris Corrêa,parlamentares_nome_parlamentar
+40,Christiane De Lima Corrêa Botelho,parlamentares_nome_civil
+40,Chris Corrêa,processos_filtro_autores
+38,Deil Machado,parlamentares_nome_parlamentar
+38,ADENIZIO DO NASCIMENTO FILHO,parlamentares_nome_civil
+38,Deil Machado,processos_filtro_autores
+8,Felipe Paiva de Oliveira,parlamentares_nome_parlamentar
+8,Felipe Paiva de Oliveira,processos_filtro_autores
+11,Frank Costa,parlamentares_nome_parlamentar
+11,Frank Francisco Fonseca da Costa,parlamentares_nome_civil
+11,Frank Costa,processos_filtro_autores
+28,Hadesh,parlamentares_nome_parlamentar
+28,Luiz Felipe Santos De Oliveira,parlamentares_nome_civil
+28,Hadesh,processos_filtro_autores
+34,Igor Corrêa,parlamentares_nome_parlamentar
+34,Igor Nunes Corrêa,parlamentares_nome_civil
+34,Igor Corrêa,processos_filtro_autores
+42,Kelly Bernardos,parlamentares_nome_parlamentar
+42,Gleice Kelly Bernardo dos Santos Figueiredo,parlamentares_nome_civil
+42,Kelly Bernardos,processos_filtro_autores
+45,LUCIANO RANGEL JUNIOR,parlamentares_nome_parlamentar
+45,LUCIANO RANGEL JUNIOR,processos_filtro_autores
+14,Marcinho da Construção,parlamentares_nome_parlamentar
+14,Marcio da Silva Carvalho,parlamentares_nome_civil
+14,Marcinho da Construção,processos_filtro_autores
+2,Marcus Bambam,parlamentares_nome_parlamentar
+2,Marcus Toselli,parlamentares_nome_civil
+2,Marcus Bambam,processos_filtro_autores
+15,Netuno,parlamentares_nome_parlamentar
+15,Ricardo Magalhães Garcia Gutierrez,parlamentares_nome_civil
+15,Netuno,processos_filtro_autores
+39,Rita Rocha,parlamentares_nome_parlamentar
+39,Rita de Cássia Rocha Livermore,parlamentares_nome_civil
+39,Rita Rocha,processos_filtro_autores
+22,Rony Peterson,parlamentares_nome_parlamentar
+22,Rony Peterson Dias da Silva,parlamentares_nome_civil
+22,Rony Peterson,processos_filtro_autores
+17,Tatai,parlamentares_nome_parlamentar
+17,Ademilton da Silva Diniz,parlamentares_nome_civil
+17,Tatai,processos_filtro_autores
+44,Thiago Fonseca,parlamentares_nome_parlamentar
+44,PAULO THIAGO FONSECA DE ARAUJO RIBEIRO,parlamentares_nome_civil
+44,Thiago Fonseca,processos_filtro_autores
+26,André Casquinha,parlamentares_nome_parlamentar
+26,André Luiz Azeredo da Silva,parlamentares_nome_civil
+26,André Casquinha,processos_filtro_autores
+27,Danilo Santos,parlamentares_nome_parlamentar
+27,Carlos Danilo Dos Santos,parlamentares_nome_civil
+27,Danilo Santos,processos_filtro_autores
+6,Dr. Felipe Auni,parlamentares_nome_parlamentar
+6,Luis Felipe Paulino Auni,parlamentares_nome_civil
+6,Dr. Felipe Auni,processos_filtro_autores
+23,Dr. Richard,parlamentares_nome_parlamentar
+23,Richard Alter Seal,parlamentares_nome_civil
+23,Dr. Richard,processos_filtro_autores
+41,Fabricinho,parlamentares_nome_parlamentar
+41,Fabricio da Silva Gomes,parlamentares_nome_civil
+41,Fabricinho,processos_filtro_autores
+9,Filipe Bittencourt,parlamentares_nome_parlamentar
+9,Filipe Dias Bittencourt,parlamentares_nome_civil
+9,Filipe Bittencourt,processos_filtro_autores
+12,Helter Ferreira,parlamentares_nome_parlamentar
+12,Helter Viana Ferreira De Almeida,parlamentares_nome_civil
+12,Helter Ferreira,processos_filtro_autores
+4,Jorge Castor,parlamentares_nome_parlamentar
+4,Jorge Luiz Cordeiro Da Costa,parlamentares_nome_civil
+4,Jorge Castor,processos_filtro_autores
+29,Julio Carolino,parlamentares_nome_parlamentar
+29,Julio Cesar Silva Santos,parlamentares_nome_civil
+29,Julio Carolino,processos_filtro_autores
+31,Marquinho da Juventude,parlamentares_nome_parlamentar
+31,Marco Ebenezer Oliveira Borges,parlamentares_nome_civil
+31,Marquinho da Juventude,processos_filtro_autores
+24,RobGol,parlamentares_nome_parlamentar
+24,Robson Teixeira da Silva,parlamentares_nome_civil
+24,RobGol,processos_filtro_autores
+16,Robson Dutra,parlamentares_nome_parlamentar
+16,Robson Dutra Da Silva,parlamentares_nome_civil
+16,Robson Dutra,processos_filtro_autores
+40,Chris Corrêa,votacao_lista_presenca
+17,Tatai,votacao_lista_presenca
+5,Chiquinho,votacao_lista_presenca
+15,Netuno,votacao_lista_presenca
+8,Felipe Paiva de Oliveira,votacao_lista_presenca
+6,Dr. Felipe Auni,votacao_lista_presenca
+39,Rita Rocha,votacao_lista_presenca
+11,Frank Costa,votacao_lista_presenca
+38,Deil Machado,votacao_lista_presenca
+28,Hadesh,votacao_lista_presenca
+42,Kelly Bernardos,votacao_lista_presenca
+32,Andrea Cunha,votacao_lista_presenca
+37,Adriana Costa,votacao_lista_presenca
+25,Adelso Pereira,votacao_lista_presenca
+41,Fabricinho,votacao_lista_presenca
+3,Bubute,votacao_lista_presenca
+34,Igor Corrêa,votacao_lista_presenca
+3,Bubute,votacao_voto_nominal_apelido
+3,Adailton Pereira Da Costa Filho,votacao_voto_nominal_nome_civil
+25,Adelso Pereira,votacao_voto_nominal_nome_civil
+17,Tatai,votacao_voto_nominal_apelido
+17,Ademilton da Silva Diniz,votacao_voto_nominal_nome_civil
+38,Deil Machado,votacao_voto_nominal_apelido
+38,ADENIZIO DO NASCIMENTO FILHO,votacao_voto_nominal_nome_civil
+37,Adriana Costa,votacao_voto_nominal_apelido
+37,ADRIANA LUIZA DA COSTA,votacao_voto_nominal_nome_civil
+32,Andrea Cunha,votacao_voto_nominal_apelido
+32,Andrea Cunha Da Silva Monken,votacao_voto_nominal_nome_civil
+40,Chris Corrêa,votacao_voto_nominal_apelido
+40,Christiane De Lima Corrêa Botelho,votacao_voto_nominal_nome_civil
+41,Fabricinho,votacao_voto_nominal_apelido
+41,Fabricio da Silva Gomes,votacao_voto_nominal_nome_civil
+8,Felipe Paiva de Oliveira,votacao_voto_nominal_nome_civil
+11,Frank Costa,votacao_voto_nominal_apelido
+11,Frank Francisco Fonseca da Costa,votacao_voto_nominal_nome_civil
+42,Kelly Bernardos,votacao_voto_nominal_apelido
+42,Gleice Kelly Bernardo dos Santos Figueiredo,votacao_voto_nominal_nome_civil
+34,Igor Corrêa,votacao_voto_nominal_apelido
+34,Igor Nunes Corrêa,votacao_voto_nominal_nome_civil
+6,Dr. Felipe Auni,votacao_voto_nominal_apelido
+6,Luis Felipe Paulino Auni,votacao_voto_nominal_nome_civil
+28,Hadesh,votacao_voto_nominal_apelido
+28,Luiz Felipe Santos De Oliveira,votacao_voto_nominal_nome_civil
+39,Rita Rocha,votacao_voto_nominal_apelido
+39,Rita de Cássia Rocha Livermore,votacao_voto_nominal_nome_civil
+15,Netuno,votacao_voto_nominal_apelido
+15,Ricardo Magalhães Garcia Gutierrez,votacao_voto_nominal_nome_civil
+5,Chiquinho,votacao_voto_nominal_apelido
+5,Valdevino Costa da Silva,votacao_voto_nominal_nome_civil
+23,Dr. Richard,votacao_lista_presenca
+1,Aldair de Linda,votacao_lista_presenca
+16,Robson Dutra,votacao_lista_presenca
+29,Julio Carolino,votacao_lista_presenca
+29,Julio Carolino,votacao_voto_nominal_apelido
+29,Julio Cesar Silva Santos,votacao_voto_nominal_nome_civil
+23,Dr. Richard,votacao_voto_nominal_apelido
+23,Richard Alter Seal,votacao_voto_nominal_nome_civil
+16,Robson Dutra,votacao_voto_nominal_apelido
+16,Robson Dutra Da Silva,votacao_voto_nominal_nome_civil
+1,Aldair de Linda,votacao_voto_nominal_apelido
+1,Aldair Nunes Elias,votacao_voto_nominal_nome_civil
+44,Thiago Fonseca,votacao_lista_presenca
+44,Thiago Fonseca,votacao_voto_nominal_apelido
+44,PAULO THIAGO FONSECA DE ARAUJO RIBEIRO,votacao_voto_nominal_nome_civil
+31,Marquinho da Juventude,votacao_lista_presenca
+31,Marquinho da Juventude,votacao_voto_nominal_apelido
+31,Marco Ebenezer Oliveira Borges,votacao_voto_nominal_nome_civil
+45,LUCIANO RANGEL JR,votacao_lista_presenca
+45,LUCIANO RANGEL JR,votacao_voto_nominal_apelido
+45,LUCIANO RANGEL JUNIOR,votacao_voto_nominal_nome_civil
+14,Marcinho da Construção,votacao_lista_presenca
+22,Rony Peterson,votacao_lista_presenca
+2,Marcus Bambam,votacao_lista_presenca
+14,Marcinho da Construção,votacao_voto_nominal_apelido
+14,Marcio da Silva Carvalho,votacao_voto_nominal_nome_civil
+2,Marcus Bambam,votacao_voto_nominal_apelido
+2,Marcus Toselli,votacao_voto_nominal_nome_civil
+22,Rony Peterson,votacao_voto_nominal_apelido
+22,Rony Peterson Dias da Silva,votacao_voto_nominal_nome_civil

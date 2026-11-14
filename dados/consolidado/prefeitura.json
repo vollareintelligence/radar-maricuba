@@ -1,0 +1,1959 @@
+{
+ "despesas": {
+  "2025": {
+   "total": {
+    "empenhado": 7981.3,
+    "anulado": 1231.3,
+    "liquidado": 6241.2,
+    "pago": 6197.8
+   },
+   "instituicoes": [
+    {
+     "nome": "Prefeitura Municipal De Marica",
+     "empenhado": 3427.6,
+     "pago": 2632.9
+    },
+    {
+     "nome": "Fundo Municipal De Saude",
+     "empenhado": 1284.7,
+     "pago": 989.5
+    },
+    {
+     "nome": "Somar",
+     "empenhado": 1102.1,
+     "pago": 905.6
+    },
+    {
+     "nome": "Companhia Desenvolvimento Marica",
+     "empenhado": 794.0,
+     "pago": 712.8
+    },
+    {
+     "nome": "Companhia De Saneamento De Marica S A",
+     "empenhado": 309.0,
+     "pago": 227.7
+    },
+    {
+     "nome": "Instituto De Seguro Social De Maricá",
+     "empenhado": 327.1,
+     "pago": 142.2
+    },
+    {
+     "nome": "Empresa Publica De Transporte",
+     "empenhado": 181.6,
+     "pago": 140.4
+    },
+    {
+     "nome": "Fundo Municipal De Proteção E Conservação Ambiental",
+     "empenhado": 159.9,
+     "pago": 136.0
+    },
+    {
+     "nome": "Instituto De Ciência Tec E Inov De Maricá",
+     "empenhado": 143.0,
+     "pago": 127.7
+    },
+    {
+     "nome": "Camara Municipal De Marica",
+     "empenhado": 80.7,
+     "pago": 70.1
+    },
+    {
+     "nome": "Fundação Estatal De Saúde De Marica",
+     "empenhado": 41.6,
+     "pago": 29.2
+    },
+    {
+     "nome": "Companhia Marica Alimentos",
+     "empenhado": 30.8,
+     "pago": 25.0
+    },
+    {
+     "nome": "Fundo Municipal De Assistencia Social De Marica",
+     "empenhado": 60.5,
+     "pago": 24.8
+    },
+    {
+     "nome": "Inst Mun De Informação E Pesquisa Darcy Ribeiro",
+     "empenhado": 18.6,
+     "pago": 15.9
+    },
+    {
+     "nome": "Fundo Municipal De Habitação",
+     "empenhado": 13.4,
+     "pago": 13.4
+    },
+    {
+     "nome": "Fundo Soberano Da Educação Publica Municipal De Marica",
+     "empenhado": 2.7,
+     "pago": 2.7
+    },
+    {
+     "nome": "Maricá Global Invest Sa",
+     "empenhado": 2.8,
+     "pago": 1.1
+    },
+    {
+     "nome": "Fundo Especial Da Procuradoria Geral Do Município De Maricá",
+     "empenhado": 1.0,
+     "pago": 0.8
+    }
+   ],
+   "elementos": [
+    {
+     "nome": "Outros servicos de terceiros pj",
+     "pago": 1671.2,
+     "empenhado": 2162.4
+    },
+    {
+     "nome": "Transf por meio de contratos de gestão",
+     "pago": 1111.4,
+     "empenhado": 1403.2
+    },
+    {
+     "nome": "Vencimentos e vantagens fixas - pessoal civil",
+     "pago": 958.2,
+     "empenhado": 974.4
+    },
+    {
+     "nome": "Obras e instalações",
+     "pago": 354.8,
+     "empenhado": 486.7
+    },
+    {
+     "nome": "Outros auxílios financeiros a pessoas físicas",
+     "pago": 296.3,
+     "empenhado": 415.7
+    },
+    {
+     "nome": "Outras desp. pessoal decor. cont. terceirização",
+     "pago": 146.8,
+     "empenhado": 205.8
+    },
+    {
+     "nome": "Aquisição de imoveis",
+     "pago": 143.1,
+     "empenhado": 143.1
+    },
+    {
+     "nome": "Material de consumo",
+     "pago": 119.6,
+     "empenhado": 174.4
+    },
+    {
+     "nome": "Outros servicos de terceiros - pessoa juridica",
+     "pago": 118.6,
+     "empenhado": 206.8
+    },
+    {
+     "nome": "Proventos pessoal civil - inativos",
+     "pago": 109.9,
+     "empenhado": 241.8
+    },
+    {
+     "nome": "Obrigações patronais",
+     "pago": 90.4,
+     "empenhado": 92.8
+    },
+    {
+     "nome": "Material de consumo",
+     "pago": 88.8,
+     "empenhado": 133.4
+    },
+    {
+     "nome": "Fii - codemar",
+     "pago": 77.5,
+     "empenhado": 77.5
+    },
+    {
+     "nome": "Contratacao por tempo determinado",
+     "pago": 74.1,
+     "empenhado": 74.1
+    }
+   ],
+   "credoresN": 5139,
+   "porClasse": {
+    "encargos": {
+     "n": 3,
+     "pago": 184.9,
+     "empenhado": 198.4
+    },
+    "ente": {
+     "n": 12,
+     "pago": 1246.5,
+     "empenhado": 1469.3
+    },
+    "outros": {
+     "n": 5124,
+     "pago": 4766.3,
+     "empenhado": 6313.6
+    }
+   },
+   "topOutros": [
+    {
+     "nome": "CENTRO DE E E P C F ANTONIO DE SALLES",
+     "doc": "33.927.377/0001-40",
+     "empenhado": 486.3,
+     "pago": 354.2
+    },
+    {
+     "nome": "HOSPITAL PSIQ ESPIRITA MAHATMA GANDHI",
+     "doc": "47.078.019/0001-14",
+     "empenhado": 390.0,
+     "pago": 288.7
+    },
+    {
+     "nome": "INSTITUTO E-DINHEIRO BRASIL",
+     "doc": "21.590.044/0001-99",
+     "empenhado": 361.0,
+     "pago": 241.6
+    },
+    {
+     "nome": "CEMPES CENTRO DE MEDIC E PROJ ESPECIAIS",
+     "doc": "19.071.461/0001-83",
+     "empenhado": 246.7,
+     "pago": 236.6
+    },
+    {
+     "nome": "LAND SERVICOS E ENGENHARIA LTDA.",
+     "doc": "18.776.916/0001-01",
+     "empenhado": 223.4,
+     "pago": 202.5
+    },
+    {
+     "nome": "PERFIL X CONSTRUTORA S.A",
+     "doc": "08.733.497/0001-69",
+     "empenhado": 197.4,
+     "pago": 150.9
+    },
+    {
+     "nome": "SAGA CONSTRUTORA LTDA",
+     "doc": "10.948.807/0001-04",
+     "empenhado": 172.2,
+     "pago": 138.8
+    },
+    {
+     "nome": "PRIMOTECH LOGISTICA LTDA ME",
+     "doc": "08.847.399/0001-52",
+     "empenhado": 142.4,
+     "pago": 129.1
+    },
+    {
+     "nome": "DESTAQ COMERCIO E SERVICOS LTDA",
+     "doc": "07.015.433/0001-60",
+     "empenhado": 131.8,
+     "pago": 114.7
+    },
+    {
+     "nome": "ASSOCIAÇÃO BANCO COMUNITÁRIO POPULAR DE",
+     "doc": "28.793.346/0001-03",
+     "empenhado": 139.3,
+     "pago": 108.2
+    },
+    {
+     "nome": "ESPAÇO SERVIÇOS ESPECIALIZADOS LTDA",
+     "doc": "06.159.080/0001-09",
+     "empenhado": 107.3,
+     "pago": 101.9
+    },
+    {
+     "nome": "VIACAO NOSSA SENHORA DO AMPARO LTDA",
+     "doc": "28.509.164/0001-68",
+     "empenhado": 115.2,
+     "pago": 88.4
+    },
+    {
+     "nome": "CODEMAR FUNDO DE INVESTIMENTO IMOBILIÁRI",
+     "doc": "52.366.833/0001-74",
+     "empenhado": 77.5,
+     "pago": 77.5
+    },
+    {
+     "nome": "AMETHYST SPE LTDA",
+     "doc": "08.619.661/0001-01",
+     "empenhado": 73.8,
+     "pago": 73.8
+    },
+    {
+     "nome": "MRC ENTRETENIMENTO PROMOCOES E EVENTOS L",
+     "doc": "18.608.503/0001-00",
+     "empenhado": 85.4,
+     "pago": 73.3
+    },
+    {
+     "nome": "UNIAO NORTE FLU ENG E COMERCIO LTDA",
+     "doc": "02.354.917/0001-10",
+     "empenhado": 80.0,
+     "pago": 66.9
+    },
+    {
+     "nome": "W COSTA CONSTRUTORA LTDA",
+     "doc": "11.516.008/0001-21",
+     "empenhado": 66.4,
+     "pago": 61.3
+    },
+    {
+     "nome": "AGENCIA UM BCA PROPAGANDA LTDA",
+     "doc": "03.598.189/0001-54",
+     "empenhado": 68.6,
+     "pago": 59.6
+    },
+    {
+     "nome": "QUANTA CONSULTORIA LTDA",
+     "doc": "05.314.789/0001-79",
+     "empenhado": 50.7,
+     "pago": 50.6
+    },
+    {
+     "nome": "ARPOADOR SERVICOS LTDA",
+     "doc": "02.780.143/0001-99",
+     "empenhado": 60.2,
+     "pago": 49.9
+    },
+    {
+     "nome": "FUNDAÇÃO EDUCACIONAL SEVERINO SOMBRA",
+     "doc": "32.410.037/0001-84",
+     "empenhado": 129.8,
+     "pago": 48.6
+    },
+    {
+     "nome": "CONSORCIO IEA IMBASSAI",
+     "doc": "50.653.196/0001-91",
+     "empenhado": 50.3,
+     "pago": 47.7
+    },
+    {
+     "nome": "ESX TRANSPORTE E TURISMO LTDA",
+     "doc": "01.211.210/0001-91",
+     "empenhado": 55.1,
+     "pago": 46.4
+    },
+    {
+     "nome": "MCDR EDIFICACOES LTDA",
+     "doc": "13.424.933/0001-58",
+     "empenhado": 46.0,
+     "pago": 46.0
+    },
+    {
+     "nome": "CONTECK COM E SERV DE INST DE EQUIP LTDA",
+     "doc": "30.598.395/0001-37",
+     "empenhado": 66.6,
+     "pago": 42.7
+    },
+    {
+     "nome": "AMPLA ENERGIA E SERVICOS S A",
+     "doc": "33.050.071/0001-58",
+     "empenhado": 73.1,
+     "pago": 39.2
+    },
+    {
+     "nome": "GENERAL CONTRACTOR CONSTRUTORA EIRELI",
+     "doc": "73.509.440/0001-42",
+     "empenhado": 48.5,
+     "pago": 38.0
+    },
+    {
+     "nome": "MARICA CAMARA MUNICIPAL",
+     "doc": "27.772.078/0001-80",
+     "empenhado": 40.4,
+     "pago": 36.5
+    },
+    {
+     "nome": "ENGEBIO ENGENHARIA DO MEIO AMBIENTE LTDA",
+     "doc": "01.792.153/0001-81",
+     "empenhado": 43.4,
+     "pago": 36.4
+    },
+    {
+     "nome": "FEDERACAO DE CONVENTION & VISITORS BUREA",
+     "doc": "08.518.149/0001-79",
+     "empenhado": 35.1,
+     "pago": 35.1
+    }
+   ],
+   "top20OutrosPct": 56.0
+  },
+  "2026": {
+   "total": {
+    "empenhado": 8374.8,
+    "anulado": 827.8,
+    "liquidado": 6099.9,
+    "pago": 6072.6
+   },
+   "instituicoes": [
+    {
+     "nome": "Prefeitura Municipal De Marica",
+     "empenhado": 3494.3,
+     "pago": 2429.0
+    },
+    {
+     "nome": "Fundo Municipal De Saude",
+     "empenhado": 1222.5,
+     "pago": 982.5
+    },
+    {
+     "nome": "Somar",
+     "empenhado": 1175.3,
+     "pago": 853.6
+    },
+    {
+     "nome": "Companhia Desenvolvimento Marica",
+     "empenhado": 1028.4,
+     "pago": 726.5
+    },
+    {
+     "nome": "Companhia De Saneamento De Marica S A",
+     "empenhado": 344.9,
+     "pago": 285.4
+    },
+    {
+     "nome": "Fundo Municipal De Proteção E Conservação Ambiental",
+     "empenhado": 215.6,
+     "pago": 174.7
+    },
+    {
+     "nome": "Empresa Publica De Transporte",
+     "empenhado": 173.7,
+     "pago": 132.6
+    },
+    {
+     "nome": "Instituto De Seguro Social De Maricá",
+     "empenhado": 192.6,
+     "pago": 129.5
+    },
+    {
+     "nome": "Instituto De Ciência Tec E Inov De Maricá",
+     "empenhado": 119.8,
+     "pago": 99.0
+    },
+    {
+     "nome": "Companhia De Cultura E Turismo De Maricá",
+     "empenhado": 106.1,
+     "pago": 78.9
+    },
+    {
+     "nome": "Camara Municipal De Marica",
+     "empenhado": 97.3,
+     "pago": 49.3
+    },
+    {
+     "nome": "Fundo Municipal De Assistencia Social De Marica",
+     "empenhado": 43.9,
+     "pago": 39.4
+    },
+    {
+     "nome": "Fundo Soberano De Maricá",
+     "empenhado": 75.0,
+     "pago": 37.5
+    },
+    {
+     "nome": "Companhia Marica Alimentos",
+     "empenhado": 36.8,
+     "pago": 28.0
+    },
+    {
+     "nome": "Maricá Global Invest Sa",
+     "empenhado": 35.6,
+     "pago": 18.2
+    },
+    {
+     "nome": "Inst Mun De Informação E Pesquisa Darcy Ribeiro",
+     "empenhado": 11.4,
+     "pago": 7.8
+    },
+    {
+     "nome": "Fundo Especial Da Procuradoria Geral Do Município De Maricá",
+     "empenhado": 1.4,
+     "pago": 0.7
+    }
+   ],
+   "elementos": [
+    {
+     "nome": "Outros servicos de terceiros pj",
+     "pago": 1722.8,
+     "empenhado": 2487.7
+    },
+    {
+     "nome": "Transf por meio de contratos de gestão",
+     "pago": 1127.4,
+     "empenhado": 1296.3
+    },
+    {
+     "nome": "Vencimentos e vantagens fixas - pessoal civil",
+     "pago": 852.9,
+     "empenhado": 889.8
+    },
+    {
+     "nome": "Obras e instalações",
+     "pago": 442.5,
+     "empenhado": 891.4
+    },
+    {
+     "nome": "Outros auxílios financeiros a pessoas físicas",
+     "pago": 226.1,
+     "empenhado": 437.0
+    },
+    {
+     "nome": "Aquisição de imoveis",
+     "pago": 170.8,
+     "empenhado": 171.3
+    },
+    {
+     "nome": "Outras desp. pessoal decor. cont. terceirização",
+     "pago": 121.6,
+     "empenhado": 190.7
+    },
+    {
+     "nome": "Proventos pessoal civil - inativos",
+     "pago": 99.0,
+     "empenhado": 145.5
+    },
+    {
+     "nome": "Material de consumo",
+     "pago": 90.6,
+     "empenhado": 145.0
+    },
+    {
+     "nome": "Obrigações patronais",
+     "pago": 76.7,
+     "empenhado": 91.4
+    },
+    {
+     "nome": "Despesas de exercicio anteriores",
+     "pago": 68.7,
+     "empenhado": 87.0
+    },
+    {
+     "nome": "Obrigacoes tributarias e contributivas",
+     "pago": 65.3,
+     "empenhado": 88.5
+    },
+    {
+     "nome": "Contratacao por tempo determinado",
+     "pago": 57.3,
+     "empenhado": 57.4
+    },
+    {
+     "nome": "Contribuições patronais",
+     "pago": 56.5,
+     "empenhado": 69.9
+    }
+   ],
+   "credoresN": 3397,
+   "porClasse": {
+    "encargos": {
+     "n": 3,
+     "pago": 144.9,
+     "empenhado": 188.6
+    },
+    "ente": {
+     "n": 10,
+     "pago": 1117.9,
+     "empenhado": 1218.1
+    },
+    "outros": {
+     "n": 3384,
+     "pago": 4809.9,
+     "empenhado": 6968.2
+    }
+   },
+   "topOutros": [
+    {
+     "nome": "INSTITUTO JURIDICO P E CIDADANIA E SAUDE",
+     "doc": "03.893.350/0001-12",
+     "empenhado": 384.2,
+     "pago": 329.5
+    },
+    {
+     "nome": "ASSOCIAÇÃO BANCO COMUNITÁRIO POPULAR DE",
+     "doc": "28.793.346/0001-03",
+     "empenhado": 532.2,
+     "pago": 284.1
+    },
+    {
+     "nome": "CEMPES CENTRO DE MEDIC E PROJ ESPECIAIS",
+     "doc": "19.071.461/0001-83",
+     "empenhado": 299.5,
+     "pago": 246.2
+    },
+    {
+     "nome": "CENTRO DE E E P C F ANTONIO DE SALLES",
+     "doc": "33.927.377/0001-40",
+     "empenhado": 279.4,
+     "pago": 244.5
+    },
+    {
+     "nome": "LAND SERVICOS E ENGENHARIA LTDA.",
+     "doc": "18.776.916/0001-01",
+     "empenhado": 248.6,
+     "pago": 183.8
+    },
+    {
+     "nome": "UNIAO NORTE FLU ENG E COMERCIO LTDA",
+     "doc": "02.354.917/0001-10",
+     "empenhado": 202.1,
+     "pago": 166.6
+    },
+    {
+     "nome": "PRIMOTECH LOGISTICA LTDA ME",
+     "doc": "08.847.399/0001-52",
+     "empenhado": 152.3,
+     "pago": 141.2
+    },
+    {
+     "nome": "PERFIL X CONSTRUTORA S.A",
+     "doc": "08.733.497/0001-69",
+     "empenhado": 173.8,
+     "pago": 127.2
+    },
+    {
+     "nome": "SAGA CONSTRUTORA LTDA",
+     "doc": "10.948.807/0001-04",
+     "empenhado": 120.4,
+     "pago": 96.9
+    },
+    {
+     "nome": "DESTAQ COMERCIO E SERVICOS LTDA",
+     "doc": "07.015.433/0001-60",
+     "empenhado": 106.6,
+     "pago": 87.9
+    },
+    {
+     "nome": "MRC ENTRETENIMENTO PROMOCOES E EVENTOS L",
+     "doc": "18.608.503/0001-00",
+     "empenhado": 136.8,
+     "pago": 87.9
+    },
+    {
+     "nome": "VIACAO NOSSA SENHORA DO AMPARO LTDA",
+     "doc": "28.509.164/0001-68",
+     "empenhado": 93.6,
+     "pago": 76.5
+    },
+    {
+     "nome": "QUANTA CONSULTORIA LTDA",
+     "doc": "05.314.789/0001-79",
+     "empenhado": 75.3,
+     "pago": 74.0
+    },
+    {
+     "nome": "CONSORCIO SANEANDO MARICA",
+     "doc": "64.869.865/0001-71",
+     "empenhado": 72.1,
+     "pago": 72.1
+    },
+    {
+     "nome": "ESPAÇO SERVIÇOS ESPECIALIZADOS LTDA",
+     "doc": "06.159.080/0001-09",
+     "empenhado": 67.0,
+     "pago": 65.7
+    },
+    {
+     "nome": "HOSPITAL PSIQ ESPIRITA MAHATMA GANDHI",
+     "doc": "47.078.019/0001-14",
+     "empenhado": 59.5,
+     "pago": 58.5
+    },
+    {
+     "nome": "CONSORCIO CONSERVACAO ECONORTE SOLUTIONS",
+     "doc": "57.157.050/0001-02",
+     "empenhado": 51.6,
+     "pago": 51.5
+    },
+    {
+     "nome": "MGS CLEAN SOLUCOES E SERVICOS LTDA",
+     "doc": "19.088.605/0001-04",
+     "empenhado": 63.4,
+     "pago": 46.6
+    },
+    {
+     "nome": "RICARDO RAMOS SOCIEDADE DE ADVOGADOS",
+     "doc": "28.925.891/0001-06",
+     "empenhado": 50.8,
+     "pago": 42.8
+    },
+    {
+     "nome": "PEDRA DE INOÃ MARICÁ EMPREENDIMENTOS IM",
+     "doc": "21.130.508/0001-84",
+     "empenhado": 42.8,
+     "pago": 42.7
+    },
+    {
+     "nome": "GENERAL CONTRACTOR CONSTRUTORA EIRELI",
+     "doc": "73.509.440/0001-42",
+     "empenhado": 54.7,
+     "pago": 41.9
+    },
+    {
+     "nome": "CONTECK COM E SERV DE INST DE EQUIP LTDA",
+     "doc": "30.598.395/0001-37",
+     "empenhado": 66.8,
+     "pago": 41.4
+    },
+    {
+     "nome": "FUNDAÇÃO EDUCACIONAL SEVERINO SOMBRA",
+     "doc": "32.410.037/0001-84",
+     "empenhado": 166.8,
+     "pago": 39.8
+    },
+    {
+     "nome": "ARPOADOR SERVICOS LTDA",
+     "doc": "02.780.143/0001-99",
+     "empenhado": 58.7,
+     "pago": 39.6
+    },
+    {
+     "nome": "INOVA INFRAESTRUTURA LTDA",
+     "doc": "11.099.079/0001-76",
+     "empenhado": 57.5,
+     "pago": 37.5
+    },
+    {
+     "nome": "INICIATIVAS E DES. IMOB. - IDB BR LTDA",
+     "doc": "08.358.727/0001-57",
+     "empenhado": 75.0,
+     "pago": 37.5
+    },
+    {
+     "nome": "AGENCIA UM BCA PROPAGANDA LTDA",
+     "doc": "03.598.189/0001-54",
+     "empenhado": 62.3,
+     "pago": 36.3
+    },
+    {
+     "nome": "ENGEBIO ENGENHARIA DO MEIO AMBIENTE LTDA",
+     "doc": "01.792.153/0001-81",
+     "empenhado": 43.6,
+     "pago": 34.1
+    },
+    {
+     "nome": "AMPLA ENERGIA E SERVICOS S A",
+     "doc": "33.050.071/0001-58",
+     "empenhado": 41.4,
+     "pago": 33.5
+    },
+    {
+     "nome": "FEDERACAO DE CONVENTION & VISITORS BUREA",
+     "doc": "08.518.149/0001-79",
+     "empenhado": 37.9,
+     "pago": 32.8
+    }
+   ],
+   "top20OutrosPct": 52.5
+  }
+ },
+ "folha": {
+  "mensal": [
+   {
+    "ano": 2025,
+    "mes": 1,
+    "vinculosAtivos": 7610,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 2,
+    "vinculosAtivos": 7904,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 3,
+    "vinculosAtivos": 8090,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 4,
+    "vinculosAtivos": 8339,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 5,
+    "vinculosAtivos": 8502,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 6,
+    "vinculosAtivos": 8679,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 7,
+    "vinculosAtivos": 8677,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 8,
+    "vinculosAtivos": 8835,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 9,
+    "vinculosAtivos": 8887,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 10,
+    "vinculosAtivos": 8870,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 11,
+    "vinculosAtivos": 8915,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2025,
+    "mes": 12,
+    "vinculosAtivos": 8944,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2026,
+    "mes": 1,
+    "vinculosAtivos": 8930,
+    "exonerados": 0,
+    "bruto": null,
+    "liquido": null
+   },
+   {
+    "ano": 2026,
+    "mes": 2,
+    "vinculosAtivos": 8856,
+    "exonerados": 272,
+    "bruto": 67.6,
+    "liquido": 48.6
+   },
+   {
+    "ano": 2026,
+    "mes": 3,
+    "vinculosAtivos": 8866,
+    "exonerados": 392,
+    "bruto": 69.6,
+    "liquido": 49.7
+   },
+   {
+    "ano": 2026,
+    "mes": 4,
+    "vinculosAtivos": 8928,
+    "exonerados": 478,
+    "bruto": 74.6,
+    "liquido": 52.9
+   },
+   {
+    "ano": 2026,
+    "mes": 5,
+    "vinculosAtivos": 8956,
+    "exonerados": 564,
+    "bruto": 72.0,
+    "liquido": 51.2
+   },
+   {
+    "ano": 2026,
+    "mes": 6,
+    "vinculosAtivos": 8945,
+    "exonerados": 630,
+    "bruto": 71.8,
+    "liquido": 51.1
+   },
+   {
+    "ano": 2026,
+    "mes": 7,
+    "vinculosAtivos": 9027,
+    "exonerados": 699,
+    "bruto": 71.9,
+    "liquido": 51.0
+   },
+   {
+    "ano": 2026,
+    "mes": 8,
+    "vinculosAtivos": 9005,
+    "exonerados": 0,
+    "bruto": 72.4,
+    "liquido": 51.2
+   }
+  ],
+  "lotacoes": [
+   {
+    "nome": "Educaçao Ensino Fundamental 2 - Mero",
+    "vinculos": 879,
+    "bruto": 13.3
+   },
+   {
+    "nome": "Secretaria De Educacao - Administrativo",
+    "vinculos": 651,
+    "bruto": 5.5
+   },
+   {
+    "nome": "Educaçao Ensino Fundamental 1 - Mero",
+    "vinculos": 352,
+    "bruto": 5.4
+   },
+   {
+    "nome": "Educaçao Ensino Fundamental 1 - Fundeb",
+    "vinculos": 485,
+    "bruto": 5.2
+   },
+   {
+    "nome": "Educaçao Creche - Fundeb",
+    "vinculos": 383,
+    "bruto": 4.7
+   },
+   {
+    "nome": "Secretaria De Seguranca Cidadã",
+    "vinculos": 372,
+    "bruto": 3.7
+   },
+   {
+    "nome": "Educaçao Pre-Escola - Mero",
+    "vinculos": 216,
+    "bruto": 2.4
+   },
+   {
+    "nome": "Secretaria De Protecao E De Defesa Civil",
+    "vinculos": 206,
+    "bruto": 1.9
+   },
+   {
+    "nome": "Secretaria De Gestao Tributaria E Fiscal",
+    "vinculos": 207,
+    "bruto": 1.7
+   },
+   {
+    "nome": "Secretaria De Assistencia Social E Cidadania",
+    "vinculos": 265,
+    "bruto": 1.3
+   },
+   {
+    "nome": "Procuradoria Geral Do Municipio",
+    "vinculos": 141,
+    "bruto": 1.2
+   },
+   {
+    "nome": "Secretaria De Urbanismo E Planejamento Territorial",
+    "vinculos": 82,
+    "bruto": 1.0
+   },
+   {
+    "nome": "Cont Educ - Ensino Especial - Mero",
+    "vinculos": 284,
+    "bruto": 0.9
+   },
+   {
+    "nome": "Cont Educ - Ensino Fundamental 1 - Mero",
+    "vinculos": 205,
+    "bruto": 0.9
+   },
+   {
+    "nome": "Cont Educ - Creche - Mero",
+    "vinculos": 181,
+    "bruto": 0.8
+   }
+  ],
+  "mesRef": "08/2026",
+  "aviso": "O portal publica valores de folha só de fevereiro a agosto de 2026. Os demais meses trazem apenas nome, cargo e lotação."
+ },
+ "obras": {
+  "paralisadas": [
+   {
+    "os": 26080436,
+    "local": "Rodovia Amaral Peixoto ( Em frente a RLA Veículos)",
+    "bairro": "Ponta Grossa",
+    "lat": -22.919387,
+    "lng": -42.854317,
+    "objeto": "Construção de infraestrutura para implantação de ecoponto",
+    "inicio": "20/08/2026",
+    "motivo": "esperando os materiais para a fixação do alambrado",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26080230,
+    "local": "Rua Begônea",
+    "bairro": "Condado de Maricá",
+    "lat": -22.898884,
+    "lng": -42.793544,
+    "objeto": "Construção de infraestrutura para implantação de ecoponto",
+    "inicio": "17/08/2026",
+    "motivo": "equipe realocada para outra demanda.",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26080212,
+    "local": "R. Fernando Henrique Assumpção, 30 - Eldorado, Maricá - RJ, 24900-000",
+    "bairro": "Centro",
+    "lat": -22.920288,
+    "lng": -42.821546,
+    "objeto": "Construção de infraestrutura para implantação de ecoponto",
+    "inicio": "12/08/2026",
+    "motivo": "Aguardando disponibilidade da equipe de execução",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26070012,
+    "local": "Av. maysa com a Rua 56",
+    "bairro": "Guaratiba",
+    "lat": -22.958653,
+    "lng": -42.778925,
+    "objeto": "Preparação de terreno público para implantação de Unidade Básica de Saúde",
+    "inicio": "29/07/2026",
+    "motivo": "falta de material",
+    "grupo": "Falta de material ou insumo",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26060013,
+    "local": "Avenida Jardel Filho (entre as ruas Rua 73 e 74)",
+    "bairro": "Jardim Atlântico leste",
+    "lat": -22.956104,
+    "lng": -42.935952,
+    "objeto": "Preparação de terreno público para implantação de Unidade Escolar",
+    "inicio": "06/07/2026",
+    "motivo": "aguardando parecer da presidencia",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26060012,
+    "local": "Avenida Roberto Silveira",
+    "bairro": "Flamengo",
+    "lat": -22.905919,
+    "lng": -42.802965,
+    "objeto": "Construção de muro de contenção",
+    "inicio": "10/06/2026",
+    "motivo": "equipe realocada para outra demanda.",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26050005,
+    "local": "Estrada Do Rio Fundo (Bota-fora)",
+    "bairro": "Caxito",
+    "lat": -22.898433,
+    "lng": -42.823344,
+    "objeto": "Construção de estrutura para implantação da balança na área de transbordo temporário (bota fora)",
+    "inicio": "21/05/2026",
+    "motivo": "Aguardando definições relacionadas a projeto",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26050002,
+    "local": "Rua Ari Spindola (Cemitério Municipal)",
+    "bairro": "Centro",
+    "lat": -22.923986,
+    "lng": -42.812243,
+    "objeto": "Revitalização das gavetas mortuárias do Cemitério Municipal de Maricá",
+    "inicio": "05/05/2026",
+    "motivo": "Aguardando equipe a ser destinada a concluir a pintura do restante das gavetas",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26040009,
+    "local": "Ruas ipê, Marajoara e Muriaé",
+    "bairro": "Itaocaia Valley",
+    "lat": -22.929151,
+    "lng": -42.964409,
+    "objeto": "Urbanzação e drenagem das ruas Ipê, Marajoara e Muriaé",
+    "inicio": "04/05/2026",
+    "motivo": "aguardando definição da Diretoria",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26040007,
+    "local": "Rua Jovino Duarte de Oliveira (Aeroporto Municipal de Maricá)",
+    "bairro": "Centro",
+    "lat": -22.920535,
+    "lng": -42.828402,
+    "objeto": "Construção de rede de drenagem e terraplanagem para pavimentação asfáltica",
+    "inicio": "27/04/2026",
+    "motivo": "Aguardando Licença Ambiental",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26040006,
+    "local": "Rua Bosque Fundo",
+    "bairro": "Inoã",
+    "lat": -22.907152,
+    "lng": -42.921354,
+    "objeto": "Serviço de troca de solo e preparação de base para pavimentação asfáltica",
+    "inicio": "27/05/2026",
+    "motivo": "aguardando a  pavimentação",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26040005,
+    "local": "Rua Projetada (entre as ruas Euclides Paulo da Silva e Leonardo José Antunes)",
+    "bairro": "Inoã",
+    "lat": -22.912626,
+    "lng": -42.93073,
+    "objeto": "Preparação de base para pavimentação asfáltica",
+    "inicio": "27/04/2026",
+    "motivo": "Obra aguardando pavimentação asfáltica.",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26040001,
+    "local": "Praça da rua setenta e oito (Boqueirão)",
+    "bairro": "Araçatiba",
+    "lat": -22.938751,
+    "lng": -42.824275,
+    "objeto": "Construção de praça",
+    "inicio": "15/04/2026",
+    "motivo": "equipe foi realocada para outra demanda",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26030025,
+    "local": "Rua Engenheiro Domingos Barbosa",
+    "bairro": "Recanto de Itaipuaçu",
+    "lat": -22.962565,
+    "lng": -43.020926,
+    "objeto": "Reparo de pavimento de concreto",
+    "inicio": "06/04/2026",
+    "motivo": "Aguardando definições em relação a continuidade da Obra.",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26030019,
+    "local": "Avenida Carlos Mariguella, intercessão com as ruas Dom Pedrito e Das Perpétuas (Praça do Ferreirinha)",
+    "bairro": "Barroco",
+    "lat": -22.961682,
+    "lng": -42.987588,
+    "objeto": "Implantação de pavimento intertravado de concreto",
+    "inicio": "06/04/2026",
+    "motivo": "Aguardando definição do setor de projetos",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26030014,
+    "local": "Rodovia Ernani Amaral Peixoto (sede da Defesa Civil)",
+    "bairro": "Centro",
+    "lat": -22.906159,
+    "lng": -42.814829,
+    "objeto": "Cosntrução de muro de contenção",
+    "inicio": "24/03/2026",
+    "motivo": "Equipe retirada pra colaborar um atende 01938/2026 na rua 1 no bairro do Caxito",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26030010,
+    "local": "Avenida central",
+    "bairro": "Espraiado",
+    "lat": -22.894909,
+    "lng": -42.713507,
+    "objeto": "Cercamento perimetral de Núcleo Operacional.",
+    "inicio": "12/03/2026",
+    "motivo": "equipe foi realocada para outra demanda",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26020007,
+    "local": "Ruas São Fidelis, Paulo José César e Santa Clara",
+    "bairro": "Ponta Negra",
+    "lat": -22.955209,
+    "lng": -42.697696,
+    "objeto": "Confecção de calçada e contrução de rede de drenagem",
+    "inicio": "07/04/2026",
+    "motivo": "aguardando a pavimentação para finalizar OS",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26020004,
+    "local": "Ruas 63, 64, 65 e 82",
+    "bairro": "Jacaroá",
+    "lat": -22.932011,
+    "lng": -42.79372,
+    "objeto": "Construção de rede de drenagem e preparação de base",
+    "inicio": "10/02/2026",
+    "motivo": "Equipe realocada para atender a solicitação de N° 26080211.",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26010011,
+    "local": "Avenida Reginal Zeidan com a 74 (Praça da Bíblia)",
+    "bairro": "Cordeirinho",
+    "lat": -22.955992,
+    "lng": -42.768754,
+    "objeto": "Construção de praça, banheiro e canteiros",
+    "inicio": "28/01/2026",
+    "motivo": "reajuste de projeto",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26010008,
+    "local": "Rua 5 (depósito do Núcleo Operacional de Inoã)",
+    "bairro": "Inoã",
+    "lat": -22.911894,
+    "lng": -42.923669,
+    "objeto": "Cercamento perimetral do depósito do Núcleo Operacional de Inoã e adequação de calçada no seu entorno.",
+    "inicio": "21/01/2026",
+    "motivo": "realocação de equipe para outra prioridade",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 26010006,
+    "local": "Rua Rogério Olivieri Cavalcante",
+    "bairro": "Balneário Bambuí",
+    "lat": -22.937956,
+    "lng": -42.748298,
+    "objeto": "Construção de rede de drenagem, colocação de meio-fio, confecção de calçada e preparação de base para pavimentação asfáltica",
+    "inicio": "09/01/2026",
+    "motivo": "Equipe aguardando insumos que não se encontram disponíveis.",
+    "grupo": "Falta de material ou insumo",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25120011,
+    "local": "Estrada Antônio Callado ( Unidade Escolar JIM Tia Sabrina )",
+    "bairro": "Pindobal",
+    "lat": -22.914112,
+    "lng": -42.741876,
+    "objeto": "Muro de vedação para unidade escolar JIM Tia Sabrina",
+    "inicio": "09/02/2026",
+    "motivo": "Aguardando a locação do muro por parte da equipe de Topografia, etapa necessária para implantação do muro conforme previsto em projeto",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25120008,
+    "local": "Rodovia Ernani Amaral Peixoto (sede da defesa Civil)",
+    "bairro": "Centro",
+    "lat": -22.906284,
+    "lng": -42.816271,
+    "objeto": "Construção de drenagem, preparação de base, calçada e meio-fio",
+    "inicio": "08/12/2025",
+    "motivo": "Equipe realocada para OS Nº 26030014",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25110005,
+    "local": "Rua Manoel Antônio dos Santos",
+    "bairro": "Centro",
+    "lat": -22.91924,
+    "lng": -42.815041,
+    "objeto": "Substituição de meio-fio e adequação de calçadas",
+    "inicio": "10/11/2025",
+    "motivo": "Aguardando Vistoria SECTRAN e Sec. De Urbanismo",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25110003,
+    "local": "Rua José Custódio Soares",
+    "bairro": "Centro",
+    "lat": -22.92026,
+    "lng": -42.816223,
+    "objeto": "Substituição de meios-fios e adequação de calçadas",
+    "inicio": "07/01/2026",
+    "motivo": "Aguardando definições referentes ao Manual de Calçadas do Município.",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25100010,
+    "local": "Rua Vereador Alípio Manoel de Oliveira (antiga Estr. 1)",
+    "bairro": "Ponta Negra",
+    "lat": -22.953926,
+    "lng": -42.70263,
+    "objeto": "Construção de rede de drenagem",
+    "inicio": "27/10/2025",
+    "motivo": "Aguardando conclusão da obra na quadra poliesportiva por parte da Sec. De Educação",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25100007,
+    "local": "Rua Jupira Silva (entre Avenida Governador Leonel Brizola e Avenida Dr. Antônio Marques Mathias)",
+    "bairro": "Jardim Atlântico Central",
+    "lat": -22.967974,
+    "lng": -42.950431,
+    "objeto": "Confecção de calçada, assentamento de blocos de piso intertravados e colocação de meio-fio",
+    "inicio": "28/10/2025",
+    "motivo": "Aguardando definição do Setor de Projetos em relação as calçadas e o setor do Meio ambiente para remoção das árvores",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25100003,
+    "local": "Estrada Comandante Celso (Campo do Silvado)",
+    "bairro": "Lagarto",
+    "lat": -22.864335,
+    "lng": -42.764634,
+    "objeto": "Revitalização do Campo do Silvado e seu entorno",
+    "inicio": "14/10/2025",
+    "motivo": "aguardando definições vindas da Presidência",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25100001,
+    "local": "Rua Austria (Minha Casa Minha Vida - Itaipuaçu)",
+    "bairro": "Chácaras de Inoã",
+    "lat": -22.945795,
+    "lng": -42.952046,
+    "objeto": "Muro para cercamento do condomínio minha casa minha vida itaipuaçu.",
+    "inicio": "29/10/2025",
+    "motivo": "Aguardando Material (Vergalhão 6.3mm)",
+    "grupo": "Falta de material ou insumo",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25090029,
+    "local": "Ruas Protásio Peres e Dilson Antônio Legentil",
+    "bairro": "Flamengo",
+    "lat": -22.917207,
+    "lng": -42.810281,
+    "objeto": "Construção de rede de drenagem, colocação de meio-fio, confecção de calçada e Preparação de base para Pavimentação",
+    "inicio": "01/10/2025",
+    "motivo": "Aguardando projeto",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "04/08/2026"
+   },
+   {
+    "os": 25080006,
+    "local": "Estrada Thomas R Colaco (Clínica Veterinária, Fazenda Pública Joaquim Piñero)",
+    "bairro": "Espraiado",
+    "lat": -22.886802,
+    "lng": -42.705293,
+    "objeto": "Obra de ampliação da clínica veterinária na Fazenda Pública Joaquín Piñero",
+    "inicio": "19/08/2025",
+    "motivo": "Aguardando a equipe de elétrica para finalizar o serviço",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25050016,
+    "local": "Estrada do Espraiado (gabinete descentralizado do prefeito)",
+    "bairro": "Espraiado",
+    "lat": -22.894109,
+    "lng": -42.716737,
+    "objeto": "Construção de rede de drenagem, confecção de calçada, base de concreto, assentamento de piso intertravado e colocação de meio-fio",
+    "inicio": "12/05/2025",
+    "motivo": "Aguardando a Div. de Parques e Jardins concluir o Gazebo",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25050014,
+    "local": "Avenida Bambuí",
+    "bairro": "Pindobal",
+    "lat": -22.914599,
+    "lng": -42.745894,
+    "objeto": "Construção de mureta e muro de contenção, confecção de calçada e revitalização da associação de moradores do bairro Pindobal",
+    "inicio": "05/05/2025",
+    "motivo": "Falta de material",
+    "grupo": "Falta de material ou insumo",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 25050013,
+    "local": "Avenida Roberto Silveira (trecho entre o elevado do Flamengo e o Complexo Esportivo Leonel de Moura Brizola)",
+    "bairro": "Flamengo",
+    "lat": -22.905307,
+    "lng": -42.802514,
+    "objeto": "Obra de adequação de vias e realocação de vagas de veículos, colocação de meio-fio, confecção de calçada e de base de concreto.",
+    "inicio": "13/05/2025",
+    "motivo": "Esperando a equipe que confecciona guarda corpo ir até o local.",
+    "grupo": "Aguardando outra etapa ou equipe",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 24090022,
+    "local": "Ruas Volta Redonda e Saquarema",
+    "bairro": "Caxito",
+    "lat": -22.876064,
+    "lng": -42.802305,
+    "objeto": "Construção de rede de drenagem, colocação de meio-fio e confecção de calçada e preparação de base para Pavimentação",
+    "inicio": "24/09/2024",
+    "motivo": "Aguardando a topografia e a Sec. De Urbanismo para definições",
+    "grupo": "Aguardando definição, projeto, licença ou vistoria",
+    "reinicio": "SEM PREVISÃO"
+   },
+   {
+    "os": 22000264,
+    "local": "Rua Raul Alfredo de Andrade (SOMAR - Anexo III)",
+    "bairro": "Itapeba",
+    "lat": -22.899044,
+    "lng": -42.826479,
+    "objeto": "Construção de novo prédio da SOMAR (Anexo III) e sua instalação administrativa",
+    "inicio": "30/05/2022",
+    "motivo": "Equipe remanejada para a OS: 26050005",
+    "grupo": "Equipe deslocada para outra demanda",
+    "reinicio": "SEM PREVISÃO"
+   }
+  ],
+  "motivosGrupo": {
+   "Aguardando definição, projeto, licença ou vistoria": 14,
+   "Aguardando outra etapa ou equipe": 10,
+   "Equipe deslocada para outra demanda": 9,
+   "Falta de material ou insumo": 4
+  },
+  "acompanhamento": [
+   {
+    "tipo_execucao": "Direta",
+    "sit": "Concluída",
+    "n": 107
+   },
+   {
+    "tipo_execucao": "Direta",
+    "sit": "Em andamento",
+    "n": 58
+   },
+   {
+    "tipo_execucao": "Indireta",
+    "sit": "Concluída",
+    "n": 1
+   },
+   {
+    "tipo_execucao": "Indireta",
+    "sit": "Em andamento",
+    "n": 27
+   },
+   {
+    "tipo_execucao": "Indireta",
+    "sit": "Outra situação",
+    "n": 2
+   },
+   {
+    "tipo_execucao": "Indireta (Parques e Jardins)",
+    "sit": "Outra situação",
+    "n": 1
+   },
+   {
+    "tipo_execucao": "Indireta (Parques e Jardins)",
+    "sit": "Paralisada",
+    "n": 1
+   }
+  ],
+  "acompanhamentoTotal": 197,
+  "fonte": "https://transparencia.marica.rj.gov.br/obras/obras-paralisadas/links-e-arquivos",
+  "dataLista": "10/10/2026",
+  "atualizacaoPortal": "19/10/2026",
+  "semPrevisao": 36
+ },
+ "secretarias": [
+  {
+   "org": "Administração",
+   "titular": "Gecimar Jorge de Aragão",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Agricultura e Pecuária",
+   "titular": "Wagner de Barros Soares",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Assistência Social e Cidadania",
+   "titular": "Dryene Tavares Areas Silva",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Assuntos Religiosos, Cidadania e Família",
+   "titular": "Pastor Sérgio Luis de Sousa",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Bem-Estar Animal",
+   "titular": "Robson Teixeira da Silva - Robgol",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Ciência e Tecnologia",
+   "titular": "Sabrina dos Santos Alves",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Comunicação Social",
+   "titular": "Jéssica Portes",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Cultura e das Utopias",
+   "titular": "Sady Bianchin",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Defesa do Consumidor",
+   "titular": "Rick Aquino",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Direitos Humanos",
+   "titular": "HONORATO LEITE FERNANDES FILHO (interino)",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Economia Solidária e Empreendedorismo Social",
+   "titular": "Matheus Silva do Amparo - Matheus Gaúcho",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Educação",
+   "titular": "Professor Rodrigo Moura",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Energias Renováveis e Iluminação Pública",
+   "titular": "Veronica da Silva Costa Faria",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Especial de Promoção das Comunidades e do Minha Casa, Minha Vida",
+   "titular": "Brunna Letícia de Oliveira Tavares - Brunna Índia",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Esportes",
+   "titular": "Filipe Dias Bittencourt",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Executiva de Gestão de Governo",
+   "titular": "Honorato Leite Fernandes Filho",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Gestão Tributária e Fiscal",
+   "titular": "Lawrice dos Santos Souza",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Governança em Licitações e Contratos",
+   "titular": "Felippe Gomes Lima",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Grandes Obras",
+   "titular": "Honorato Leite Fernandes Filho (interino)",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Habitação",
+   "titular": "Alessandro Magno Coutinho",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Igualdade Racial",
+   "titular": "Marco Ebenezer Oliveira Borges",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Justiça e Cidadania",
+   "titular": "Eduardo Carlos de Souza",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Juventude e Participação Popular",
+   "titular": "Andressa Verônica da Silva Santos",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Lutas e Esportes de Combate de Base e Alto Rendimento",
+   "titular": "Thiago da Silva Reis",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Meio Ambiente e Sustentabilidade",
+   "titular": "Helter Viana Ferreira de Almeida",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Pesca",
+   "titular": "Alexandre Rodrigues de Oliveira - Xandi de Bambuí",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Pessoa com Deficiência e Inclusão",
+   "titular": "Tatiana Vieira da Costa Castro dos Santos - Tatiana Castor",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Planejamento, Contabilidade e Finanças",
+   "titular": "Joab Santana de Carvalho",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Políticas de Desenvolvimento Regional e Articulação com o CONLESTE",
+   "titular": "Priscilla Canedo Loureiro",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Políticas e Defesa dos Direitos das Mulheres",
+   "titular": "Ingrid Caldas Pereira de Almeida Bastos",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Políticas para Terceira Idade",
+   "titular": "Amarildo Ribeiro da Silva",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Promoção de Eventos",
+   "titular": "Victor Petrucio de Souza",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Proteção e Defesa Civil",
+   "titular": "Carlos Danilo dos Santos",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Qualidade de Vida, Bem-Estar Social e Entretenimento",
+   "titular": "Reinaldo da Silva Cunha",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Recursos Hídricos e Minerais",
+   "titular": "Julio Cesar Silva Santos - Julio Carolino",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Relações Internacionais",
+   "titular": "Jorge Luiz Cordeiro da Costa - Castor",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Representação e Articulação Institucional",
+   "titular": "Ivana Cristina Melo de Moura",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Saúde",
+   "titular": "Marcelo Costa Velho Mendes de Azevedo",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Segurança Cidadã",
+   "titular": "Julio Cesar Veras Vieira",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Trabalho e Emprego",
+   "titular": "Rosana Corrêa",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Transição Climática e Resiliência Ambiental",
+   "titular": "Richard Alter Seal",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Transportes e Postura",
+   "titular": "Andre Luis Azeredo da Silva - André Casquinha",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Trânsito",
+   "titular": "Michelle Rodrigues De Melo Carvalho",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Turismo, Comércio, Indústria e Mercado Interno",
+   "titular": "Jose Alexandre Almeida da Silva",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "Urbanismo e Planejamento Territorial",
+   "titular": "Adelmo Berty da Silveira Bessa",
+   "cargo": "Secretário"
+  },
+  {
+   "org": "30ª Junta Militar de Maricá",
+   "titular": "da Junta Militar  Roseli Ferreira da Silva",
+   "cargo": "Secretária"
+  },
+  {
+   "org": "Assessoria de Conformidade Processual – subsecretaria",
+   "titular": "Sabrina Guimarais Portes Mendonça",
+   "cargo": "Subsecretária"
+  },
+  {
+   "org": "Conselho de Desenvolvimento Econômico Social Sustentável de Maricá",
+   "titular": "A secretaria-executiva fica a cargo da  Chefe de Gabinete do Prefeito e da equipe do Gabinete.",
+   "cargo": "Titular"
+  },
+  {
+   "org": "Controladoria Geral do Município",
+   "titular": "Cinthia Madeira da Silva",
+   "cargo": "Controladora Geral"
+  },
+  {
+   "org": "Escola Municipal de Governo",
+   "titular": "Maria Inez Pucello",
+   "cargo": "Diretor"
+  },
+  {
+   "org": "Gabinete do Prefeito",
+   "titular": "Celso Pansera",
+   "cargo": "Chefe de Gabinete"
+  },
+  {
+   "org": "Ouvidoria Geral do Município",
+   "titular": "Barbara Machado da Costa",
+   "cargo": "Ouvidora Geral"
+  },
+  {
+   "org": "Procuradoria Geral do Município",
+   "titular": "Thiago Santos Ferreira",
+   "cargo": "Procurador Geral"
+  },
+  {
+   "org": "Biblioteca Pública Municipal",
+   "titular": "Ingrid Barreto de Souza Guinin",
+   "cargo": "Bibliotecária"
+  },
+  {
+   "org": "Empresa Pública de Transportes",
+   "titular": "Celso Haddad Lopes",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Instituto de Ciência, Tecnologia e Inovação de Maricá",
+   "titular": "Cláudio de Souza Gimenez",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Instituto de Seguro Social de Maricá",
+   "titular": "Priscila França de Almeida Souza",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Instituto Municipal de Informação e  Pesquisa Darcy Ribeiro",
+   "titular": "Magnun de Souza Assumpção Amado",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Serviços de Obras de Maricá",
+   "titular": "Arlen Pereira",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Companhia de Desenvolvimento de Maricá",
+   "titular": "Júlio Urdangarin",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Companhia de Saneamento de Maricá",
+   "titular": "Márcia da Silva Ferreira",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "Companhia Maricá Alimentos",
+   "titular": "Marlos Costa",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "CTMAR – COMPANHIA DE CULTURA E TURISMO DE MARICÁ – MARÉ",
+   "titular": "Antonio Grassi",
+   "cargo": "Presidente"
+  },
+  {
+   "org": "MARICÁ GLOBAL INVEST S.A.",
+   "titular": "Marcelo Batista Gomes",
+   "cargo": "Presidente"
+  }
+ ],
+ "sancoes": [
+  {
+   "nome": "ESPACO CIDADANIA E OPORTUNIDADES SOCIAIS",
+   "doc": "02.539.959/0001-25",
+   "tipo": "Impedimento/proibição de contratar com prazo determinado",
+   "inicio": "2025-10-15",
+   "fim": "2026-10-15",
+   "status": "",
+   "pub": "2025-10-22",
+   "contrato": "TC 14/2024"
+  },
+  {
+   "nome": "CENTRO DE APOIO E DESENVOLVIMENTO INDIVIDUAL E SOCIAL",
+   "doc": "07.956.924/0001-05",
+   "tipo": "Impedimento/proibição de contratar com prazo determinado",
+   "inicio": "2025-10-15",
+   "fim": "2026-10-15",
+   "status": "EM VIGOR",
+   "pub": "2025-10-22",
+   "contrato": "TC 18/2022"
+  },
+  {
+   "nome": "WL ENGENHARIA, PLANEJAMENTO LTDA",
+   "doc": "86.986.189/0001-59",
+   "tipo": "SUSPENSÃO TEMPORÁRIA DE PARTICIPAÇÃO EM LICITAÇÃO E IMPEDIMENTO DE CONTRATAR COM A ADMINISTRAÇÃO PÚBLICA MUNICIPAL",
+   "inicio": "2025-03-14",
+   "fim": "2026-03-14",
+   "status": "EM VIGOR",
+   "pub": "2025-03-14",
+   "contrato": ""
+  },
+  {
+   "nome": "SOLRAC COMERCIAL LTDA",
+   "doc": "45.224.548/0001-53",
+   "tipo": "Impedimento/proibição de contratar com prazo determinado",
+   "inicio": "2024-12-27",
+   "fim": "2026-12-27",
+   "status": "EM VIGOR",
+   "pub": "2024-12-26",
+   "contrato": ""
+  },
+  {
+   "nome": "SOLAR SERVICOS E ADMINISTRACAO DE MAO DE OBRA LTDA",
+   "doc": "08.598.571/0001-81",
+   "tipo": "SUSPENSÃO TEMPORÁRIA DE PARTICIPAÇÃO EM LICITAÇÃO E IMPEDIMENTO DE CONTRATAR COM A ADMINISTRAÇÃO PÚBLICA MUNICIPAL\t12",
+   "inicio": "2024-09-21",
+   "fim": "2025-09-21",
+   "status": "EM VIGOR",
+   "pub": "2024-09-24",
+   "contrato": "313/2019"
+  },
+  {
+   "nome": "GREEN ENERGY INDÚSTRIA, COMÉRCIO, IMPORTAÇÃO E SERVIÇOS DE ENGENHARIA LTDA",
+   "doc": "18.341.624/0001-38",
+   "tipo": "SUSPENSÃO TEMPORÁRIA DE PARTICIPAÇÃO EM LICITAÇÃO E IMPEDIMENTO DE CONTRATAR COM A ADMINISTRAÇÃO PÚBLICA MUNICIPAL",
+   "inicio": "2024-07-19",
+   "fim": "2025-07-19",
+   "status": "EM VIGOR",
+   "pub": "2024-07-19",
+   "contrato": "274/2022"
+  },
+  {
+   "nome": "De Sá Serviços LTDA.",
+   "doc": "07.028.841/0001-56",
+   "tipo": "MULTA",
+   "inicio": "nan",
+   "fim": "nan",
+   "status": "",
+   "pub": "2024-01-19",
+   "contrato": "114/2023"
+  },
+  {
+   "nome": "De Sá Serviços LTDA.",
+   "doc": "07.028.841/0011-57",
+   "tipo": "MULTA",
+   "inicio": "nan",
+   "fim": "nan",
+   "status": "",
+   "pub": "2024-01-19",
+   "contrato": "114/2024"
+  },
+  {
+   "nome": "Alpha Eletromóveis Eireli",
+   "doc": "41.297.212/0001-60",
+   "tipo": "SUSPENSÃO TEMPORÁRIA DE PARTICIPAÇÃO EM LICITAÇÃO E IMPEDIMENTO DE CONTRATAR COM A ADMINISTRAÇÃO PÚBLICA MUNICIPAL",
+   "inicio": "2022-02-20",
+   "fim": "2024-02-20",
+   "status": "PRAZO DA SANÇÃO CUMPRIDO",
+   "pub": "2022-02-09",
+   "contrato": "44835"
+  },
+  {
+   "nome": "Asset Patrimonial e Informática LTDA",
+   "doc": "73.849.069/0001-68",
+   "tipo": "MULTA",
+   "inicio": "2021-08-31",
+   "fim": "nan",
+   "status": "PRAZO DA SANÇÃO CUMPRIDO",
+   "pub": "2021-08-20",
+   "contrato": "178/2020"
+  }
+ ],
+ "vereadorSecretario": {
+  "24": {
+   "nome": "RobGol",
+   "org": "Bem-Estar Animal",
+   "titular": "Robson Teixeira da Silva - Robgol"
+  },
+  "9": {
+   "nome": "Filipe Bittencourt",
+   "org": "Esportes",
+   "titular": "Filipe Dias Bittencourt"
+  },
+  "31": {
+   "nome": "Marquinho da Juventude",
+   "org": "Igualdade Racial",
+   "titular": "Marco Ebenezer Oliveira Borges"
+  },
+  "12": {
+   "nome": "Helter Ferreira",
+   "org": "Meio Ambiente e Sustentabilidade",
+   "titular": "Helter Viana Ferreira de Almeida"
+  },
+  "27": {
+   "nome": "Danilo Santos",
+   "org": "Proteção e Defesa Civil",
+   "titular": "Carlos Danilo dos Santos"
+  },
+  "29": {
+   "nome": "Julio Carolino",
+   "org": "Recursos Hídricos e Minerais",
+   "titular": "Julio Cesar Silva Santos - Julio Carolino"
+  },
+  "4": {
+   "nome": "Jorge Castor",
+   "org": "Relações Internacionais",
+   "titular": "Jorge Luiz Cordeiro da Costa - Castor"
+  },
+  "23": {
+   "nome": "Dr. Richard",
+   "org": "Transição Climática e Resiliência Ambiental",
+   "titular": "Richard Alter Seal"
+  }
+ },
+ "fontes": {
+  "portal": "https://transparencia.marica.rj.gov.br",
+  "despesas": "https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao",
+  "folha": "https://transparencia.marica.rj.gov.br/e-cidade/servidores",
+  "obras": "https://transparencia.marica.rj.gov.br/obras",
+  "sancoes": "https://transparencia.marica.rj.gov.br/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos",
+  "secretarias": "https://www.marica.rj.gov.br/secretarias/",
+  "consulta": "2026-11-14"
+ }
+}

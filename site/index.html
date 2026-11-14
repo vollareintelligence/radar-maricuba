@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar da Gastança · Maricúba — Câmara e Prefeitura de Maricá em dados abertos</title>
+<meta name="description" content="Presença, pedidos e votos dos vereadores de Maricá, com link para a fonte oficial em cada número.">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+:root{
+  --primary:#0F172A;--secondary:#334155;--accent:#0369A1;--on-accent:#fff;
+  --bg:#F8FAFC;--fg:#020617;--card:#fff;--muted:#E8ECF1;--muted-fg:#475569;--border:#E2E8F0;
+  --warn:#B45309;--ring:#0F172A;--radius:14px;
+  --c-pres:#0369A1;--c-just:#7B93AE;--c-falta:#B45309;--c-lic:#6B7280;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;color:var(--fg);background:var(--bg)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+header.top{background:var(--primary);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:10px}
+.brand svg{flex:none}
+nav.menu{display:flex;gap:4px;flex-wrap:wrap}
+nav.menu a{color:#E2E8F0;text-decoration:none;padding:10px 12px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}
+nav.menu a:hover{background:#1E293B;color:#fff}
+.hero{background:linear-gradient(180deg,var(--primary) 0,#13203d 100%);color:#fff;padding:36px 0 48px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.12;margin:0 0 12px;max-width:20ch}
+.hero p{max-width:62ch;color:#CBD5E1;margin:0 0 6px;font-size:18px}
+.hero .stamp{font-size:14px;color:#94A3B8;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:-30px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 2px rgba(15,23,42,.06)}
+.stat b{display:block;font-size:30px;line-height:1.1;color:var(--primary)}
+.stat span{color:var(--muted-fg);font-size:15px}
+section{padding:44px 0 6px}
+section>.wrap>h2{font-size:clamp(23px,3.4vw,30px);margin:0 0 6px;color:var(--primary)}
+.lead{color:var(--muted-fg);max-width:70ch;margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.note{font-size:14.5px;color:var(--muted-fg)}
+.source{font-size:14px;color:var(--muted-fg);margin-top:10px}
+.pill{display:inline-block;font-size:13px;padding:2px 9px;border-radius:99px;background:var(--muted);color:var(--secondary);white-space:nowrap}
+.pill.warn{background:#FEF3C7;color:#7C2D12}
+/* controles */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button,.btn{font:inherit;min-height:44px;padding:8px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--primary);cursor:pointer;transition:background .15s,border-color .15s}
+.seg button:hover,.btn:hover{border-color:var(--accent)}
+.seg button[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+input[type=search],select{font:inherit;min-height:44px;padding:8px 12px;border-radius:10px;border:1.5px solid var(--border);background:#fff;color:var(--fg)}
+label.chk{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+label.chk input{width:20px;height:20px}
+/* barras */
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.bar-row{display:grid;grid-template-columns:minmax(150px,270px) 1fr;gap:12px;align-items:center}
+.bar-row .who{display:flex;align-items:center;gap:10px;min-width:0;background:none;border:0;padding:0;font:inherit;color:var(--primary);cursor:pointer;text-align:left;min-height:44px}
+.bar-row .who:hover .nm{text-decoration:underline}
+.nm{font-weight:700;line-height:1.2}
+.rk{width:26px;text-align:right;color:var(--muted-fg);flex:none;font-variant-numeric:tabular-nums}
+.avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;background:var(--muted);flex:none;display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--secondary)}
+.track{position:relative;height:26px;background:var(--muted);border-radius:8px;overflow:hidden;display:flex}
+.seg-pres{background:var(--c-pres)}
+.seg-just{background:repeating-linear-gradient(45deg,var(--c-just) 0 6px,#9FB2C8 6px 12px)}
+.seg-falta{background:var(--c-falta)}
+.seg-lic{background:repeating-linear-gradient(135deg,var(--c-lic) 0 4px,#9CA3AF 4px 8px)}
+.seg-one{background:var(--accent);border-radius:0 8px 8px 0}
+.val{font-variant-numeric:tabular-nums;font-weight:700;margin-left:8px;color:var(--primary);white-space:nowrap}
+.bar-row .tr{display:flex;align-items:center;min-width:0}
+.bar-row .tr .track{flex:1}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 14px;font-size:14.5px}
+.legend i{display:inline-block;width:18px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+@media (max-width:620px){.bar-row{grid-template-columns:1fr;gap:2px}.nm{white-space:normal}}
+/* tabela */
+.tscroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+th{background:var(--muted);position:sticky;top:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+/* cards de vereadores */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.vcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;font:inherit;padding:0;color:inherit;transition:transform .15s,box-shadow .15s}
+.vcard:hover{box-shadow:0 6px 18px rgba(15,23,42,.1);transform:translateY(-2px)}
+.vcard img,.vcard .ph{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--muted);display:grid;place-items:center;font-size:42px;font-weight:700;color:var(--secondary)}
+.vcard .in{padding:12px 14px 14px}
+.vcard h3{margin:0;font-size:18px;color:var(--primary)}
+.vcard .sub{font-size:14px;color:var(--muted-fg)}
+.vcard .big{font-size:26px;font-weight:700;color:var(--primary);margin-top:6px}
+/* dialog */
+dialog{border:0;border-radius:18px;padding:0;max-width:760px;width:calc(100% - 24px);max-height:92vh;box-shadow:0 20px 60px rgba(2,6,23,.4)}
+dialog::backdrop{background:rgba(2,6,23,.6)}
+.dlg-h{display:flex;gap:14px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:#fff;z-index:2}
+.dlg-h img,.dlg-h .ph{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--muted);display:grid;place-items:center;font-weight:700;font-size:24px}
+.dlg-h h3{margin:0;font-size:22px}
+.dlg-b{padding:18px 20px 24px;display:grid;gap:18px}
+.dlg-b h4{margin:0 0 8px;font-size:16px;color:var(--primary)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kv div{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+.kv b{display:block;font-size:22px;color:var(--primary)}
+.kv span{font-size:13.5px;color:var(--muted-fg)}
+.close{margin-left:auto;min-width:44px}
+ul.rec{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ul.rec li{border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:15px}
+/* meu ranking */
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px}
+.sl label{display:flex;justify-content:space-between;font-weight:700;color:var(--primary)}
+.sl input[type=range]{width:100%;height:44px;accent-color:var(--accent)}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;background:var(--muted);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre-wrap}
+/* gráfico de linhas */
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:inherit;font-size:12px;fill:var(--muted-fg)}
+/* em breve */
+.soon{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.soon .card h3{margin:0 0 6px;font-size:18px;color:var(--primary)}
+details.card summary{cursor:pointer;font-weight:700;color:var(--primary);min-height:44px;display:flex;align-items:center}
+footer{margin-top:50px;background:var(--primary);color:#CBD5E1;padding:30px 0 40px;font-size:15px}
+footer a{color:#93C5FD}
+footer h2{color:#fff;font-size:18px;margin:0 0 8px}
+.sh{font-size:19px;margin:26px 0 10px;color:var(--primary)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.vtabs{display:flex;gap:4px;flex-wrap:wrap}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.mapbox{height:460px;border-radius:12px;border:1px solid var(--border);overflow:hidden;background:var(--muted)}
+.mapfb{width:100%;height:100%;display:block}
+.olist{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-height:460px;overflow:auto}
+.olist li button{width:100%;text-align:left;font:inherit;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;cursor:pointer;min-height:44px}
+.olist li button:hover,.olist li button[aria-pressed="true"]{border-color:var(--accent);background:#F0F7FC}
+.num{display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:99px;background:var(--primary);color:#fff;font-size:13px;font-weight:700;margin-right:8px}
+.big3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:10px 0 16px}
+.big3 .stat b{font-size:24px}
+.explain{background:#F0F7FC;border:1px solid #BAD7EA;border-radius:12px;padding:12px 14px;font-size:15.5px}
+.vbars{display:flex;align-items:flex-end;gap:4px;height:150px;border-bottom:1px solid var(--border)}
+.vbars div{flex:1;background:var(--accent);min-width:6px;border-radius:4px 4px 0 0;position:relative}
+.vbars div.nov{background:repeating-linear-gradient(45deg,#9FB2C8 0 5px,#C7D3E0 5px 10px)}
+.vlab{display:flex;gap:4px;font-size:11px;color:var(--muted-fg)}
+.vlab span{flex:1;text-align:center;min-width:6px;overflow:hidden}
+.leaflet-container{font-family:inherit}
+#empresas .explain{margin:0 0 14px}#empresas .stats{margin-top:6px}details.emp{background:#fff;border:1px solid var(--line,#E2E8F0);border-radius:12px;padding:12px 14px;margin:8px 0}details.emp>summary{cursor:pointer;min-height:44px;list-style:none}details.emp .rk{display:inline-block;min-width:28px;color:#475569;font-weight:700}#buscaEmp{width:100%;max-width:420px;min-height:44px;padding:0 12px;border:1px solid #94A3B8;border-radius:10px;font:inherit}
+
+/* ===== TEMA CARTAZ (v4) ===== */
+@font-face{font-family:"Anton";src:url(fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--ink:#111;--paper:#F1E8D6;--hot:#D93A1E;--hot-text:#B72E14;--disp:"Anton","Impact","Arial Narrow",sans-serif;
+ --primary:#111;--secondary:#2b2b2b;--accent:#B72E14;--bg:#F1E8D6;--fg:#111;--card:#FBF6EA;--muted:#E3D8C0;--muted-fg:#4a4338;--border:#111;--ring:#111;--radius:2px;
+ --c-pres:#111;--c-just:#8a7f6a;--c-falta:#D93A1E;--c-lic:#6b6558}
+body{background:var(--bg)}
+a{color:var(--hot-text)}
+header.top{background:var(--ink);border-bottom:6px solid var(--hot)}
+.brand{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:22px}
+
+nav.menu a{color:#EDE3CD;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.4px;border-radius:0}
+nav.menu a:hover{background:var(--hot);color:#111}
+.hero{background:var(--paper);color:var(--ink);padding:40px 0 64px;border-bottom:3px solid var(--ink)}
+.hero .kick{font-family:var(--disp);letter-spacing:1px;font-size:15px;color:var(--hot-text);margin:0 0 10px;text-transform:uppercase}
+.hero h1{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(46px,11.5vw,128px);line-height:.92;max-width:none;margin:0 0 20px;letter-spacing:0}
+.hero h1 .a{display:block;color:var(--ink)}.hero h1 .a::before{content:".";color:var(--hot)}
+.hero h1 .b{display:inline-block;background:var(--ink);color:var(--paper);padding:.04em .16em .0;margin-top:.06em}
+.hero h1 .c{display:block;color:var(--hot);font-size:.62em;margin-top:.1em}
+.hero p{color:var(--ink);max-width:56ch;font-size:19px}
+.hero .stamp{color:var(--muted-fg)}
+.bignum{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:22px 0 0;border-top:3px solid var(--ink);padding-top:14px}
+.bignum b{font-family:var(--disp);font-weight:400;font-size:clamp(44px,9vw,96px);line-height:1;color:var(--hot)}
+.bignum span{font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:15px;max-width:26ch}
+.stats{margin-top:-34px}
+.stat{background:var(--ink);color:var(--paper);border:2px solid var(--ink);border-radius:0;box-shadow:5px 5px 0 var(--hot)}
+.stat b{font-family:var(--disp);font-weight:400;font-size:clamp(34px,5vw,48px);color:var(--paper);letter-spacing:.3px}
+.stat span{color:#D8CDB4}
+section>.wrap>h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(34px,6.2vw,68px);line-height:.98;color:var(--ink);margin:0 0 12px;letter-spacing:.2px}
+section>.wrap>h2::before{content:".";color:var(--hot)}
+section{padding:54px 0 10px}
+.lead,.sub{color:var(--muted-fg)}
+.card,details.emp{background:var(--card);border:2px solid var(--ink);border-radius:0;box-shadow:5px 5px 0 var(--ink)}
+details.emp{box-shadow:4px 4px 0 var(--ink)}
+.seg button,.btn,input[type=search],select{border:2px solid var(--ink);border-radius:0;background:var(--card);color:var(--ink);font-weight:700}
+.seg button:hover,.btn:hover{background:var(--hot);color:#111;border-color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn.primary{background:var(--hot);color:#111;border-color:var(--ink)}
+.pill{border-radius:0;background:var(--ink);color:var(--paper)}
+.explain{background:var(--ink)!important;color:var(--paper)!important;border:0!important;border-left:8px solid var(--hot)!important;border-radius:0!important}
+.explain a{color:#FFB199}
+.track{border-radius:0}
+#prefeitura{background:var(--ink);color:var(--paper);margin-top:54px;padding-bottom:56px}
+#prefeitura>.wrap>h2{color:var(--paper)}
+#prefeitura .lead,#prefeitura .sub,#prefeitura .note,#prefeitura .source{color:#D8CDB4}
+#prefeitura a{color:#FFB199}
+#prefeitura .card,#prefeitura details,#prefeitura .stat{color:var(--ink)}
+#prefeitura .stat{background:var(--paper);box-shadow:5px 5px 0 var(--hot)}
+#prefeitura .stat b{color:var(--ink)}
+#prefeitura .stat span{color:var(--muted-fg)}
+#prefeitura .card a,#prefeitura details a{color:var(--hot-text)}
+#prefeitura .card .note,#prefeitura .card .source,#prefeitura details .note,#prefeitura details .source{color:var(--muted-fg)}
+#obras>.wrap>h2{background:var(--hot);display:inline-block;padding:.04em .2em 0;color:var(--ink)}
+#obras>.wrap>h2::before{color:var(--ink)}
+footer{border-top:6px solid var(--hot)}
+@media (max-width:560px){.hero h1{font-size:clamp(44px,15vw,80px)}.stats{margin-top:-26px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.mk{display:flex;align-items:center;justify-content:center;width:28px;height:28px;font:700 14px/1 var(--disp,Anton),sans-serif;border:2px solid #111;box-shadow:0 0 0 2px #fff}
+.mk.concluida{background:#1E8E3E;color:#fff;border-radius:50%}
+.mk.andamento{background:#1F6FB5;color:#fff;border-radius:3px;transform:rotate(45deg)}
+.mk.andamento span{transform:rotate(-45deg)}
+.mk.paralisada{background:#F2B200;color:#111;border-radius:0;clip-path:none}
+.sw{display:inline-block;width:18px;height:18px;border:2px solid #111;vertical-align:-4px;margin-right:6px}
+.sw.concluida{background:#1E8E3E;border-radius:50%}.sw.andamento{background:#1F6FB5;border-radius:2px;transform:rotate(45deg) scale(.8)}.sw.paralisada{background:#F2B200}.sw.problema{background:#D32F2F;border-radius:50% 50% 50% 0;transform:rotate(-45deg) scale(.9)}
+.leaflet-popup-content{font-family:"Atkinson Hyperlegible",sans-serif;font-size:14px;line-height:1.4}.leaflet-popup-content b{font-size:15px}
+</style>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="top"><div class="wrap">
+  <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
+  <nav class="menu" aria-label="Seções">
+    <a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
+  </nav>
+</div></header>
+
+<main id="principal">
+<div class="hero"><div class="wrap">
+  <p class="kick">Maricá · Câmara e Prefeitura · dados oficiais</p>
+  <h1><span class="a">Radar da</span><span class="b">Gastança</span><span class="c">Maricúba</span></h1>
+  <p>Quanto a Prefeitura pagou, a quem pagou, e o que cada vereador faz: tudo lido direto dos registros públicos, com a fonte oficial em cada número.</p>
+  <p>O Radar mostra fatos e não faz acusação. A mesma régua vale para todos.</p>
+  <div class="bignum" id="bignum" hidden><b id="heroBig"></b><span>pagos pela Prefeitura em 2025 e 2026 (até 14/11)</span></div>
+  <div class="stamp" id="stamp"></div>
+</div></div>
+<div class="wrap"><div class="stats" id="stats" aria-label="Resumo da base"></div></div>
+
+<section id="vereadores"><div class="wrap">
+  <h2>Os vereadores</h2>
+  <p class="lead">Toque em um nome para ver presença, motivo das ausências, pedidos feitos e votos, com os links para os documentos oficiais.</p>
+  <div class="controls">
+    <label class="sr" for="busca">Buscar vereador</label>
+    <input type="search" id="busca" placeholder="Buscar por nome ou partido">
+    <label class="chk"><input type="checkbox" id="chkTodos"> Incluir quem não está em exercício agora</label>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="source">Fotos e partidos: <a href="https://marica.rj.leg.br" target="_blank" rel="noopener">site oficial da Câmara de Maricá</a>. O partido é o atual, não o de 2024.</p>
+</div></section>
+
+<section id="rankings"><div class="wrap">
+  <h2>Rankings por indicador</h2>
+  <p class="lead">Não existe uma nota única, porque ela esconderia escolhas. Aqui cada indicador aparece separado, e você inverte a ordem quando quiser. Quem tem poucas sessões no período fica separado ao final, para não distorcer a comparação.</p>
+  <div class="controls">
+    <div class="seg" id="segInd" role="group" aria-label="Indicador"></div>
+  </div>
+  <div class="controls">
+    <button class="btn" id="btnOrd" aria-pressed="false"></button>
+    <button class="btn" id="btnTab" aria-pressed="false">Ver como tabela</button>
+    <label class="chk"><input type="checkbox" id="chkTodos2"> Incluir quem não está em exercício agora</label>
+  </div>
+  <div class="card">
+    <p id="indDesc" style="margin:0 0 8px;font-weight:700;color:var(--primary)"></p>
+    <p id="indNota" class="note" style="margin:0 0 12px"></p>
+    <div class="legend" id="legend"></div>
+    <div id="rankOut"></div>
+    <p class="source" id="indFonte"></p>
+  </div>
+</div></section>
+
+<section id="meu-ranking"><div class="wrap">
+  <h2>Meu Ranking</h2>
+  <p class="lead">Cada pessoa valoriza uma coisa. Ajuste os pesos e veja o resultado. A fórmula é pública e aparece abaixo. O Radar não impõe um peso a ninguém.</p>
+  <div class="card">
+    <div class="sliders" id="sliders"></div>
+    <div id="meuOut"></div>
+    <details style="margin-top:14px"><summary>Ver a fórmula</summary>
+      <div class="formula" id="formula"></div>
+    </details>
+  </div>
+</div></section>
+
+<section id="tempo"><div class="wrap">
+  <h2>Pedidos ao longo do tempo</h2>
+  <p class="lead">Quantidade mensal de documentos protocolados por todos os vereadores, por tipo.</p>
+  <div class="card">
+    <div class="controls"><button class="btn" id="btnTab2" aria-pressed="false">Ver como tabela</button></div>
+    <div id="tempoOut"></div>
+    <p class="source">Fonte: <a href="https://marica.sicam.app/areapublica" target="_blank" rel="noopener">Área Pública do SICAM (Câmara de Maricá)</a>, processos legislativos.</p>
+  </div>
+</div></section>
+
+<section id="problemas"><div class="wrap">
+  <h2>Problemas que não somem</h2>
+  <p class="lead">Ruas com 3 ou mais pedidos do mesmo tipo (asfalto, iluminação, trânsito etc.) protocolados por vereadores. Muitos pedidos repetidos mostram que o problema persiste. Isso não prova quem agiu ou deixou de agir.</p>
+  <div class="card">
+    <div id="probBars"></div>
+    <details style="margin-top:14px"><summary>Ver a lista completa (até 40 ruas)</summary><div id="probTab" style="margin-top:10px"></div></details>
+    <p class="source">A mesma rua às vezes aparece com grafias diferentes nos documentos. O agrupamento usa o nome escrito, então alguns problemas podem estar divididos em mais de uma linha.</p>
+  </div>
+</div></section>
+
+
+<section id="prefeitura"><div class="wrap">
+  <h2>Prefeitura: para onde vai o dinheiro</h2>
+  <p class="lead">Dados do portal da transparência da Prefeitura, em linguagem simples. Os valores de 2026 vão até a data da consulta e não são comparáveis a um ano fechado.</p>
+  <div class="explain"><b>Como ler:</b> <i>empenhado</i> é o valor que a Prefeitura reservou para um gasto. <i>Liquidado</i> é o serviço ou produto já entregue e conferido. <i>Pago</i> é o dinheiro que realmente saiu. O Radar usa o <b>pago</b> nos gráficos.</div>
+  <div class="big3" id="pTot"></div>
+  <div class="controls"><div class="seg" id="pAno" role="group" aria-label="Ano"></div></div>
+
+  <h3 class="sh">Por órgão</h3>
+  <div class="card"><div id="pInst"></div><p class="source">Fonte: <a href="https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao" target="_blank" rel="noopener">Despesas por instituição, portal da Prefeitura</a>. A Prefeitura e suas empresas, fundos e institutos aparecem separados, como no portal.</p></div>
+
+  <h3 class="sh">Em que se gasta</h3>
+  <div class="card"><div id="pElem"></div><p class="source">Fonte: <a href="https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao" target="_blank" rel="noopener">Despesas por elemento de despesa</a>. "Contratos de gestão" são repasses a organizações que gerem serviços públicos, como saúde.</p></div>
+
+  <h3 class="sh">Quem recebe</h3>
+  <div class="card"><div id="pCred"></div></div>
+
+  <h3 class="sh">Folha de pagamento</h3>
+  <div class="card"><div id="pFolha"></div></div>
+
+  <h3 class="sh">Secretarias e secretários</h3>
+  <div class="card"><div class="controls"><label class="sr" for="buscaSec">Buscar secretaria ou secretário</label><input type="search" id="buscaSec" placeholder="Buscar secretaria ou nome"></div><div id="pSec"></div>
+  <p class="source">Fonte: <a href="https://www.marica.rj.gov.br/secretarias/" target="_blank" rel="noopener">marica.rj.gov.br/secretarias</a>, consulta de 14/11/2026. O Radar copia o que está publicado, sem checar nomeações.</p></div>
+
+  <h3 class="sh">Empresas sancionadas pela Prefeitura</h3>
+  <div class="card"><div id="pSanc"></div><p class="source">Lista publicada pela própria Prefeitura. Fonte: <a href="https://transparencia.marica.rj.gov.br/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos" target="_blank" rel="noopener">Sanções administrativas aplicadas</a>.</p></div>
+</div></section>
+
+<section id="empresas"><div class="wrap">
+  <h2>Empresas que mais receberam da Prefeitura</h2>
+  <p class="sub">As 100 maiores recebedoras privadas em 2025 e 2026, cruzadas com os contratos e sanções publicados pela Prefeitura. Cada ficha mostra fatos com fonte. O Radar não diz se o gasto foi bom ou ruim: isso é com você.</p>
+  <div class="explain"><b>Como ler:</b> "sem contrato na lista" quer dizer que o CNPJ não aparece na relação de contratos publicada no portal. Pode haver contrato anterior a 2025 fora da lista, ou a despesa pode ter outra forma de contratação. Não é, por si só, sinal de irregularidade.</div>
+  <div id="eStats" class="stats"></div>
+  <div class="row" style="margin:12px 0"><input id="buscaEmp" type="search" placeholder="Buscar empresa ou CNPJ" aria-label="Buscar empresa ou CNPJ"></div>
+  <div id="eLista"></div>
+  <p class="source">Fontes: <a href="https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao" target="_blank" rel="noopener">despesas por credor</a>, <a href="https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao" target="_blank" rel="noopener">contratos</a> e <a href="https://transparencia.marica.rj.gov.br/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos" target="_blank" rel="noopener">sanções</a>, portal da Prefeitura. Cruzamento por CNPJ feito pelo Radar. Valores de "contratado" são o valor publicado do contrato, que pode durar vários anos; não é o que foi pago.</p>
+</div></section>
+<section id="obras"><div class="wrap">
+  <h2>Mapa das obras de Maricá</h2>
+  <p class="lead">Todas as obras que a Prefeitura publica com localização: concluídas, em andamento e paralisadas. A situação é a que o próprio órgão declara. Toque num ponto para ver o que é, onde fica e a fonte oficial.</p>
+  <div class="big3" id="oTot"></div>
+  <div class="controls"><div class="seg" id="oSit" role="group" aria-label="Filtrar o mapa por situação"></div></div>
+  <div class="legend" id="oLeg" style="margin:0 0 10px"></div>
+  <p class="note" style="margin:0 0 10px">Filtrar as paralisadas por motivo declarado:</p>
+  <div class="controls"><div class="seg" id="oGrupo" role="group" aria-label="Filtrar paralisadas por motivo"></div></div>
+  <div class="cols">
+    <div class="card" style="padding:12px"><div class="mapbox" id="mapa" role="region" aria-label="Mapa das obras de Maricá por situação"></div></div>
+    <div class="card"><ul class="olist" id="oLista"></ul></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3 class="sh" style="margin-top:0">Motivos declarados, por grupo</h3><div id="oMot"></div>
+  <p class="source">Os grupos são do Radar (regras iguais para todas as obras); o texto original de cada obra aparece na lista. Fonte: <a id="oFonte" target="_blank" rel="noopener">Obras paralisadas, portal da Prefeitura</a>.</p></div>
+  <div class="card" style="margin-top:14px"><h3 class="sh" style="margin-top:0">Todas as obras acompanhadas pela Prefeitura</h3><div id="oAcomp"></div></div>
+</div></section>
+
+<section id="em-breve"><div class="wrap">
+  <h2>O que vem a seguir</h2>
+  <div class="soon">
+    <div class="card"><h3>Mais da Prefeitura</h3><p class="note" style="margin:0">Empenhos detalhados por fornecedor, dispensas, resultados de licitações e contratos. Em coleta.</p></div>
+        <div class="card"><h3>Relatos de moradores</h3><p class="note" style="margin:0">Em estudo. Exige moderação, proteção de dados e orientação jurídica antes de abrir.</p></div>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <h2>Como lemos os dados</h2>
+  <div class="card" style="display:grid;gap:12px">
+    <details open><summary>De onde vêm os números</summary>
+      <p class="note">Tudo vem da Área Pública do SICAM da Câmara de Maricá (presenças, sessões, proposições e votações nominais) e do site oficial da Câmara (fotos, partidos). Nada foi estimado sem aviso. Valores calculados por nós trazem o rótulo "calculado".</p></details>
+    <details><summary>Presença: o que conta como falta</summary>
+      <p class="note">Contamos sessões ordinárias e extraordinárias do período em que o parlamentar tinha mandato ativo. A ausência é <b>justificada</b> quando o próprio gabinete protocolou um documento de justificativa citando a data. O Radar mostra o motivo declarado, mas não consegue verificar se ele é verdadeiro. Sequências de 4 ou mais sessões seguidas sem presença e sem justificativa aparecem como <b>provável licença, a confirmar</b>. Justificativas que citam datas sem sessão registrada no portal ficam de fora da conta.</p></details>
+    <details><summary>Tipos de pedido</summary>
+      <p class="note"><b>Indicações</b>: pedidos de obra ou serviço enviados ao Executivo, em geral sobre bairros e ruas. <b>Requerimentos</b>: pedidos de informação, audiência, CPI e similares. <b>Leis</b>: projetos de lei, emendas e propostas de resolução. Homenagens (moções, títulos, honra ao mérito) e justificativas de ausência não entram nos rankings de atuação.</p></details>
+    <details><summary>Limites desta versão</summary>
+      <p class="note">Quantidade não mede qualidade nem resultado. Um vereador com poucos pedidos pode ter feito poucos pedidos mais efetivos. Mandatos mais curtos têm menos sessões e por isso vão separados. Se você encontrar erro, use o botão "Reportar erro" na ficha do vereador.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgNjgwIDMwMCIgcm9sZT0iaW1nIj48dGl0bGU+UmFkYXIgZGEgR2FzdGFuw6dhIMK3IE1hcmljw7piYTwvdGl0bGU+PHN0eWxlPkBmb250LWZhY2V7Zm9udC1mYW1pbHk6J0FudG9uJztzcmM6dXJsKGRhdGE6Zm9udC93b2ZmMjtiYXNlNjQsZDA5R01nQUJBQUFBQUVpMEFCRUFBQUFBcXhRQUFFaFFBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUdvSlFHNVl5SEloQUJtQUFoVVFJZ1Q0Sm5Bd1JDQXFCNzF5QjBpa0xoRGdBQVRZQ0pBT0liQVFnQllRTUI0cFBESUZoR3dLWkpXeGN4ZXgyRUVTQ3VvZUhLRXJVckpod1kraGg0NERSOHp5LytQOXZDWnpJa0xJYjJ1bXV3aVhwZ29oU0FSR1JSdE9qM3VoV0t4cWVMdDNFNWVSVzZoYkNwRkNwVUVhdC91M1UvK3BlYVpmTHpHVmZiYkYrTUdDNHdPNFhJZXlIUGJpMzRCNStFQUZsNjJBUkdrVWY1bEhjZk9SZW5kVkZZT015UnJKeTh2Sjh0UGIvNzlwVlBUM3ozdjBCQWhsV2hJcUlYRlRpQ0NVQmVtTEpjRS83RC93Mi85ejNIby9JS1Vaall4UGF5QWNzRmxYV0tvSjFzcXAyWGM1dFgzdisvOWRNdS9jKytMK3FwRVl5VUpKQjFwR3BRd3BnaDJWMW9LeFplVFN3N0ZQQjNkckxHYUJ0ZGhhQ2JtSVVvaGdnQ2lJV0tBcGlvSTFGQ1RhbGpVN0ZtRkZ6czNyR1p1VG0ybTFPVi8ydXJNM05YcnZJZC85eitiOXRmaDg2cFlnbUJKTVFyRURWenJ2ajM4NWViTEhZanZWOS8xOS9LZzlUeWlwYzlYV3l6LzhGQ3FCTVFkQXJTdkdQaDluRHJHMjZVbmg1dTY5a1pwbFp1RklwVjFzSkJ6MmMyWDlVMS9TRU1ubURBMDJWcGZOZjRJbklrdVU4K0pidENnVEpnL1oyMmRwdFF2OC9uWi92enJ4QmpRQU5KRnUyUC9nREw1Q1d5QUh1c0tzMlhaT1RvdHEyQ1Nnd1oyUDlXTGp4aVdISmFhV1JpTkpvdWRCZGVXVk44QnEvdVJBQ01BMTR1MkgzeXhSQ0Y2UHQvZlloVnJKYzRPeFZlVTFTRmFZM1BmOS9UZjNhdmxzbDJaTHowOGNLZk9EMFIvODAwTm5iRG5RUGE0Qm9YN3J2bGFwZXZSSlZXWWtvam0wNU9ZNGRrSlIwMnJML3lhZ0UvcExkRUhCeW5BYkMvRUZiQ2pwaC95R21GZEdLY0xIazNXeVhzNXY5ekhJMSswWDNkdUEvV2s3TlBPcU1XaHdTWVZ6cCsrbXJBSFU0WE93NUdTVkxsN0d4RVM0bXk4d2RFT0l3YkV3VUxJTk16MWRmOWQzb3MzMlJPdjM4VThsSjhJS0laMFVHYndsenJHbWRXZG5XM0VTbDJDaURqRENJeWZ1YVdXMnlVTFVJcXA5WEo0Y2NvNk91eGVPSXRQUzBOZUhCLy9FUkRBVkFDZ3d0amhweEY0cUVpMEhpNkJFakMyS1RpWlVsQjZtakR0SlFJNlMxTmtpZVBLUlFENnkrK21FTk1BU1pZQUl5MFJTTUdXWmd6RFVYY1ZpSXRkeHlaSVdWV0t0dFFyWndJanZzUUhiWmkzWElJZVNZWThnSnA1R3p6aUxYWEVlS0ZDSHZ2VWMrKzR5VW9oUVVVTUJHU0ZKUUZLUUFSVWxLc0ZGRkU4VTkyZ2hod1YzQmpjRmxFVEdiREQwNExMRENTcnNpQXlKbms2bFFYLzA0TExUQ0xydnRzVGNBZ3RWWHYwQkI0Q0t0TnBpNzNwM09BaFRQZUd5bUJGRGdnUFdQZ1dDd1QzOWl1Z1NJL3MwR0FQOW45dUFMQW1yUWVFSWlzR216T0lLeUg4NXc0WUw3MGJKVGhuWVNvK2VMNGRSNEtrU0NRVWN1T3pwU3lZZ2swbGtsVWdoL25sd1E3TTlIRW84NnBNNEZWYlQrN2o0STlyY0pJb1NUUTRjaEdzSG15TlFpOUVSem1VWm8xbHVLbUZreWcyaGhOTHg1VXgvd3FqU09ud2pTNzhYazl2RWlNcWFvWTMrcTl5Z1M0c0hpVUxXb1ZTVzRzVDM1ZTV2ampDamtFWnlQT3J3blg4RU1IZ1RZL0k4ZDJxckkwTGFUSjhLWmFKTEpadUNFQ09GT2dobGhlTlNtdVk0ZDN0UkVhQnMrMXpGREJoNzFtTG1PTTcyeGx1WDJ3OVprTWwweS9uWGY4WXhtMEw4NzdWMmJVcFBkS2U2NTgvRXpJMGw4QkYwandrbHcvRDZ3UjZqM2tXSWIzQ2RHeHloNlhUV2pRaUphMVVQMkRLakMveWpHRis5dWE3L3cyRjNYOHkraXpBQzVsRTR0VUg0b0RPb0s4QmdmalFZZnBNd0NxL0lXaHhyemNyOWN1UmZ2K1ZsS0MyTWlQOWd3clJzcDVnbXZlYStGMERNTkxDVldHbFhGSHBPR1Qvb0hqbExPdWZvdmFvd0FYSitzVjBNbTVmUW5lRmxCSTVTYmNORjh0aDJCNXhCWlBSbmt5QWppbGJEbmxMVGJsTHk5bEw2M2t0bFdzbVhmV05TbURuVnBTQ09hMEpSbWFyNnJhS0cyVzRwMjZoejNsMmFQQ0d5ZDVjSU9Hc3hzN0gzWUxKdjUwU2Y3azluSW16ekx3OXpPVlhrL241T1p3SHRqT1p6aDlLYXpoMjlWV2xLM2RhMUlLWjdPVDFiU2toaFJvc0w5NmpPNnBSWjZ2T0lhcDltYUFPSDVkK1l4aVg2dXh6MnFVU0lPRldwUWhub0p2dm5nbGFJNG9hZnV1K215czQ0NytQV1QzWndvKzdkbGxOdDdBY29qb1pRbzJKWEk0K251OEpSWFNadnIwT2VzSnVwQnF0cFhwOHE5NlBKM0h5WjN0MiszSXVHY01DRnZhVkZ1WXhGRjhWYXlMOFV2TTFWeldaV3FybTZsM2hURkNwcCs2YjQ2SDBMK24wcDlJeFczWUtVbGgwcnpSKzU1SFZuSWZWN3lOditvRmVXYUsrQnF2TzZVc1Rid2o1K2NWeG5zbkxmdlA5S01nSXljZ3BJN0Q1NThCTkFJRkNSWWlDZ3g0dWpvR2NWTGtDaEpzaFNwMHBuOXh5Skx0aHgxbGo2MTF1WjNBd3cweUdCRFRERFhjbXVzczk0R0cyMnlaZjFIdkQ3a2hpZWNkRXBuMS8xdmlyejNXU2tKU1VSaWtwQ1VGS1NLV3RTakVjMW9rME0reEhydTZkckJuY2x0MzJ2ZWN6emNSclRJRFBCZUlKOEExaEFPdi9xN3RIWlc3RmhXajZ0eHZOR1NyL2I1M1dmMm5OdytGb2IzSE5qZXUyYytyaU11aDZqaGNxbHhHY3Z5WGlwWjVwTzhUeXJleG9qekJIOTJ4U1NrVkdweDRVck5pemNmdnZ6NEN4Vk9LMEtrS05HVDdVOWptcW9hdFZtV20xYUk5ei8xMTJWd2RYSGRnVXRYeGNhdDlaZmJlSWNRV3VDTnRPRWVvRDg3MHM2RGFORUl3WTFKYTNDcTFyU05wNElmcGZvSGlqd1RuczY0cWE3MytyU1NYVTVYb3hSSUw4OXlUa1ZLd1VDVWtXTDNQZHc3ZHdwbXlsOFBoZ2lUVmlRWWEzQ1FLN3BKVE9UejRQVk82THk5WG5Xcyt4MGNna1o3SlFjMW11bVZIUjdQclFoTXBuc29kdjg1Tjl6bW1uYW5QMzA0TFpGOTJrcGk4Wm5Vd3BEaStoTXplR0tNQUorUTNzZEpGbnk1ekliSWE5ZWQ4TVV0VWl0cUJCaGlLNW5XSnU3Y2lXUW1LWlRTNndXR2dpdGZ3eVBlZStEUWpYaUR2VmVQUlVUZHBBUEZXT2FiMTZJVGE0NTNjT3NaWG9BUVJDQStsNEIrWFphOEhrcFpINlVwM0FST0xmVENONitlcXN4ZHVMUjYyTHZjaVdXRTFIdlY4ekNDOWdGTi9JM2c3cVFocVVQR1Jzckp2Zk51Z2VhcmFSY2haTnF4ci9qeGowOUpBM0w1a3A4Z1NVMEJPajBwblM4RVdqd2pJWTRQTkhwR3FqQVpxSE9UTTR2Tnp4cVVrZzRrZ3hjdWtJV3lTQlpETGJPM01oVmxWMlQ1UEhXZHFrTHVwSmIxVmVWOUhzY1pTV0xDQ0RXNjl0djA5WXhkSkl0RVoyMnVHa2srSHJOMG1jNkdtbXFtdzg2NTY3dGlWQkJMSHIweHZVaE10Z2lFWFFxRTdDSW1uSmN5MzJvVGQwd3dHU3ZUVHBPT05hc1JLcWtacVRmYXNYZ1NiTzlwWW9vaCtQYWxERFBOTEVlYzk4TXZWQkpIbm5xSWRMdklsL25kUDl4MHN4MTF3VThscUNJQmVTRmtUcGYxa3FoRmg5WmUrOHE3LzVaQ05NbHdKdzBnOGlrUWZ3Q2ZPeDRDR2ZmQjJXb25tZ3NYZHgzMzMvT3BTZmJtck1YWW5JSVBCTHdHdzl1YTlwWVIxSysyZVVZRGxwYi9wYWJWWGd5SFBSZzJRMWdvZHFYdXpFZXpiQnlhMFpiRGFCNXVYd2h4YjBsdldBb3RtcE1QaGhCdWI5SHZnTjF1ZW5XR0o3RWl2ZEVXRmJzSyt3cjFYYlBDYXBzRlVKdVB1cWVCU0lwRmNNZUtHdjBlVGpvbzNDNGlqV2kyMUpJMUs4eURoVmdCazEyTXZvRXFqS0EzalNSZWk2akg1aTdNdFRNTkJMRGRjdHdEYjAzMEVxK1cyN3NnSHZBeWVESjRtdmpOK3F3blptY0NwK0g2VnhJbm5FZkIyVzJyLzdxZzF3SGJ6K1lyY0Ywc0tBaDNYUkdMZkZ6dDVuZDBQZ0Y4NzE3S2FQL0lKc3c2WHplcnFKNDFzUndyWm9NYmMxMngwWm5SRlRYZUduOU5rQ1pNWTlTa2FqSTEyMWxRNER6bUtGMkMzUDc5dGZGcHJGbk5xSFAzZ1cxV2ROY1ZOSjRhM3cvYW9FbEphMjN1dGRZREFjNlhuTGJYM0FDRTc0WDY1NjkrOWVrcEZQalZkd0g4Nmphdk5QQ3J4N3lhOTVMWDF0ZnlYL3hjN1YvbGdnQzNWUWJrRTduL3hmTXhzTVA4Q0FzZTVmQ2o2UjhZNTduamVydkQ3cDFiYnF2dnNjNVd1ZXMzZVRnWEZoV1lhYXBpZkRmVVlaMThzODFvaXp6VkFFZEdUa25sWGJ0NzhWQ094SUo1VnA0V1d6ZlhXQXQxc3czem1ZR1JPbFZjRDgyZktseDN3NU5xWHZSSHM3YW1tbWltSHRaNDdmMlAzR2hwNmFzQzNWMngySFovOE1GTytaNkVSdzJzOXJucGdiWXV1MnFKU3k2cXhqTmlQQ0VwRVFrQkJiVmY0LzZNY2N4TmlFandhQThIUTBsWTI4UmduaHhmUTFtN3NyVXhCS0ZOZmpzeHhyRkduUnUvSGtuUGVLVE8rbStNWFpXVFdwZ3p1cW5Od1JZQUgxWm9oVkZHZXVtVkZ3NzQ0dE84eFlNOTMzckFNSkpZSHUySTB3bW1Mc3licnM4aUhsRTg1Z0tSOSt4RUU4K1NJckE4dVhqUWRHQ1diTi9rNEtrS0x6czVtZWpiSy9iUHJsUGlCWFowNisvVGUwQWpkcnYxWkRwSmZ3Q1JUcFQways4cHNQTkF5Y1VPOWRVdno1czFIajZFRWRKUDl4UWVINjJBUlRpVVMyTXQ2VGZTUytrV2d0Q0Nxd2l3TFNPK240QllzV2VWUUhNdDU1OU91QTVMSXRodmZNSXM1anN1YjVvdjgzazZCb01kMTlLSkRmbDhYRVNqd2VDNEhMNjJmZmtsV1poODhSb3RUMXdwVTJsb0phUnYvWldXSm9scENlZkpZRTFQeWlacFZMNnZyRUVEZmowbjUxL2xNTVhzRFh2VU85NVN1aDcvOWsveVRmcFYrZTM1RGU4UGkvZlBkOTUvVU9ScU1EWTg5R3FiWXBJdWpBdHg4alVISTZRdjlZSjRIblNqRlREOHVYUkg3aEpCOWNFaUZNN0FJZWw3VC9yNHdLMnFHeS9OQytkSDhTR1RvZGhGSHBRSVZKdW9SS2phUWZRcnlJYml0S0lDZWlCN2JFRERRMDlqamxZa2piVVBzNldpZHJwQ0pFYXo2VG53b05HbU1RS2J4ZFNsTjZUcVd2K1ZKMUw3OVcrS2ZERzZJZWNqSHc1TlBGWXZhaFhzcnp3WkJoeDFRU2VyYUVESGRpSGhiV0p6blRrQnFUNVJwT2lOaUg2Q3BwdFREdEE1TitId2dVV1FPVkdxTDhwcGgrN2RtVHlLbXhOYXo3VnMrSkRJR1U1bUdDdUprT2tBMllPMkszVVZqY3N0bXZobEQ5czE5bTVMVUxyTjdFNzB6TVNEeExqZUJhcFlrd1ROdXZMcmVFYmtkZzY5TldLMVpTdW15S0t4dzcvTmd4VXpaQjFJcGR3ZUp2Q1pNS2N6YklQdlJiWnFKRmRHNnBxejRvRkZtTHJLbkFIcGR4MFM1c1EvOGdJN3B6N3pvS3NmR0E5bFhMSEV6cEhmT2VtS0dadmw4djRWTWhVODB3czVnYWlPZWFoaG84SmRUcDhoRzBjc0NpaTlHdG1KVWZKTktuM1J5UWV6cnBYSHdSYlRDQkVSRVBRMVY1bHl3QXlCV1JtZlZlUEo4MmFpMHJvRVNVOS9rZExMTjFtTmlVenNuSG9XNXRCallvNnhVUmVIY0Q5Y25pUTFtUlBuSEF5a21wK291WnJZOFo5WWU2OCtwMEdtT2dZeWtFQ0draUFqU1pLeHhHUWlLVEtWTkpsSmhzd2xTeGFTNjk5QlZxRXBkZGs1OVlLYWVJa1pKZFdmOExRM3J2ZnVwKzFiMThmYnJjVUVMeFBXRGhQMTlna3JoNVd3aEJaV29OQ0J3aG9VTnFDd0JZVURVRGdFaFNOUU9BYk5uZ0hMWVV2Tzh3T0hCUjI1RkIzUDZtakdHWEtqRjdEb2tmWHUrSGE1QkREQW1nNUpuSmYwWHIyWVlTQWdWK3h4S0Nkak83aHJ4Y3R1Vm1taDV6K3ByZUxhU1RVSVptK0E3L3B2dWNWRU5jUE96R2tpTktyWXV5ZzEvMFJFOUdwVjV2Tk5xaTErdTl3Qnl4aFlrU0M5akwrS0t0NUQvWHk1NG4ySktERVBQQnIvQUZtSXRxUG1GS21MbVpHdDlHWFArbWlFdnpUVU85NWN1Wit3OEtUbDh4K0MxSHdQdm1Qc2I1UTdrWU5jemh1eGZaWE9ERmhPOTlITG96N1VvMGFwOWFCS0N2eWRXTWIzRi82YWRiWTFjalRQanRYUjdaZ25VcWNXbFg0NXJPYW1OUUxsc2IxcEFXWm9oSXF4S1RwL2NLTVlnZTdLS2lhallPY2NXZnB4M2dnOSt4VCtRZWM2WWtCdFNNVmxiZ1NmSkpWSFVaWTNSYzVMa1p4THFkSnB5WXk2Zm9jZkE4SXhpNnRjSldSNWZxSDlpVTB2cFBlQlUrTmFocDhLVUpNWTNJcitSRC82R3N0aVRmREpnSFloNW90cDF4cTJEakRNbHhVeHI2NlpZWUVmZnZhQmF4QjhOVUtaVTlid29LY1RQY1NNVUNyaTdBUDZRM09zSHN0YTU0dFV0UzA5bjMvZ1kzTTQ4NHNScWxaN3ZWK0NEMlBhM0ZmZ28wanRnVWliWmJvdmtVZk5taGQ3NUxWTkRVck5ESDhpTWhUbUFIelQ1ZUUyMURJL1MvNGJaRC9pRGxNZTJQOHBCbGhHeTVETVhuMVo1bzFGVGR5cXR1UnRQejBNYVBnN1RUbmlWcGhxaytZSWVHL1dtOThxRk9mNjNOUnoxMTJmRHlNZmtRbFhNZDRqL1pPUlAvZ2duMDlIelk2Z1JqOTFGVEpyajdDTzhmTkYzamNvUkc4d01Yd3JLUXZ4T3hBRUVpVDBTZDRRU1pDNEEwRWlrWi9pV2dKb0FUSXlKTHNNUVU2RzVGZElNbENRSWNWbENFb3lScmt5ZUVvVkpGTHRRRkNUSUhXZjVBTU5DZExzUU5DU0VPM213RVB1WUNEZFpRaDZNcUlQQkF4a3lIQVpncEhNbmpHeWpOOVJUS1FZbmVTYWdtdk0vdldVd05Qbjl5R1VaT0ZHWHJvaHE4MHlyV0h0TW1Iak1zVVc5QjEyNmp2WnV5RUhOL3o0M1c3QnlXWEIyV1hCeFdYQlZRVzV1U0YzTi95QmRodWVMaHRlTGh2ZUxocytLc2pYRGZtNXlmNUI4UnY1Mnh6cXRjS044ZEplckxHcXJrMDdaSHdXZForaC83Ty94V05BYVAyMUR1UWFRTjBHY211NDdMc1JydnBVb0g4QWRWdTR6VXNnOFBrUkM3TnNacVRNM0VRRjlsV3FWV1cxb0J2RFh0WENia3hwa1VSTkJpWnMxYlUzN1RVWU5BTW5hSnpMWXI2bVlZdEx1MlBFRElDWmdXbFM2OEZSUlN1b2FJN2w1VnJXWHAydFUzUEh5R2p2Mm5DZE9rWXpDRXlkWCswVTVqb3F6VWFZakVBRVRFZWoxR0s1WVRoenBaWkpqRDYvSW5PeW5ISHUvTks3a01SK0diaU1kT3lUcVBDTmVnMnV5Q3A3WWxOZm1UZzQzM3JHd0gzclYvVXJZY3kwZUJES2hMbnJyR1VPcTdMY0dzTnNrRk5sczJtb05qY0hodWVNOTNFek4vSGhVUCtZbWtmblB3cnFnNjZMNUZlV0YvRTZiNXJubTZzODU2ZElrb2lOM25CK3lhRmVSM09YTStVUU9odjF5QlczUHZaTktKTDBJVThnYzFFSVhNVXo1aGcyNk1weGxSVW1QT2p3UEdLVHBlbmZ6T1hkSUU4dWRpRERHMjI4WGlScmRqdGpJUnY0QkY4eHkxbmMwUzdYMkxaWmRtNlJMMVJjMXRrNXp4cnBtUTFadEtnZTQrT3Fkb2huVGtJV3AxTUlNTERhaEhGaHBsNG1oMllrN3FhZ1MxZ0lYOTNnQmVPOU5KZ1dtNktsOFFsNWhtaDRMSjRneFYwNlZFQlBSRFNQTVl6WGRDNlJiTVlCaWRsUWVjNDVLTUNkRjUzZUx3ejNVaW9HT3ptZFJ3cWpobU1xNFpJVkJ4SnFaMk9PbE5IdXRCZFpCR3JEVVZVSzVleHN0QlY5YlNsQ2dFL1J0TDJSRWl0V0htcVdaM1NvbDhVcjd5M3lzeVlySC9XblNpaXhZRXN2cVVaeFhjc1c2RXBtRzgrZ0UzaVQxNVBEV0d0MEJ3TXp4VUg4NEIzbHVET2YwTHl2b1lvTDAxTnAvWEdBVEYyTGNZRU54dzhVdVp6QThRb1ZudmJpR3dXWFJKL2l3MUV4NVJiSEs0NDlhOFlINU84dHBKWVVmdzh5UGdvYzAxSGtidGlxSVBwY2g2R1FJWFUwR01uRXVCQWpkVjQwNktYdUNuMmhUMUhiWjkwRjhZaERoNWNMRFY4WENvU2NwUXhieFg4QUxtWEkyY3JBbHdYNzJGN05BbTQwc1diTjBKeUoxZ3d3NU0xWjdCdkpERzROZUtjTzBTak1HdjIyaVpqYzByZ0RHQkJxaWJLbkcybmxaYzZ0RE8wY3dmSE1FNHNLQmE3VUMxMHZaTk5kVzM3RHVTSFVienRFYnVKY1p1RDV2N2JNR1Z6RnBKalhMN1N5cGZNeTk0dVFmOWRWdXBFUyt1ZlhNdnF4dHlqbnQ4Q3VPaS9QbnFtS3VjeXE0dFRwdk56dC9COUpjQy85VzM3d08vWlcwUUlWcitreFBGcEpZTUZpWXlLMC84OWIvUytmYkxGZXF6djNRVm1KaFh1ZWpzRTJwL2lvQXllWlZ3WXp4QVVKY3NwNzdRb25yT3ZiVU5mSG5aZzUvQmxvOEE3OGpnRzNZaFBmSHpyYWh5Y0wrcEdqYi9xSHQ4d1ViYXFNaHZrcXBWMFdHam9XREpQOHJIT3hScTBRRjUySWVpaTBlNDlQa0lCVUkzRVRCTDRBM0dlTk4rYlY1d0ZsRzRGN2h0VWQxZ2FqQytxYk1nSnZaUWRFUHcxQVhxMmNtYy82SHpzY0tWNFNackU2NnNudEpsTWx1ZUJOTDQ2bWpPRTd5aVl4cGpxWDJENGtzeXhneEl6c0F4ek9Id2swZ3VTcXNncTZsYUtJNUp3aTM4Q2dFQ3ZYTDE0UnF4VVNHNllUNFdEYk5XbUhhczFIOVhubzZvMDgyZ0pIdExOQm8zQkVZR3ZCT1pQQk9VcEx0clF3SVJoMFcxdExMOXdISWRNMmRsU2ZKNFNMamhHYU5TYnBHU3BTVGFvb3BBc3RQUEJnVURzWTFkcVdpZWRrWVlvMWtmaUd1TjNRbG8xcFpqZXNvdHkwZURYWmgvMm1Db1NENTMwbDU1MzUyVGZ3V25LRlhIS3ZnRXNiZFpjeERZVGF1TEUyeDhHWGdZTmIxbW0vdmRCSEkxdVRsMVcxcTQyM2pCakpTTlVTRWNDQXpSbzIwakRHM1VuYk9iS2dZRTlCekFYMmQ2M3F0VDIzT2tXdGswNVNwcXBRU3NOd29Kd1VCRGs1N2Y4Z0tiZ1RZMGwvc25CQ3NQRlJ0UEEyN2loTVF1WXdMOXFXQWc1bjlUejlsZ2sraTd2cVA5azl0RU11U3dRWkgwaXN4cHBHQXdHR0N4SmViVHRKN3JROTcwV1dWbGJGMTdUK0ZLUEVVSGViOUc1Z0hwcHViMWZ2WXhJeXpDQmszQTg2ZDRaT056QXg4OW1RcU9nc24rUTIzcjFBRi9IVTZkdk1xTHN5NTNHM2FyeGJSU1NGcFJLYlVtemhJMGhjK2F1YktENkVBVEZ0N2pMMU92VUcwWUNnTFFOK0dGOWRNZy91NUkwcjJnSnRRdFRvb3JQTFFLcnB6VHQwRjArZHZraldaSmROY0FadHN1VUVTUEJQVXhnaUxOSTNyTE9JTnJRZXowU1JEeFhDbXNhNlVFRnAxU1ZSS0JFSlFwdkpNVExkZ25VR01hRjM5Z0JJYWZyVkl6Wnl5RmUzbGhNVm5pZmVCWk1JQmpkWkN5WjBhRXZWenA4SWFpWmVpWlcxem56QWVlZk0xcnk1SHo2OTc0Znk2V0MxbGI0WUNRZDdoU1lQekxXOVlJTzUxNlRQRnJodm1PaEg1NngyRXIraHZEbnp1UnVVcEttN081WVBBMDh3Q1RoeWZFdUlySG1CN1hRVjZhZmp3Wlo5bjR4RU1nMU9tdEhWVnRmMFpDVkhvamU3S3ZOVGVhMVZSUHZHREhRL0REWTdhQ2pla1pWWG1oMW5VaXhpbzV2d3lTWkk4cWFldGlGRC84ZkYzSnZoU3FmdGd3eGlZR0ZZOTNWcnpmWnpWZ0RUR2xUZ2VDUGNTMUduS0VzZ21oMHRtQS9TMTJsOVFoYXNHcTRZRWwxRm1uS2FHSFkwSjR1L0FSWWdteUNoamFDbDg3aWhuT3h3eUR3WitZWEdQT09XdWxDaFp0U2Vhc3JIREU1QTYzSVZPSmdhQ1RqblVVT3lGMmRNclBsQXdRUmtHdThRTmdYdDdNNVEvcXpjUzFHTHhobVB4N2haRnBaYkRPRGdFU1U5TENnV2duSEdOWTA5eFBHQmNJZHRTWllCdXowbVUzR2hscDFjKy9aVmpwdS9NcmZaR2p5eE9reFRXMWs2U3FDai8zMWJMb2NYTzB6MlVhd2oxUmpYNGVZVVNnOU45T3FvSDk5M0hndXZwRjFHQkt6RUNwRE11ODhCUFAzUjh2QlIvbzJ5eXdpTzdSYjlDWDlCTXhrNStaVHhiQUdtVlVYVDkxYmdZczN6eS9Zc3hrd1plQVE1R2s3YlIxdWhoVFdWVnhsUE5JSEpTaHgycG83VitYNEtFTWEzZE1BKzhITE85aEJXVWNJamw4VlZwU0UyMDhkN2NpN005MlRtbFFRRDc2bzNXaDZETVh1cnkxeDFKQ0lEaS9rcDdDV1htcXlMMldUQWthYTNQNU1TRzdmY1IzSllDMjdQQU1lZk9wTDZFVnRjdmNVVWpWaFRBcVE2QnJrK04wYSs0UzZGWmdNY3pUL1RwYm1McitDVFNKclQyZE5ZSm5wRjk5SVdvUVpYZFUyWHVsdnJwY3QyUGl0TVZKa040c05ycHJxY1lqZDZnd0lNWWhRdGlibm1BMkMzekxla3dSUTdyM3RSd0VIbC9LSm0rTXpRdjFjcG1PMlJKSUVkZ1VDdUM4UjhjRTNhUVQyVzR1bnp6Kzd4QXFpaGZZREN2cWYzM0djblh5RWlRbWw0bmEyVXRSNmdDNS9YZ3VNSnZmSnpSYW80bktiMitsMi9wQ1pWQzlVelJJZkt0UWVCcTRwek12dE9PZVpBUG5INEg4SXJsNCtlWFFqSTUzYUU2V1FaQkMvM0hITDV1L21nQzh6eTliR0IreE5Qc1AzOVpBbWRsYVhML2pnTzFlMVBpTzAxOU5MR2gwYzRZQXI2c3VCcWVPcDR0WFdVZkZBVzFzYllpN3pEOTVDNUpjcVg3Q3dJMkhnelRaN2oybDVjdkRSN2gvVGpLSFJKYXUvTWo2cmhQdk14TSt0dWRaa1ZGa3IzcHpmdkNMWFM1M1dpL0RmODUxWEdla00zUWgzVXZtRkNvM1RwVERvQ013SE4xZi8vdy9HeEMzWGVhamU0K3h3UmRCdG5kSWdOMnh2RnRTZUpwcjQvbzNSSFpXckp6ZUVENTVSSG82VEQwcWl6SFloaGhCazFjSmIvcG9CQjFDRVF5QncwKzFwNCtxbGRreEdEZUc5TUVCOElmeUVRNWpVcGQ2OUlMRVpZUE9MS3dHWEJOaVphNWZuWmxHMXlMSlpwVjJFTUVLY1NjWVlYbmtnWDRtRURJZGdZdEhEZjNEYTRTZGt1MnR5MGNqUlJDZW52UDkrVmNKWGwwdEpRa0MvUXVkVS9YenplTEw5NStGQWtubmw4MGI3cEg5Q0N1OEpMQTdubFlRd3pMOHNvM05IdXJxcGovL21zNnlhR3BORXNhRS9pSGF6N0hKd3pIY2pPUHE3dVhrU0JpN3UrZXlTVHZvaWNvcDhlYjFjMzVrSzlOS2ovMWdSWXQrMkFlTHg3SXY5WXdqUWgzTjM2WUdzUTVocHVCV01RN0ZCMFVwaW5JZFBEMzkrZ00wMmpKYjZmaG51ZDMzZVhOTlZQZnRNVVdLUWtpYkRKd1dZV3hPSnpPbWQrMmQxLy9POWI1dlBWZDNOei9xdjJuTG5JejIrTGZxV1BWZ1NIb0IxSUNLNGR3WkRqNklJRUI5cGJEdnFUUm45UDVVNzhjbXVEenlHUkVVUFZ2VFMrTS94RXdBc3ZKSUJpc1gxNzR2N2lqdTArUWIvTWZ3SWRqbGgyUm5uZ3JiMWRRd3lUQXdXZWJ2dGJqdzh2UEoxK2QvUHJsSXhpYkM1cUR4SXJNVFUxWTQ5TVhmMUhYT3c4bXZkOVhEZnhKYUJRTjhPUVpjd01odkhhZlFmeU5uT1dIYXh5Myt6cGNQaDNmMjFIL2RpTUpvUE1id25Zbm1ucjZtUm04d0s2L09DL3owQkFPRDl4a0dBN2M0d3RPQVQzazRPQWZKNGFLUGdXL0x5OTdXa1FXUE9vSXVGbzBNVTVqUjhyUDFybmdqUkRRWVJRSDRVWG9XOVhIN0VOdEQ2c1VCYWtRQXN5Z3l2UERVR0VGRzVZUkhBRXIvNmNVNzQySkpJYzIzRU1qYVNwdGV5UDVEUDV6QWkxWGZ0cFNJaVJLNHdRa2V5eFJvQU54bGQ2V0hHaEJhVVpWdjhVVnhLUGxxYW1vMWY4TzNPRGZBUmhFWW93MWZYWnN5OXpMckFrUXp1elJXT3d5R3loaXhiTzBOZWkzOWNnSkl4N3BYd01ERllZVjF0YmZCSU9VbmxWTHlKelpYSEVFS1FaOTZxanFzTm12bXZwcHVETGFyZG5QejhZQ3Bob0YwbE1UMUxpR0VoZmpCOURQTkYzOGZYekUwV1ZsSnI4R2tybTFRZnpEMVBFTXRWYWtObDhUSW9Oempna3RWREU3dk42Y1NLM0wyRnZGTUxMMktjOVFydnM5TUY5L2NFMExRa0hMdFJlRkZULzVHTnpqNVgvVmJRU3pjR3p2OWQ2U0RQaWFqZTdERXdjOWJ4SXpPNXE1d29GdmF6b2c2VzE4UmZpUTZPL09MVklRcW9lWjBRRXpCeWJZS0dqVWt0cHdIK245R0FpcXp5a0Fkcy9JQUJoTUtxNHkzWk1qTkV2SG1rMzhqeFdySnh4MCsxZEVUYkxXTHpKRnBrZGcycDB0WXRFSEp2QjMyRjR5MnRZcjB6NHdxMWdIWDBEVlY0Zlc4L05UU0p3Q3d4TzFIV0hEVDNWUldoRW5pYnIrVkJMQmNIdVlTOHNMRCtlejdpbGxxbVczTVovR01NaU4wd01YaDYrR0ZCUFZzL0VmMjJ2VGlQUk5vNXAzU2NJc2U5V2R3bC9POTI3V1BvQktodng4SGlERHVvRTZWNXpkWTVKaEZwWVREcERXRjdodmxyU1FQaFlVSnZpRTBVUFJKYytLdzYwY3NlNFcxd1l2OGRIcjNkZk1iT3VUQXVuUmtDU3VqVVJUNDhqMms3Z2phSWNLcWhlTnZvRkdlVHRHU2ovUVhBM2xKdkNNZUwySmdPNW5qeG94TWlNU0duT2VYamtXUVoxb2pSeFM5dFJKNVhoeDlTUmtKeGdhU0YrSVhUT21uSFkrT3RrMlBCcm1ETVRLTjljNkhzTTBYTHVndHhEZDg3KzZpQVJQakljY2lOY0NSOGhDcXJoN0h2b2ZrRk9tY25TSTJiSFVOS0VwSm9hSVltU3hzOG1zdlNZQVdibit0djVybFNoUEtSblg4MFRXa1dFS2QwSWcxaEZkbFp6OWw4ODFQa2NvTGlFaFUwQkNnZW5ZT1ltNTg0NWR2YlBxZWJ5SGhwMUxuVWFtM0Y5WGRLczRwcGFCODd1YlIrWWJHMGRuR3pmTzNqV1VBbjZhMWJteC8zelFWdTM4c2J5cjRmdU9KajNNbVdXWU9CbHl5MVl3SnZSOFZZb1A5dGZTWHkrNVBpVlNQS0hyTGdvczdVMzUrRzI3Z1Eza24yOXRVOWZEQ3R4T2pLdXRvYjBVK0JQMDFCLzIxM3RBMy9mM0I5MS9kUy9wM0g3d0pIaFpzMGJGd2VCbEE4VG52VnAwcnNEMS81cDFkenJLYnZiNFhOVCsxc2lqcTFQeCtIaGo5cUs1R25UMkZpcytObXIzeXJqTFFZdlpacjRpUHdvR3VxcUdMSHFEanJaM1RJWUFDcTdhVEhtdU9kbGo5MnQrU2dZR3hOOHJLbFJGc3FnS05QVmlQTlZGemV1MVJWL2Ftd3EvdWh1Ykd4WXI0czJOVUxCTjNnbEw3NUFtdGhZbUZLU0x5NFhpRHN1aUFQdytsOE5PclFUdGZCdXJWY0dsdjY5OHF1bE5TeU13TStVMnNYd2VNcThuTkFZKzl6Y0dDS0gwOXJpY29neFdWbEV2bFBjTnpjM05Od3VQeitjc0ZBWHZhTXNNam8xbngrMW95UWlNcTNFVHdLTnovVW5sNnVmaktzNXN2TmhjMHBtaENGamNDSitRL1FZQkFzaXNUcDJKaUdKMlVSRUxOSEpnTytVZmI1Q2QyNmc5L0pZVC9mbGs3MTlnbmY3M0o1VE5MOXdOemVFYUNoeU5JbDF3Y1ppL1hDY3JkeC96OEh2c1dWK0dNRnUwNWpHcHZ6YklSdnhHN2NieGg5K3JnYXc0ZlUvc1BGMW5hSzAxbk5hZlV1ekRoSFlUajVXaUtSK1FoanQzejhwQ210dmkrRkJjNDlraldxZCtIQmQ3R2F4Z3NaMklHMEZmQjJOWmU0UnlkQS8xL2VxTnVmSzI1T3dzVmowV084M3ZQci9ReUZxZ2k0VFQ0dkNxWnhEMFVUTmQ5RGVDOWtoVDN2Q1p6NDltajErSU9XbUhBMXNZZzZoRzV1UjRER0JEU0wyQWNhejYrbFFZZjNvVklpWmw3a0Zuc2FpYnFsL240UExTM2U3RExFdGdvMW9uUm40dDIvbjExODlYL3hhbEhhSWF4cGw3ZEM5V3lvL0I0ZnVLb2s4UUVJTDdlM1JRdElCaFRuVG1LNitZQ3lQNkdER0MrN3I2cVJBbXZLSE8xeURUR05nejgzQ2FQQ3F5dnhkZThxTDZ2MU14SjUzNGJsY3ZZNjg0Y1plZTZGeG1KRlJvckhRZm80VVMwTkM2ZWFHeVVTM1dCcmxWaDVQNXg2RGpjV1dmK1Zia1g5dGdEY1Fqc2ovVkpLYnkxK1hYWmNwM0pEZHNQb0pQWHk3anExeVNmNzZyMFZQbWk2UzV4SitQSjFSM0M0WXJHdEFSRDcvcnYzNjNxaUVVZHdRbGRpVWpwdFVPQi82YlNaN0FCMWRDOXNqRHQxM2t3dExwMFpDMTc2cVBnOFZqWXZzUkJPaXNDK3ZnSGZyYzM5ZlJPcFQ5TUlvK01ydUlrK1E3Y2pqNUoxNHZKYzV4dElMRDR1c0Z5NWZLVmpMWDVVWHk4U0tZc01WYkN3V0p5ZjF6VWx0OFdtZEw3b2ZZRllKbFc1cWJyRmZ2NlpuNmEvc0Foc3VJelVDdGJ6THFWdTZkNERiMHlESlhpdWwwR3dMUnlTZEVtYWh4QXpGaWhwcEI3ejl0cjczY0swcE9XM2h3UU9JaGZ3ZW96OHhCODdHQkZBZytCdWNySjJkQ3p5c3FxZVpNUjE1RnczMU1DV3pMeHA5dUlhcGV1YVBqSTZKTk83bTU1dWVrUXB2VU82aytJdnlHeHpRVWRMUW5KOUFEVVdobzNUc0tkUFp0cDRIN2ZxdlhYUS9SVHBDT2tobjc1U3o5WGlJL3padVFWRU9nRDUyRHdCYmtvdHYwWlFTZTNQdWx3YVVjWmdwM0dac3g5bWtNakg1U0JJODEyNmlKRTRxbEFqVldRZFRnQUQ5L2JMNDhCOVcreDhNbm8waHdPaTJmK3oxK0oxT2dNS3U1SU5YWDQ5Y2x5WjQxQWZEQ2cwWTc2KzIwdjRjNkd5TGg5Vm4wVU5jM1JqZmlRaWEzVFRkMzU4T3hCRUg0OTFxaTVIaGkwOUFLbzkrenllejZHdTRPQUxTREYzcHFPb0l2YVArY1pnU2JzV3lMN0l2eFRteXVrRkl1ZC82M2I5VjRoeHlIVXJkeE1JQTJGRXUxaXRWajZ0YnU5MzFvVjhhd0VyMUlNRi9yRUUrUUs2bmRlZ3pzNE9EOTlWZUd5cExUTGFweFprZXc2VmFBeURuaER5bUc5azJXbXgxN0ZTb1VYUkJUZjZPb3E0R0M1bEhtRzRUaVdsTFBwWUNkRzA1Q0Nnc3gzSWNTLzFJd1VDdit1ZFRHNkdrOHo1clFnMFdEQWxhM3BhcTNzTFQ1RW01THNOaWlZc0pJSWZrTTlhcjFaNEhGNnhldllaNXhmVDRJeEFXY2N1UjIrM0lpbU5mWWw4RTNSeFA3Qjk3b28veUFXSTU2cWhPZUFZL0xheVFBYU9aKzByb2NRVzdFd25uODMzRWdZMStaaTNRQURPaU9OQktPOUxLZkJMS3dpQTVzcnVaSFZVZGFFM09EMjhvWndpaHNtQjhVSXZaV2x5QkVmV0RaWE80YlhIYUpBQnFpN2NMZzNzUlNQckNJR094alpONzliMTgyRDdianhFY2tZZCs0RGd3MEhTV2JWb2dINWwzTjdta3dVN080ZStydVRSU3pvL0JJZjF3bUhnSUMydkkrQSthZW9rdTdVaS95RVRod0tHK1dMS2xxek8vVnVqbzA3Zy9rL3o2NkhFMjZIYmo0WWw3K2F3ZkY1YlBJSFQ0RjY3d0lYTFBJd3NXUzdsVW5YaEdYVU9lRTRUZkpoYW4zZFl5VS9FeFJiYWlwcGY2c0NXc3pvNnVyUE43K3pNSFIzVHJrVGR5UkprKzluN0ZBWGFtSzlZc2RyYlRMY2tQb2dGNS9XeFN0T0JYOUtjYWVJTmtveXRpVWY5TkROOGxJamVxYmhMSkc1MHJPdHlUa1VURGkyRjEzbUh2bjlETE0ySHpIMzdOem9tenpvZk5YTmF3Ukx2YXJwU3hXR1VydG1PUkpSZ00vcVIyZWM3VzRzOXNSMnEwT0hyaytHakpleVZnTFRZcXhNN2FPSkZlSVdBZllEeS9uakZLdVp4NGpwcmQ2ZEgwc0V3N1pEQWJYdVl3NUovWEx2Qy9RTkNkQ2dna21IY3VJVDRDN2dZSFFFOHg3Zm8rdm9iR1E2K1NYU3RIbERCN0gxNThTVlZJbWY3REQyKzE1OHJDdUFoMHJ6akdhQmMzb3QrL0JKMkNOY1dTM1lJMVFScmJUeHhvbmF5ZjdLaXYxc3UvTE9iYXJDQ3JUQnlIWFQyOHFoUEdZRUpsVWZycThMazdJd2ZPM3o2NGV2cjQrYkZsOTNEUGVIZGF2R2U0NWFsSjhxdFRTZWJ1K0oybCtObGNyNkg4SzBoS21xa05tN2xDLzRVZlAzdkJuQk43Z0wyM2dIeVUzRnVFTm5lZHFFcE1hM0k5MXNrQy9xeDlFQVZ0U2U5ZlB2WFMwbmNhakdtTVhML2UwVFMwNWRLWkRhVGpKMEJCTVFvSVJWT3JjL3RCTDVyei9oNG9WWDlpWlVISy90dW9VVHlTZjFEWXNVamtPWU5qUVdIK0pCNDF5bitic2l6b0oxYVZjeUJQNFVWTFhJdnh6ZGNleG85ZW0wTFAzbjF4S1ducXlzS05HMWNYcHBJdTNYMXhWc0dNaTMxRk5xYVJuVXc4bkY1aHVjd3ljMTdyTDNRSFhBRG1EYXpiUUdIeXU2UWY4eUNDWjdGVUxLTDdOdlU4TFdMZ0lzT0hnZmdmTnoyOThUQVg5M3QvMjhTNjdnMzVEVkxBVnNlUmFJYW9BeFAwbnVEUkZSa3JOSitiZTFUNnhpd3Z2TmxiTUFaTFo5b2ZySGN6NGxNc3NwUlkrQ2JKbnluZzZwMnh1MFdjelJOSDBxQXZ1NDZOaHQ2Z20zeElYcEpEdzI0b1BnMHU5bWxQM0dzUkJKNFhDZk5pL1BQQXpYNVV4cnVpTkF6NjJFNlFFMDJWb2VIbzZxVXpRSnRUNHQwNXVzdGEyM0lkYmV5dzZhd0dMSlg4bHBROEF1T1U4VVVXdUZ6MWNDUE5QTjhpOTY5aEFkRXM0eFRuMG1SUE5ETTRVQ1hKYllLT1ZrUHZBclN0VFFPSlA0a0pzQ3hjdVhtVUFFandKK1V6NlBtcjJmSEg3WEp4Z1ZKQlNNemhpMDA4ejhpdTZwS2RJMU1oV2FkTzZxYzdXaUtZbHZUZ2tOOHJmWEYrTmZjT3pYOWVhWnRYdjdkMittNlFmRDRmbllCQVJBbUlFYWdHcDZ4UlpubGxiS1dvUGk2MVpTSW81ZmIwNUcwYitmeEkzR3NqNjBqM0xNS0FkMFk3cjZ3eXJpcTJObDNUbVNERHlUc0NiYVRJWHdUVHM4VEVVQ1R5eUN1SmZ2WG1hZmYrazRYWUFFQy9KV3lyVEhQcDRMLy80algwY3FMbkFxa2tEOWFFVjFVM1ROLytPRmZzM29OTFFsMVNpdmZ5dW1HWmFKdmxxcWJVWjdEallmK0JocXJRTS9meldUL1BFN1hSVCszWHRXY3NjN1I0dkRvaHlhZHBYOThFTFkwYklTbjlxNTVIaC9SSmg0WjFHMURYYzBSRmdsYXhPTzJXTm5xN0R4bzVoSHF3MkdkUlROSHpTYzkzWHpTOWE4TmtXem1VVnlvOW0zNUw4Z2VkMUFBMi9Eb1pOdjRhaG9XZERLQ1pDcG51dS9zMzlpeW1xTWVvQ0kxdkxVOWNiendvOVgzYzRpS0IwMUVHZ3pZNmVIZ05YS0svc2FWVUpzOE5LaWg5aE16S2d6YUtkaGFOaU5YRTFBaXFmTSs2VE5NQ0UxM2s1c2tDYlZmbkxhQThUK1B3d2lWbjZwY201ekpjSjZ1UzBocmRUblF5Z1QvcnBETFNQTFI1Ukh0anRrZG1DQ3pOL2JuR203bHYzeWNTSnIxTVlweXB4dkhadUhES0hwNHljRTRKanc2T2J1V1EwQndhTVZsWlJ2WHIwNmR2cnM2WGVoNklNdlpEZXFkcURXV0JsdzMyNENDVitRMU55Zk1wR0I5VG85Z0FtRDB5a0tCNWxsaEhpclJEVk5vaUYweWJ5c29ySWJwMGMyR0dtNkdSTkg1ZnljZzQ3dGJMSy9laytwd0srek4vSGpQdTc3ZlRVb2pENkswUW13TnFuRVRoRkcvdmRFd1V4Z3crUXhvaTZyZzdab2Y1dWl0eC9BT2tsakU0dk9oSDZiY0RFMUZ2T2VLZHU1M0N3eDN1eXNSRVl0RHZDYUxBVVJKR3kzbGcvcUI3dzJlajU4RzJNMjFwMGxScHh4bTVPUEJBM0dlSVhWeWNCNVZWRmp4ZE5PYkY5bURtSHcrOFgwSkZjWjI0K3hmU1FSajR4U0R3Vk5YRTB0ZHZMN3FDTnNvdUJrWTV1TWRYbXdXdDAvRVVoOHpZQVdkL1oxL0J3QTRVMDRRUVhyVG9PcEp5YXFDNHJyNDgzS1k2SUcxSWtjSXUwcnZHSU0rSXZ6S0M1YTdwc2w5aVRqdzBwMUJvT1pZVFdYaU5OMlpIOFVSV0NSczFLZmRyK0FFUk1laHkvNG9SRDBWejRJcFFyZVU0QmVGYmtNYmJXQ2g3MmJpajFKNWdqMzZwZkRIZURtU0hWc2hBaDRLRXJsRGViWXVnTEYzT0JWMWpLanhubW9IVjdOQmI0eW5GU1lWSlNqSXZ0LzhYdDNpb2RnaU4zWHArMkF5dWdsYzVmUzRVNUJHc0tBcm1xY1ZpVlZnc0R0ODhUT1hvYmNIdG8vMVF1K1JJZmlZL013S0tUTzQ4ZWxsdytlaGxLQjFLMVYvU0ViNFU2UzlzYW1zc2k3WlpiVUhYdm02OTAvditDdnp1L1V2d2Q3MTNYN2JXYUJoTFg3eVlxaGRCb2VoRlVNVjR2SytsWXpFUWw3MnlxV3F1YVhkWGRmWHVycWE1cXJxbTBvdTZ6dmlmNmY5MmcvOTl3WjFEeWlYT3kvVU1HZ2ZaWWJVNThzR1Nmd2RTL3dLTS8zd1gvRDlxdGZMZnYvOFNPYkdtcmRjUVV0VWhBelQ0ZDFnTHF3dldmUVo1bnV6VmFWMDlBaWh5RXpiUEl4elNBWm5XOU50R2Z3RzFycGVUL0F0T1AxYk9YeGZrNEpYL2NDcUgrbHM1L1R0UStCY1FySjd2TXV0YVBnOFpyZVFWYnFNSlV2dVUvM2NiNWFPdU5Oc1l1TTJyZDFMdG1laHdlVlhlVjVqUFFmZzc4ci9mcC93Zko3eVIxc1NhZHZVQ3hBRDQyL0xYdjJQKytCZm1mOE1CUXA2d2RVSlJJZDhFY3gvYzZwSGY1bVJLaEJZa0p5bDVZNmROaWN1dW05aVN0N00yZjJnT2JzMkN1UjM5Q2pjVStySm42dk0vSUM4YzZyNkozcVZEdHdSTXlBbVNQYmI4cGdyK0hmUEx2ekRmREllQ1NGNUFibVJPbnBETUhrQWMyd1k2WGdxN2tqQm5WbzlXc2duV2FSQ2VOeWxXRlYxWDFkTjlUL3B0UjFIeXQ1V01mOGNDL0F1ekZYSW9aUFYrV3g2RDZzbjBYMmo5MTVmY1hyeHhHZkdrNjBFRGw2RzhMUHdYM0JYZUxnTnczVU1leFo1d2JlaHZIRGVUYVhxSnl5L2NQNXVENWJ5eUIrZG5EYUJ2WlBLdXYveWxabER4aDIwSHMrUkhMTi8zQzM5YW43YzV4OHl5QU9xZElKUm92ZHdjSkZwa2ZNUmM4UW9DS2s4Y1lEZURtUUlOdm1ZcE1BKzBmQjBZSWluWk5STG9WMEJFZXNXK1NMQ2ZrWm1MSUpZZjYrTjdtTTQvZTNKN2p3RFNPL2Nwd0RHR1NFSzJVQXZqdnZNcjNUSnZ1Z3ZNbTlGMS9WdHYvNVZ3c2Z4eWF3U25LbzVjbDBVQTZrUGdtWDdWbm5CTytUc2NZV1A1aGZsOEVVT1V5cm5PRHYzWnZiN3FjenV4THlhUlhQRUpQZGVQN2VEOFlkNjJyV0lXQjZQSHpOdHVUMmpLNzdMVVM0N1lyRytDekxHRCs1UU1oS2JFU0VKMmoycUI1SllsUDkwVHZqUStiMFBVTnJXa2lUTUFHZFJqcEYxZ3hua0NqVytCOWJVTUdHeFQ2ZjBkekQwY25PRVFYVThCL3ZGWmxDSW4ySU9tb3FCczVuam1EM2UvZnRsKyt6dDBKR0FwNjZsSXI5a1BRR0x1WHZuZnJjZzk1a09qaUluYWU3OGtCN0pacVhGb0hVOG1CbENpN1FMYjRXOXVmdjZpTkgrNit5citQLzc4MWorZk5iVi9hZUhGSVhRVEhKb2hoQ3VXbU9rYmxSQ3luQmRZKzAzdlkwUTNGaEdQZWVnN0dHV1UzckIrZndkbkVoYW1HSVJiK0JWbVhFQStaSDljdUN3QUh2R20wT2swOUlsdGhKcTRqdGI0dlIxVUV5YVFSSzRVQmVZSnVrZURla1BOWTR3T2tyd01rSFpCdlJkQWg4NGRuWkkvYm1NYjIram1rbUN2d1VJNDBST2hPZExRVDJUekJyT0ovTDF4TkFwOGo5b21qVEc2a1dQRkgrNmcwU2NxSWxnVFhrcG5nd1pEQVk1SWJqM3phV0l6SDhEb2NVY1VIT2lYeHRLMEloR2UwVHN0dTZoV3pQQ1RzdU5xanlvSE50dCtFTStVTXFuc2hydHJpai9BQjUzTmtqZ0tQV3JGYlpQdUc1ZWJDTGpSZTRXVlcyWktibkZDYllNSFFYaXlialJpUE5LWDhZSlVubFh6eXp3ZHdXVFVBQlFUSGx5cStHbTJOdTZhREd5aFVNdHNVVHB0Sm5BbXZ4NDRsWkltb3JCRnUxVmdjYjFFOGtyUWRqMHhDSTBMeEdZKzlRZDBYQlhaa1hReHRGbGloQkVFOGVickJtYWw1c01WcDFXcElYVTk3REVSMWIxWWZKWVFPNFU1VElkV1k4eHhtdExzVGhJZTVuMEYvZ2tULy9GWjBZckEzRmRrTXJJcUJOcmIzaDQ3c2YxYjRmTVNtOGc5YXQ3eTF3UnZkYWZBRG9SY013aitPSUZ1OFpNSUxBQWVSdmxYUVF1a1I3cmZOWWpPcGg3M09hcXAzcEpHTnJGTnBEc1FsSEdKTy82RDRBN3RsbGJzdk5UZDVRemduRDYzSnlRcWNZbzhGZFROVmtVY0V1YXd1aFJsOXF3ZDVQUnFMRFZrYzBSbVNiYmw4Y2lqcUtTeWpKajBBTVlqcm9pRDRTdW9vSzZJc0FWbUR3UElWVExlMTl5ejU4Q1dFdUNBcnMyaTBIZFZHNDZmWVVkU3V6SUJ3RWZoS1Rrd3dtZFlNNWJhZ3pITTJSRm05NS8zbVV6VGd3WmJ0SWExdTBzc3liMVdKa0dpM0xPUlBpQWMyeWhySjdFNW1RUTZ0VEMvRjRuY0lob3NveEJqbTVtZEZGS3J0NWw3NC9TSFJJZk9Lb2l4dkNnejJxeHJLdXBXVWFyZkdVY05rRFJwaGd0M0k4bm1NTklZVW9oT3dLanV6TnJhaWRBcEtEVHpOc0tZT3NFa3VZOUJtL1RpMEhtWGdPVkRrNlpNcytDZVhRenNDSDNGdVEyNVQ2cTZRcEx6THd1QnJoK3hlUkw3cnAzMzZYQU5DN3NCN2VlWHJkblphMzRYK052NzgwRnBkTGp6VlVEaUFncWljOEcza3FYeVEyU3hvaUdYakFSWXBSOTVKS3I1US9Ta1kxZHZYblVLYktWbThSSVpKUWNOb2pUUkQyR2FsY0ErcnhFcEU1Y3R3QVJiYzZkK3pKcUJ6YXAvcVBiVHR2WE1hQlFWMGs3K0hDNDkvWG43OCtQUjViemJMTVo1Vy9FVTNqditoSHNKT2tZS210N3M2aVFLZlU5eWJ2c3BVZGt1RUdaSVRlZm54MGVwcW8vNzQxSStkT2R4Z0VHL09SLzdYR2liZEFOTHJjMDgrZFg3VXlUSVdRYjFJcjZFQVAwTEFyd29BQXFJdDd6MytnK3JuK3BNZ0xZbDVjM3RYeE9QVmgybmlBSVBIcUlVSlZ0TWlEbFZxY3BYN3pUMEoxSXRhUTFCbTJHRWZZeEFpRWUyU1lzRUdONFJPczRyZ1dOTS9wL1FjZUxQeXowaytIOUZpYlhwSzRYbnpadVVENy9uZ1N3Rjc5c1ErVWRZL1FsVWZmYjN4Zm4yZDFncWVHbUx0NE0yUzV0WFk2YzBxcWIrU2UySWlxOHBCZkJYcjN2dmQzS2tJYzNUbzBrMUg2TzZydVdmd3dEMjhDTFE1TW5sdy9YVjRYcTE2QnBlNXFudllzdFgvQm4zWTd4QXZvOXFHV1k0Q1Y0Q21zRVZMWW13UEowODdIU1k0K3JBUitNL0lpU0grb2FYc0R0M0kzTHkrVTBoVCtYc2ZUeHlDbHJvd0dKeGdxZnF5cUpaUTB3R0R3SjFOU2FLRGN5QlBxd1JBQW1OM1lhZ0F4N2J2UjEwMHNmU292Q2QrT05Ibmsyby8wQjFNc1lLZ2hneW93dHlwL0ZRWHB3OThOanU4U0tsaitWRjN6dUI0b0tidENySkd3T2hQaDBGOXNoTUY1UituT3l0cklqQ1JIZ2hBb0psUUs5NHJTT1JjMWc1NXlRR3ZIVDFGc3lyZlgxaXRxVmdSVUlsMExIN0c2dThEbG5YZVlHRHpiZ3A4ZTQyWTdDUVlBeStPYzBROWVPVUhaZEczazJQUjZVSURmSFdla2lVbitENW5lNGszSTZGTVpMWTMzelNCMjV5dXdJUW9TVVdZUjlqRms4S3d1SnRnRHUwS1N2dVJwSS9wcEVwVkpuUzlUSExaQm04SlJLVEFrRitvSTJ1SlZSSXA4VVNHSVlzbFdyOXVObG0xc1o1anVzcEdTbCtwVUJKV2dzaUVzK2dWTlByaGlUMXRzTlJwdit4dStUVVVFRE5Gdms5ZWlWZG1wSXJhdU5OWFVGWTBKWUVTa1paMG96b2FudzVnZ0I5UElLRXhSQVEzdkVjMzNnYjU5ajV3UHI2K3hqSHZCa1k3dGY1bThxbEFrMW9udjEydlJyN0N1b2VCWlM3WEhPRmFqaEc5RGY5Wnl0dWlodDJzcGx3MmZIQUZaaXkyZFFLcjIyQlZ3Rk1zR1dDU0gyY3dDU0w1dUk3NXlsblNadTJZMzhqb0ZJNUNjdTVxVjZxa3hVcGZIU3k5R3lSQmQ0bmNNZWxWZURjaHN3bXdpVTBqbFpHVDhiVmNvc01hYlhWTnRtU3I0d2xhQ0F6TzBuT2NqckpKQkRidVQ2SUJ4VFVrRWtoM1Fwc01rdkI4TGM2VXZDcTB0eVplckdwRXRrTkQ2SmN5SDJGUm9zeGovQUwwd2xwb3g1dk5Tc2VyVjAvdUcweWtaeWdvMyszU1A1dnZ3Szl0ejZzSjZ5ZmExT0JCcmg1UzlMaHRnSjBISngwUlJ0YndvanRrQnBxOW1HODVYM0hmbFFZMGtzRW1BVDhnazQ3bXBUdXBsZkRRVXE3dFhiV1dnNWtFNk9ERXhPdkF2eHZqZG9QM1lpMVNYY09ZbjhQOVdUdU1oNnp0anJwMWpKTEE1K1N6emVkWUdyM2U5MHhJclNDelNrTURHM3NVSTkxR1I0c2dsQjlab081dDRlMVNVVG92ZlI0V3lleFFEOC9ydGZObXVWeGxWUldqQ09NalQwaEtHRncwbXRYVG1uVlMzSy9PQ1FFVXIvajY3SWR4VDlrTnVjWldRamd2S2xpR2VwVHRkT3oyaUdzaldWS2o3ZWJiZzYyMTdhbURyWmg5Q2ErMW1KT2pNZHpuWGU1dmNxNnZGdHhpaGxieitFbytYNWpqa2JqMVRvODJ1QU5wOVhsK3lIVWtXT3haelRDNVhRc2dHT2VzamltUHFTSDlHZnhWd3JIb3lIRlhlQkEwTStPMjdwa3hYOGpVeEI0RHJGTkF4UUZ2RGYvRW1mcHdYUEd0R2xuc2hOK2hhdXA3L3cvQzFwdlJkTnNBZkIxVEpSeFFDZUM2SkVlZHdQd1kreFFWZlB5NVBCTEJGazR3NDFtK3BIc1lnWG14WlpreHB3SUZLYXRXV2RUZ3k4T04wVmpicnFMcmJPZkJ4bXlrK0NmaVJXWnRDdzJNRTk3aGpPZFYxRGlNd0paSW52WjJuSnVYSE1mcFYrbHMrczNuRWJXeUhIbHhIVHRrM0ZOREtJdEtlMmp4azJzemppU0xKNjJ3bG1xY2tKVUNlR2JOdHBleXJRMncxZ0l2bEtLK1pCQ3U0NmxVZXBRMVZXMW5UVmozanpmZWg5MWJ3NnJHS0lSMGl5UGhERzQ4TlFjRlo1aDl2Y2JkV2pSS29WTHpTRkdPSWcvY3RkS0FvdlBCZjVUY1RNZ3F1cWNpREFIRFVHTENkbzZLb0tVRTd6QTkzcTZwaFJOc0FpSW9hbGRpc1N3ZlVtOEVwZFFadDJublhrYUVvd1hEZHRjb0x2cmZDaUdPUEpkMDA1ejh4bm1ibmp2WVJndHJoNlV3SUxpS2J1NXFGb04rblhqRm5WclRQRll5djdFTUtZOGtEenYyUmFEaGhWZGNmdTdTWlBkWHNpdDJjSUdZSmNHQU56YkxESjZxVzkzMGxFako0VUdkdUYwaU5mYUlMeXFQMmNlTnhNMXZsYnFtdmFaN3UzenEybGZHWEU4ckd0cXdSbTBYU2dwMHd3RTZXQS9nSXVaNmJKQWVrWDNtUUh3bXZWTmxVdVFURU9uay9acE90QXVzNFhzUERlUE9YYlJPRkVJZzYwNDg5U1JVdVc0WlQwekMyQmFsOFBac3VPMU1UbXppWnYyTkF4MGdMMm1YVFpoTFpYMlBtb1haQUhPSWM4VFg0RDlmNXZidE81b1NTdU9GWCtxRnZJMDdZSGpOZDMzaHJCUDNLL1AraTVUZEpNY04zTVR2RGRob0EyYWlTUjY1MnBNTjVqZDJLSWlIN3UxVjE2ZE14Nmoxc29UU1VJd0RaR3V6UXlNMVBlWjZ1cWdVYnhwSEtUQm1iUDd1VTRMMkRxaElaakUxWHBDakI2amorRUwzQitHNjk0VmJsMTROYkRqbHVQWlZFdDQ2YkJhMXNzNGRMRHVNM0FMM1lGRnhsSUFEVlVsT0FHT0RNK2xmT2QxVzEwMU0xNlhnRFZtVUxUQ0lWdjUyTTFMcFlseUFBVWJwUUMzMTJEUjFWTFhjSGxPK0RDRG0vKzRoMnk5U3U1YW4wNmRPR3FGanVqbnNlaTZTYlFIeXRodU5LSEpXRkhSN2c5V0Y0N0hYczRybmxnMTk0WDJRaFlpcDJzcWI0Q1lxeUE4WENyd3dGQnAzRlRyREUzclRscDFPTksrcHoySTFKRThINmh0aGRIYzZ6a1ptdjcyWWppT3g2NnBlSkhacEF1d3Jia1N4N2tqaWtGVEJWYXVMRVZNWjRjemFrMkhicmVzVFA4MG1uOE1XclE3a1hiR2xpRTd2NExQNDRDYnpmT0xKWkkvcVArUW40UVg2TmN2bFlWclhhVEhoZnhwejZveWMyVWlYWFQvc05kUDF3bzhiSnVCaEpJcDFmMkNmTm94alc4eW1xUVpHbkdVUERWWm1WM24zUzQvQzZjVGovbE1uWVpkSlFNYkVKclJ4d2NIM2RCS3M2TVdWdktBeHBSUzI5b3FVV1BJak1LTElUb2FrdHpKVVU3NWx1UGlkMEVKTUF3SUdFa3VaM1RaM3JTWnQrTExldDF3QXAyWEg4OWdHT3czT0ZTQzdMM00xMHJkeW85bk1oRDhEUThEQWRUaERjcEdFQk9NWmlNWk5GNmE1UmlnTWxUZDdhbUZJUlhtRWgrYTZOWTZBbk9FWkthMUlJb0VMZWtWaFlGdDJENm1Zb3RtUVhJSW1ZODIxaS80bGlTaVdDeXZLdk5pZ3g5cGY3NWtoVU5FQnY1NHM3eXRibDFUTE5paTN6ZnJIaXFGVS9qMVBuSE8zcS9kZ2ZNZmdFWE00ZnZjQzRQdTY0MzVjMVc4Rlk3VGNHRDkrbFZHS25veXkzeUFVaVptUHc3QWFIMjB2allXQmxVMXZrTFdScEpoaFNxUmc0cUcxK2NDc0JodmtNc2pWYUJPQkZEdlJ0U253MjU1Ykg5RTBMVXBCamdDSGdQVUJLQnVaZVJoYVowODUxbjB0TzAzNWhtYVpodE9HM0lhK0ExbFVVa05ScnZpZ3dRSzBUOS9DY2lMZlNWMkNZbDNBZnJvZFc0WG1iRWpiZ2FnTG5uQnpLd21nZHFSL3dFd245NEV0VW93azRobHNHMWtKWlgyT2FjYW9JdzdJaWpNQmhHUzV6NjdoY0Z3QmVWL0JFUGdqS25TeHNsSTMwdFRYMUhpa1JsMnMrV2pRSWxjWUZrb0FWVjQzR2dsQVdPU0F6OERuTDUvcUg1S0lDcFhkczZUVEN4TWlYWkkwdHRSazJqOEVpSnhXa2FjTG5RMzBVSkM2c2p4bzMxUW50UnVZVkpLaWZMdFdMeW9ITXVDeENLMG83SGIrQlFuRDlrTHpGVVZTcjNjRXFDSHlZaFNFNktRL0x6L2p0Q1ZzN0ZScERMa1dKSDhmbzZtZXZNMlZtVFVUTVNUVlNYbjc0L094K3JRby91ZE8ySmJSMU5zZzNoSStabFhZaDBQcHVvWG55VzluQ09xV1ozbjFjWTQ3K1VjVTRxLzJSNjFKcVh1NFNBcS9QOFBSK1FOZkFEQmJXU2x4SjFDY21lK3ZYSW5xelBNSzVyRWdVc3JpR2ZTZUordGc0dzZOMWpnSnhERjFXTS9kUFp2YjcydG55VmpKcVBYQ1VScFNLNm95WUVSQVJEUjB6REZRbFJrMm1UOE8yK01KK3BUb29QdEZ1YW1rNURUSnVDSktJMG8vZXg5U0xXbzQyZEhRMm5zVWY4empSaTdKZEFJSThIUkZaUmZMdisydWxwbVRRZnJ1Tk94UU9ETlRTR08zTjI4VkZyQU5ZUlRBWWxXZEpYVTFWNVdIN0F4VWQzQWdLd0Zqb0pwMU11OTMyMWx0eHJMWVBKd2FVVXBkVDVBclJQclIwS1pqNEpES21KTC9lWjlpWTRyN0pWT2kzM1ZuKzNnVVFxYU82RFVqQ1NZR0p3S01zVWVPR211SnF5UGhzcmZ2SWZHN3ZVaUVWd0gwZVg4RWJVd1QrMDRYbnlaSXpvYzRJeGtLS05zVytJdjl2TkZ0RTgxL0dMWHpvMWNuYkQ3akJnZ0tiNVMvdUhBcmMybDBESHdJYVhtMjV3N1haWkdRVFFKV2ZFcm5CLzh2Rk9hN3YyWnhCVUZrU1dXZVRodTJTaWFiaWgvWlU3dHVtMnNtVXZFWmQrTmhXWEV4T1NEZmduSHZjMjFESmtoVzJ1WnNDcDdiMzIxWWtwcEcyb1ZxZjBTOUhXUDJoQjIrNFI4cXQ3MXRxaWExemxSYXVlcnNnRWtzTUE0YitWQTNhQ2liOUwrWFJqMk1TQVBiVGJLeitqTlltTWdUSytHRXdBSVM3dHQ1cEVCSHMrdUR3dC9xZkVIV0JVWWc3ZE9wbm4zNHM3a2JZTC85S0k0YkdEQUcwdVI1alFMMUoxdUZUZ0VNTjQySVZoZVRVY0dQSEk3b0lXLzIwRSsvMzZHdFc5Uk4ycklRRWVLR1hQaVZ2Z2FvTEM4N2ZjK2tWdVJpdUdNYis2TTVpTk81dG0yUmR6TVc4Mi9yQkQxM05Ua1ZtQ3A1dEtkQnRuclBtbVk4V0ZGMjdLS2RHVnZ3dUg3T0FpUmRNc1dXSkNIdlpPTGJVVFF0WEJUSHQwVGR6bGV2cGZKNSt4bVppWGZ6NURaUVVWcXg2bERnUWZuYjc3Z05RSHdQNENLcXR6ekJsL1hkQ3FLS2VjenZoR202ek8xYWtlSkdkSzJHQVBzU2RxQmtIbXRkYXh0VmN5OEFUQWFUSWhPdDY5OGtoQ2ZWcUJyVlJ2VW5xYVp1RDNBSGpVMXhhZVg0T2V0KzJ2ZTV1czNyZUU3TkQ3RHZjcWNwSk53QjJwcTVPRHQ0a3M0SVFXa012djNJZ0lBbmY0M3RHbE8vck1lLzkreXlpRUc0S2RyOW5NQStObSsvUU8vVzgvRlowZk9uTURFQUFLL0dsdi9ZY2tXei8vVGowYytuenpYNkQ4YVpCMG1UOUsvNGI4WnJ2bktiTzE1RGZvT0MvK3FoUDBSVzM4aHE1U3BqMjE5K2lsTGxjUTBzODliUDdZWjY5UEFMV0JReEx3K0pxeHZtWFc4ODJ6ZmwvZXZ3aGNzbXkxREVnQWs5clJnSWY5M3lxZHhzUk1pRzB2ZEo1bDdTa3FJYUlYaUt6eTJNVDY5aHBWTkpJOXJwK2xWRVU5UlZkckNjckZPUnpORDJ4Tmh5WVNCRVZ4Y3cwSE5XMzFoNkc0aDh5Mkw2bXJsVUsrcGZIS091U1lFMUNSdFZUT0w1c0c1SmJObXhQVkhKclpndWRMQ3lkeUxkRDhSaGVZWitTUXpMeVJsbXAzT1ZsejVXNnlnM2hEVHYyeDAxUmZkMDJ4R1cxeFRIUlpVcy94NlRGRGV5WUJWbjMyMlRKZXBOKzdlRkZ1NUxiWlJTYU9FcVFwWXMvU2hDUDJ3bzgzREpoVGNyNmkwSTk4N0pTVEhNNnlwaVNtRlBaekVqRXNKOFJ2T2cwWGl3SWp0VDFLclN2b2c3MytzbWlTTTNnQVNxUlUxZUNxNmFDakREcXNoREVNajgrYXI3RHpERFE1d3NVVnd4SE01ODZQWjhoWjB2LzdBbmw4TFZKUGdKZ3VkYW9wWUhHTERNY3IyTzVubTF6SXVvbTZLN3Qvc3ZTbXhLaGlCNHNPTWFHRzl4WVNoN1EwZEp0UVFyNHp4aEdkN01EVEx6TU1CalJUZGxneEZDdzQ1MlB1bmdHTFJ1OVloUjZiSXpFdktGWGJXZFYxaldKMG50OU5qMmxvVk85RXIvMHpYWDRTMVJFUmZrTlRqRXZzVVE1NE8zaXpoTXJBT2hIMFJkQlFtd1dsMTN4VmVlUEoyMnZ6SDFwdXlhemVqWFpvWm1OUlVmc1ZsT3MzbitwN0kyaUV3bmRCL1lqWm53aXVIaHVZamptUkMvNjgxbkxwaWNJOWxNTzVPTFNrVGJ1cy9Nc01aUXJiZTB5MWM4WEh1c0hLalNmVWRKb3Fvd3NsUGtiUTczOTZrclV3VzNFcmZ5cm1HVm9RNkVXRG9kRElMdk9uUzI4QWhjTWpGb2lFR2ZFaVpjQStSK0hFUFErSFZQU3lkM2Zkd3ZDMjZSeUJiSTg1UDNZbGNVWGZBVXd6c1hmc2FJRlZjOFFCZDlWZWdyL01ORUpzczBIUGdmU3JQTXoxeFE5bnFzZXJOKzhqaUdFMTBsMmVRbFhkbTNrSVQvVXRSazY5aEVFdmZ4eEtsMFZUa3VXWXh5SUxuVjE5dkEzMWFnNU94a3NWY280Z3F2V2ljcHJ6M25BOXBzMHpUbEZNcVZmTU1tZTVyV01jaWJ4VFlzTkN4cEVZekhibzdtdUdOTnBKOUZFNUYxemRoN1VYa2owY01lQzA3MEhTZUFsMXlrQzZWZDdXTFhqbmVweGZtNmFtNzNBcDAzUFZ4RlVQWnVWQ3NUVFlDNC9PVE85MlE2OXM1MTRBVXNjUWh4RnhYWE5MRkRsM3RGQ3BNTitHMHVydnNxbXMrTDhKZ3lZbXZSNEFiYnJwbFNlQTNuc3RndDl2dXlIUFBQTHRzbUp6cXUyVDNQWkR2b1cyQjcwNlRyOUpsS3RERHJJQklTQ0wwdEVZaGNjVG96YW96dVdDOVpQbFBSeDEwWW1ieHlaUzIvdS9YaTBndzBlTkk0VWNaR2NsSmdSbE95REhCN0VCSjVYRFVDRDJMU3pTaXlhNnYvZ2JveHlkYTBiYk5QbnRwZklrSHpucTFveHRZOUp6bUdYajBuZUVSZ3lBY1Y4YzBHVEdNVVl3RjJzcnBwRlBxeGlSSUt2VU1ETXBnUTJMcWtVSHFCNjJCaGdKczBFaFJ3bU1lVExDeDhEUFJpdEdZYnl5RE54U3ZpV0ZHR0dtUDRkU3hpclUvK0V0Nks2MnkxaWhOVFNVbEkxSXJ0ckZ6THZFaFVuQm9Kc2c2QWhmc2Q4QkJoNXduMGR4MHo1T29SUnhNNXM4N3BEanlpbFBJWEVMQm1xUmxuUDNnSG1wYy9FOFdUMktOdTVuY1FvdEhQTFV5MmxqampHR0xsOWJ4MWtaYjdYeHoxQ0x0dWNZbnZ2RXIydjNrQXg5SXB5dEtuNVZncmJQcVZMVTdDNldaNG1nL2ZNOCt3dVJBdWdkRWRLN0VTa1NGNHRhc0dNcnBra2FkWG9qNFBOSUdXd1paWlRRa0tYcFlNdXRuQSs5OGlNcWd5UkExVGNnV041NHNJelJ6VUp4a2E5QW55RVRQem5RTUM0dHRVT05vNUFFSS8zbnBEV2Q4UysxeDBaSVlRMkhJVzUzZklSZjc2RmdGWVVjbkhLMWtpSlV0R3A5U2VsR2dQOXZURU9vek9MZjdoYlZjOHgyUWRBK1N4ejg3TllrdlNJMFVVWmUwSkgycUJSM2FuaWdTYUliRjhPK0g1Y1lrZDN4RGZGRVFYNjhYVE4xQVpXd0p2TE5oT3FTWmtpWlJTaEVIcHlyNFN5OXEwcjRVcVJOZU5FcFF3S2VwalpEUWxCbXQ1c3RCYzJQQlZYcHhLZlpaK1MxL3BOYkdhUGFNWWZWWm1mSFVITHlWd3JKbUVsemNNblVaak1ha1QyZXQ5ekdLTTUrYUxCb0lTalZrd1prdlRrMkt2NDZiYlJCT2pMZzBiU3BhS1dKYlpUUUJwZHFWMjRZTG9PNW5jUGwrclU2UXpPeUhIcWYvVlMvMm5CTVEzdm5UN1lIczJ5QjRBcEhTUmUrb3d0ejlCL213bW1ZRFBrRVNyV1hZRmxTMFNSd1daVHk4cTVIZitjdHVjS1VrSXlHRVNScUk2OEd3dkJHTGZoYXhjTmVQaGxERmZibkhMUld0Uk5KTjBtWW1STUMrQUhkOUtIeFBlOHc1S3lwR3c3eXBLMHZIMTFmQVZZVzlCWlR6dEJtWU1oZ2dSZVJuaEwvbGxLLzlxT3hhNGNjRm9nbGszaFVBKSBmb3JtYXQoJ3dvZmYyJyl9LmFue2ZvbnQtZmFtaWx5OidBbnRvbicsSW1wYWN0LHNhbnMtc2VyaWZ9PC9zdHlsZT48cGF0aCBkPSJNMzAgMTUwIEwxMjAgMTA4IEwxNzUgMTI4IEwyNzAgNjIgTDM0NSAxMjAgTDQxMCA5NiBMNTAwIDE0MCBMNjUwIDE1MCBMNjUwIDE2MCBMMzAgMTYwWiIgZmlsbD0iIzExMSIvPgo8cGF0aCBkPSJNOTUgMTUwIEw5OCAxMDAgTTk4IDEwMCBxLTI2IC0xNCAtNDAgNiBNOTggMTAwIHEtNiAtMjYgMjIgLTMwIE05OCAxMDAgcTI0IC02IDM2IDE0IE05OCAxMDAgcS0xOCA0IC0yMiAyMiIgc3Ryb2tlPSIjMTExIiBzdHJva2Utd2lkdGg9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI1NjAiIGN5PSI4OCIgcj0iNjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q5M0ExRSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGNpcmNsZSBjeD0iNTYwIiBjeT0iODgiIHI9IjM2IiBmaWxsPSJub25lIiBzdHJva2U9IiNEOTNBMUUiIHN0cm9rZS13aWR0aD0iMyIvPgo8cGF0aCBkPSJNNTYwIDg4IEw1NjAgMjYgQTYyIDYyIDAgMCAxIDYxNCA1N1oiIGZpbGw9IiNEOTNBMUUiLz48Y2lyY2xlIGN4PSI1NjAiIGN5PSI4OCIgcj0iNiIgZmlsbD0iIzExMSIvPjxjaXJjbGUgY3g9IjU5MCIgY3k9IjYwIiByPSI3IiBmaWxsPSIjMTExIi8+Cjx0ZXh0IGNsYXNzPSJhbiIgeD0iMzAiIHk9IjI2MiIgZm9udC1zaXplPSIxMTgiIHRleHRMZW5ndGg9IjYyMCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIj48dHNwYW4gZmlsbD0iIzExMSI+TUFSSTwvdHNwYW4+PHRzcGFuIGZpbGw9IiNEOTNBMUUiPkPDmkJBPC90c3Bhbj48L3RleHQ+CjxyZWN0IHg9IjMwIiB5PSIyNzQiIHdpZHRoPSI2MjAiIGhlaWdodD0iNiIgZmlsbD0iIzExMSIvPjwvc3ZnPg==" alt="Radar da Gastança · Maricúba" style="display:block;width:min(300px,70%);height:auto;background:#F1E8D6;padding:10px 14px;border:3px solid #111;box-shadow:6px 6px 0 #D93A1E;margin:0 0 14px"><div class="wrap">
+  <h2>Quem faz o Radar Maricuba</h2>
+  <p>Projeto da <b>Volare Intelligence</b>, de Theo Barros. A Volare presta serviços de comunicação e marketing político a clientes, e um deles é parlamentar que aparece nesta base. Por isso as regras são públicas, a mesma régua vale para todos e cada número leva à fonte oficial.</p>
+  <p>Dados públicos de <a href="https://marica.sicam.app/areapublica" target="_blank" rel="noopener">marica.sicam.app</a> e <a href="https://marica.rj.leg.br" target="_blank" rel="noopener">marica.rj.leg.br</a>. Última atualização: <span id="rodAt"></span>.</p>
+  <p id="rodErro"></p>
+</div></footer>
+
+<dialog id="dlg" aria-labelledby="dlgNome"></dialog>
+
+<script src="vendor/leaflet.js"></script>
+<script src="dados.js"></script>
+<script>
+(function(){
+const D=window.DADOS,V=D.vereadores,M=D.meta;
+const $=s=>document.querySelector(s);
+const fmt=(n,d=0)=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dt=iso=>{const [y,m,d]=iso.split('-');return d+'/'+m+'/'+y};
+const MIN_SESS=50;
+const ini=n=>n.split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const av=(v,cls)=>v.foto?`<img class="${cls||'avatar'}" src="${esc(v.foto)}" alt="" loading="lazy">`:`<span class="${cls==='x'?'ph':'avatar'}">${esc(ini(v.nome))}</span>`;
+const per100=(v,k)=>v.sessoes?v.props[k]/v.sessoes*100:0;
+const contra=v=>v.votosExec?(v.votosExec-v.simExec)/v.votosExec*100:0;
+
+$('#stamp').textContent='Atualizado em '+dt(M.atualizado)+' · documentos até '+dt(M.coletaAte);
+$('#rodAt').textContent=dt(M.atualizado);
+$('#rodErro').innerHTML=M.contatoErros?`Encontrou um erro? <a href="${esc(M.contatoErros)}">Fale com a gente</a>.`:'Canal para reportar erros: em ativação no lançamento.';
+const emEx=V.filter(v=>v.emExercicio).length;
+$('#stats').innerHTML=[[emEx,'vereadores em exercício'],[M.sessoes,'sessões analisadas'],[fmt(M.proposicoes),'documentos legislativos'],[fmt(M.votosNominais),'votos nominais lidos']]
+ .map(([n,l])=>`<div class="stat"><b>${typeof n==='number'?fmt(n):n}</b><span>${l}</span></div>`).join('');
+
+/* ---------- cards ---------- */
+let incluirTodos=false;
+function lista(){return V.filter(v=>incluirTodos||v.emExercicio)}
+function drawGrid(){
+  const q=$('#busca').value.trim().toLowerCase();
+  const arr=lista().filter(v=>!q||(v.nome+' '+v.civil+' '+v.partido).toLowerCase().includes(q));
+  $('#grid').innerHTML=arr.map(v=>`<button class="vcard" data-id="${v.id}" aria-label="${esc(v.nome)}, abrir ficha">
+    ${v.foto?`<img src="${esc(v.foto)}" alt="Foto de ${esc(v.nome)}" loading="lazy">`:`<div class="ph" aria-hidden="true">${esc(ini(v.nome))}</div>`}
+    <div class="in"><h3>${esc(v.nome)}</h3><div class="sub">${esc(v.partido)}${v.emExercicio?'':' · fora de exercício'}</div>
+    <div class="big">${fmt(v.pct,1)}%</div><div class="sub">presença em ${v.sessoes} sessões</div></div></button>`).join('')||'<p class="note">Nenhum vereador encontrado.</p>';
+}
+$('#busca').addEventListener('input',drawGrid);
+function setTodos(x){incluirTodos=x;$('#chkTodos').checked=x;$('#chkTodos2').checked=x;drawGrid();drawRank();drawMeu()}
+$('#chkTodos').addEventListener('change',e=>setTodos(e.target.checked));
+$('#chkTodos2').addEventListener('change',e=>setTodos(e.target.checked));
+document.addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b&&!b.closest('dialog'))abrir(+b.dataset.id)});
+
+/* ---------- rankings ---------- */
+const IND=[
+ {k:'pres',nome:'Presença',desc:'Presença efetiva nas sessões',nota:'Percentual de sessões ordinárias e extraordinárias em que o vereador estava presente, no período em que tinha mandato ativo. Ausência com justificativa do gabinete não conta como presença.',val:v=>v.pct,fmt:v=>fmt(v,1)+'%',stack:true,fonte:'Fonte: presenças e sessões na Área Pública do SICAM.'},
+ {k:'just',nome:'Ausências justificadas',desc:'Sessões com ausência justificada pelo gabinete',nota:'Percentual das sessões em que houve justificativa protocolada pelo gabinete. É o motivo declarado, e o Radar não consegue verificá-lo.',val:v=>v.sessoes?v.justificadas/v.sessoes*100:0,fmt:v=>fmt(v,1)+'%',fonte:'Fonte: documentos "Justificativa de Ausência" no SICAM.'},
+ {k:'bairro',nome:'Indicações',desc:'Indicações (pedidos de obra e serviço) a cada 100 sessões',nota:'Pedidos enviados ao Executivo, em geral sobre ruas e bairros. Calculado: total de indicações ÷ sessões × 100, para comparar quem tem períodos diferentes.',val:v=>per100(v,'bairro'),fmt:v=>fmt(v,1),fonte:'Fonte: proposições do tipo Indicação no SICAM. Taxa calculada pelo Radar.'},
+ {k:'cobranca',nome:'Requerimentos',desc:'Requerimentos (informação, audiência, CPI) a cada 100 sessões',nota:'Pedidos de informação, audiência e instrumentos de fiscalização. Os números são pequenos, então diferenças de 1 ou 2 documentos mudam muito a posição.',val:v=>per100(v,'cobranca'),fmt:v=>fmt(v,1),fonte:'Fonte: proposições do tipo Requerimento no SICAM. Taxa calculada pelo Radar.'},
+ {k:'lei',nome:'Propostas de lei',desc:'Propostas de lei e emendas a cada 100 sessões',nota:'Projetos de lei, emendas, indicações legislativas e propostas de resolução. Homenagens ficam de fora.',val:v=>per100(v,'lei'),fmt:v=>fmt(v,1),fonte:'Fonte: proposições legislativas no SICAM. Taxa calculada pelo Radar.'},
+ {k:'contra',nome:'Votos contra o Executivo',desc:'Votos que não foram "sim" em projetos do Executivo',nota:'Percentual dos votos em matérias do Executivo que não foram "sim" (inclui "não" e abstenção). Votar contra ou a favor não é bom nem ruim por si só.',val:contra,fmt:v=>fmt(v,1)+'%',fonte:'Fonte: votações nominais no SICAM. Percentual calculado pelo Radar.'}
+];
+let ind=IND[0],asc=false,tabela=false;
+$('#segInd').innerHTML=IND.map(i=>`<button data-ind="${i.k}" aria-pressed="${i===ind}">${esc(i.nome)}</button>`).join('');
+$('#segInd').addEventListener('click',e=>{const b=e.target.closest('[data-ind]');if(!b)return;ind=IND.find(i=>i.k===b.dataset.ind);[...$('#segInd').children].forEach(x=>x.setAttribute('aria-pressed',x===b));drawRank()});
+function setOrd(){$('#btnOrd').textContent=asc?'Ordem: menor para maior':'Ordem: maior para menor'}
+$('#btnOrd').addEventListener('click',()=>{asc=!asc;setOrd();drawRank()});setOrd();
+$('#btnTab').addEventListener('click',e=>{tabela=!tabela;e.target.setAttribute('aria-pressed',tabela);e.target.textContent=tabela?'Ver como gráfico':'Ver como tabela';drawRank()});
+
+function barRow(v,i,html,valTxt){return `<li class="bar-row"><button class="who" data-id="${v.id}" aria-label="Abrir ficha de ${esc(v.nome)}"><span class="rk">${i}</span>${av(v)}<span class="nm">${esc(v.nome)}</span></button><div class="tr">${html}<span class="val">${valTxt}</span></div></li>`}
+function stackHtml(v){const s=v.sessoes||1;const p=v.presencas/s*100,j=v.justificadas/s*100,l=(v.licenca||0)/s*100,f=Math.max(0,100-p-j-l);
+ return `<div class="track" role="img" aria-label="${esc(v.nome)}: ${v.presencas} presenças, ${v.justificadas} justificadas, ${v.faltas} sem justificativa"><div class="seg-pres" style="width:${p}%"></div><div class="seg-just" style="width:${j}%"></div><div class="seg-lic" style="width:${l}%"></div><div class="seg-falta" style="width:${f}%"></div></div>`}
+function drawRank(){
+  $('#indDesc').textContent=ind.desc;$('#indNota').textContent=ind.nota;$('#indFonte').innerHTML=esc(ind.fonte)+' <a href="'+esc(M.fonte)+'" target="_blank" rel="noopener">Abrir a fonte oficial</a>.';
+  $('#legend').innerHTML=ind.stack?`<span><i style="background:var(--c-pres)"></i>Presente</span><span><i class="seg-just"></i>Ausência justificada</span><span><i class="seg-lic"></i>Provável licença (a confirmar)</span><span><i style="background:var(--c-falta)"></i>Ausência sem justificativa</span>`:'';
+  const todos=lista(),main=todos.filter(v=>v.sessoes>=MIN_SESS),poucas=todos.filter(v=>v.sessoes<MIN_SESS);
+  const ord=(a)=>[...a].sort((x,y)=>asc?ind.val(x)-ind.val(y):ind.val(y)-ind.val(x));
+  const A=ord(main),B=ord(poucas);
+  if(tabela){
+    const rows=[...A,...B].map((v,i)=>`<tr><td class="n">${i<A.length?i+1:'—'}</td><td><button class="who" style="min-height:0" data-id="${v.id}">${esc(v.nome)}</button> <span class="pill">${esc(v.partido)}</span>${v.sessoes<MIN_SESS?' <span class="pill warn">poucas sessões</span>':''}</td><td class="n">${v.sessoes}</td><td class="n">${v.presencas}</td><td class="n">${v.justificadas}</td><td class="n">${v.faltas}</td><td class="n">${v.props.bairro}</td><td class="n">${v.props.cobranca}</td><td class="n">${v.props.lei}</td><td class="n"><b>${ind.fmt(ind.val(v))}</b></td></tr>`).join('');
+    $('#rankOut').innerHTML=`<div class="tscroll"><table><thead><tr><th class="n">#</th><th>Vereador</th><th class="n">Sessões</th><th class="n">Presenças</th><th class="n">Justif.</th><th class="n">Sem justif.</th><th class="n">Indicações</th><th class="n">Requerim.</th><th class="n">Leis</th><th class="n">${esc(ind.nome)}</th></tr></thead><tbody>${rows}</tbody></table></div>`;return;
+  }
+  const max=Math.max(1,...[...A,...B].map(ind.val));
+  const mk=(arr,off)=>arr.map((v,i)=>barRow(v,off?'—':i+1,ind.stack?stackHtml(v):`<div class="track"><div class="seg-one" style="width:${Math.max(0.5,ind.val(v)/max*100)}%"></div></div>`,ind.fmt(ind.val(v)))).join('');
+  $('#rankOut').innerHTML=`<ol class="bars" style="padding:0">${mk(A,false)}</ol>`+(B.length?`<h3 style="font-size:16px;margin:22px 0 8px">Poucas sessões no período (menos de ${MIN_SESS}) <span class="pill warn">comparação limitada</span></h3><ol class="bars" style="padding:0">${mk(B,true)}</ol>`:'');
+}
+
+/* ---------- meu ranking ---------- */
+const PESOS=[{k:'pres',n:'Presença efetiva',w:5},{k:'bairro',n:'Indicações',w:5},{k:'lei',n:'Propostas de lei',w:5},{k:'cobranca',n:'Requerimentos',w:5},{k:'contra',n:'Votos contra o Executivo',w:0}];
+$('#sliders').innerHTML=PESOS.map(p=>`<div class="sl"><label for="w_${p.k}">${p.n}<span id="o_${p.k}">${p.w}</span></label><input type="range" id="w_${p.k}" min="0" max="10" step="1" value="${p.w}" data-w="${p.k}"></div>`).join('');
+$('#sliders').addEventListener('input',e=>{const k=e.target.dataset.w;if(!k)return;PESOS.find(p=>p.k===k).w=+e.target.value;$('#o_'+k).textContent=e.target.value;drawMeu()});
+$('#formula').textContent='nota(v) = Σ peso_i × (valor_i(v) ÷ maior_valor_i) ÷ Σ peso_i × 100\n\nvalor_i: presença % · indicações, leis e requerimentos por 100 sessões · votos contra o Executivo %\nmaior_valor_i: maior valor do indicador entre os vereadores com ao menos '+MIN_SESS+' sessões no período mostrado\nPesos 0 a 10. Peso 0 tira o indicador da conta. Quem tem menos de '+MIN_SESS+' sessões não entra na ordem.';
+function drawMeu(){
+  const arr=lista().filter(v=>v.sessoes>=MIN_SESS);
+  const S=PESOS.reduce((a,p)=>a+p.w,0);
+  if(!S){$('#meuOut').innerHTML='<p class="note">Aumente o peso de pelo menos um indicador.</p>';return}
+  const get={pres:v=>v.pct,bairro:v=>per100(v,'bairro'),lei:v=>per100(v,'lei'),cobranca:v=>per100(v,'cobranca'),contra};
+  const mx={};PESOS.forEach(p=>{mx[p.k]=Math.max(1e-9,...arr.map(get[p.k]))});
+  const sc=arr.map(v=>({v,s:PESOS.reduce((a,p)=>a+p.w*get[p.k](v)/mx[p.k],0)/S*100})).sort((a,b)=>b.s-a.s);
+  $('#meuOut').innerHTML=`<ol class="bars" style="padding:0">${sc.map((r,i)=>barRow(r.v,i+1,`<div class="track"><div class="seg-one" style="width:${Math.max(0.5,r.s)}%"></div></div>`,fmt(r.s,0))).join('')}</ol><p class="source">Nota de 0 a 100, calculada pelo Radar com os pesos acima. É uma ferramenta de comparação pessoal, não uma avaliação oficial.</p>`;
+}
+
+/* ---------- gráfico mensal ---------- */
+const SER=[{k:'bairro',n:'Indicações',dash:'',c:'#0369A1'},{k:'lei',n:'Leis e emendas',dash:'7 4',c:'#0F172A'},{k:'homenagem',n:'Homenagens',dash:'2 4',c:'#B45309'},{k:'cobranca',n:'Requerimentos',dash:'10 3 2 3',c:'#6B7280'}];
+let tab2=false;
+$('#btnTab2').addEventListener('click',e=>{tab2=!tab2;e.target.setAttribute('aria-pressed',tab2);e.target.textContent=tab2?'Ver como gráfico':'Ver como tabela';drawTempo()});
+function drawTempo(){
+  const m=D.mensal;
+  if(tab2){$('#tempoOut').innerHTML=`<div class="tscroll" style="max-height:420px"><table><thead><tr><th>Mês</th>${SER.map(s=>`<th class="n">${s.n}</th>`).join('')}</tr></thead><tbody>${m.map(r=>`<tr><td>${r.m}</td>${SER.map(s=>`<td class="n">${r[s.k]}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;return}
+  const W=900,H=320,L=44,R=12,T=14,Bm=36,mx=Math.max(...m.flatMap(r=>SER.map(s=>r[s.k])),1),x=i=>L+i*(W-L-R)/Math.max(1,m.length-1),y=v=>T+(H-T-Bm)*(1-v/mx);
+  const ticks=[0,.25,.5,.75,1].map(t=>Math.round(mx*t));
+  const lines=SER.map(s=>`<polyline fill="none" stroke="${s.c}" stroke-width="2.4" stroke-dasharray="${s.dash}" points="${m.map((r,i)=>x(i)+','+y(r[s.k])).join(' ')}"/>`).join('');
+  const lab=m.map((r,i)=>i%3===0?`<text x="${x(i)}" y="${H-12}" text-anchor="middle">${r.m.slice(5)}/${r.m.slice(2,4)}</text>`:'').join('');
+  $('#tempoOut').innerHTML=`<div class="legend">${SER.map(s=>`<span><svg width="34" height="10" aria-hidden="true"><line x1="0" y1="5" x2="34" y2="5" stroke="${s.c}" stroke-width="3" stroke-dasharray="${s.dash}"/></svg> ${s.n}</span>`).join('')}</div>
+  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Documentos por mês, por tipo. Use o botão Ver como tabela para os valores exatos.">${ticks.map(t=>`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="#E2E8F0"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${t}</text>`).join('')}${lines}${lab}</svg>`;
+}
+
+/* ---------- problemas ---------- */
+const TEMA={asfalto:'Asfalto e buracos',iluminacao:'Iluminação',transito:'Trânsito e sinalização',limpeza:'Limpeza e mato',outros:'Outros'};
+function drawProb(){
+  const P=D.problemas,top=P.slice(0,12),mx=Math.max(...top.map(p=>p.n));
+  $('#probBars').innerHTML=`<ol class="bars" style="padding:0">${top.map((p,i)=>`<li class="bar-row"><div class="who" style="cursor:default"><span class="rk">${i+1}</span><span class="nm" title="${esc(p.rua)}">${esc(p.rua)}</span></div><div class="tr"><div class="track"><div class="seg-one" style="width:${p.n/mx*100}%"></div></div><span class="val">${p.n}</span></div></li>`).join('')}</ol><p class="note" style="margin-top:10px">Cada barra é o número de pedidos para a rua sobre o mesmo tema. Passe pela lista abaixo para ver o bairro, o tema e o período.</p>`;
+  $('#probTab').innerHTML=`<div class="tscroll" style="max-height:420px"><table><thead><tr><th>Rua</th><th>Bairro</th><th>Tema</th><th class="n">Pedidos</th><th class="n">Vereadores</th><th>Período</th></tr></thead><tbody>${P.map(p=>`<tr><td>${esc(p.rua)}</td><td>${esc(p.macro||'não informado')}</td><td>${esc(TEMA[p.tema]||p.tema)}</td><td class="n">${p.n}</td><td class="n">${p.autores}</td><td>${dt(p.d0)} a ${dt(p.d1)}</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+/* ---------- ficha ---------- */
+const GN={bairro:'Indicações',cobranca:'Requerimentos',lei:'Leis e emendas',homenagem:'Homenagens',outros:'Outros'};
+const dlg=$('#dlg');
+function abrir(id){
+  const v=V.find(x=>x.id===id);if(!v)return;
+  const mot=Object.entries(v.motivos||{}).map(([k,n])=>`<li>${esc(k)}: <b>${n}</b></li>`).join('')||'<li>Nenhuma ausência justificada.</li>';
+  const fd=(v.faltasDatas||[]).map(dt).join(', ');
+  dlg.innerHTML=`<div class="dlg-h">${v.foto?`<img src="${esc(v.foto)}" alt="Foto de ${esc(v.nome)}">`:`<div class="ph" aria-hidden="true">${esc(ini(v.nome))}</div>`}
+    <div><h3 id="dlgNome">${esc(v.nome)}</h3><div class="note">${esc(v.civil)} · ${esc(v.partido)}${v.emExercicio?'':' · fora de exercício'}</div></div>
+    <button class="btn close" id="dlgX" aria-label="Fechar ficha">Fechar</button></div>
+  <div class="dlg-b">
+   ${(PF&&PF.vereadorSecretario&&PF.vereadorSecretario[v.id])?`<p class="note" style="margin:0"><span class="pill">nas duas fontes</span> Também consta como titular da <b>Secretaria de ${esc(PF.vereadorSecretario[v.id].org)}</b> no site da Prefeitura (consulta de 14/11/2026).</p>`:''}
+   <div><h4>Presença</h4><div class="kv"><div><b>${fmt(v.pct,1)}%</b><span>presença efetiva</span></div><div><b>${v.sessoes}</b><span>sessões no período</span></div><div><b>${v.justificadas}</b><span>ausências justificadas</span></div><div><b>${v.faltas}</b><span>sem justificativa</span></div></div>
+   <div style="margin-top:10px">${stackHtml(v)}</div>
+   ${v.licenca?`<p class="note"><span class="pill warn">a confirmar</span> ${v.licenca} sessões seguidas sem presença e sem justificativa. Pode ser licença. O portal não informa.</p>`:''}
+   <p class="note">Período considerado: ${dt(v.inicio)} a ${dt(v.fim)}.</p></div>
+   <div><h4>Motivos declarados pelo gabinete</h4><ul style="margin:0;padding-left:20px">${mot}</ul><p class="note">São declarações do próprio gabinete. O Radar não verifica se são verdadeiras.</p>${fd?`<p class="note"><b>Datas sem justificativa:</b> ${fd}</p>`:''}</div>
+   <div><h4>Documentos protocolados</h4><div class="kv">${Object.keys(GN).map(k=>`<div><b>${v.props[k]}</b><span>${GN[k]}</span></div>`).join('')}</div></div>
+   <div><h4>Votos nominais</h4><div class="kv"><div><b>${fmt(v.votos)}</b><span>votos registrados</span></div><div><b>${v.nao}</b><span>votos "não"</span></div><div><b>${v.abst}</b><span>abstenções</span></div><div><b>${v.votosExec?fmt(v.simExec/v.votosExec*100,0)+'%':'—'}</b><span>"sim" em matérias do Executivo (${v.votosExec})</span></div></div></div>
+   ${v.recentes.length?`<div><h4>Documentos recentes (indicações, requerimentos e leis)</h4><ul class="rec">${v.recentes.map(r=>`<li><b>${esc(r.t)}</b> · ${esc(r.d)}<br>${esc(r.e)}${r.e.length>=160?'…':''}<br><a href="${esc(r.u)}" target="_blank" rel="noopener">Ver documento oficial</a></li>`).join('')}</ul></div>`:''}
+   <p class="source">Fontes: <a href="${esc(M.fonte)}" target="_blank" rel="noopener">Área Pública do SICAM</a>${v.ficha?` · <a href="${esc(v.ficha)}" target="_blank" rel="noopener">Ficha na Câmara</a>`:''}. ${M.contatoErros?`<a href="${esc(M.contatoErros)}">Reportar erro</a>`:'Reportar erro: canal em ativação no lançamento.'}</p>
+  </div>`;
+  dlg.showModal();$('#dlgX').addEventListener('click',()=>dlg.close());dlg.scrollTop=0;
+}
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+
+/* ================= PREFEITURA ================= */
+const PF=D.prefeitura;
+const brl=mi=>mi==null?'—':(mi>=1000?'R$ '+fmt(mi/1000,2)+' bi':'R$ '+fmt(mi,1)+' mi');
+function hbars(items,valKey,labFn,extra){
+  const mx=Math.max(1e-9,...items.map(i=>i[valKey]));
+  return `<ol class="bars" style="padding:0">${items.map((i,k)=>`<li class="bar-row"><div class="who" style="cursor:default"><span class="rk">${k+1}</span><span class="nm">${esc(labFn(i))}</span></div><div class="tr"><div class="track"><div class="seg-one" style="width:${Math.max(0.4,i[valKey]/mx*100)}%"></div></div><span class="val">${brl(i[valKey])}</span></div></li>`).join('')}</ol>`;
+}
+function tbl(head,rows){return `<div class="tscroll" style="max-height:380px"><table><thead><tr>${head.map(x=>`<th${x[1]?' class="n"':''}>${x[0]}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${head[i][1]?' class="n"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+let pAno=2026;
+function drawPref(){
+  if(!PF){return}
+  const dd=PF.despesas[pAno],T=dd.total;
+  $('#pAno').innerHTML=[2025,2026].map(a=>`<button data-pa="${a}" aria-pressed="${a===pAno}">${a}${a===2026?' (até 14/11)':''}</button>`).join('');
+  $('#pTot').innerHTML=[['Pago',T.pago],['Liquidado',T.liquidado],['Empenhado',T.empenhado]].map(([l,v])=>`<div class="stat"><b>${brl(v)}</b><span>${l} em ${pAno}</span></div>`).join('');
+  $('#pInst').innerHTML=hbars(dd.instituicoes,'pago',i=>i.nome)+`<details style="margin-top:10px"><summary>Ver como tabela</summary>${tbl([['Órgão'],['Empenhado',1],['Pago',1]],dd.instituicoes.map(i=>[esc(i.nome),brl(i.empenhado),brl(i.pago)]))}</details>`;
+  $('#pElem').innerHTML=hbars(dd.elementos,'pago',i=>i.nome)+`<details style="margin-top:10px"><summary>Ver como tabela</summary>${tbl([['Tipo de gasto'],['Empenhado',1],['Pago',1]],dd.elementos.map(i=>[esc(i.nome),brl(i.empenhado),brl(i.pago)]))}</details>`;
+  const c=dd.porClasse,tot=c.ente.pago+c.encargos.pago+c.outros.pago;
+  const pc=k=>c[k].pago/tot*100;
+  $('#pCred').innerHTML=`<p class="note" style="margin-top:0">Quem recebeu o dinheiro pago em ${pAno}, em três grupos. O primeiro e o segundo não são fornecedores: são transferências entre órgãos do próprio município e encargos obrigatórios.</p>
+   <div class="track" role="img" aria-label="Divisão do pago por tipo de credor" style="height:34px"><div class="seg-lic" style="width:${pc('ente')}%"></div><div class="seg-just" style="width:${pc('encargos')}%"></div><div class="seg-pres" style="width:${pc('outros')}%"></div></div>
+   <div class="legend" style="margin-top:8px"><span><i class="seg-lic"></i>Órgãos do município e previdência: <b>${brl(c.ente.pago)}</b> (${fmt(pc('ente'),0)}%)</span><span><i class="seg-just"></i>Encargos e tributos (INSS, PIS/PASEP, Receita): <b>${brl(c.encargos.pago)}</b> (${fmt(pc('encargos'),0)}%)</span><span><i style="background:var(--c-pres)"></i>Empresas, associações, institutos e demais credores: <b>${brl(c.outros.pago)}</b> (${fmt(pc('outros'),0)}%)</span></div>
+   <h4 style="margin:16px 0 6px;color:var(--primary)">Maiores credores do terceiro grupo (${dd.credoresN.toLocaleString('pt-BR')} credores no ano)</h4>
+   ${hbars(dd.topOutros.slice(0,15),'pago',i=>i.nome)}
+   <p class="note">Os 20 maiores deste grupo concentram <b>${fmt(dd.top20OutrosPct,0)}%</b> do valor pago a ele. Concentração não indica irregularidade; mostra onde está o dinheiro.</p>
+   <details><summary>Ver os 30 maiores, com CNPJ</summary>${tbl([['Credor'],['CNPJ'],['Empenhado',1],['Pago',1]],dd.topOutros.map(i=>[esc(i.nome),esc(i.doc),brl(i.empenhado),brl(i.pago)]))}</details>
+   <p class="source">Fonte: <a href="https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao" target="_blank" rel="noopener">Despesas por credor, portal da Prefeitura</a>. O agrupamento em três tipos é do Radar, por nome do credor, com a mesma regra para todos. "Calculado".</p>`;
+}
+$('#pAno').addEventListener('click',e=>{const b=e.target.closest('[data-pa]');if(!b)return;pAno=+b.dataset.pa;drawPref()});
+
+function drawFolha(){
+  if(!PF)return;const F=PF.folha,m=F.mensal;
+  const mxv=Math.max(...m.map(x=>x.vinculosAtivos)),lab=x=>String(x.mes).padStart(2,'0')+'/'+String(x.ano).slice(2);
+  const comVal=m.filter(x=>x.bruto!=null),mxb=Math.max(...comVal.map(x=>x.bruto));
+  $('#pFolha').innerHTML=`<p class="note" style="margin-top:0">${esc(F.aviso)}</p>
+  <h4 style="margin:10px 0 6px;color:var(--primary)">Vínculos ativos por mês (matrículas)</h4>
+  <div class="vbars" role="img" aria-label="Vínculos ativos por mês">${m.map(x=>`<div class="${x.bruto==null?'nov':''}" title="${lab(x)}: ${x.vinculosAtivos}" style="height:${(x.vinculosAtivos/mxv*100)}%"></div>`).join('')}</div>
+  <div class="vlab">${m.map((x,i)=>`<span>${i%3===0?lab(x):''}</span>`).join('')}</div>
+  <p class="note">De ${fmt(m[0].vinculosAtivos)} em ${lab(m[0])} a ${fmt(m[m.length-1].vinculosAtivos)} em ${lab(m[m.length-1])}. Uma pessoa com duas matrículas conta duas vezes. Barras hachuradas: meses sem valores publicados.</p>
+  <h4 style="margin:16px 0 6px;color:var(--primary)">Folha bruta mensal (meses com valores publicados)</h4>
+  <div class="vbars">${comVal.map(x=>`<div title="${lab(x)}: ${brl(x.bruto)}" style="height:${x.bruto/mxb*100}%"></div>`).join('')}</div>
+  <div class="vlab">${comVal.map(x=>`<span>${lab(x)}</span>`).join('')}</div>
+  <p class="note">${comVal.map(x=>lab(x)+': '+brl(x.bruto)).join(' · ')}</p>
+  <details><summary>Maiores lotações em ${esc(F.mesRef)} (por folha bruta)</summary>${tbl([['Lotação'],['Vínculos',1],['Folha bruta',1]],F.lotacoes.map(l=>[esc(l.nome),fmt(l.vinculos),brl(l.bruto)]))}</details>
+  <p class="source">Fonte: <a href="https://transparencia.marica.rj.gov.br/e-cidade/servidores" target="_blank" rel="noopener">Folha de pagamento de servidores, portal da Prefeitura</a>. O Radar mostra totais e cargos de direção. Não publica nomes de servidores de base.</p>`;
+}
+function drawSec(){
+  if(!PF)return;const q=($('#buscaSec').value||'').toLowerCase();
+  const rows=PF.secretarias.filter(s=>!q||(s.org+' '+s.titular).toLowerCase().includes(q));
+  const vs=Object.values(PF.vereadorSecretario||{}).map(s=>({v:{nome:s.nome},s}));
+  $('#pSec').innerHTML=(vs.length&&!q?`<div class="explain" style="margin-bottom:12px"><b>Nas duas fontes oficiais:</b> ${vs.length} nomes que aparecem como vereadores na Câmara também constam como titulares de secretaria no site da Prefeitura: ${vs.map(x=>`<b>${esc(x.v.nome)}</b> (${esc(x.s.org)})`).join(', ')}. A correspondência é pelo nome civil completo. O Radar não afirma se há licença do mandato.</div>`:'')+tbl([['Secretaria ou órgão'],['Titular como publicado'],['Cargo']],rows.map(s=>[esc(s.org),esc(s.titular),esc(s.cargo)]));
+}
+$('#buscaSec').addEventListener('input',drawSec);
+function drawSanc(){
+  if(!PF)return;
+  $('#pSanc').innerHTML=tbl([['Empresa ou entidade'],['CNPJ'],['Tipo de sanção'],['Início'],['Fim'],['Contrato']],PF.sancoes.map(s=>[esc(s.nome),esc(s.doc),esc(s.tipo),esc(s.inicio),esc(s.fim),esc(s.contrato)]));
+}
+
+/* ================= OBRAS ================= */
+let oFilt='todos',oMap=null,oLayer=null,oSel=null;
+function drawObras(){
+  if(!PF)return;const O=PF.obras,A=O.paralisadas;
+  $('#oFonte').href=O.fonte;
+  const nAnd=O.acompanhamento.filter(x=>x.sit==='Em andamento').reduce((a,x)=>a+x.n,0);
+  $('#oTot').innerHTML=[[A.length,'obras paralisadas (lista oficial de '+O.dataLista+')'],[O.semPrevisao,'sem previsão de reinício'],[A.length,'com coordenadas oficiais'],[O.acompanhamentoTotal,'obras acompanhadas no total']].map(([n,l])=>`<div class="stat"><b>${fmt(n)}</b><span>${l}</span></div>`).join('');
+  const grupos=Object.keys(O.motivosGrupo);
+  $('#oGrupo').innerHTML=[['todos','Todas ('+A.length+')'],...grupos.map(g=>[g,g+' ('+O.motivosGrupo[g]+')'])].map(([k,l])=>`<button data-og="${esc(k)}" aria-pressed="${k===oFilt}">${esc(l)}</button>`).join('');
+  const arr=A.map((o,i)=>({...o,n:i+1})).filter(o=>oFilt==='todos'||o.grupo===oFilt);
+  $('#oLista').innerHTML=arr.map(o=>`<li><button data-os="${o.os}" aria-pressed="${oSel===o.os}"><span class="num">${o.n}</span><b>${esc(o.bairro)}</b> · ${esc(o.objeto)}<br><span class="note">${esc(o.local)}</span><br><span class="note"><b>Motivo declarado:</b> ${esc(o.motivo)}<br><b>Início da obra:</b> ${esc(o.inicio)} · <b>Reinício:</b> ${esc(o.reinicio==='SEM PREVISÃO'?'sem previsão':o.reinicio)} · OS ${o.os}</span></button></li>`).join('')||'<li class="note">Nenhuma obra neste grupo.</li>';
+  drawMapa(arr);
+  const mx=Math.max(...Object.values(O.motivosGrupo));
+  $('#oMot').innerHTML=`<ol class="bars" style="padding:0">${Object.entries(O.motivosGrupo).sort((a,b)=>b[1]-a[1]).map(([g,n])=>`<li class="bar-row"><div class="who" style="cursor:default"><span class="nm">${esc(g)}</span></div><div class="tr"><div class="track"><div class="seg-one" style="width:${n/mx*100}%"></div></div><span class="val">${n}</span></div></li>`).join('')}</ol>`;
+  const sits=['Concluída','Em andamento','Paralisada','Outra situação'],tipos=[...new Set(O.acompanhamento.map(x=>x.tipo_execucao))];
+  $('#oAcomp').innerHTML=tbl([['Execução'],...sits.map(s=>[s,1]),['Total',1]],tipos.map(t=>{const r=sits.map(s=>(O.acompanhamento.find(x=>x.tipo_execucao===t&&x.sit===s)||{n:0}).n);return [esc(t),...r.map(x=>fmt(x)),fmt(r.reduce((a,b)=>a+b,0))]}))+`<p class="source">Fonte: <a href="https://transparencia.marica.rj.gov.br/obras" target="_blank" rel="noopener">Acompanhamento de obras, portal da Prefeitura</a>. A lista de paralisadas é de ${O.dataLista}; o portal registra atualização manual em ${O.atualizacaoPortal}. Situações são as declaradas pelo órgão.</p>`;
+}
+let mSit='todas';
+const SYM={concluida:'✓',andamento:'●',paralisada:'!'},SITNOME={concluida:'Concluída',andamento:'Em andamento',paralisada:'Paralisada'};
+function popObra(o){return `<b>${esc(o.bairro||'Maricá')}</b><br>${esc(o.obj||'Obra')}<br><span class="note">${esc(o.local)}</span><br><b>${SITNOME[o.sit]}</b> (como declarado pela Prefeitura: ${esc(o.situacaoOriginal)})${o.pct?'<br>Executado: '+esc(o.pct)+'%':''}${o.empresa?'<br>Executor: '+esc(o.empresa):''}${o.inicio?'<br>Início: '+esc(o.inicio):''}${o.prev?' · Previsão: '+esc(o.prev):''}${o.motivo?'<br><b>Motivo declarado:</b> '+esc(o.motivo):''}${o.reinicio?'<br>Reinício: '+esc(o.reinicio==='SEM PREVISÃO'?'sem previsão':o.reinicio):''}<br><a href="${esc(o.fonte)}" target="_blank" rel="noopener">Fonte oficial</a>`}
+function drawMapa(arr){
+  const box=$('#mapa'),M=PF.obrasMapa;if(!M)return;
+  const num={};arr.forEach(o=>num[String(o.os)]=o.n);
+  const gOK=new Set(PF.obras.paralisadas.filter(o=>oFilt==='todos'||o.grupo===oFilt).map(o=>String(o.os)));
+  const vis=M.obras.filter(o=>(mSit==='todas'||o.sit===mSit)&&(o.sit!=='paralisada'||oFilt==='todos'||gOK.has(o.id)));
+  const lab=o=>o.sit==='paralisada'&&num[o.id]?num[o.id]:SYM[o.sit];
+  if(window.L){
+    if(!oMap){oMap=L.map(box,{scrollWheelZoom:false}).setView([-22.92,-42.82],11);(location.protocol==='file:'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Tiles © Esri, © OpenStreetMap contributors'}):L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'})).addTo(oMap);oLayer=L.layerGroup().addTo(oMap)}
+    oLayer.clearLayers();const pts=[];
+    vis.forEach(o=>{const m=L.marker([o.lat,o.lng],{icon:L.divIcon({className:'',html:`<span class="mk ${o.sit}"><span>${lab(o)}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${SITNOME[o.sit]}: ${o.bairro}`,keyboard:true,zIndexOffset:o.sit==='paralisada'?1000:o.sit==='andamento'?500:0}).addTo(oLayer);m.bindPopup(popObra(o));m.on('click',()=>{if(o.sit==='paralisada'){oSel=+o.id;markSel()}});pts.push([o.lat,o.lng]);o._m=m});
+    setTimeout(()=>{oMap.invalidateSize();if(pts.length)oMap.fitBounds(pts,{padding:[30,30],maxZoom:14})},60);return;
+  }
+  const all=M.obras,la=all.map(o=>o.lat),lo=all.map(o=>o.lng);
+  const x0=Math.min(...lo),x1=Math.max(...lo),y0=Math.min(...la),y1=Math.max(...la),W=620,Hh=460,pad=30,k=Math.min((W-2*pad)/(x1-x0),(Hh-2*pad)/(y1-y0));
+  const col={concluida:'#1E8E3E',andamento:'#1F6FB5',paralisada:'#F2B200'};
+  box.innerHTML=`<svg class="mapfb" viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Posição das obras, sem fundo de mapa"><rect width="${W}" height="${Hh}" fill="#EEF2F6"/>${vis.map(o=>{const x=pad+(o.lng-x0)*k,y=Hh-pad-(o.lat-y0)*k;return `<g><circle cx="${x}" cy="${y}" r="9" fill="${col[o.sit]}" stroke="#111" stroke-width="2"/><text x="${x}" y="${y+4}" text-anchor="middle" fill="${o.sit==='paralisada'?'#111':'#fff'}" font-size="10" font-weight="700">${lab(o)}</text></g>`}).join('')}<text x="12" y="${Hh-10}" font-size="12" fill="#475569">Mapa interativo indisponível sem internet. Posições em escala.</text></svg>`;
+}
+function drawSit(){
+  const M=PF.obrasMapa;if(!M)return;const c=M.contagem;
+  $('#oSit').innerHTML=[['todas','Todas ('+M.obras.length+')'],['concluida','Concluídas ('+(c.concluida||0)+')'],['andamento','Em andamento ('+(c.andamento||0)+')'],['paralisada','Paralisadas ('+(c.paralisada||0)+')']].map(([k,l])=>`<button data-ms="${k}" aria-pressed="${k===mSit}">${l}</button>`).join('');
+  $('#oLeg').innerHTML=`<span><i class="sw concluida"></i>✓ Concluída</span><span><i class="sw andamento"></i>● Em andamento</span><span><i class="sw paralisada"></i>! Paralisada (número = lista ao lado)</span><span class="note"><i class="sw problema"></i>Pedidos que se repetem sem solução: em preparação</span>`;
+  $('#oSit').onclick=e=>{const b=e.target.closest('[data-ms]');if(!b)return;mSit=b.dataset.ms;drawSit();drawObras()};
+}
+function markSel(){document.querySelectorAll('#oLista button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.os===oSel));const b=document.querySelector(`#oLista button[data-os="${oSel}"]`);if(b)b.scrollIntoView({block:'nearest'})}
+$('#oGrupo').addEventListener('click',e=>{const b=e.target.closest('[data-og]');if(!b)return;oFilt=b.dataset.og;drawObras()});
+$('#oLista').addEventListener('click',e=>{const b=e.target.closest('[data-os]');if(!b)return;oSel=+b.dataset.os;markSel();const o=PF.obras.paralisadas.find(x=>x.os===oSel);if(oMap&&o){oMap.setView([o.lat,o.lng],15);const m=(PF.obrasMapa.obras.find(x=>x.id===String(oSel))||{})._m;if(m)m.openPopup()}});
+
+/* ================= EMPRESAS ================= */
+function drawEmp(){
+  const E=PF&&PF.empresas;if(!E)return;const cb=E.cobertura,q=($('#buscaEmp').value||'').toLowerCase().replace(/[.\/-]/g,'');
+  $('#eStats').innerHTML=[['R$ '+fmt(cb.pagoPrivado,2)+' bi','pago a credores privados em 2025 e 2026'],[fmt(cb.top100Pct,0)+'%','do valor está nas 100 maiores'],[fmt(cb.contratosN),'contratos na lista da Prefeitura'],[cb.top100SemContrato,'das 100 maiores não aparecem na lista de contratos']].map(([n,l])=>`<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+  const rows=E.empresas.map((e,i)=>({e,i})).filter(({e})=>!q||(e.nome+' '+e.cnpj).toLowerCase().replace(/[.\/-]/g,'').includes(q));
+  const mx=Math.max(...E.empresas.map(e=>e.pago));
+  $('#eLista').innerHTML=rows.slice(0,q?100:25).map(({e,i})=>`<details class="emp"><summary><span class="rk">${i+1}</span> <b>${esc(e.nome)}</b> <span class="note">· R$ ${fmt(e.pago,1)} mi pagos${e.nContratos?'':' · sem contrato na lista'}${e.sancoes.length?' · consta sanção':''}</span><span class="track" style="display:block;margin-top:6px"><span class="seg-one" style="display:block;width:${Math.max(0.5,e.pago/mx*100)}%;height:100%"></span></span></summary>
+   <p class="note" style="margin:8px 0">CNPJ ${esc(e.cnpj)} · Pago em 2025: R$ ${fmt(e.pago25,1)} mi · Pago em 2026 (até 14/11): R$ ${fmt(e.pago26,1)} mi · ${e.nContratos} contrato(s) na lista${e.nContratos?', somando R$ '+fmt(e.contratado,1)+' mi de valor publicado':''}.</p>
+   ${e.tipos.length?`<p class="note" style="margin:4px 0">Tipos (classificação do Radar pelo texto do objeto): ${e.tipos.map(esc).join(', ')}</p>`:''}
+   ${e.contratos.length?tbl([['Contrato'],['Objeto'],['Vigência'],['Valor',1]],e.contratos.map(c=>[`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.id)}</a>`,esc(c.obj)+(c.obj.length>=240?'…':''),esc(c.ini)+' a '+esc(c.fim),'R$ '+fmt(c.v,2)+' mi'])):''}
+   ${e.nContratos>6?`<p class="note">Mostrando os 6 maiores de ${e.nContratos}.</p>`:''}
+   ${e.sancoes.length?`<p class="note"><b>Sanções publicadas:</b> ${e.sancoes.map(s=>esc(s.tipo)+(s.status?' ('+esc(s.status)+')':'')).join('; ')}</p>`:''}
+  </details>`).join('')||'<p class="note">Nenhuma empresa encontrada entre as 100 maiores.</p>';
+  if(!q&&rows.length>25)$('#eLista').insertAdjacentHTML('beforeend',`<p class="note">Mostrando as 25 maiores. Use a busca para as outras ${rows.length-25}.</p>`);
+}
+$('#buscaEmp').addEventListener('input',drawEmp);
+
+try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#heroBig').textContent='R$ '+fmt((a+b)/1000,1)+' bi';$('#bignum').hidden=false}catch(e){}
+
+drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();drawSec();drawSanc();drawObras();drawSit();drawEmp();
+})();
+</script>
+</body>
+</html>
