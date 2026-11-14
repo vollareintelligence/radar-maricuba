@@ -3,6 +3,8 @@ S=pathlib.Path(__file__).resolve().parent.parent/'site'
 h=(S/'index.html').read_text()
 def b64(f,mime): return f"data:{mime};base64,"+base64.b64encode((S/f).read_bytes()).decode()
 h=h.replace('<link rel="stylesheet" href="vendor/leaflet.css">','<style>'+(S/'vendor/leaflet.css').read_text()+'</style>')
+h=h.replace('<link rel="stylesheet" href="vendor/MarkerCluster.css">','<style>'+(S/'vendor/MarkerCluster.css').read_text()+'</style>')
+h=h.replace('<script src="vendor/leaflet.markercluster.js"></script>','<script>'+(S/'vendor/leaflet.markercluster.js').read_text().replace('</script>','<\\/script>')+'</script>')
 h=h.replace('<script src="vendor/leaflet.js"></script>','<script>'+(S/'vendor/leaflet.js').read_text().replace('</script>','<\\/script>')+'</script>')
 h=h.replace('<script src="dados.js"></script>','<script>'+(S/'dados.js').read_text().replace('</script>','<\\/script>')+'</script>')
 h=re.sub(r'url\((["\']?)(fonts/[^)"\']+\.woff2)\1\)',lambda m:f"url({b64(m.group(2),'font/woff2')})",h)

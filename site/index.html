@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar da Gastança · Maricúba — Câmara e Prefeitura de Maricá em dados abertos</title>
 <meta name="description" content="Presença, pedidos e votos dos vereadores de Maricá, com link para a fonte oficial em cada número.">
-<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="vendor/MarkerCluster.css">
 <style>
 :root{
   --primary:#0F172A;--secondary:#334155;--accent:#0369A1;--on-accent:#fff;
@@ -209,13 +209,39 @@ footer{border-top:6px solid var(--hot)}
 .sw{display:inline-block;width:18px;height:18px;border:2px solid #111;vertical-align:-4px;margin-right:6px}
 .sw.concluida{background:#1E8E3E;border-radius:50%}.sw.andamento{background:#1F6FB5;border-radius:2px;transform:rotate(45deg) scale(.8)}.sw.paralisada{background:#F2B200}.sw.problema{background:#D32F2F;border-radius:50% 50% 50% 0;transform:rotate(-45deg) scale(.9)}
 .leaflet-popup-content{font-family:"Atkinson Hyperlegible",sans-serif;font-size:14px;line-height:1.4}.leaflet-popup-content b{font-size:15px}
+
+.menubtn,.atalhos{display:none}
+.cl{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#111;color:#F1E8D6;font:400 17px/1 var(--disp,Anton),sans-serif;border:3px solid #F1E8D6;box-shadow:0 0 0 2px #111}
+.cl.par{border-color:#F2B200;box-shadow:0 0 0 2px #111}
+.mapdica{display:none;margin:6px 0 0}
+details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font-family:var(--disp);font-size:24px;text-transform:uppercase;min-height:52px;display:flex;align-items:center;cursor:pointer}details.mcol[open]>summary{margin-bottom:8px}
+@media (max-width:720px){
+ header.top{position:sticky;top:0;z-index:2000}
+ header.top .wrap{flex-wrap:wrap;min-height:56px;padding-top:6px;padding-bottom:6px}
+ .brand{font-size:17px}
+ .menubtn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;font:inherit;font-family:var(--disp);font-size:18px;text-transform:uppercase;background:var(--hot);color:#111;border:2px solid var(--paper);cursor:pointer}
+ nav.menu{display:none;width:100%;flex-direction:column;gap:0;padding-bottom:8px}
+ header.top.open nav.menu{display:flex}
+ nav.menu a{min-height:48px;border-top:1px solid #333;font-size:16px}
+ .atalhos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
+ .atalhos a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:8px 10px;background:var(--ink);color:var(--paper);font-family:var(--disp);font-size:19px;line-height:1.1;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--hot)}
+ .atalhos a.zap{background:var(--hot);color:#111;grid-column:1/-1}
+ .mapbox{height:420px}.mapdica{display:block}
+ .olist{max-height:360px}
+ .seg button,.btn,button,summary,input,select,.olist li button{min-height:44px}
+ .note,.source,small,.nm,.ts,.kick,td,th,label{font-size:14px}
+ body{font-size:16px}
+ a{text-underline-offset:3px}
+ .vcard,.card a{min-height:0}
+}
 </style>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+PGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTUiIGZpbGw9IiMxMTEiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjFFOEQ2IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcgMTcgTDE3IDcgQTEwIDEwIDAgMCAxIDI1LjcgMTJaIiBmaWxsPSIjRDkzQTFFIi8+PC9zdmc+"></head>
 <body>
 <a class="skip" href="#principal">Pular para o conteúdo</a>
 <header class="top"><div class="wrap">
   <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
-  <nav class="menu" aria-label="Seções">
+  <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuNav">Menu</button>
+  <nav class="menu" id="menuNav" aria-label="Seções">
     <a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
   </nav>
 </div></header>
@@ -226,6 +252,7 @@ footer{border-top:6px solid var(--hot)}
   <h1><span class="a">Radar da</span><span class="b">Gastança</span><span class="c">Maricúba</span></h1>
   <p>Quanto a Prefeitura pagou, a quem pagou, e o que cada vereador faz: tudo lido direto dos registros públicos, com a fonte oficial em cada número.</p>
   <p>O Radar mostra fatos e não faz acusação. A mesma régua vale para todos.</p>
+  <div class="atalhos" aria-label="Atalhos"><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
   <div class="bignum" id="bignum" hidden><b id="heroBig"></b><span>pagos pela Prefeitura em 2025 e 2026 (até 14/11)</span></div>
   <div class="stamp" id="stamp"></div>
 </div></div>
@@ -381,7 +408,7 @@ footer{border-top:6px solid var(--hot)}
 
 <dialog id="dlg" aria-labelledby="dlgNome"></dialog>
 
-<script src="vendor/leaflet.js"></script>
+<script src="vendor/leaflet.js"></script><script src="vendor/leaflet.markercluster.js"></script>
 <script src="dados.js"></script>
 <script>
 (function(){
@@ -603,9 +630,9 @@ function drawMapa(arr){
   const vis=M.obras.filter(o=>(mSit==='todas'||o.sit===mSit)&&(o.sit!=='paralisada'||oFilt==='todos'||gOK.has(o.id)));
   const lab=o=>o.sit==='paralisada'&&num[o.id]?num[o.id]:SYM[o.sit];
   if(window.L){
-    if(!oMap){oMap=L.map(box,{scrollWheelZoom:false}).setView([-22.92,-42.82],11);(location.protocol==='file:'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Tiles © Esri, © OpenStreetMap contributors'}):L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'})).addTo(oMap);oLayer=L.layerGroup().addTo(oMap)}
+    if(!oMap){oMap=L.map(box,{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false}).setView([-22.92,-42.82],11);(location.protocol==='file:'?L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Tiles © Esri, © OpenStreetMap contributors'}):L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'})).addTo(oMap);oLayer=(L.markerClusterGroup?L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:38,spiderfyOnMaxZoom:true,iconCreateFunction:c=>{const n=c.getChildCount(),par=c.getAllChildMarkers().some(x=>x.options.sit==='paralisada');return L.divIcon({className:'',html:`<span class="cl${par?' par':''}">${n}</span>`,iconSize:[38,38]})}}):L.layerGroup()).addTo(oMap)}
     oLayer.clearLayers();const pts=[];
-    vis.forEach(o=>{const m=L.marker([o.lat,o.lng],{icon:L.divIcon({className:'',html:`<span class="mk ${o.sit}"><span>${lab(o)}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${SITNOME[o.sit]}: ${o.bairro}`,keyboard:true,zIndexOffset:o.sit==='paralisada'?1000:o.sit==='andamento'?500:0}).addTo(oLayer);m.bindPopup(popObra(o));m.on('click',()=>{if(o.sit==='paralisada'){oSel=+o.id;markSel()}});pts.push([o.lat,o.lng]);o._m=m});
+    vis.forEach(o=>{const m=L.marker([o.lat,o.lng],{icon:L.divIcon({className:'',html:`<span class="mk ${o.sit}"><span>${lab(o)}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${SITNOME[o.sit]}: ${o.bairro}`,keyboard:true,sit:o.sit,zIndexOffset:o.sit==='paralisada'?1000:o.sit==='andamento'?500:0}).addTo(oLayer);m.bindPopup(popObra(o));m.on('click',()=>{if(o.sit==='paralisada'){oSel=+o.id;markSel()}});pts.push([o.lat,o.lng]);o._m=m});
     setTimeout(()=>{oMap.invalidateSize();if(pts.length)oMap.fitBounds(pts,{padding:[30,30],maxZoom:14})},60);return;
   }
   const all=M.obras,la=all.map(o=>o.lat),lo=all.map(o=>o.lng);
@@ -621,7 +648,7 @@ function drawSit(){
 }
 function markSel(){document.querySelectorAll('#oLista button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.os===oSel));const b=document.querySelector(`#oLista button[data-os="${oSel}"]`);if(b)b.scrollIntoView({block:'nearest'})}
 $('#oGrupo').addEventListener('click',e=>{const b=e.target.closest('[data-og]');if(!b)return;oFilt=b.dataset.og;drawObras()});
-$('#oLista').addEventListener('click',e=>{const b=e.target.closest('[data-os]');if(!b)return;oSel=+b.dataset.os;markSel();const o=PF.obras.paralisadas.find(x=>x.os===oSel);if(oMap&&o){oMap.setView([o.lat,o.lng],15);const m=(PF.obrasMapa.obras.find(x=>x.id===String(oSel))||{})._m;if(m)m.openPopup()}});
+$('#oLista').addEventListener('click',e=>{const b=e.target.closest('[data-os]');if(!b)return;oSel=+b.dataset.os;markSel();const o=PF.obras.paralisadas.find(x=>x.os===oSel);if(oMap&&o){oMap.setView([o.lat,o.lng],15);const m=(PF.obrasMapa.obras.find(x=>x.id===String(oSel))||{})._m;if(m){if(oLayer.zoomToShowLayer)oLayer.zoomToShowLayer(m,()=>m.openPopup());else m.openPopup()}}});
 
 /* ================= EMPRESAS ================= */
 function drawEmp(){
@@ -643,6 +670,18 @@ $('#buscaEmp').addEventListener('input',drawEmp);
 try{const a=PF.despesas[2025].total.pago,b=PF.despesas[2026].total.pago;$('#heroBig').textContent='R$ '+fmt((a+b)/1000,1)+' bi';$('#bignum').hidden=false}catch(e){}
 
 drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();drawSec();drawSanc();drawObras();drawSit();drawEmp();
+})();
+
+(function(){
+ const hd=document.querySelector('header.top'),bt=document.getElementById('menuBtn');
+ if(bt){bt.addEventListener('click',()=>{const o=hd.classList.toggle('open');bt.setAttribute('aria-expanded',o)});
+  document.getElementById('menuNav').addEventListener('click',e=>{if(e.target.closest('a')){hd.classList.remove('open');bt.setAttribute('aria-expanded','false')}})}
+ const z=document.getElementById('zap');
+ if(z){const url='https://vollareintelligence.github.io/radar-maricuba/';z.href='https://wa.me/?text='+encodeURIComponent('Radar da Gastança · Maricúba: o que a Câmara e a Prefeitura de Maricá fazem, com dados oficiais e a fonte em cada número. '+url)}
+ const mb=document.getElementById('mapa');if(mb&&!document.querySelector('.mapdica')){const p=document.createElement('p');p.className='note mapdica';p.textContent='No celular, use dois dedos para mover e dar zoom no mapa. Toque num ponto para ver os detalhes.';mb.parentNode.insertAdjacentElement('afterend',p)}
+ if(!window.matchMedia('(max-width:720px)').matches)return;
+ document.querySelectorAll('#prefeitura h3.sh').forEach((h,i)=>{const d=document.createElement('details');d.className='mcol';if(i===0)d.open=true;const sm=document.createElement('summary');sm.textContent=h.textContent;d.appendChild(sm);let n=h.nextElementSibling;const mv=[];while(n&&!(n.tagName==='H3'&&n.classList.contains('sh'))){mv.push(n);n=n.nextElementSibling}h.replaceWith(d);mv.forEach(x=>d.appendChild(x))});
+ const el=document.getElementById('eLista');if(el){const d=document.createElement('details');d.className='mcol';const sm=document.createElement('summary');sm.textContent='Ver as 100 maiores recebedoras';d.appendChild(sm);const row=document.getElementById('buscaEmp').closest('.row');el.parentNode.insertBefore(d,row);d.appendChild(row);d.appendChild(el);const src=d.parentNode.querySelector('.source');if(src)d.appendChild(src)}
 })();
 </script>
 </body>

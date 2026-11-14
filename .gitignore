@@ -1,0 +1,5 @@
+dados/cache/
+dist/
+*.zip
+__pycache__/
+dados/brutos/prefeitura/folha.csv
