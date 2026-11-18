@@ -1,24 +1,11 @@
 {
- "coletadoEm": "2026-11-18T03:01:31Z",
+ "coletadoEm": "2026-11-18T03:14:19Z",
  "janelaDias": 730,
  "fonte": "Google News RSS (não oficial)",
- "consultas": 12,
- "falhas": [
-  "Piscina de água salgada: HTTPError",
-  "Roda-gigante: HTTPError"
- ],
- "total": 44,
+ "consultas": 11,
+ "falhas": [],
+ "total": 39,
  "itens": [
-  {
-   "titulo": "Quaquá anuncia corte de 30% nos contratos e defende revisão de benefícios sociais em Maricá - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4zOEhLSjlsa2ZPXzF5YzlISXhvdWl2dndWZndUNi0zM1FVajkxaE5NU3JrV213a2J4cVgwRGhXblU5VG9fVWNyWl83VnFkMGRndDRpSTB2WUt5MFBmUjNTYXMzVnoyMGZidWZBUGtrMA?oc=5",
-   "data": "2026-11-18",
-   "veiculo": "Maricá Info",
-   "dominioVeiculo": "https://maricainfo.com",
-   "temas": [
-    "Prefeito"
-   ]
-  },
   {
    "titulo": "Maricá avança com asfalto em mais de 7 km de ruas de Itaipuaçu - Folha do Leste",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ05vcWZrSVhENU1nY3BDV1ZUUXUyZU1uOTdfUFdpYmgzU3BFY3hWVmVOSVNyX04yWVcyM1puMGY2bV9xTnhZVnA1SGdON0RoQ2tZVnBBOEp4OE1RUVVnOEtvX291S3o4S21vQTJGYm5JcFdCQkp5UnNTVFNLTHdQSHFGR05kYXd4QzN1dA?oc=5",
@@ -26,7 +13,7 @@
    "veiculo": "Folha do Leste",
    "dominioVeiculo": "https://folhadoleste.com.br",
    "temas": [
-    "Asfalto"
+    "asfalto"
    ]
   },
   {
@@ -36,7 +23,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Fábrica de aviões"
+    "aviões"
    ]
   },
   {
@@ -46,17 +33,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "Asfalto"
-   ]
-  },
-  {
-   "titulo": "Quaquá ecumênico: prefeito de Maricá anuncia parque aquático evangélico na região do antigo lixão de Itapeba e garante que 'todas as religiões terão espaço na cidade' - Tempo Real",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5rVGo4Z2tKVVJZV3BlTWtZaE9FTm1ZcEdVWFJJMWIxcVdtT0VOdjJHVUZobExWa1hzc0xLSWhmYjRzTGFZM3ZFNUpZXzhINjJLb0tYaDZtSlZrM0dseVVuV0JoMlRKVHlzWkhNckh5MFQxVW8?oc=5",
-   "data": "2026-09-22",
-   "veiculo": "Tempo Real",
-   "dominioVeiculo": "https://temporealrj.com",
-   "temas": [
-    "Prefeito"
+    "asfalto"
    ]
   },
   {
@@ -66,7 +43,7 @@
    "veiculo": "Poder360",
    "dominioVeiculo": "https://www.poder360.com.br",
    "temas": [
-    "Hotéis públicos"
+    "hoteis"
    ]
   },
   {
@@ -76,7 +53,7 @@
    "veiculo": "LSM Notícias",
    "dominioVeiculo": "https://lsmnoticias.com.br",
    "temas": [
-    "Hotéis públicos"
+    "hoteis"
    ]
   },
   {
@@ -86,7 +63,7 @@
    "veiculo": "Coluna do Gilson",
    "dominioVeiculo": "https://colunadogilson.com.br",
    "temas": [
-    "Asfalto"
+    "asfalto"
    ]
   },
   {
@@ -96,7 +73,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "Hotéis públicos"
+    "hoteis"
    ]
   },
   {
@@ -106,17 +83,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "Esgoto"
-   ]
-  },
-  {
-   "titulo": "Quaquá volta atrás e anuncia apoio à candidatura de Benedita ao Senado: 'Sou um cara que evoluo' - O GLOBO",
-   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTk8yN2VjVDFGRXliRUotVmVtM255UHFqS1RKUjVOQjlfdU5PRThoRlQ0SE1sVkw3MjFZM1BsSWdPTzRRdU1YR09uNEhPNkJFODlIVGo0dFdkc3RIb29uYkZ4TGVGNkU1Z1QxbjA1U3A2ZVU4VVJ4MjZiTEhvV3BSSEJuX1ZlbUZ1YVUzOHptaTg4a1BzeHVOUkQ3RU5NNHBHWVF6eTUzeExhUnpBQ0JkeGF4R2xMdmpCZVBkaUh6WnVVTkstb3FvMTNZWTFIU2RUenNPRWMzZXBMb0ZyaldFalRsZjVMRnPSAfYBQVVfeXFMT1l2NGU3RVpOMFJxZGh5TlhYT05LTHo0anM4bUpIakVTNmRVOUFKUko0ZGFzQVlCcGZOVWJXZWVOdlNYclVCQUtsTWJCTDlCcjcwY2I4UFozMjQ1djZuTzNPanFidVFXdV92RlR4SE5WUU5YamhDWW10b2pneENzczVPbXgtSTVPam5rTFppUXg2SkNtbnc5X2xSZ05XZXBhMUtXNmdDUDVrR0cxejFwcElWUG5vNFAzTjBscHZlV3NtYmNBeWJjTGVhajdCZzFGaVZEejdqLVJTTGJldWVVZ0R3WklsMlhFVFdFWkhtbDlOalVVM0pB?oc=5",
-   "data": "2026-07-08",
-   "veiculo": "O GLOBO",
-   "dominioVeiculo": "https://oglobo.globo.com",
-   "temas": [
-    "Prefeito"
+    "esgoto"
    ]
   },
   {
@@ -126,17 +93,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Aeroporto"
-   ]
-  },
-  {
-   "titulo": "Desaer anuncia 40 vagas para engenheiros e arquitetos na futura fábrica de aeronaves em Maricá - lrcadefenseconsulting.com",
-   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdWpvc3pQMG5rYVdGZDVmaDhiUzRRajJXOEtXYzVTVzNRV1BNSF8yMVNVZkd4NzBVSUpmWF80czNQdHFuR0Q5NXB0cGdCYWdMQldHcDlxLXpQOWFDNklQUTJzZXFaMnRENUJ3b3hIV0xOX2hoa3R6M1NCWHU4VWtXc2hnVDkyZw?oc=5",
-   "data": "2026-07-04",
-   "veiculo": "lrcadefenseconsulting.com",
-   "dominioVeiculo": "https://www.lrcadefenseconsulting.com",
-   "temas": [
-    "Fábrica de aviões"
+    "aeroporto"
    ]
   },
   {
@@ -146,7 +103,7 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -156,7 +113,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -166,7 +123,17 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Fábrica de aviões"
+    "aviões"
+   ]
+  },
+  {
+   "titulo": "Quaquá anuncia roda-gigante para impulsionar o turismo e a economia de Maricá - ErreJota Notícias",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWnk3aDVUTzBKalRxQXJaWHBObnktRy1QdDNfWWNZYlhzdVRwTWNmcHJpWkZqeGM3THFuLTJYZndXTFBtU0VyQ3BoUXg2cnlkSk1XSWpENHo3OEp4RzJuMDl0eFpxek4zOFNYdHltMHY1RXk2dEN4S19sekVUVTRJOS1vbGJEYjgtTHNzU0lkdnRrcmExSV8xbmR2eHBTSENDVnhwdG51akRXYlNXRzRZ?oc=5",
+   "data": "2026-01-12",
+   "veiculo": "ErreJota Notícias",
+   "dominioVeiculo": "https://errejotanoticias.com.br",
+   "temas": [
+    "roda"
    ]
   },
   {
@@ -176,7 +143,7 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Esgoto"
+    "esgoto"
    ]
   },
   {
@@ -186,7 +153,7 @@
    "veiculo": "A Seguir Niterói",
    "dominioVeiculo": "https://aseguirniteroi.com.br",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -196,7 +163,7 @@
    "veiculo": "O Dia",
    "dominioVeiculo": "https://odia.ig.com.br",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -206,7 +173,7 @@
    "veiculo": "Rádio Manchete Rio",
    "dominioVeiculo": "https://mancheterio.com.br",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -216,17 +183,27 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
-   "titulo": "Prefeito Washington Quaquá assina contrato para a construção do Plaza Shopping Maricá - Prefeitura de Maricá",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdTg5bERsOVhBc1NhWTR5dW1xaTVMUUNHdGZzTUt1cmhJZC1KbHM4Tlk4Y2RtRkdLWFF6ZVVJNUVUemNtVldicjZGanViS0F5T25kY01ZNllYNTJtb1FCRG81OWRQVlFVVkdFNlA2dC1DX29fMzNBcTlobFplQmVremlXbVh2OUZvLXlYTHZZS2NrN0xlSFFTaTN2bWgwRjB6ajc1dDFwQnNad25KWi04Yll4ZDRQY0N0Z3pqaXBhc1U?oc=5",
-   "data": "2025-09-02",
+   "titulo": "Roda gigante e pista de patinação: Parque Nanci é destaque no Natal Brasilidade em Maricá - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWlhiLUE5RnRMZTNFNGxXQ2dhNXRtVzNla3VvVnhpcjJhNk02MHFPaUo0bXBlUVhWN0JwVDY2eWVDajV4VnBKamJjUnRWOG90d0lKbHNWdTlqd3dtT05GSm10bkYzMFViYjhTb3dKajhVYkJUODhLd1JLMHdYajE1SkpUb0Z0QnBtUERJVWJsOUlpMVA5cFZXTXVYNUVCMDlfSmlxX1ZMcjk3V3VBUkQ1cmtkanV2OTFtOF9FTkFyRGtPOUVC?oc=5",
+   "data": "2025-11-30",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Prefeito"
+    "roda"
+   ]
+  },
+  {
+   "titulo": "Maricá: Agendamento para roda gigante, pista de gelo e outras atrações do Natal começam neste sábado (22); confira! - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTG5jVXZNcTJGZTVJSWdXeDhsVGdISXppa1ZIYXVLVndLNjlGcG9aNzhLSkRWdHJHS2lGRzlMZkptd2ZCa1VrRTk0Q2JoaUlBc1FRcDJjOG5NbDR4bTY5cXVNUmR0UEhMd1ZlcXRoa1J3RW5lRTR6aUpzTlN5QVVCY0s5Y2t6eEx6SmVqLThDaktBdVVONm4zSDBOZDM3WC1SV2ZlVUpWSnpRaGFGZWlMczFyTkFpSklJNFpwOWdKVElXNjZldk82S3VpRi1INDR5cGcyMmFnQnFTTGs?oc=5",
+   "data": "2025-11-21",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
+   "temas": [
+    "roda"
    ]
   },
   {
@@ -236,7 +213,7 @@
    "veiculo": "Prensa de Babel",
    "dominioVeiculo": "https://prensadebabel.com.br",
    "temas": [
-    "Base de foguetes"
+    "foguetes"
    ]
   },
   {
@@ -246,7 +223,7 @@
    "veiculo": "ErreJota Notícias",
    "dominioVeiculo": "https://errejotanoticias.com.br",
    "temas": [
-    "Base de foguetes"
+    "foguetes"
    ]
   },
   {
@@ -256,7 +233,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -266,7 +243,7 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Base de foguetes"
+    "foguetes"
    ]
   },
   {
@@ -276,7 +253,7 @@
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "Base de foguetes"
+    "foguetes"
    ]
   },
   {
@@ -286,7 +263,7 @@
    "veiculo": "Prensa de Babel",
    "dominioVeiculo": "https://prensadebabel.com.br",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -296,7 +273,7 @@
    "veiculo": "AERO Magazine",
    "dominioVeiculo": "https://aeromagazine.uol.com.br",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -306,7 +283,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -316,7 +293,7 @@
    "veiculo": "Geocracia",
    "dominioVeiculo": "https://geocracia.com",
    "temas": [
-    "Base de foguetes"
+    "foguetes"
    ]
   },
   {
@@ -326,7 +303,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -336,7 +313,7 @@
    "veiculo": "Extra online",
    "dominioVeiculo": "https://extra.globo.com",
    "temas": [
-    "Hotéis públicos"
+    "hoteis"
    ]
   },
   {
@@ -346,7 +323,7 @@
    "veiculo": "gbnews.com.br",
    "dominioVeiculo": "https://www.gbnews.com.br",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -356,7 +333,7 @@
    "veiculo": "Diário do Rio",
    "dominioVeiculo": "https://www.diariodorio.com",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -366,7 +343,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "VLT e trilhos"
+    "vlt"
    ]
   },
   {
@@ -376,7 +353,7 @@
    "veiculo": "Revista Forca Aérea",
    "dominioVeiculo": "https://forcaaerea.com.br",
    "temas": [
-    "Fábrica de aviões"
+    "aviões"
    ]
   },
   {
@@ -386,7 +363,7 @@
    "veiculo": "AIRWAY",
    "dominioVeiculo": "https://www.airway.com.br",
    "temas": [
-    "Fábrica de aviões"
+    "aviões"
    ]
   },
   {
@@ -396,27 +373,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Fábrica de aviões"
-   ]
-  },
-  {
-   "titulo": "Quaquá anuncia que vai armar a Guarda Municipal de Maricá: ‘Bandido vai para a vala’ - O GLOBO",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWW93Zl9LTW5kTF80bXVoYVRFMTh5a3k4dnZZcFVDWU9oZmZheElFTzAwM09fWG10MFhDWHVlbF9KbHhTVF9rbTRQUXhDMjR5dEYwM3EtTDFaa1h1RGZUMzZqbkhDVjV3emZkdGxzOTZHMWgxZmJ0SDRUOEdYT1pkSWlmNzYwLXVvUzZLQ1lQS2hJQmpPaVJHMmNSbUZMbGl3aG1GQ2RYSGNiU2xGd2tsaE5SVjFfX0FVMTdpUlV2ekFHWGNNQ0hfU1NsTWx4eDJFR0pVTTItTdIB5gFBVV95cUxQYzMyRUR3SnVKR2ZTd2V6YVdyQi1zNlhJZmJKYmpyeWJOd0JMdDNDZzJ2cDdGTE1rc1ZOY2ota3JzVF82b05lRl9sVkpFbDNfckRvNWFjeEhXSHhIdmtKczkwQ0x1eVNpOGs5UjBJajRfUmRTVUtyX181cThVSkdEeXE1eV9sVDZDTU8wR2F3MldEaWY4OTFQb3lsbnZlQjVDbmxrXzhoV0s1eTJYcEV6N2dtdlRVdHowckE3MGxNd2xnZy1iWnhidG5acTgzckxnOGFUNGJjN2t4UGdTbFRaTjRKWmUxdw?oc=5",
-   "data": "2025-03-31",
-   "veiculo": "O GLOBO",
-   "dominioVeiculo": "https://oglobo.globo.com",
-   "temas": [
-    "Prefeito"
-   ]
-  },
-  {
-   "titulo": "Por iniciativa de Quaquá, Maricá compra 10 projetos de Niemeyer e será a 2ª cidade do Brasil com mais obras do arquiteto - Prefeitura de Maricá",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52NThDU2l5MXl6WlRnbnlCdG1lNU9zeTdqNlFvZjZpN29VRUNpM2tDNnJTaXhxNTh6MEdUdUpzSHpJS24wbGJKbGFXY0N1UmJYUnVmcW1QZw?oc=5",
-   "data": "2025-03-28",
-   "veiculo": "Prefeitura de Maricá",
-   "dominioVeiculo": "https://www.marica.rj.gov.br",
-   "temas": [
-    "Prefeito"
+    "aviões"
    ]
   },
   {
@@ -426,7 +383,7 @@
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
-    "Aeroporto"
+    "aeroporto"
    ]
   },
   {
@@ -436,17 +393,7 @@
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "VLT e trilhos"
-   ]
-  },
-  {
-   "titulo": "Washington Quaquá anuncia nomes de secretários para mandato de 2025 em Maricá - G1",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQd0wtdUZIeWN0V0xqU1dzclpLbUJRanhuMnV0ZEdjTVhjTXd0eXptOVBtWHpvaDBlempSOEJtTXhzWklmQ2NnQktmR0xmS19LOGpIOXM1SWdHZ2FReVlDLTE0ZTFfaHFjUndYOFYtbkVobTJBZFlZSjljN1Zsa1JRYTg1OWt3NnNVYjJXbktnTWRPcDhQcUhKZjNkYWVmTGhCMFd6QWRyTXBjdE1KYndBNzZIUklqeHZDdVF6c3VDOUVyTEFkY05mWlZDU1Q3d9IB3AFBVV95cUxOSUNXSkFfaGt1UWJocmVfellWT1Ztd1dSTW1FemRUSm1INVJ6RVNLSXFOZWxVdWhqNTNWcWVpLS16SGRtWDg0Vk1Fbjd1UXFkU2VBQkhXbnRqQnhrRmZicEx6R0xVNlFvTEdWSnRTdlZlQ0ctZGxIcFN4ZGY2WWJkcDZhZHFTYUVfU1VhOWJNM05yMGJrdXJSUXkwSGRvQ0JVeWdyOS1QNFU1RmJuTkZ6RTJ1S2pRM3hodnRSdUtxUHQ1YjdjSFd6dWZHeWNTUjJtSldtTEdrYUplZURk?oc=5",
-   "data": "2024-11-20",
-   "veiculo": "G1",
-   "dominioVeiculo": "https://g1.globo.com",
-   "temas": [
-    "Prefeito"
+    "vlt"
    ]
   }
  ]
