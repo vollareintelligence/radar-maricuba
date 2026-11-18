@@ -133,15 +133,23 @@
     "url": "https://www.ocafezinho.com/2025/04/11/volto-a-prefeitura-com-orcamento-de-7-bilhoes-por-ano/amp/"
    },
    "prazo": "Sem prazo dito",
-   "status": "cade",
-   "achado": "Nenhum contrato, licitação ou dispensa com roda-gigante nos dados do portal (consulta de 14/11/2026). Na entrevista ele disse que um auxiliar tinha acabado de reunir com a empresa da roda, mas não achamos registro oficial dessa reunião.",
+   "status": "parcial",
+   "achado": "Nenhum contrato, licitação ou dispensa de roda-gigante permanente nos dados do portal (consulta de 14/11/2026). Existe uma roda-gigante no parque de diversões do Natal Brasilidade 2025, no Parque Nanci, citada pela imprensa e pela Prefeitura. É uma atração de evento, e não achamos a altura informada. A roda de 90 metros, maior que a do Rio (85 m), que ele disse que Maricá teria: cadê?",
    "fontes": [
     {
      "rotulo": "Contratos no portal",
      "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "Natal Brasilidade 2025 no Parque Nanci, com roda-gigante (Folha do Leste)",
+     "url": "https://folhadoleste.com.br/natal-brasilidade-marica-2025/"
+    },
+    {
+     "rotulo": "Natal Brasilidade: roda gigante instalada (Brasil de Fato, 15/12/2025)",
+     "url": "https://www.brasildefato.com.br/2025/12/15/marica-celebra-natal-com-decoracao-e-atividades-inspiradas-nas-raizes-brasileiras/"
     }
    ],
-   "curto": "Sem registro"
+   "curto": "Roda provisória de Natal; a de 90 m, sem registro"
   },
   {
    "id": "vlt",

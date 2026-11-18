@@ -92,7 +92,7 @@ meta = dict(
     proposicoes=int(len(pc)), votosNominais=int(sum(v['votos'] for v in votos.values())),
     justSemSessao=sum(len(v) if hasattr(v, '__len__') else 1 for v in jsem.values()) if isinstance(jsem, dict) else len(jsem),
     fonte='https://marica.sicam.app/areapublica', fonteCamara='https://marica.rj.leg.br',
-    contatoErros='',  # preencher no lançamento (e-mail/WhatsApp do canal de correções)
+    contatoErros='https://github.com/vollareintelligence/radar-maricuba/issues/new',  # canal provisório (Issues do GitHub); trocar por e-mail/WhatsApp quando definido
 )
 out.sort(key=lambda r: r['nome'])
 (S).mkdir(exist_ok=True)
