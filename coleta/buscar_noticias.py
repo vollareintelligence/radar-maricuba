@@ -6,13 +6,14 @@ publica nada incompleto.
 
 Saída: dados/consolidado/noticias.json
   - cada item tem título, link, data, veículo (domínio do editor) e os temas
-    de promessa que a consulta cobriu
+    (ids de promessa) que a consulta cobriu
   - só entra notícia com data e com "Maricá" ou "Quaquá" no título
   - deduplicado por título normalizado
 """
 import json
 import re
 import sys
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -25,23 +26,26 @@ RAIZ = Path(__file__).resolve().parent.parent
 SAIDA = RAIZ / 'dados' / 'consolidado' / 'noticias.json'
 JANELA_DIAS = 730
 TIMEOUT = 20
+TENTATIVAS = 3
+PAUSA_ENTRE_CONSULTAS = 3.0   # segundos; evita bloqueio por excesso de pedidos
+VEICULOS_BLOQUEADOS = {'lrcadefenseconsulting.com'}  # fonte sem credibilidade editorial
 USER_AGENT = 'Mozilla/5.0 (compatible; RadarMaricuba/1.0; +https://vollareintelligence.github.io/radar-maricuba/)'
 
-# Cada tema vira uma consulta. O tema é o rótulo que aparece no site.
+# Cada consulta serve a UMA promessa de dados/consolidado/promessas.json: o 'tema' é o id dela.
+# Não há tema genérico (ex.: 'Prefeito'): notícia sem promessa correspondente não entra.
 CONSULTAS = [
     # (tema, consulta no Google News, palavras que o título precisa ter para contar como esse tema)
-    ('Base de foguetes', 'Maricá foguete OR lançamento Ilhas Maricás', ['foguet', 'lancamento', 'espacial', 'ilhas maricas']),
-    ('Fábrica de aviões', 'Maricá Embraer OR fábrica aviões', ['embraer', 'aviao', 'aeronave', 'fabrica de avi']),
-    ('Braço de pedra', 'Maricá braço de pedra Itaipuaçu', ['braco de pedra', 'enrocamento', 'molhe']),
-    ('Hotéis públicos', 'Maricá hotel público Quaquá', [r'\bhotel(es)?\b', 'maraey']),
-    ('Piscina de água salgada', 'Maricá piscina água salgada', ['piscina']),
-    ('Catamarãs', 'Maricá catamarã Santos Dumont', ['catamar']),
-    ('Aeroporto', 'Maricá aeroporto pista', ['aeroporto', 'pista']),
-    ('Roda-gigante', 'Maricá roda-gigante', ['roda-gigante', 'roda gigante', 'roda-gigante']),
-    ('VLT e trilhos', 'Maricá VLT OR teleférico OR bonde', [r'\bvlt\b', 'telefer', 'trilho']),
-    ('Asfalto', 'Maricá asfalto ruas pavimentação', ['asfalt', 'pavimenta']),
-    ('Esgoto', 'Maricá esgoto saneamento Quaquá', ['esgoto', 'saneamento']),
-    ('Prefeito', 'Quaquá prefeito Maricá', [r'\bprefeitura', r'\bobras?\b', r'\banunci', r'\bcontratos?\b', r'\binvest']),
+    ('foguetes', 'Maricá foguete OR lançamento Ilhas Maricás', ['foguet', 'lancamento', 'espacial', 'ilhas maricas']),
+    ('aviões', 'Maricá Embraer OR fábrica aviões', ['embraer', 'aviao', 'aeronave', 'fabrica de avi']),
+    ('braco', 'Maricá braço de pedra Itaipuaçu', ['braco de pedra', 'enrocamento', 'molhe']),
+    ('hoteis', 'Maricá hotel público Quaquá', [r'\bhotel(es)?\b', 'maraey']),
+    ('piscina', 'Maricá piscina água salgada', ['piscina']),
+    ('catamara', 'Maricá catamarã Santos Dumont', ['catamar']),
+    ('aeroporto', 'Maricá aeroporto pista', ['aeroporto', 'pista']),
+    ('roda', 'Maricá roda-gigante', ['roda-gigante', 'roda gigante']),
+    ('vlt', 'Maricá VLT OR teleférico OR bonde', [r'\bvlt\b', 'telefer', 'trilho']),
+    ('asfalto', 'Maricá asfalto ruas pavimentação', ['asfalt', 'pavimenta']),
+    ('esgoto', 'Maricá esgoto saneamento Quaquá', ['esgoto', 'saneamento']),
 ]
 
 
@@ -57,9 +61,17 @@ def url_feed(consulta):
 
 
 def baixar(url):
-    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return r.read()
+    """Baixa com nova tentativa e espera crescente. Erro final sobe: nunca vira 'sem notícia'."""
+    ultimo = None
+    for n in range(TENTATIVAS):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                return r.read()
+        except Exception as e:
+            ultimo = e
+            time.sleep(5 * (n + 1))
+    raise ultimo
 
 
 def ler_feed(xml_bytes, tema):
@@ -84,6 +96,9 @@ def ler_feed(xml_bytes, tema):
 def relevante(item, limite, palavras):
     if item['data'] < limite:
         return False
+    host = re.sub(r'^https?://(www\.)?', '', item.get('dominioVeiculo', '')).split('/')[0]
+    if host in VEICULOS_BLOQUEADOS:
+        return False
     # o veículo vem no fim do título ("... - Maricá Info"): tira antes de testar
     t = normalizar(sem_veiculo(item['titulo'], item['veiculo']))
     if not ('maric' in t or 'quaqua' in t):
@@ -102,7 +117,9 @@ def coletar():
     limite = datetime.now(timezone.utc) - timedelta(days=JANELA_DIAS)
     vistos = {}
     falhas = []
-    for tema, consulta, palavras in CONSULTAS:
+    for n, (tema, consulta, palavras) in enumerate(CONSULTAS):
+        if n:
+            time.sleep(PAUSA_ENTRE_CONSULTAS)
         try:
             itens = ler_feed(baixar(url_feed(consulta)), tema)
         except Exception as e:  # rede, XML ou bloqueio
@@ -122,8 +139,8 @@ def coletar():
 
 def main():
     itens, falhas = coletar()
-    if len(falhas) == len(CONSULTAS):  # nenhuma resposta
-        print('ERRO: nenhuma consulta respondeu. Nada foi gravado.', file=sys.stderr)
+    if falhas:  # busca incompleta não pode virar "sem notícia": mantém o arquivo anterior e falha
+        print('ERRO: consultas sem resposta (' + '; '.join(falhas) + '). Nada foi gravado.', file=sys.stderr)
         sys.exit(1)
     saida = {
         'coletadoEm': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),

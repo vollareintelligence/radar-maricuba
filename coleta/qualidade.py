@@ -51,6 +51,9 @@ if _os.path.exists(_NOT):
     _n = _json.load(open(_NOT, encoding='utf-8'))
     ok(all(i.get('link', '').startswith('https://') and i.get('data') and i.get('temas') for i in _n.get('itens', [])), 'noticias: item sem link https, data ou tema')
     ok(_n.get('total', 0) == len(_n.get('itens', [])), 'noticias: total nao bate com itens')
+    _ids = {i['id'] for i in PR.get('itens', [])}
+    ok(all(set(i.get('temas', [])) <= _ids for i in _n.get('itens', [])), 'noticias: tema que nao e id de promessa')
+    ok(not _n.get('falhas'), 'noticias: coleta com consulta sem resposta')
 N = D.get('natal') or {}
 ok(len(N.get('contratos', [])) == 2 and all(c.get('fonte', '').startswith('https://') and c.get('valor', 0) > 1e6 and c.get('processo') for c in N.get('contratos', [])), 'natal: contratos sem fonte, processo ou valor')
 ok(N.get('pagamentos', {}).get('2025', {}).get('pago', 0) > 1e6 and N.get('pagamentos', {}).get('2026', {}).get('pago', 0) > 1e6 and N['pagamentos'].get('fonte', '').startswith('https://'), 'natal: pagamentos ausentes')

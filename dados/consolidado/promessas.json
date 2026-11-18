@@ -1,7 +1,7 @@
 {
  "prefeito": "Washington Quaquá",
  "mandato": "2025–2028",
- "conferido": "2026-11-14",
+ "conferido": "2026-11-18",
  "foto": "img/prefeito-quaqua.jpg",
  "fotoCredito": "arquivo, internet",
  "nota": "Disse em março de 2025 que não prometeu nada na campanha. Por isso separamos o que foi dito em entrevistas do que está no plano de governo registrado no TSE. Esta seção cobre apenas falas públicas com fonte.",
@@ -153,8 +153,8 @@
     "url": "https://maricainfo.com/wp-content/uploads/2024/08/PlanodeGovernoQuaqua.pdf"
    },
    "prazo": "Mandato 2025–2028 (plano)",
-   "status": "cade",
-   "achado": "Nenhum contrato, licitação ou dispensa de VLT, bonde, teleférico ou trilhos nos dados do portal (consulta de 14/11/2026), e nenhuma notícia oficial de obra. Este é um item do plano de governo, não de entrevista.",
+   "status": "parcial",
+   "achado": "VLT, bonde e trilhos: nenhum contrato, licitação ou dispensa nos dados do portal (consulta de 14/11/2026). Teleférico: a imprensa registra um protocolo de intenções assinado pela Codemar em 16/12/2025 para o Farol de Ponta Negra, com investimento privado de R$ 21 mi e operação prevista até 2027. Protocolo de intenções não é obra. Este é um item do plano de governo. E o VLT, e os trilhos?",
    "fontes": [
     {
      "rotulo": "Plano de governo (PDF)",
@@ -163,9 +163,13 @@
     {
      "rotulo": "Contratos no portal",
      "url": "https://transparencia.marica.rj.gov.br/e-cidade/contratos/padrao"
+    },
+    {
+     "rotulo": "Reportagem sobre o protocolo do teleférico (25/12/2025)",
+     "url": "https://clickpetroleoegas.com.br/cidade-do-sudeste-do-brasil-ganha-fascinante-teleferico-de-r-21-milhoes-projeto-com-capital-privado-e-foco-no-turismo-nmb91/"
     }
    ],
-   "curto": "Sem registro"
+   "curto": "Só protocolo de teleférico; VLT e trilhos sem registro"
   },
   {
    "id": "catamara",
@@ -198,7 +202,7 @@
    },
    "prazo": "Dentro do mandato, pela fala",
    "status": "parcial",
-   "achado": "O Aeroporto Municipal existe e recebe obras: contratos de 2024 para o pátio 04 e quatro hangares (um deles de R$ 29,76 mi), e uma obra de drenagem e terraplanagem no entorno, paralisada aguardando licença ambiental. Não achamos contrato de uma nova pista de 2 mil metros. Pista nova: cadê?",
+   "achado": "O Aeroporto Municipal existe e recebe obras: contratos de 2024 para o pátio 04 e quatro hangares (um deles de R$ 29,76 mi), e uma obra de drenagem e terraplanagem no entorno, paralisada aguardando licença ambiental. A imprensa fala em ampliação do aeroporto, mas não achamos contrato nem extensão que confirmem uma pista de 2 mil metros. Em maio/2026 o MPF ajuizou ação civil pública pedindo a regularização ambiental, urbanística e aeronáutica do aeroporto. Pista de 2 mil metros: cadê?",
    "fontes": [
     {
      "rotulo": "Contratos no portal",
@@ -207,6 +211,14 @@
     {
      "rotulo": "Obras paralisadas (OS 26040007)",
      "url": "https://transparencia.marica.rj.gov.br/obras/obras-paralisadas/links-e-arquivos"
+    },
+    {
+     "rotulo": "MPF pede regularização do aeroporto (Agência iNFRA, 22/05/2026)",
+     "url": "https://agenciainfra.com/blog/?p=41689"
+    },
+    {
+     "rotulo": "Maricá apresenta expansão do aeroporto na LABACE (AEROIN)",
+     "url": "https://aeroin.net/marica-rj-apresenta-expansao-do-aeroporto-e-projetos-aeroespaciais-na-maior-feira-de-aviacao-da-america-latina/"
     }
    ],
    "curto": "Aeroporto existe e tem obra; pista nova sem registro"
