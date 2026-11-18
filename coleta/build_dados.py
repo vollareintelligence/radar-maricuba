@@ -29,6 +29,10 @@ if PREF and (C / 'empresas.json').exists():
 SECR = json.load(open(C / 'secretarias.json')) if (C / 'secretarias.json').exists() else None
 NATAL = json.load(open(C / 'natal.json')) if (C / 'natal.json').exists() else None
 PROM = json.load(open(C / 'promessas.json')) if (C / 'promessas.json').exists() else None
+IMP = json.load(open(C / 'imprensa.json')) if (C / 'imprensa.json').exists() else {'itens': []}
+if PROM:  # só entra no card o que o Mestre Theo aprovou
+    for _i in PROM['itens']:
+        _i['imprensa'] = sorted([{k: n[k] for k in ('titulo', 'veiculo', 'data', 'link', 'linkOriginal')} for n in IMP['itens'] if _i['id'] in n['temas']], key=lambda n: n['data'], reverse=True)
 PMAPA = json.load(open(C / 'problemas_mapa.json')) if (C / 'problemas_mapa.json').exists() else []
 if PREF and (C / 'obras_mapa.json').exists():
     PREF['obrasMapa'] = json.load(open(C / 'obras_mapa.json'))

@@ -10,6 +10,7 @@ Saída: dados/consolidado/noticias.json
   - só entra notícia com data e com "Maricá" ou "Quaquá" no título
   - deduplicado por título normalizado
 """
+import hashlib
 import json
 import re
 import sys
@@ -106,6 +107,43 @@ def relevante(item, limite, palavras):
     return any(re.search(p, t) for p in palavras)
 
 
+def id_noticia(titulo, veiculo):
+    base = normalizar(sem_veiculo(titulo, veiculo))
+    return hashlib.sha1(base.encode('utf-8')).hexdigest()[:10]
+
+
+def link_original(link):
+    """Tenta trocar o redirecionamento do Google News pelo endereço da matéria.
+    Melhor esforço: se o Google mudar o formato ou bloquear, devolve None e o link
+    do Google News é mantido (marcado como não original)."""
+    try:
+        m = re.search(r'/articles/([^?/]+)', link)
+        if not m:
+            return None
+        art = m.group(1)
+        html = baixar_uma_vez(f'https://news.google.com/rss/articles/{art}').decode('utf-8', 'ignore')
+        sg = re.search(r'data-n-a-sg="([^"]+)"', html)
+        ts = re.search(r'data-n-a-ts="([^"]+)"', html)
+        if not (sg and ts):
+            return None
+        req = ['Fbv4je', json.dumps(['garturlreq', [['X', 'X', ['X', 'X'], None, None, 1, 1, 'BR:pt-419', None, 1, None, None, None, None, None, 0, 1], 'X', 'X', 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0], art, int(ts.group(1)), sg.group(1)])]
+        corpo = urllib.parse.urlencode({'f.req': json.dumps([[req]])}).encode()
+        r = urllib.request.Request('https://news.google.com/_/DotsSplashUi/data/batchexecute', data=corpo,
+                                   headers={'User-Agent': USER_AGENT, 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'})
+        with urllib.request.urlopen(r, timeout=TIMEOUT) as resp:
+            txt = resp.read().decode('utf-8', 'ignore')
+        u = re.search(r'garturlres\\",\\"(https?:[^"\\]+)', txt)
+        return u.group(1) if u else None
+    except Exception:
+        return None
+
+
+def baixar_uma_vez(url):
+    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        return r.read()
+
+
 def sem_veiculo(titulo, veiculo):
     """Google News põe ' - Veículo' no fim do título. Tira para deduplicar."""
     if veiculo and titulo.endswith(' - ' + veiculo):
@@ -150,11 +188,19 @@ def main():
         'falhas': falhas,
         'total': len(itens),
         'itens': [
-            {'titulo': i['titulo'], 'link': i['link'], 'data': i['data'].strftime('%Y-%m-%d'),
+            {'id': id_noticia(i['titulo'], i['veiculo']), 'titulo': i['titulo'], 'link': i['link'], 'linkOriginal': i.get('linkOriginal'), 'data': i['data'].strftime('%Y-%m-%d'),
              'veiculo': i['veiculo'], 'dominioVeiculo': i['dominioVeiculo'], 'temas': i['temas']}
             for i in itens
         ],
     }
+    pend = [i for i in itens]
+    for i in pend:  # só resolve o que ainda não foi decidido, para não martelar o Google
+        time.sleep(1.0)
+        i['linkOriginal'] = link_original(i['link'])
+    saida['itens'] = [
+        {'id': id_noticia(i['titulo'], i['veiculo']), 'titulo': i['titulo'], 'link': i['link'], 'linkOriginal': i.get('linkOriginal'),
+         'data': i['data'].strftime('%Y-%m-%d'), 'veiculo': i['veiculo'], 'dominioVeiculo': i['dominioVeiculo'], 'temas': i['temas']}
+        for i in itens]
     SAIDA.write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding='utf-8')
     print(f'NOTICIAS: {len(itens)} itens; falhas: {len(falhas)}')
 

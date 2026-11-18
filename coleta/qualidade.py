@@ -54,6 +54,7 @@ if _os.path.exists(_NOT):
     _ids = {i['id'] for i in PR.get('itens', [])}
     ok(all(set(i.get('temas', [])) <= _ids for i in _n.get('itens', [])), 'noticias: tema que nao e id de promessa')
     ok(not _n.get('falhas'), 'noticias: coleta com consulta sem resposta')
+ok(all(n.get('link','').startswith('https://') and n.get('data') and n.get('veiculo') for i in PR.get('itens', []) for n in i.get('imprensa', [])), 'imprensa: item aprovado sem link https, data ou veiculo')
 N = D.get('natal') or {}
 ok(len(N.get('contratos', [])) == 2 and all(c.get('fonte', '').startswith('https://') and c.get('valor', 0) > 1e6 and c.get('processo') for c in N.get('contratos', [])), 'natal: contratos sem fonte, processo ou valor')
 ok(N.get('pagamentos', {}).get('2025', {}).get('pago', 0) > 1e6 and N.get('pagamentos', {}).get('2026', {}).get('pago', 0) > 1e6 and N['pagamentos'].get('fonte', '').startswith('https://'), 'natal: pagamentos ausentes')
