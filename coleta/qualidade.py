@@ -44,6 +44,13 @@ for x in PM:
         ok(-23.2 < x['lat'] < -22.7 and -43.1 < x['lng'] < -42.5, f"problema fora de Maricá: {x['rua']}")
 PR = D.get('promessas') or {}
 ok(len(PR.get('itens', [])) >= 11 and all(i.get('curto') for i in PR.get('itens', [])) and all(i.get('onde', {}).get('url', '').startswith('https://') and i.get('fontes') and i.get('status') in ('cade', 'parcial', 'prazo') and i.get('achado') for i in PR.get('itens', [])), 'promessas: item sem fonte, status valido ou achado')
+import os as _os
+_NOT = _os.path.join(_os.path.dirname(__file__), '..', 'dados', 'consolidado', 'noticias.json')
+if _os.path.exists(_NOT):
+    import json as _json
+    _n = _json.load(open(_NOT, encoding='utf-8'))
+    ok(all(i.get('link', '').startswith('https://') and i.get('data') and i.get('temas') for i in _n.get('itens', [])), 'noticias: item sem link https, data ou tema')
+    ok(_n.get('total', 0) == len(_n.get('itens', [])), 'noticias: total nao bate com itens')
 N = D.get('natal') or {}
 ok(len(N.get('contratos', [])) == 2 and all(c.get('fonte', '').startswith('https://') and c.get('valor', 0) > 1e6 and c.get('processo') for c in N.get('contratos', [])), 'natal: contratos sem fonte, processo ou valor')
 ok(N.get('pagamentos', {}).get('2025', {}).get('pago', 0) > 1e6 and N.get('pagamentos', {}).get('2026', {}).get('pago', 0) > 1e6 and N['pagamentos'].get('fonte', '').startswith('https://'), 'natal: pagamentos ausentes')

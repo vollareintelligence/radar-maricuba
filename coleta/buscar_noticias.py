@@ -1,0 +1,145 @@
+"""Coleta notícias sobre Maricá e o prefeito a partir de feeds RSS públicos.
+
+Fonte: Google News RSS (sem chave, sem custo). Serviço não oficial: pode mudar
+ou sair do ar sem aviso. Por isso o script falha de forma explícita e não
+publica nada incompleto.
+
+Saída: dados/consolidado/noticias.json
+  - cada item tem título, link, data, veículo (domínio do editor) e os temas
+    de promessa que a consulta cobriu
+  - só entra notícia com data e com "Maricá" ou "Quaquá" no título
+  - deduplicado por título normalizado
+"""
+import json
+import re
+import sys
+import unicodedata
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parent.parent
+SAIDA = RAIZ / 'dados' / 'consolidado' / 'noticias.json'
+JANELA_DIAS = 730
+TIMEOUT = 20
+USER_AGENT = 'Mozilla/5.0 (compatible; RadarMaricuba/1.0; +https://vollareintelligence.github.io/radar-maricuba/)'
+
+# Cada tema vira uma consulta. O tema é o rótulo que aparece no site.
+CONSULTAS = [
+    # (tema, consulta no Google News, palavras que o título precisa ter para contar como esse tema)
+    ('Base de foguetes', 'Maricá foguete OR lançamento Ilhas Maricás', ['foguet', 'lancamento', 'espacial', 'ilhas maricas']),
+    ('Fábrica de aviões', 'Maricá Embraer OR fábrica aviões', ['embraer', 'aviao', 'aeronave', 'fabrica de avi']),
+    ('Braço de pedra', 'Maricá braço de pedra Itaipuaçu', ['braco de pedra', 'enrocamento', 'molhe']),
+    ('Hotéis públicos', 'Maricá hotel público Quaquá', ['hotel', 'maraey', 'hoteleiro']),
+    ('Piscina de água salgada', 'Maricá piscina água salgada', ['piscina']),
+    ('Catamarãs', 'Maricá catamarã Santos Dumont', ['catamar']),
+    ('Aeroporto', 'Maricá aeroporto pista', ['aeroporto', 'pista']),
+    ('Roda-gigante', 'Maricá roda-gigante', ['roda-gigante', 'roda gigante', 'roda-gigante']),
+    ('VLT e trilhos', 'Maricá VLT OR teleférico OR bonde', ['vlt', 'telefer', 'bonde', 'trilho']),
+    ('Asfalto', 'Maricá asfalto ruas pavimentação', ['asfalt', 'pavimenta']),
+    ('Esgoto', 'Maricá esgoto saneamento Quaquá', ['esgoto', 'saneamento']),
+    ('Prefeito', 'Quaquá prefeito Maricá', ['quaqua', 'prefeito']),
+]
+
+
+def normalizar(texto):
+    sem_acento = unicodedata.normalize('NFKD', texto or '')
+    sem_acento = ''.join(c for c in sem_acento if not unicodedata.combining(c))
+    return re.sub(r'\s+', ' ', sem_acento).strip().lower()
+
+
+def url_feed(consulta):
+    params = urllib.parse.urlencode({'q': consulta, 'hl': 'pt-BR', 'gl': 'BR', 'ceid': 'BR:pt-419'})
+    return f'https://news.google.com/rss/search?{params}'
+
+
+def baixar(url):
+    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        return r.read()
+
+
+def ler_feed(xml_bytes, tema):
+    raiz = ET.fromstring(xml_bytes)
+    itens = []
+    for it in raiz.iter('item'):
+        titulo = (it.findtext('title') or '').strip()
+        link = (it.findtext('link') or '').strip()
+        pub = it.findtext('pubDate')
+        fonte_el = it.find('source')
+        veiculo = (fonte_el.text or '').strip() if fonte_el is not None else ''
+        dominio = fonte_el.get('url', '') if fonte_el is not None else ''
+        try:
+            data = parsedate_to_datetime(pub).astimezone(timezone.utc)
+        except (TypeError, ValueError):
+            continue  # sem data, não entra
+        itens.append({'titulo': titulo, 'link': link, 'data': data, 'veiculo': veiculo,
+                      'dominioVeiculo': dominio, 'tema': tema})
+    return itens
+
+
+def relevante(item, limite, palavras):
+    if item['data'] < limite:
+        return False
+    t = normalizar(item['titulo'])
+    if not ('maric' in t or 'quaqua' in t):
+        return False
+    return any(p in t for p in palavras)
+
+
+def sem_veiculo(titulo, veiculo):
+    """Google News põe ' - Veículo' no fim do título. Tira para deduplicar."""
+    if veiculo and titulo.endswith(' - ' + veiculo):
+        return titulo[: -len(veiculo) - 3]
+    return titulo
+
+
+def coletar():
+    limite = datetime.now(timezone.utc) - timedelta(days=JANELA_DIAS)
+    vistos = {}
+    falhas = []
+    for tema, consulta, palavras in CONSULTAS:
+        try:
+            itens = ler_feed(baixar(url_feed(consulta)), tema)
+        except Exception as e:  # rede, XML ou bloqueio
+            falhas.append(f'{tema}: {type(e).__name__}')
+            continue
+        for it in itens:
+            if not relevante(it, limite, palavras):
+                continue
+            chave = normalizar(sem_veiculo(it['titulo'], it['veiculo']))
+            if chave in vistos:
+                vistos[chave]['temas'] = sorted(set(vistos[chave]['temas']) | {tema})
+                continue
+            vistos[chave] = {**it, 'temas': [tema]}
+            del vistos[chave]['tema']
+    return sorted(vistos.values(), key=lambda x: x['data'], reverse=True), falhas
+
+
+def main():
+    itens, falhas = coletar()
+    if len(falhas) == len(CONSULTAS):  # nenhuma resposta
+        print('ERRO: nenhuma consulta respondeu. Nada foi gravado.', file=sys.stderr)
+        sys.exit(1)
+    saida = {
+        'coletadoEm': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'janelaDias': JANELA_DIAS,
+        'fonte': 'Google News RSS (não oficial)',
+        'consultas': len(CONSULTAS),
+        'falhas': falhas,
+        'total': len(itens),
+        'itens': [
+            {'titulo': i['titulo'], 'link': i['link'], 'data': i['data'].strftime('%Y-%m-%d'),
+             'veiculo': i['veiculo'], 'dominioVeiculo': i['dominioVeiculo'], 'temas': i['temas']}
+            for i in itens
+        ],
+    }
+    SAIDA.write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding='utf-8')
+    print(f'NOTICIAS: {len(itens)} itens; falhas: {len(falhas)}')
+
+
+if __name__ == '__main__':
+    main()
