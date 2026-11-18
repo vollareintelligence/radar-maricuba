@@ -1,5 +1,5 @@
 {
- "coletadoEm": "2026-11-18T03:14:19Z",
+ "coletadoEm": "2026-11-18T03:24:15Z",
  "janelaDias": 730,
  "fonte": "Google News RSS (não oficial)",
  "consultas": 11,
@@ -7,8 +7,10 @@
  "total": 39,
  "itens": [
   {
+   "id": "257b5add3d",
    "titulo": "Maricá avança com asfalto em mais de 7 km de ruas de Itaipuaçu - Folha do Leste",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ05vcWZrSVhENU1nY3BDV1ZUUXUyZU1uOTdfUFdpYmgzU3BFY3hWVmVOSVNyX04yWVcyM1puMGY2bV9xTnhZVnA1SGdON0RoQ2tZVnBBOEp4OE1RUVVnOEtvX291S3o4S21vQTJGYm5JcFdCQkp5UnNTVFNLTHdQSHFGR05kYXd4QzN1dA?oc=5",
+   "linkOriginal": "https://folhadoleste.com.br/obras-jardim-atlantico-leste-asfalto-drenagem-itaipuacu/",
    "data": "2026-10-16",
    "veiculo": "Folha do Leste",
    "dominioVeiculo": "https://folhadoleste.com.br",
@@ -17,8 +19,10 @@
    ]
   },
   {
+   "id": "e196891e97",
    "titulo": "Desaer reúne 40 profissionais em Marica-RJ e planeja matriz para desenvolver aeronaves no município - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRWFwMVlvRzNWUVBDWFRYMmZJZnZtX2U5OG9uSExXRU5xQ1NSUmhjV1hzU05EcEhHQ1lZYXQ0aTN2d1JrN3p4UmtHUzBLYTFoYWh0RllRbktjcmNTRzZFVDJvQTAtTW5CdWlnZjFKdk9IV1FrS2ZFalEyaGhNVm1rVVZMQ0h1NUxIMDQtRzI4bWc3NGs1bS1HRlZhZzdRSlZvVC1jQ0ItMHBCYXN6X05LZFlha0h6RURSRk5v0gG7AUFVX3lxTFBFYXAxWW9HM1ZRUENYVFgyZklmdm1fZTk4b25ITFdFTnFDU1JSaGNXWHNTTkRwSEdDWVlhdDRpM3Z3Ums3enhSa0dTMEthMWhhaHRGWVFuS2NyY1NHNkVUMm9BMC1NbkJ1aWdmMUp2T0hXUWtLZkVqUTJoaE1WbWtVVkxDSHU1TEgwNC1HMjhtZzc0azVtLUdGVmFnN1FKVm9ULWNDQi0wcEJhc3pfTktkWWFrSHpFRFJGTm8?oc=5",
+   "linkOriginal": "https://aeroin.net/desaer-reune-40-profissionais-em-marica-rj-e-planeja-matriz-para-desenvolver-aeronaves-no-municipio/",
    "data": "2026-10-07",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -27,8 +31,10 @@
    ]
   },
   {
+   "id": "798f15a00a",
    "titulo": "Quaquá reforça meta de concluir pavimentação de todas as ruas de Maricá até 2028: “maior pacote de obras da história” - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbFhnUnRNSXBGaFZfOUs2NGJwTG9BMzNVWnMwWGtjbUh2UEg4RTlKa1ZwbjRpMG9XVHl3XzlrN3lqSnM1RGp5MmtQSmJSTnJEM25TWFJDdUcwRjQ2R2NJSDBZR3hpMld4T1p5V1RCcnZsM2ZaZmxvLTdCcU9ieWl3VklzRDB1N21tdjZWQTZlYks4WWx3MFN4VDQzb3AwYjJfWnd2LV9TVktsenBKc0hHN1FoRVRNM3U4bkpPck93bVkyNXVNMndRMU4xWUw4ZExWZkdjSEdsODJQR0Np?oc=5",
+   "linkOriginal": "https://maricainfo.com/obras/quaqua-reforca-meta-de-concluir-pavimentacao-de-todas-as-ruas-de-marica-ate-2028-maior-pacote-de-obras-da-historia/",
    "data": "2026-10-06",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -37,8 +43,10 @@
    ]
   },
   {
+   "id": "612ab5b684",
    "titulo": "Maricá anuncia hotel de 25 andares projetado por Niemeyer - Poder360",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONzdmTXFYeXlwS2RiSGYzZ0tsZU9rd0dXWW0yVHo5eE9ucDRqM09KVWpuTVczeGU2d2pNYWpaTjA5RVltQXV2c0NOU25yX29lUVlVa09Fek9IbVRITklRWnBvcm5kZmdVLUl5bXd1NFo4Uzg1NTE2WlZ3Qm9qaTBFMTFpUjIwZWl0cjlwTG1OTUUwVXdzYy1sR0ozSE9SSEtO?oc=5",
+   "linkOriginal": "https://www.poder360.com.br/poder-brasil/marica-anuncia-hotel-de-25-andares-projetado-por-niemeyer/",
    "data": "2026-08-14",
    "veiculo": "Poder360",
    "dominioVeiculo": "https://www.poder360.com.br",
@@ -47,8 +55,10 @@
    ]
   },
   {
+   "id": "b103627bd3",
    "titulo": "Maricá: Quaquá anuncia hotel projetado por Oscar Niemeyer na orla da cidade - LSM Notícias",
    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMG9IeDI0ZzR1UEF4OHlubG9hNVdPSE5uOW5MZkpveDdMUXZya3g4Qy1ZWm1jUTdNYlozdHdOY1JCLTJWOXBhelVnU1lVakw5Uk9JeHdrTHQzYzV3WUZnQXpWOTBjMV8xeE1rc3BZLVlKSUhOa0hCYjByQm8tVFdVTkltUzBnUldpNzZWR2hWeTREang4dHZ6ZTdQVDBPdXM3Qld3R194Umlta3ZCbmRj?oc=5",
+   "linkOriginal": "https://lsmnoticias.com.br/cidades/marica/politica-marica/quaqua-anuncia-hotel-oscar-niemeyer-orla-marica-n13/",
    "data": "2026-08-14",
    "veiculo": "LSM Notícias",
    "dominioVeiculo": "https://lsmnoticias.com.br",
@@ -57,8 +67,10 @@
    ]
   },
   {
+   "id": "80021dd1be",
    "titulo": "Cresce o número de quebra-molas à medida que o asfalto avança em Maricá - Coluna do Gilson",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdThyeXA3TmNfWk02ek9ZT0o4NVotVXE0djFGeGFuUHJVcktZa0Fjb1NQaGdnNUh4cGdOdzhQTUoyUFdxRFhmbTE2NVdQb1BkVjZmRXgyTV9zdDlVd1JQLWZQYkZlY1RObWJnWjFPUTdEM3QwQUdmT3FRWjN1QUNTUVV3UWJVWTNTT0pHbDZHdGd2NnpXWE9WNVZSUU9seng5aWdmYQ?oc=5",
+   "linkOriginal": "https://colunadogilson.com.br/cresce-o-numero-de-quebra-molas-a-medida-que-o-asfalto-avanca-em-marica/",
    "data": "2026-08-12",
    "veiculo": "Coluna do Gilson",
    "dominioVeiculo": "https://colunadogilson.com.br",
@@ -67,8 +79,10 @@
    ]
   },
   {
+   "id": "f9c19f0bd1",
    "titulo": "Maricá: Hotel N13, projeto de Niemeyer, deve iniciar obras em 2026 - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmd4d3JSdDNzcVUtNnpWU3FtNUlPT3RZQlItT1FUZlh4Rm9vZzJBSVdDMVdCVzVveHNLaW9PN3o2VjJtWlg4cUUxVU92Q0Fya182NkxjQzR3WTdQXzhlWUhSWmZuMkZtRWc1VGY2eUpIdjg1RzVFeXl4R05Ud043Z01BbkxHSTFjaGdHcUpTYnl0R3VleFh0YlZQbmUwNjhuaXcyMGFuWm1IckRaLTFxQ2s0VTgtenNQOVVCb1JJM2xJVVdsWlQxcEl3?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/quaqua-afirma-que-obras-do-hotel-n13-projetado-por-oscar-niemeyer-comecam-ainda-em-2026/",
    "data": "2026-08-06",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -77,8 +91,10 @@
    ]
   },
   {
+   "id": "661dcaa669",
    "titulo": "Maricá investe R$ 13,6 milhões em saneamento básico para o 4º distrito de Itaipuaçu - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcUVXc2hpMEFnMkpQSGJic0xuT3NyRWM5dG1IUnBZbTFQaU96Q2pqN2VRWnRCYUpETV9Kclg2Nlo4WURlcUZCQkJpVEQxZHJCSmw4akhpeUZoR29tMFZHOWhqM3hhQUtqaUIwVG1lcE16QUNzYzZ6Q1pZOGhDOVpWUG1xb1FfeUxvNURwbm56dy1jS0JGa0p2c0IyVGxhdC10akxSMkQ3dzgtc3ZuOWFHMkdBRl84aExZaWlpbDFRckw0M0l1WjF1TQ?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/sanemar-recebe-r-136-milhoes-para-construir-estacoes-de-tratamento-de-esgoto-em-marica/",
    "data": "2026-07-14",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -87,8 +103,10 @@
    ]
   },
   {
+   "id": "a144d434a2",
    "titulo": "Maricá-RJ apresenta expansão do aeroporto e programa de formação de pilotos durante o Aviação Day da ANAC - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPemM3clp1R29HU0pLVmc0QVpKZkd5aERNT3NWUXF6ejViRDdhZjNvajF0LXZ5M05iZ0h3bkF4ZFA0UGx1S0I3eVIySWFpVXhzbDYwZjFoVS1fSGhNUzV4Tzk2SVByX0xyZEFDbk8xemFCcUdiV25qQUE0cFJSYmpEQWdFNDFGM0tnd3RSUWQtcVRNelRkUWdrakRjQXFnTGFPTjNzNlYwbWJHNld0V1dYa2lMNVZNb1BBLTdZLWlWaUFPcVHSAcMBQVVfeXFMT3pjN3JadUdvR1NKS1ZnNEFaSmZHeWhETU9zVlFxeno1YkQ3YWYzb2oxdC12eTNOYmdId25BeGRQNFBsdUtCN3lSMklhaVV4c2w2MGYxaFUtX0hoTVM1eE85NklQcl9McmRBQ25PMXphQnFHYlduakFBNHBSUmJqREFnRTQxRjNLZ3d0UlFkLXFUTXpUZFFna2pEY0FxZ0xhT04zczZWMG1iRzZXdFdXWGtpTDVWTW9QQS03WS1pVmlBT3FR?oc=5",
+   "linkOriginal": "https://aeroin.net/marica-rj-apresenta-expansao-do-aeroporto-e-programa-de-formacao-de-pilotos-durante-o-aviacao-day-da-anac/",
    "data": "2026-07-06",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -97,8 +115,10 @@
    ]
   },
   {
+   "id": "59c7330d0d",
    "titulo": "Maricá apresenta projetos de ampliação do aeroporto e qualificação de jovens em encontro nacional da aviação - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPdDMxR2ZxT1BQNGxuaFZ0dVRYcGhTSE5zNWZxdHdNcktPbzktdW9rdUhwbi1NVndpa2hCdzlPM0gzelZjMW55dURLblBHaERjY3FqWHFaMEVMX29YS3k5VktCTnJERmt5blRWLXNPV3VaZW5uSFNReFhJSGRzOFQwYm0za2l0a0wwa3JodHRIeEhPX3Z0b3BTd1BxN19vbGVMdHZPdkNZQnQ2Qm0yVDJWMElWSnJ5WkQzNEs2ZnFSaXJzNS1RWWFCTThxanNqU2oyUFBraGRCZEo3NG1lN2ZV?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-apresenta-projetos-de-ampliacao-do-aeroporto-e-qualificacao-de-jovens-em-encontro-nacional-da-aviacao/",
    "data": "2026-07-01",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -107,8 +127,10 @@
    ]
   },
   {
+   "id": "653140f1a2",
    "titulo": "Maricá vai ter voos internacionais? Entenda o que o projeto do aeroporto realmente prevê - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd1lFemNDLU5QQ3JHeGp2TnAxcmljOENCQWxtd0p4aEt5b3ZwcF9oNmlNY2ZEdWZPSDdPUFM5aEM3ZjBKTUdDSUdwX3pvUjVFR2hFNTBNVjhkRy1xTEhrcVFmR1QyZ1BXR2Z1WmotQ0lzc2ktYlA2OUNoU3MxY094RzNuUVh4Qjg2cjhhOXFKOHplOURLYWk5OWQtSGdUVy1UeWNFMzY0YmE5djlCeGZsdzljTGlCV29ERkg3Qm1rbjM1djB2TjlpY2hB?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/marica-vai-ter-voos-internacionais-entenda-o-que-o-projeto-do-aeroporto-realmente-preve/",
    "data": "2026-06-11",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -117,8 +139,10 @@
    ]
   },
   {
+   "id": "064dcabf96",
    "titulo": "Maricá firma parceria inédita para produzir aeronaves no município - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQc01SUEZDQ2V5VzFkZ2F1dV9MUlpXWnJsM0VBX3FKMUcyVGNMTlhYZTVzcktTYWZySVE3YTVxT3IwVUZpVzQxRkw2N1RlMG1GeEM1S0pqaGdUUmZNeUtMUldSQk5EbjZGWUllY3VBQXNJOEpzQ3l4RzlFMklHMHFGREUxU01oNzd4OGNncGRxeXZmZFNsMHJ3WnYyekU4OEV0NUc0WDlJMA?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-firma-parceria-inedita-para-produzir-aeronaves-no-municipio/",
    "data": "2026-03-17",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -127,8 +151,10 @@
    ]
   },
   {
+   "id": "455fc90fb2",
    "titulo": "Quaquá anuncia roda-gigante para impulsionar o turismo e a economia de Maricá - ErreJota Notícias",
    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWnk3aDVUTzBKalRxQXJaWHBObnktRy1QdDNfWWNZYlhzdVRwTWNmcHJpWkZqeGM3THFuLTJYZndXTFBtU0VyQ3BoUXg2cnlkSk1XSWpENHo3OEp4RzJuMDl0eFpxek4zOFNYdHltMHY1RXk2dEN4S19sekVUVTRJOS1vbGJEYjgtTHNzU0lkdnRrcmExSV8xbmR2eHBTSENDVnhwdG51akRXYlNXRzRZ?oc=5",
+   "linkOriginal": "https://errejotanoticias.com.br/quaqua-anuncia-roda-gigante-para-impulsionar-o-turismo-e-a-economia-de-marica/",
    "data": "2026-01-12",
    "veiculo": "ErreJota Notícias",
    "dominioVeiculo": "https://errejotanoticias.com.br",
@@ -137,8 +163,10 @@
    ]
   },
   {
+   "id": "cc5426bc82",
    "titulo": "Prefeitura de Maricá assina contratos de R$ 267 milhões com o Governo Federal para investimentos em transporte, saneamento e drenagem - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNeXJuZ1VTb3ZzUV9hdGpEU1k2NEl5YUk4ZDZRSFBnN2RRQnFqak5DT2d5UHRGcF9RWGVtN0VOT1NZclZuSHY4X3lySnNRb3FJZEx6MlMza3ZOemE4T3p4QzlFUU1rNzJ1bW9Jdm1WZ1N1NlVmSVhhSi1IdllUMnFLdXVCWlNibUpFZmFfeExnX1dQaDFrXzlveXgxa2wyaDcwUEFXQldxTFp0ZkFPbUxZYTlwem9ZNFEzekJYc0lIOUtVaWFKMkRDcllqbnBLTWhnTElkVi1hVmpGTTdwazA5TmNob2dqbm10VHNaVjVlUjZzWjUxUFNuMUhVcTY0QQ?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/prefeitura-de-marica-assina-contratos-de-r-267-milhoes-com-o-governo-federal-para-investimentos-em-transporte-saneamento-e-drenagem/",
    "data": "2026-01-06",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -147,8 +175,10 @@
    ]
   },
   {
+   "id": "6cd0439ac4",
    "titulo": "Maricá planeja teleférico no Farol de Ponta Negra - A Seguir Niterói",
    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeDdlMzFSd3dXSkcwTkFzZ0pVYjZicnZLclhsQ1pJRHh5OVU3c3dSdVA4UUljU083S2J3THg1R0FHOUFKMnFCaGdZS1BuYVo2MUhJLXJENHNSLUJHWXVOS0lISTNwTERlZU5UV3ducTlkekY2OEpObkxadEV0RExTc1VXSkpQWE1KSXBORTYwX1dIaTg?oc=5",
+   "linkOriginal": "https://aseguirniteroi.com.br/noticias/marica-planeja-teleferico-no-farol-de-ponta-negra/",
    "data": "2025-12-26",
    "veiculo": "A Seguir Niterói",
    "dominioVeiculo": "https://aseguirniteroi.com.br",
@@ -157,8 +187,10 @@
    ]
   },
   {
+   "id": "aa3ea2fe6b",
    "titulo": "Prefeitura de Maricá firma acordo para instalação de teleféricos em Ponta Negra - O Dia",
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQjQxbzNfZ3VwaUN6NUtNUzVYdTF0Ni1ScWIySTRTUFJ5dm1aNjNZdXpXbFBTUnpCVWx6MjdjWnFjdS1DckpvTWRPUzhpMUhpRjZCZmlILURKekxZcmN0SUpmLTJ6ZkwzZWk1dzVydXpWZ1NaNV9lMG1qTXFGRjg2eko4V3JCV2NlcjdXWG91bTF1eEdYbGk5OWpJYjdrTDFSV1AxUU1wYTdRTmhtR3BTc2szZHBLd09raEFCNEdVcWgwdllmU19EVWhB0gHPAUFVX3lxTE9XeklrUnpCTUlfNnR5RWJIbmd1bk1weDFucUZ6bUgtWkwtSndVWVk4UkJRSEw3YkRBdDJ2dW9GT2Q1Z1NNT0xZNENVUjBsWUZQd2pkb3I3MklfQldNLTRNbXhQMVhZdW80MHNFSS1reXNZd0o3RHBFQXR0RFNJYnlpZnVfTExoakNGaC15YzBTX2pWTC02LTZpeU1KQ2cxWUdFNUY3LVF1QUxSRE9ocGZBZVlsUmUxYmhOU21RbExMaVVrOHp2WGx0MndtakxJRQ?oc=5",
+   "linkOriginal": "https://odia.ig.com.br/marica/2025/12/7181084-prefeitura-de-marica-firma-acordo-para-instalacao-de-telefericos-em-ponta-negra.html",
    "data": "2025-12-17",
    "veiculo": "O Dia",
    "dominioVeiculo": "https://odia.ig.com.br",
@@ -167,8 +199,10 @@
    ]
   },
   {
+   "id": "2f57c79df8",
    "titulo": "Maricá amplia pista do aeroporto e lança programa de formação aeronáutica - Rádio Manchete Rio",
    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZ2xlT0tpOE9oTXZqV1Rna090LTdkMmVVZl9zZXUtbmtkNHhEZWNMcENnNkhJWENmdVY3QkI0UlE5c1NhNEg0QmtBWkttT3NpNDdCVWJrcDFGRDlLeUlfVjNrUExGcHE0bUcweFhzVHBQMnNldEw0d2NwYklSMjdQWm94c3FWR1E0ejBFckV0b0NrMDF2YkRwMWlySlhrcG5GazRz?oc=5",
+   "linkOriginal": "https://mancheterio.com.br/marica-amplia-pista-do-aeroporto-e-lanca-programa-de-formacao-aeronautica/",
    "data": "2025-12-11",
    "veiculo": "Rádio Manchete Rio",
    "dominioVeiculo": "https://mancheterio.com.br",
@@ -177,8 +211,10 @@
    ]
   },
   {
+   "id": "56aff5e5d7",
    "titulo": "Prefeitura de Maricá amplia Aeroporto Municipal e anuncia formação de pilotos e mecânicos de aeronaves por meio do Passaporte Universitário - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQU1c0dlhfWmxjMWt3cXV6S1Rpb2FrTGFJZ2VlVXhfWWhRd2NNejExWGVJWmczRFgtbWFLQmNIazFkcW1SbEd6R08zUDdLMnVJRHA3SC1jSUlEMkVJdmh3dUZ4RkNYdHMtc0VSMVdVOGZNei1TdjE0WFlQd0Jkd2h6NWI3NVNYYVNGTHJ4RjlZMzkyUXNRaGJKM1d4N25ZcFloRjUwZzY0enRfWUNVVDE4N3Eyd3JOYW5hSnAtOHlFRkVlTE9Ldi1wYjQtVW9veEQ5VGpycGk1VFVHczhhRGJ2T05fRGt2aWFmZnZ4eHhYUjhxRGZmakV2NjRYcWdNUXBaTDNpZk9sNTk?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/prefeitura-de-marica-amplia-aeroporto-municipal-e-anuncia-formacao-de-pilotos-e-mecanicos-de-aeronaves-por-meio-do-passaporte-universitario/",
    "data": "2025-12-10",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -187,8 +223,10 @@
    ]
   },
   {
+   "id": "f867de11f2",
    "titulo": "Roda gigante e pista de patinação: Parque Nanci é destaque no Natal Brasilidade em Maricá - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWlhiLUE5RnRMZTNFNGxXQ2dhNXRtVzNla3VvVnhpcjJhNk02MHFPaUo0bXBlUVhWN0JwVDY2eWVDajV4VnBKamJjUnRWOG90d0lKbHNWdTlqd3dtT05GSm10bkYzMFViYjhTb3dKajhVYkJUODhLd1JLMHdYajE1SkpUb0Z0QnBtUERJVWJsOUlpMVA5cFZXTXVYNUVCMDlfSmlxX1ZMcjk3V3VBUkQ1cmtkanV2OTFtOF9FTkFyRGtPOUVC?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/roda-gigante-e-pista-de-patinacao-parque-nanci-e-destaque-no-natal-brasilidade-em-marica/",
    "data": "2025-11-30",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -197,8 +235,10 @@
    ]
   },
   {
+   "id": "66e65f0b5d",
    "titulo": "Maricá: Agendamento para roda gigante, pista de gelo e outras atrações do Natal começam neste sábado (22); confira! - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTG5jVXZNcTJGZTVJSWdXeDhsVGdISXppa1ZIYXVLVndLNjlGcG9aNzhLSkRWdHJHS2lGRzlMZkptd2ZCa1VrRTk0Q2JoaUlBc1FRcDJjOG5NbDR4bTY5cXVNUmR0UEhMd1ZlcXRoa1J3RW5lRTR6aUpzTlN5QVVCY0s5Y2t6eEx6SmVqLThDaktBdVVONm4zSDBOZDM3WC1SV2ZlVUpWSnpRaGFGZWlMczFyTkFpSklJNFpwOWdKVElXNjZldk82S3VpRi1INDR5cGcyMmFnQnFTTGs?oc=5",
+   "linkOriginal": "https://maricainfo.com/destaques/marica-agendamento-para-roda-gigante-pista-de-gelo-e-outras-atracoes-do-natal-comecam-neste-sabado-22-confira/",
    "data": "2025-11-21",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -207,8 +247,10 @@
    ]
   },
   {
+   "id": "7cbf03f921",
    "titulo": "Maricá avança em projeto para instalação de base de lançamentos espaciais nas Ilhas Maricás - Prensa de Babel",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTXpaNmthbXRtemN1MnkwUTBYUTNnZHRTOHNWQTFVZzg0S19EYlFNTW8zR0h3LVo4c2FISGxzcFMzSXE0a3lIZzVOb09iTy14MXdJSUdaMTAyX0p6QUV1UHhBZWlzTVIzOEw0Q1R6TDRiMUdaU3RKT3NoTkFKMjZpeUZJYw?oc=5",
+   "linkOriginal": "https://prensadebabel.com.br/marica-base-lancamentos-espaciais-ilhas-maricas/",
    "data": "2025-08-22",
    "veiculo": "Prensa de Babel",
    "dominioVeiculo": "https://prensadebabel.com.br",
@@ -217,8 +259,10 @@
    ]
   },
   {
+   "id": "2eaa5f9b84",
    "titulo": "Maricá investe no futuro: projeto de base de lançamento de satélites ganha força na cidade - ErreJota Notícias",
    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPa3NYMTVVWTZQcHZHRVFPVllkNnFQT0QxaFpNUlozNy1sb1VMQVJ3NVF6U2VMSTNEN1pIZXZKalY5S0x0NHQzNWZUUmdwMkZNUU5Sakc2M0E2SWxvNEN4ZUlnUEt4Rk1LN1FxbXdoZlA0c0VkNDVEVXlkdVdPWmZ6c1pEdWw4eURxQnphZEktVFlJb2JfeVFkWkgtdG93cVRKTGFpTThZR3hpYTEwX0YtWExWLUJMdlZPRFV1VmVfdw?oc=5",
+   "linkOriginal": "https://errejotanoticias.com.br/marica-investe-no-futuro-projeto-de-base-de-lancamento-de-satelites-ganha-forca-na-cidade/",
    "data": "2025-08-22",
    "veiculo": "ErreJota Notícias",
    "dominioVeiculo": "https://errejotanoticias.com.br",
@@ -227,8 +271,10 @@
    ]
   },
   {
+   "id": "61ade27153",
    "titulo": "Crianças visitam Aeroporto de Maricá e conhecem rotina da aviação, segurança e oportunidades profissionais - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSWNVTkUzcWFSMDFVUWhYYzNPR1FrZlpIam1ZWE5WTGs2YVhKenVJbkZfcTBYeVk0MWx4Y2lPVFdwS0VLZ3hnRGtpcFo3QkJEd0xaWnlHX0xTVUlyYUZQOFdnZUhJS2ZwenU3Mi05SnNmenR0d094WGRvRlJqVFVfNUxFSWd6b0JseXZMejdidWxRcHBIdU9xX0dfS2JnM2NwR20zVWNzRU5qWl9NQVlYRWI2UGpFWjZ4ZExSd2tBSlVRaWfSAcMBQVVfeXFMTUljVU5FM3FhUjAxVVFoWGMzT0dRa2ZaSGptWVhOVkxrNmFYSnp1SW5GX3EwWHlZNDFseGNpT1RXcEtFS2d4Z0RraXBaN0JCRHdMWlp5R19MU1VJcmFGUDhXZ2VISUtmcHp1NzItOUpzZnp0dHdPeFhkb0ZSalRVXzVMRUlnem9CbHl2THo3YnVsUXBwSHVPcV9HX0tiZzNjcEdtM1Vjc0VOalpfTUFZWEViNlBqRVo2eGRMUndrQUpVUWln?oc=5",
+   "linkOriginal": "https://aeroin.net/criancas-visitam-aeroporto-de-marica-e-conhecem-rotina-da-aviacao-seguranca-e-oportunidades-profissionais/",
    "data": "2025-08-22",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -237,8 +283,10 @@
    ]
   },
   {
+   "id": "b246c47451",
    "titulo": "Maricá avança em projeto de construção de base para lançamento de foguetes - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNU5FenlQMGl4ZF9YQS03WkxhTFVpUXFab2NhYXR3Mk9sRWp6WHprYUdOS1A2RkV2SkFXTGVTXzNOQWNSdmRDVjZ6azVuWjFlSWRXaV9sUW5rdkhQd2tYeDdpaTdLX1RHQncybWRTeG1WT0xtZ1c1aHdSRkdReXJQeE9QNHlSRHRJVnpiOTF2UnpKNEpzemhKcHZweXNRWUM4Q19qS1l0TGxxR1hDWEdRcXdR?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-em-projeto-de-construcao-de-base-para-lancamento-de-foguetes/",
    "data": "2025-08-21",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -247,8 +295,10 @@
    ]
   },
   {
+   "id": "803e53494a",
    "titulo": "Maricá é destaque na Folha de São Paulo com projeto para construção de base de lançamentos de foguetes - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOanBzM3M0bW1OdmtTTWFxd0FtQUZLWXhMVWVGNTVBdTE1cnk1a0JqV3Q1ZUQxSUpjWUlhME1rNTdCTGIycVhQRWU1cjctMmRIQm93ODNsZzl6bVJuZVJWNUkyWC1EVzBmUWFURmU1aTNQa2pzVm1BTHBvaUo0UXRDQWEtX2hhMl9VcjEtNkxqR2o3YUZGbEptbGRNWlBYTHNVa0dOS2p0aVBNWGFRcnZyTmFNN2ZhazZtOUZfZWZKdktCYlJlQU1zbjhXcDFSTDZDTktUVzh0Zw?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-e-destaque-na-folha-de-sao-paulo-com-projeto-para-construcao-de-base-de-lancamentos-de-foguetes/",
    "data": "2025-08-10",
    "veiculo": "Prefeitura de Maricá",
    "dominioVeiculo": "https://www.marica.rj.gov.br",
@@ -257,8 +307,10 @@
    ]
   },
   {
+   "id": "f6cce340d4",
    "titulo": "Projeto propõe linha marítima entre Rio e Maricá com integração ao metrô e VLT - Prensa de Babel",
    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZkM1bWlTaU9Rc1NOWEhUS2RyeWc0b3EwQTROdFJiX1ZRdEZCZEFfRlVXRnlkSUVRUUVZX0FkM0hUU0NKcm16d2J1UlVxcnpQNG5CSWNhZDY1V18xRl9xdm9YZDdBZ0lOalA4ZjVJOVRVYjFad284SUFPaW5LRzFzR1NBQkdseXhscmhjc01iTWM?oc=5",
+   "linkOriginal": "https://prensadebabel.com.br/ferry-entre-marica-e-rio-pode-ter-obras-iniciadas-em-2025/",
    "data": "2025-06-28",
    "veiculo": "Prensa de Babel",
    "dominioVeiculo": "https://prensadebabel.com.br",
@@ -267,8 +319,10 @@
    ]
   },
   {
+   "id": "b5655b76a6",
    "titulo": "Aeroporto de Maricá entra na fase final de ampliação com foco no setor offshore - AERO Magazine",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVFhIY1hjaktWcVk1b19salcyNXdjcWFKNlFEdFhaNmlad1VlQTlIQWFSNkctOVhxTndYWlZCV2JOdHRqeU9RTF9EaTI1YU9GeGR1Y0ZhTC1wRE5JcHhjUnIzcDN2b2tFeVpUanEtRjlsOTQ5TkJrT1ptWEJZM1VuOF9hcHBqbTU4ZE5XeNIBkgFBVV95cUxPb3IxMzhpRi1WN1l1ODR4NVpaejE2TzRTMy1CcEVlNkdXQTBBeEd3Uk9FbHVkZ29iLVUtQ1ZRQXNvSU04bmF6S3hjTEhDOXhUNTdWTmthQ3dYeWJsb2lIR2tIZjRkdlNONGZKZGtFZkUyaWltU25zS1psZm4zVjkwVUlGdU5TdFdoMWRGdTRWNFhjdw?oc=5",
+   "linkOriginal": "https://aeromagazine.uol.com.br/artigo/aeroporto-marica-ampliacao-polo-offshore.html",
    "data": "2025-06-20",
    "veiculo": "AERO Magazine",
    "dominioVeiculo": "https://aeromagazine.uol.com.br",
@@ -277,8 +331,10 @@
    ]
   },
   {
+   "id": "6ee57c658e",
    "titulo": "Com obras terminando, Aeroporto de Maricá-RJ abre licitação para concessão de uso de novos hangares - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZlYtX0JlYldRSVZ6MmN5eGJUM29fQjhYVU40ZTdLMVhuMndpVklmTU5VRWQ0UGpjSW1Eakkya0RTTmk2MGhRN3hJem9CTGtHbjlZQ0JvSXV4dEZLUElkLXN0Nk5EOGxoRE9rdlVMSW5JLTR4dmtWUkpoMjBia19XYThYaE0yQllHVDMxWGRGVUhzMGQwVlgxQ3c2N3FTWVFWWUc4YTZ3eDBvNWhfX1RpbzVSdExxWmg1UlHSAboBQVVfeXFMT2ZWLV9CZWJXUUlWejJjeXhiVDNvX0I4WFVONGU3SzFYbjJ3aVZJZk1OVUVkNFBqY0ltRGpJMmtEU05pNjBoUTd4SXpvQkxrR245WUNCb0l1eHRGS1BJZC1zdDZORDhsaERPa3ZVTEluSS00eHZrVlJKaDIwYmtfV2E4WGhNMkJZR1QzMVhkRlVIczBkMFZYMUN3NjdxU1lRVllHOGE2d3gwbzVoX19UaW81UnRMcVpoNVJR?oc=5",
+   "linkOriginal": "https://aeroin.net/com-obras-terminando-aeroporto-de-marica-rj-abre-licitacao-para-concessao-de-uso-de-novos-hangares/",
    "data": "2025-06-20",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -287,8 +343,10 @@
    ]
   },
   {
+   "id": "bdf339f816",
    "titulo": "RJ: Maricá quer construir Centro Aeroespacial, mas enfrenta impasses ambientais e institucionais - Geocracia",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNV3hzakc4aldZQkFSRTE2QnI0a2JFdG1SQ0R3UGdVdjBDRE1wVmNJWjJoaEhSVTFXYjUxeWgyVmxlRXF6MDlfVWV6MHczam5Uay1ERHJEaFlfRFRGb0R1NC1QRzVjWngyUXNzZ08zMXBMSnlWM2xCbERuUGlVTGk4Yk1sdnBJMS1PNXdrbzh3NWdZaTFhcmFPdlFkT1luN3pSTGdUX0Q1eVhYNGNqb2VseUFUbjc5Q2VS?oc=5",
+   "linkOriginal": "https://geocracia.com/rj-marica-quer-construir-centro-aeroespacial-mas-enfrenta-impasses-ambientais-e-institucionais/",
    "data": "2025-06-16",
    "veiculo": "Geocracia",
    "dominioVeiculo": "https://geocracia.com",
@@ -297,8 +355,10 @@
    ]
   },
   {
+   "id": "da567236ee",
    "titulo": "Aeroporto de Maricá terá pista de pouso e decolagem coberta com grafeno - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWkJzUkxLYlltQ2k1bHQxZzlzYTdfUFJBNDcydlJfaVU4OTJTTGtYZXhBWlY4R1d4STFVb09MWTBmMkx6dEdfVnBsT3Q0NnowX0V0c2tKa2RydWw0WTR3TmE1Q3dmR2sxYUxiOWlncFZjbExOTnNjN01mYWZNaTNsM1llQkI4QjE0dHZqQkRsSmZ0cG82X1HSAZYBQVVfeXFMT1pCc1JMS2JZbUNpNWx0MWc5c2E3X1BSQTQ3MnZSX2lVODkyU0xrWGV4QVpWOEdXeEkxVW9PTFkwZjJMenRHX1ZwbE90NDZ6MF9FdHNrSmtkcnVsNFk0d05hNUN3ZkdrMWFMYjlpZ3BWY2xMTk5zYzdNZmFmTWkzbDNZZUJCOEIxNHR2akJEbEpmdHBvNl9R?oc=5",
+   "linkOriginal": "https://aeroin.net/aeroporto-de-marica-tera-pista-de-pouso-e-decolagem-coberta-com-grafeno/",
    "data": "2025-05-06",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -307,8 +367,10 @@
    ]
   },
   {
+   "id": "a03f25535c",
    "titulo": "Maricá na rota do vinho? Quaquá anuncia rótulo com nome da cidade e a construção de uma vinícola-hotel - Extra online",
    "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPQ29BYk9lUUJtb1o4ZlR3VVhjaVNCaXlXanB2OXRHbXlHTVY1YTAtRUdma3ZlZk9GcEI3WkVYcHZ6MEtVWHplUkNZS1FlenFsUmtqMWdOeGlSWG9OU0Y0UmQxQm0zeHJVbHNtYUxXX0hnOC1ndHM5M2ZmV2llaFRmSmphTUN1QlpNeENIbjRpdm1UcGhhU1BiVjlPVFd0Y2lHYWR0NmJ4cHVWU2ZIbS1KemdPd3ZfRjA2a0lzeUliMnYtUTFGb01jRmxvdGY0T2R4dTdEeUhhYzk1emNFMzRLcFNGTHpqQmstaVV6QjRMNU5RZGZIRWlWXy1n0gGIAkFVX3lxTFBOb1BBYlJMMm85VUhqX3VlVWZjRWhEYTQ3YXE1RnZ4dEw3Uk1EWFI2MFYwZGRIT3lXUDlvdjREa2g3dXJaNU1zZGRNV0c1VGVQZTl0dmJxLU5PbXpqQXp6N0ttVXRYU0hSYlBDNzdETFYyTnpuUGxNUG5IWHdaYzlVbDhNU1dKU1VNZFY3MnZtbUVtelUzaUxCOWtHSnduLTdWcXpybUw5WmdHVXhqNTlpQ0NNQkpDbFlRdWZReEhWTzVjelZzVWRKZ25rUExDTTEyVTF4cVV2cDJOTzd0U3o1Y2Nvb010NzlVYW10Y3IyYk9uUDRwZUVPVkI5NkFfbU92a3JCbDh0UQ?oc=5",
+   "linkOriginal": "https://extra.globo.com/rio/cidades/marica/noticia/2025/05/marica-na-rota-do-vinho-quaqua-anuncia-rotulo-com-nome-da-cidade-e-a-construcao-de-uma-vinicola-hotel.ghtml",
    "data": "2025-05-02",
    "veiculo": "Extra online",
    "dominioVeiculo": "https://extra.globo.com",
@@ -317,8 +379,10 @@
    ]
   },
   {
+   "id": "144e091e81",
    "titulo": "Quaquá anunciará VLT para Maricá a “Cidade do Futuro” - gbnews.com.br",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOa3V4ejA2N1pFMVVlSWVfdm5keGRiR0NHSjg4aHVTLXY1bG5FU1R0MkVkNWI3T0ZGeGZyREc0bzhRRTFCdDloQVZSZDVYQWFvcUk0Y3lmY1RYVUJVYlYxSVVmb3diSk9rR2t1VVZQWXExdFlmOTFPLUFNRmgxOTlJME9aVW1rSjNaRVBYV1pnQzhIRkY1UkJEU1ZuOVd5MXVuY1ZMTVdWaw?oc=5",
+   "linkOriginal": "https://www.gbnews.com.br/single-post/quaqu%C3%A1-anunciar%C3%A1-vlt-para-maric%C3%A1-a-cidade-do-futuro",
    "data": "2025-04-15",
    "veiculo": "gbnews.com.br",
    "dominioVeiculo": "https://www.gbnews.com.br",
@@ -327,8 +391,10 @@
    ]
   },
   {
+   "id": "9a7205a989",
    "titulo": "Quaquá anuncia corredor VLT como um dos novos projetos para o aniversário de Maricá - Diário do Rio",
    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRGhER0NGM0dVT09tMEludjl6c1JjaWRVUUNRTER4NXhrQUpQc0xEVHdLSFJyUVZLS0VIME1VekotRlFPZnY2emxfcHI1RmJIb0RHd1UtdFNxa0Z2TVgyR0k5TllUOHpQSkljYzBZYnVmaFpNU1hyckRfdzUtLVc5LUJUcUxnRkp6X2FFOGtlUkdDWjdHMkM1RjBfSkxuUTB5d2ZXakc3b1BIaTlFVjJneHFBcENWUzBRSEhHakN3WQ?oc=5",
+   "linkOriginal": "https://www.diariodorio.com/quaqua-anuncia-corredor-vlt-como-um-dos-novos-projetos-para-o-aniversario-de-marica/index.html",
    "data": "2025-04-15",
    "veiculo": "Diário do Rio",
    "dominioVeiculo": "https://www.diariodorio.com",
@@ -337,8 +403,10 @@
    ]
   },
   {
+   "id": "9eca568e90",
    "titulo": "Maricá (RJ) inicia estudo para viabilidade do Teleférico na Pedra de Inoã - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMVNVTmVSY2tlVm1leXZrZEc2bkd3YzQ5SUZYMnE2ZjZ3VVMyUlo4d0RhRXJEY1NMUXlMVy1LVWpvTGh3WGc2c3Nmc21NLXBCWVR5ck9pOXVaMkJ6NV9mejdoc0ZZNzR3dloyX1dib1VNbWZfb3V5bkVJbEFWcFBYMlFXRUpyZ2Rlb2hsWVp5Y1VLcnBMdnJhM1J2RjBPOF9HQm5wT1NoQVRKTExHVXRYZUdrU3g?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/marica-rj-inicia-estudo-para-viabilidade-do-teleferico-na-pedra-de-inoa/",
    "data": "2025-04-15",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -347,8 +415,10 @@
    ]
   },
   {
+   "id": "4d73dde7f0",
    "titulo": "DESAER e prefeitura de Maricá/RJ firmam parceria para instalação de fábrica de aeronaves no município - Revista Forca Aérea",
    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVk5DbTZFMWhWR3ZCMVo4RGJRQzFSQXpRT3pIZXczZUtWX0pHcHBZcFN5X1RGS0dVd2xHQnZNdWd3RUdnY1J1OWlfdTZJUkdadmRZOVA5aWV5VFQ0Rmw3WTB2ZjZaNlpBaGNaWkJFblhhNjlLeFJRRjhIV0lzR1FHU3d3VDhGb3JBNGxDMmRmSVRxNzRFMzZiZUMyOUpWT0d5UzYxalcxakNKa3dKWXJDcHdKQnRXLXJBOFNWQjNJWnY2bmZCZDJr?oc=5",
+   "linkOriginal": "https://forcaaerea.com.br/desaer-e-prefeitura-de-marica-rj-firmam-parceria-para-instalacao-de-fabrica-de-aeronaves-no-municipio/",
    "data": "2025-04-14",
    "veiculo": "Revista Forca Aérea",
    "dominioVeiculo": "https://forcaaerea.com.br",
@@ -357,8 +427,10 @@
    ]
   },
   {
+   "id": "e50ab0c215",
    "titulo": "'Nova Embraer' brasileira mira fábrica em Maricá, no Rio de Janeiro - AIRWAY",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUmI0bHg4UjdLTlNBSzRJU3ZadUFnbk9TODdHN1UzUjNHVTVzSUlhU3hEN1ZfY01qMFZCV25pUF85N2kyTkhRNmR0NHZTUnlQbld0SFZTY0duWXBkM2owRWR1YmQ2QU45QUt1T0VSRjNGN0xibjg4d2plaEx3U0hhOUxwTUJXQ3FhaVduMGZIOXE0QmtqQmc?oc=5",
+   "linkOriginal": "https://www.airway.com.br/nova-embraer-brasileira-mira-fabrica-em-marica-no-rio-de-janeiro/",
    "data": "2025-04-10",
    "veiculo": "AIRWAY",
    "dominioVeiculo": "https://www.airway.com.br",
@@ -367,8 +439,10 @@
    ]
   },
   {
+   "id": "b6a758b2c1",
    "titulo": "Assinado protocolo de intenções para instalação de unidade da fabricante de aeronaves DESAER em Maricá-RJ - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSnFGZVpTR29lT014NF9PXzV4MlFKRS05NUI4d09GUGtLdnJPSXd1MWtZSUdzcFZXY0tRNjBCZXpRTy1JSC1wS1JhWDMtV3ZTRWhCQVlkRU8wMUZqN1RIaTZJN3oxUWw5b0t1MV9JZjg2d1BsUFVxNHoxeFYtM0J4MHMyQS01NS01R1F6cDUxcXk5cFZFQmxYUVV6SmoxWU1Oa0U1T2RMTkhYT3dVTXQ5clhhZ0Z4SnRlenZyeEJHWERBN0HSAcMBQVVfeXFMUEpxRmVaU0dvZU9NeDRfT181eDJRSkUtOTVCOHdPRlBrS3ZyT0l3dTFrWUlHc3BWV2NLUTYwQmV6UU8tSUgtcEtSYVgzLVd2U0VoQkFZZEVPMDFGajdUSGk2STd6MVFsOW9LdTFfSWY4NndQbFBVcTR6MXhWLTNCeDBzMkEtNTUtNUdRenA1MXF5OXBWRUJsWFFVekpqMVlNTmtFNU9kTE5IWE93VU10OXJYYWdGeEp0ZXp2cnhCR1hEQTdB?oc=5",
+   "linkOriginal": "https://aeroin.net/assinado-protocolo-de-intencoes-para-instalacao-de-unidade-da-fabricante-de-aeronaves-desaer-em-marica-rj/",
    "data": "2025-04-10",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -377,8 +451,10 @@
    ]
   },
   {
+   "id": "a37fc0d0e1",
    "titulo": "Serviços do Voa Maricá entre os aeroportos de Maricá e Campinas-Viracopos estão suspensos devido a obras - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPT1BhTkFXYnRjUW02RVh5RmU1U0RQdGVGWmZWYTVYWHg5VXRSZURVb2NOR0YwcVdxWnR4NXFGekF6djgySThQcjZLWTAwWUp2QTVnV2tXQ3g2RGNTMzlONGV4S250aldCc0tfcm1GeXJTaGV6WUdUTk8zZDdhUEIyOHBkelRkOUlNeFR5bkMxYU41c1BBQTZ2ZElMd0lFQ0lVRGJjVnpzNzloSTRFa1QtZ1ZiUVdjTHlwTFR1RmFCOFp3Z9IBwgFBVV95cUxPT1BhTkFXYnRjUW02RVh5RmU1U0RQdGVGWmZWYTVYWHg5VXRSZURVb2NOR0YwcVdxWnR4NXFGekF6djgySThQcjZLWTAwWUp2QTVnV2tXQ3g2RGNTMzlONGV4S250aldCc0tfcm1GeXJTaGV6WUdUTk8zZDdhUEIyOHBkelRkOUlNeFR5bkMxYU41c1BBQTZ2ZElMd0lFQ0lVRGJjVnpzNzloSTRFa1QtZ1ZiUVdjTHlwTFR1RmFCOFp3Zw?oc=5",
+   "linkOriginal": "https://aeroin.net/servicos-do-voa-marica-entre-os-aeroportos-de-marica-e-campinas-viracopos-estao-suspensos-devido-a-obras/",
    "data": "2025-02-23",
    "veiculo": "AEROIN",
    "dominioVeiculo": "https://aeroin.net",
@@ -387,8 +463,10 @@
    ]
   },
   {
+   "id": "338013801a",
    "titulo": "Cidade das Utopias: Novo governo de Maricá apresenta projeto futurístico de urbanização com mergulhão, teleféricos e VLT; confira! [vídeo] - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPcGItN0N0X2JFN2JLWi1CemJrc1VHaFpSdVhNbkctOXBHdWRFNlgwenBQdGtVNEtjZUtla2ZmckIzSWpVZUdlZDZhNl9jSzFqWnN5NDhPQ2JFM1pob3o4Mmx6bkc1bElWVzd3MTNOdlNDeUNzM1dyQzFaZU9LRnN4YTZjV1kyTm8za2hKd3d4elQ0QnZjYUdrZlk5T0hKRVNnZ1VpQTBkank1a2ZIRUt3NkRZYm5GSkVxVXI2QVVtX2JFYjBfYk9zcUE1N0pqZGtFbnJGeHpXVVloMDZiTnIxTmtqc25VZG42Nk5abl9CbHg5OGw2RVdfTnA0U3FTSzgtQ0xsSE1R?oc=5",
+   "linkOriginal": "https://maricainfo.com/cidade-das-utopias/cidade-das-utopias-novo-governo-de-marica-apresenta-projeto-futuristico-de-urbanizacao-com-mergulhao-telefericos-e-vlt-confira-video/",
    "data": "2025-01-03",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
