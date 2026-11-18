@@ -33,15 +33,15 @@ CONSULTAS = [
     ('Base de foguetes', 'Maricá foguete OR lançamento Ilhas Maricás', ['foguet', 'lancamento', 'espacial', 'ilhas maricas']),
     ('Fábrica de aviões', 'Maricá Embraer OR fábrica aviões', ['embraer', 'aviao', 'aeronave', 'fabrica de avi']),
     ('Braço de pedra', 'Maricá braço de pedra Itaipuaçu', ['braco de pedra', 'enrocamento', 'molhe']),
-    ('Hotéis públicos', 'Maricá hotel público Quaquá', ['hotel', 'maraey', 'hoteleiro']),
+    ('Hotéis públicos', 'Maricá hotel público Quaquá', [r'\bhotel(es)?\b', 'maraey']),
     ('Piscina de água salgada', 'Maricá piscina água salgada', ['piscina']),
     ('Catamarãs', 'Maricá catamarã Santos Dumont', ['catamar']),
     ('Aeroporto', 'Maricá aeroporto pista', ['aeroporto', 'pista']),
     ('Roda-gigante', 'Maricá roda-gigante', ['roda-gigante', 'roda gigante', 'roda-gigante']),
-    ('VLT e trilhos', 'Maricá VLT OR teleférico OR bonde', ['vlt', 'telefer', 'bonde', 'trilho']),
+    ('VLT e trilhos', 'Maricá VLT OR teleférico OR bonde', [r'\bvlt\b', 'telefer', 'trilho']),
     ('Asfalto', 'Maricá asfalto ruas pavimentação', ['asfalt', 'pavimenta']),
     ('Esgoto', 'Maricá esgoto saneamento Quaquá', ['esgoto', 'saneamento']),
-    ('Prefeito', 'Quaquá prefeito Maricá', ['quaqua', 'prefeito']),
+    ('Prefeito', 'Quaquá prefeito Maricá', [r'\bprefeitura', r'\bobras?\b', r'\banunci', r'\bcontratos?\b', r'\binvest']),
 ]
 
 
@@ -84,10 +84,11 @@ def ler_feed(xml_bytes, tema):
 def relevante(item, limite, palavras):
     if item['data'] < limite:
         return False
-    t = normalizar(item['titulo'])
+    # o veículo vem no fim do título ("... - Maricá Info"): tira antes de testar
+    t = normalizar(sem_veiculo(item['titulo'], item['veiculo']))
     if not ('maric' in t or 'quaqua' in t):
         return False
-    return any(p in t for p in palavras)
+    return any(re.search(p, t) for p in palavras)
 
 
 def sem_veiculo(titulo, veiculo):
