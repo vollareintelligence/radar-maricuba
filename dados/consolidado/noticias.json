@@ -1,19 +1,19 @@
 {
- "coletadoEm": "2026-11-18T03:24:15Z",
+ "coletadoEm": "2026-11-23T21:28:31Z",
  "janelaDias": 730,
  "fonte": "Google News RSS (não oficial)",
  "consultas": 11,
  "falhas": [],
- "total": 39,
+ "total": 34,
  "itens": [
   {
-   "id": "257b5add3d",
-   "titulo": "Maricá avança com asfalto em mais de 7 km de ruas de Itaipuaçu - Folha do Leste",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ05vcWZrSVhENU1nY3BDV1ZUUXUyZU1uOTdfUFdpYmgzU3BFY3hWVmVOSVNyX04yWVcyM1puMGY2bV9xTnhZVnA1SGdON0RoQ2tZVnBBOEp4OE1RUVVnOEtvX291S3o4S21vQTJGYm5JcFdCQkp5UnNTVFNLTHdQSHFGR05kYXd4QzN1dA?oc=5",
-   "linkOriginal": "https://folhadoleste.com.br/obras-jardim-atlantico-leste-asfalto-drenagem-itaipuacu/",
+   "id": "7d194eea52",
+   "titulo": "Maricá asfalta e faz novas calçadas no Jardim Atlântico Leste, em Itaipuaçu - O Dia",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxON0JQN1JrbXE1QnJodEViQU1uT2RQNUlFckdLUHRxRGEta0ZuNzNUZEpOQ3NDcnp3Y2htV25uV200ZGtaMnItSHdxaS1wSk9iX2lfb1hoOVhhT2xXR1BIal9nVmRxNWNWODJpRzV5VTdXWHFxaEpmMnZvbmNtaW45Wk92U29XNzdsTFkxVWdnY25ET3Z6MktrdDNxTVdILVgwcGNkVzNmbGpUbzVINEpJSlpzdnRpTk1LTGZqMjNMcmJTcVXSAcgBQVVfeXFMTlV6QWRaU3lmaHhvNEFsQXNHcUI0VmN5dG5kNV8yVTZKWjFwazRlQjdUU1lXWU0wc1ZUV0xrOF9IcmxzQ1k5S1ZudzZvUm56NzNKZ1dHVEwxaW12VkxVNE96OHFDdEdGTFd1MThIak9YRURzM3RleDNjWEp0eGdmZTJyQmR1dEhRNFVzZnFLQUZRb3JiUmEtdTAyU0NMcGlUOWpRZDVnOFIwcENLNkY5TE96SmdIZVRVMTNCYzB0OUw3eUVwNXdBak4?oc=5",
+   "linkOriginal": "https://odia.ig.com.br/marica/2026/10/7313003-marica-asfalta-e-faz-novas-calcadas-no-jardim-atlantico-leste-em-itaipuacu.html",
    "data": "2026-10-16",
-   "veiculo": "Folha do Leste",
-   "dominioVeiculo": "https://folhadoleste.com.br",
+   "veiculo": "O Dia",
+   "dominioVeiculo": "https://odia.ig.com.br",
    "temas": [
     "asfalto"
    ]
@@ -31,15 +31,15 @@
    ]
   },
   {
-   "id": "798f15a00a",
-   "titulo": "Quaquá reforça meta de concluir pavimentação de todas as ruas de Maricá até 2028: “maior pacote de obras da história” - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbFhnUnRNSXBGaFZfOUs2NGJwTG9BMzNVWnMwWGtjbUh2UEg4RTlKa1ZwbjRpMG9XVHl3XzlrN3lqSnM1RGp5MmtQSmJSTnJEM25TWFJDdUcwRjQ2R2NJSDBZR3hpMld4T1p5V1RCcnZsM2ZaZmxvLTdCcU9ieWl3VklzRDB1N21tdjZWQTZlYks4WWx3MFN4VDQzb3AwYjJfWnd2LV9TVktsenBKc0hHN1FoRVRNM3U4bkpPck93bVkyNXVNMndRMU4xWUw4ZExWZkdjSEdsODJQR0Np?oc=5",
-   "linkOriginal": "https://maricainfo.com/obras/quaqua-reforca-meta-de-concluir-pavimentacao-de-todas-as-ruas-de-marica-ate-2028-maior-pacote-de-obras-da-historia/",
-   "data": "2026-10-06",
-   "veiculo": "Maricá Info",
-   "dominioVeiculo": "https://maricainfo.com",
+   "id": "116f685832",
+   "titulo": "Maricá avança no saneamento com nova rede de esgoto em Santa Paula - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPLWliNElPSzJYa2RZREN4c18tQzZTYzhHTjhpalRKUEJHN2V3Mm1aYXVlNkFjR3VERnpmcldpc3ZqZW5DRHFYS3RfSDN6WDA0ZUstZlZ4MmpmTFJvUHNJSmFGZFczVUNFdzlBRFhNYTZBWmZTdlpsdWZ3eVg0azZqUFQzQ29BajZHVGx3a05kaVVNSnU1ZTRsNDEtbnVfQUxKN1dPMGZkOA?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-no-saneamento-com-nova-rede-de-esgoto-em-santa-paula/",
+   "data": "2026-09-02",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
    "temas": [
-    "asfalto"
+    "esgoto"
    ]
   },
   {
@@ -91,15 +91,15 @@
    ]
   },
   {
-   "id": "661dcaa669",
-   "titulo": "Maricá investe R$ 13,6 milhões em saneamento básico para o 4º distrito de Itaipuaçu - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcUVXc2hpMEFnMkpQSGJic0xuT3NyRWM5dG1IUnBZbTFQaU96Q2pqN2VRWnRCYUpETV9Kclg2Nlo4WURlcUZCQkJpVEQxZHJCSmw4akhpeUZoR29tMFZHOWhqM3hhQUtqaUIwVG1lcE16QUNzYzZ6Q1pZOGhDOVpWUG1xb1FfeUxvNURwbm56dy1jS0JGa0p2c0IyVGxhdC10akxSMkQ3dzgtc3ZuOWFHMkdBRl84aExZaWlpbDFRckw0M0l1WjF1TQ?oc=5",
-   "linkOriginal": "https://maricainfo.com/noticias-de-marica/sanemar-recebe-r-136-milhoes-para-construir-estacoes-de-tratamento-de-esgoto-em-marica/",
-   "data": "2026-07-14",
+   "id": "7df1a12f20",
+   "titulo": "VLT de Maricá avança com Licença Prévia para projeto da CODEMAR - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTVRKU3V1aW55T29OZnFvUHRSNlJnMDlfcGt0MUZDSTIycDdjZmhqR1B4Qll5QXJBdkliVE1OVjEyVXRQVzU3YVU3WlpuZTUzTngxQ3E3UTZaUTF2cHRKbGo5QU0yenVFQVBjNjBFSWdKUE1LS0s3LUVqaE1mc3I3Y19LVXp5OWhaZ2RwcA?oc=5",
+   "linkOriginal": "https://maricainfo.com/transporte/vlt-de-marica-avanca-com-licenca-previa-ambiental/",
+   "data": "2026-07-11",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "esgoto"
+    "vlt"
    ]
   },
   {
@@ -151,13 +151,13 @@
    ]
   },
   {
-   "id": "455fc90fb2",
-   "titulo": "Quaquá anuncia roda-gigante para impulsionar o turismo e a economia de Maricá - ErreJota Notícias",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWnk3aDVUTzBKalRxQXJaWHBObnktRy1QdDNfWWNZYlhzdVRwTWNmcHJpWkZqeGM3THFuLTJYZndXTFBtU0VyQ3BoUXg2cnlkSk1XSWpENHo3OEp4RzJuMDl0eFpxek4zOFNYdHltMHY1RXk2dEN4S19sekVUVTRJOS1vbGJEYjgtTHNzU0lkdnRrcmExSV8xbmR2eHBTSENDVnhwdG51akRXYlNXRzRZ?oc=5",
-   "linkOriginal": "https://errejotanoticias.com.br/quaqua-anuncia-roda-gigante-para-impulsionar-o-turismo-e-a-economia-de-marica/",
-   "data": "2026-01-12",
-   "veiculo": "ErreJota Notícias",
-   "dominioVeiculo": "https://errejotanoticias.com.br",
+   "id": "3c2a28e836",
+   "titulo": "Maricá terá roda-gigante maior que a do Rio de Janeiro - Agenda Bafafá",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTThJenZHdnRLd2I4RldPdU9VbFBpZzlzdy1wdkg3bjJmRFdweDJqR0x6ZXhObGtWczdEaVFKMlJHQWIya1dZWnQ1RXpHS25mcG1SQ3VoUzI2NVNxaXA2MW81OWJkZy1mcTRCWWhHblV3emxmYlZJZ011OGZhdWkzM0k4emRaazRwWlo2MWpVSTJXek9Jd2lxV3Q1Q2ZEM3RSa0stUg?oc=5",
+   "linkOriginal": "https://bafafa.com.br/mais-coisas/jornal-bafafa/marica-tera-roda-gigante-maior-que-a-do-rio-de-janeiro",
+   "data": "2026-01-14",
+   "veiculo": "Agenda Bafafá",
+   "dominioVeiculo": "https://bafafa.com.br",
    "temas": [
     "roda"
    ]
@@ -187,27 +187,15 @@
    ]
   },
   {
-   "id": "aa3ea2fe6b",
-   "titulo": "Prefeitura de Maricá firma acordo para instalação de teleféricos em Ponta Negra - O Dia",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQjQxbzNfZ3VwaUN6NUtNUzVYdTF0Ni1ScWIySTRTUFJ5dm1aNjNZdXpXbFBTUnpCVWx6MjdjWnFjdS1DckpvTWRPUzhpMUhpRjZCZmlILURKekxZcmN0SUpmLTJ6ZkwzZWk1dzVydXpWZ1NaNV9lMG1qTXFGRjg2eko4V3JCV2NlcjdXWG91bTF1eEdYbGk5OWpJYjdrTDFSV1AxUU1wYTdRTmhtR3BTc2szZHBLd09raEFCNEdVcWgwdllmU19EVWhB0gHPAUFVX3lxTE9XeklrUnpCTUlfNnR5RWJIbmd1bk1weDFucUZ6bUgtWkwtSndVWVk4UkJRSEw3YkRBdDJ2dW9GT2Q1Z1NNT0xZNENVUjBsWUZQd2pkb3I3MklfQldNLTRNbXhQMVhZdW80MHNFSS1reXNZd0o3RHBFQXR0RFNJYnlpZnVfTExoakNGaC15YzBTX2pWTC02LTZpeU1KQ2cxWUdFNUY3LVF1QUxSRE9ocGZBZVlsUmUxYmhOU21RbExMaVVrOHp2WGx0MndtakxJRQ?oc=5",
-   "linkOriginal": "https://odia.ig.com.br/marica/2025/12/7181084-prefeitura-de-marica-firma-acordo-para-instalacao-de-telefericos-em-ponta-negra.html",
+   "id": "1bdf926006",
+   "titulo": "Maricá terá teleféricos em Ponta Negra - A Tribuna RJ",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQU1lJWHNSbEJiTlJtZTEtOHUtQXZ3MThOakVVamNBV1pFaXZMc1VmNjQ0VUVTN2VFY29tMDVPNE5CMS1fV2dudG5DZTBNN1lydXM2YVEyLWdOejlSNGxyOFlfU3ZwejBSeHZDRHR5OWRuTDlOY1dtanlzVU00eUFOTzRR?oc=5",
+   "linkOriginal": "https://www.atribunarj.com.br/materia/marica-tera-telefericos-em-ponta-negra",
    "data": "2025-12-17",
-   "veiculo": "O Dia",
-   "dominioVeiculo": "https://odia.ig.com.br",
+   "veiculo": "A Tribuna RJ",
+   "dominioVeiculo": "https://www.atribunarj.com.br",
    "temas": [
     "vlt"
-   ]
-  },
-  {
-   "id": "2f57c79df8",
-   "titulo": "Maricá amplia pista do aeroporto e lança programa de formação aeronáutica - Rádio Manchete Rio",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZ2xlT0tpOE9oTXZqV1Rna090LTdkMmVVZl9zZXUtbmtkNHhEZWNMcENnNkhJWENmdVY3QkI0UlE5c1NhNEg0QmtBWkttT3NpNDdCVWJrcDFGRDlLeUlfVjNrUExGcHE0bUcweFhzVHBQMnNldEw0d2NwYklSMjdQWm94c3FWR1E0ejBFckV0b0NrMDF2YkRwMWlySlhrcG5GazRz?oc=5",
-   "linkOriginal": "https://mancheterio.com.br/marica-amplia-pista-do-aeroporto-e-lanca-programa-de-formacao-aeronautica/",
-   "data": "2025-12-11",
-   "veiculo": "Rádio Manchete Rio",
-   "dominioVeiculo": "https://mancheterio.com.br",
-   "temas": [
-    "aeroporto"
    ]
   },
   {
@@ -247,15 +235,15 @@
    ]
   },
   {
-   "id": "7cbf03f921",
-   "titulo": "Maricá avança em projeto para instalação de base de lançamentos espaciais nas Ilhas Maricás - Prensa de Babel",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTXpaNmthbXRtemN1MnkwUTBYUTNnZHRTOHNWQTFVZzg0S19EYlFNTW8zR0h3LVo4c2FISGxzcFMzSXE0a3lIZzVOb09iTy14MXdJSUdaMTAyX0p6QUV1UHhBZWlzTVIzOEw0Q1R6TDRiMUdaU3RKT3NoTkFKMjZpeUZJYw?oc=5",
-   "linkOriginal": "https://prensadebabel.com.br/marica-base-lancamentos-espaciais-ilhas-maricas/",
-   "data": "2025-08-22",
-   "veiculo": "Prensa de Babel",
-   "dominioVeiculo": "https://prensadebabel.com.br",
+   "id": "6f8aa31bac",
+   "titulo": "Maricá: Roda gigante, pista de patinação no gelo e muitas outras atrações são esperadas no Natal Brasilidade 2025 - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWktPeWw4Yk1ZYzlWN291ZWVQakFLZlZVQzFVTGl3cm54UTJ0V3hWOW1HenVmdHR0QkpyZzJYWmd4elZJRDk5bEM5bURHYmlKR0FjTEM3b0pOYXhGVFN0RExROU8yUDdTWmlRZFVqUndTRHRfY2ZGQ2hTaGtwTEhJQTRFTGZIVklacjhZM2JkTWFqR0dvUmFfaWRzZWMyUkJUTjlDREYybmxaVEU4WF92T1RfRTdIeThkNGVIdzFBUm95UkNsWVMtaHJHLVgxcl9ISGRDVXYtVHdXbnlZLXc?oc=5",
+   "linkOriginal": "https://maricainfo.com/destaques/marica-roda-gigante-pista-de-patinacao-no-gelo-e-muitas-outras-atracoes-sao-esperadas-no-natal-brasilidade-2025/",
+   "data": "2025-11-20",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
    "temas": [
-    "foguetes"
+    "roda"
    ]
   },
   {
@@ -307,18 +295,6 @@
    ]
   },
   {
-   "id": "f6cce340d4",
-   "titulo": "Projeto propõe linha marítima entre Rio e Maricá com integração ao metrô e VLT - Prensa de Babel",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZkM1bWlTaU9Rc1NOWEhUS2RyeWc0b3EwQTROdFJiX1ZRdEZCZEFfRlVXRnlkSUVRUUVZX0FkM0hUU0NKcm16d2J1UlVxcnpQNG5CSWNhZDY1V18xRl9xdm9YZDdBZ0lOalA4ZjVJOVRVYjFad284SUFPaW5LRzFzR1NBQkdseXhscmhjc01iTWM?oc=5",
-   "linkOriginal": "https://prensadebabel.com.br/ferry-entre-marica-e-rio-pode-ter-obras-iniciadas-em-2025/",
-   "data": "2025-06-28",
-   "veiculo": "Prensa de Babel",
-   "dominioVeiculo": "https://prensadebabel.com.br",
-   "temas": [
-    "vlt"
-   ]
-  },
-  {
    "id": "b5655b76a6",
    "titulo": "Aeroporto de Maricá entra na fase final de ampliação com foco no setor offshore - AERO Magazine",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVFhIY1hjaktWcVk1b19salcyNXdjcWFKNlFEdFhaNmlad1VlQTlIQWFSNkctOVhxTndYWlZCV2JOdHRqeU9RTF9EaTI1YU9GeGR1Y0ZhTC1wRE5JcHhjUnIzcDN2b2tFeVpUanEtRjlsOTQ5TkJrT1ptWEJZM1VuOF9hcHBqbTU4ZE5XeNIBkgFBVV95cUxPb3IxMzhpRi1WN1l1ODR4NVpaejE2TzRTMy1CcEVlNkdXQTBBeEd3Uk9FbHVkZ29iLVUtQ1ZRQXNvSU04bmF6S3hjTEhDOXhUNTdWTmthQ3dYeWJsb2lIR2tIZjRkdlNONGZKZGtFZkUyaWltU25zS1psZm4zVjkwVUlGdU5TdFdoMWRGdTRWNFhjdw?oc=5",
@@ -364,42 +340,6 @@
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
     "aeroporto"
-   ]
-  },
-  {
-   "id": "a03f25535c",
-   "titulo": "Maricá na rota do vinho? Quaquá anuncia rótulo com nome da cidade e a construção de uma vinícola-hotel - Extra online",
-   "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPQ29BYk9lUUJtb1o4ZlR3VVhjaVNCaXlXanB2OXRHbXlHTVY1YTAtRUdma3ZlZk9GcEI3WkVYcHZ6MEtVWHplUkNZS1FlenFsUmtqMWdOeGlSWG9OU0Y0UmQxQm0zeHJVbHNtYUxXX0hnOC1ndHM5M2ZmV2llaFRmSmphTUN1QlpNeENIbjRpdm1UcGhhU1BiVjlPVFd0Y2lHYWR0NmJ4cHVWU2ZIbS1KemdPd3ZfRjA2a0lzeUliMnYtUTFGb01jRmxvdGY0T2R4dTdEeUhhYzk1emNFMzRLcFNGTHpqQmstaVV6QjRMNU5RZGZIRWlWXy1n0gGIAkFVX3lxTFBOb1BBYlJMMm85VUhqX3VlVWZjRWhEYTQ3YXE1RnZ4dEw3Uk1EWFI2MFYwZGRIT3lXUDlvdjREa2g3dXJaNU1zZGRNV0c1VGVQZTl0dmJxLU5PbXpqQXp6N0ttVXRYU0hSYlBDNzdETFYyTnpuUGxNUG5IWHdaYzlVbDhNU1dKU1VNZFY3MnZtbUVtelUzaUxCOWtHSnduLTdWcXpybUw5WmdHVXhqNTlpQ0NNQkpDbFlRdWZReEhWTzVjelZzVWRKZ25rUExDTTEyVTF4cVV2cDJOTzd0U3o1Y2Nvb010NzlVYW10Y3IyYk9uUDRwZUVPVkI5NkFfbU92a3JCbDh0UQ?oc=5",
-   "linkOriginal": "https://extra.globo.com/rio/cidades/marica/noticia/2025/05/marica-na-rota-do-vinho-quaqua-anuncia-rotulo-com-nome-da-cidade-e-a-construcao-de-uma-vinicola-hotel.ghtml",
-   "data": "2025-05-02",
-   "veiculo": "Extra online",
-   "dominioVeiculo": "https://extra.globo.com",
-   "temas": [
-    "hoteis"
-   ]
-  },
-  {
-   "id": "144e091e81",
-   "titulo": "Quaquá anunciará VLT para Maricá a “Cidade do Futuro” - gbnews.com.br",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOa3V4ejA2N1pFMVVlSWVfdm5keGRiR0NHSjg4aHVTLXY1bG5FU1R0MkVkNWI3T0ZGeGZyREc0bzhRRTFCdDloQVZSZDVYQWFvcUk0Y3lmY1RYVUJVYlYxSVVmb3diSk9rR2t1VVZQWXExdFlmOTFPLUFNRmgxOTlJME9aVW1rSjNaRVBYV1pnQzhIRkY1UkJEU1ZuOVd5MXVuY1ZMTVdWaw?oc=5",
-   "linkOriginal": "https://www.gbnews.com.br/single-post/quaqu%C3%A1-anunciar%C3%A1-vlt-para-maric%C3%A1-a-cidade-do-futuro",
-   "data": "2025-04-15",
-   "veiculo": "gbnews.com.br",
-   "dominioVeiculo": "https://www.gbnews.com.br",
-   "temas": [
-    "vlt"
-   ]
-  },
-  {
-   "id": "9a7205a989",
-   "titulo": "Quaquá anuncia corredor VLT como um dos novos projetos para o aniversário de Maricá - Diário do Rio",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRGhER0NGM0dVT09tMEludjl6c1JjaWRVUUNRTER4NXhrQUpQc0xEVHdLSFJyUVZLS0VIME1VekotRlFPZnY2emxfcHI1RmJIb0RHd1UtdFNxa0Z2TVgyR0k5TllUOHpQSkljYzBZYnVmaFpNU1hyckRfdzUtLVc5LUJUcUxnRkp6X2FFOGtlUkdDWjdHMkM1RjBfSkxuUTB5d2ZXakc3b1BIaTlFVjJneHFBcENWUzBRSEhHakN3WQ?oc=5",
-   "linkOriginal": "https://www.diariodorio.com/quaqua-anuncia-corredor-vlt-como-um-dos-novos-projetos-para-o-aniversario-de-marica/index.html",
-   "data": "2025-04-15",
-   "veiculo": "Diário do Rio",
-   "dominioVeiculo": "https://www.diariodorio.com",
-   "temas": [
-    "vlt"
    ]
   },
   {
