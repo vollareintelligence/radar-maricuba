@@ -116,6 +116,15 @@ ul.rec li{border:1px solid var(--border);border-radius:10px;padding:10px 12px;fo
 .sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px}
 .sl label{display:flex;justify-content:space-between;font-weight:700;color:var(--primary)}
 .sl input[type=range]{width:100%;height:44px;accent-color:var(--accent)}
+.pl-pod{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0}
+.pl-c{background:var(--card);border:3px solid var(--ink,#111);padding:14px;position:relative}
+.pl-c.ruim{box-shadow:8px 8px 0 var(--hot,#D93A1E)}.pl-c.bom{box-shadow:8px 8px 0 #1F7A4D}
+.pl-c .pos{position:absolute;top:-16px;left:12px;background:var(--ink,#111);color:#fff;font-family:var(--disp,Impact);font-size:22px;padding:2px 10px}
+.pl-c img,.pl-c .ph{width:72px;height:72px;object-fit:cover;border-radius:50%;float:right;margin-left:8px}
+.pl-c h3{margin:8px 0 2px;font-size:22px}.pl-c .nt{font-family:var(--disp,Impact);font-size:44px;line-height:1}
+.pl-c ul{margin:8px 0 0;padding-left:18px;font-size:15px}.pl-c .cu{font-weight:700;color:var(--hot-text,#B72E14)}
+.pl-h{font-family:var(--disp,Impact);text-transform:uppercase;font-size:26px;margin:22px 0 0}
+.pl-t{width:100%;border-collapse:collapse;font-size:14px}.pl-t th,.pl-t td{border-bottom:1px solid var(--border);padding:6px;text-align:right}.pl-t th:nth-child(-n+2),.pl-t td:nth-child(-n+2){text-align:left}
 .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;background:var(--muted);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre-wrap}
 /* gráfico de linhas */
 .chart{width:100%;height:auto;display:block}
@@ -286,7 +295,7 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#111"/><circle cx="17" cy="17" r="10" fill="none" stroke="#F1E8D6" stroke-width="2"/><path d="M17 17 L17 7 A10 10 0 0 1 25.7 12Z" fill="#D93A1E"/><circle cx="17" cy="17" r="2" fill="#F1E8D6"/></svg>Radar da Gastança · Maricúba</div>
   <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuNav">Menu</button>
   <nav class="menu" id="menuNav" aria-label="Seções">
-    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#promessas">Promessas</a><a href="#natal">Natal</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
+    <a href="#gastometro">Gastômetro</a><a href="#vereadores">Vereadores</a><a href="#placar">Placar do mês</a><a href="#rankings">Rankings</a><a href="#meu-ranking">Meu Ranking</a><a href="#tempo">Ao longo do tempo</a><a href="#problemas">Problemas que não somem</a><a href="#prefeitura">Prefeitura</a><a href="#promessas">Promessas</a><a href="#natal">Natal</a><a href="#empresas">Empresas</a><a href="#obras">Obras paradas</a><a href="#metodo">Como lemos os dados</a>
   </nav>
 </div></header>
 
@@ -323,6 +332,13 @@ details.mcol{border-top:2px solid var(--ink);padding:0}details.mcol>summary{font
   </div>
   <div class="grid" id="grid"></div>
   <p class="source">Fotos e partidos: <a href="https://marica.rj.leg.br" target="_blank" rel="noopener">site oficial da Câmara de Maricá</a>. O partido é o atual, não o de 2024.</p>
+</div></section>
+
+<section id="placar"><div class="wrap">
+  <h2>Placar do mês: quem rendeu menos pelo mesmo salário</h2>
+  <p class="lead">Os 21 vereadores recebem o mesmo salário. O placar mede o que cada um entregou no mês por esse dinheiro: presença em plenário, projetos de lei e cobranças ao Executivo, indicações para os bairros e faltas sem justificativa. Mesma régua para todos, fórmula aberta logo abaixo.</p>
+  <div class="controls"><label for="plMes" style="font-weight:700">Mês</label> <select id="plMes"></select></div>
+  <div id="plBox"></div>
 </div></section>
 
 <section id="rankings"><div class="wrap">
@@ -514,6 +530,41 @@ $('#chkTodos').addEventListener('change',e=>setTodos(e.target.checked));
 $('#chkTodos2').addEventListener('change',e=>setTodos(e.target.checked));
 document.addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b&&!b.closest('dialog'))abrir(+b.dataset.id)});
 
+/* ---------- placar do mês ---------- */
+(function(){
+ const P=D.placar;if(!P||!P.meses||!P.meses.length){document.getElementById('placar').style.display='none';return}
+ const V={};D.vereadores.forEach(v=>V[v.id]=v);
+ const br=n=>n==null?'—':'R$ '+n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+ const nt=n=>n.toLocaleString('pt-BR',{maximumFractionDigits:1});
+ const sel=document.getElementById('plMes');sel.innerHTML=P.meses.map((m,i)=>`<option value="${i}">${m.rotulo} (${m.sessoes} sessões)</option>`).join('');
+ function foto(v){return v&&v.foto?`<img src="${esc(v.foto)}" alt="Foto de ${esc(v.nome)}" loading="lazy">`:`<span class="ph"></span>`}
+ function card(r,pos,cls,lbl){const v=V[r.id]||{};return `<div class="pl-c ${cls}"><span class="pos">${pos}º ${lbl}</span>${foto(v)}<h3>${esc(r.nome)}</h3><div style="font-size:14px">${esc(v.partido||'')}</div><div class="nt">${nt(r.nota)}<small style="font-size:16px"> /100</small></div>
+  <ul><li><b>${r.presencas}</b> presença(s) em ${r.avaliaveis} sessões avaliadas${r.justificadas?` · ${r.justificadas} ausência(s) justificada(s)`:''}${r.justSaude?` · ${r.justSaude} por saúde ou família (não contam)`:''}${r.faltas?` · <b>${r.faltas} falta(s) sem justificativa</b>`:''}</li>
+  <li><b>${r.leis+r.cobrancas}</b> projeto(s) de lei ou cobrança(s) ao Executivo · <b>${r.indicacoes}</b> indicação(ões)</li>
+  <li class="cu">${r.presencas?br(r.custoPorPresenca)+' de salário por sessão em que esteve presente':'Nenhuma presença no mês, com o mesmo salário'}</li></ul></div>`}
+ function draw(){const m=P.meses[+sel.value];const L={};m.linhas.forEach(r=>L[r.id]=r);
+  const menos=m.menos.map(i=>L[i]),mais=m.mais.map(i=>L[i]);
+  document.getElementById('plBox').innerHTML=
+  `<p class="pl-h" style="color:var(--hot-text,#B72E14)">Os 3 menos eficientes de ${m.rotulo}</p><div class="pl-pod">${menos.map((r,i)=>card(r,i+1,'ruim','menos eficiente')).join('')}</div>
+   <p class="pl-h" style="color:#1F7A4D">Os 3 mais eficientes de ${m.rotulo}</p><div class="pl-pod">${mais.map((r,i)=>card(r,i+1,'bom','mais eficiente')).join('')}</div>
+   <details class="card"><summary><b>Ver os ${m.linhas.length} vereadores do mês</b></summary><div style="overflow-x:auto"><table class="pl-t"><thead><tr><th>#</th><th>Vereador</th><th>Nota</th><th>Presenças</th><th>Sessões</th><th>Sem justif.</th><th>Leis/cobranças</th><th>Indicações</th><th>R$ por presença</th></tr></thead><tbody>${
+    m.linhas.slice().sort((a,b)=>(b.avaliado-a.avaliado)||((b.nota||0)-(a.nota||0))).map((r,i)=>`<tr><td>${r.avaliado?i+1:'—'}</td><td>${esc(r.nome)}</td><td>${r.avaliado?nt(r.nota):'não avaliado'}</td><td>${r.presencas}</td><td>${r.avaliaveis}</td><td>${r.faltas}</td><td>${r.leis+r.cobrancas}</td><td>${r.indicacoes}</td><td>${r.avaliado?br(r.custoPorPresenca):'—'}</td></tr>`).join('')}</tbody></table></div></details>
+   <details class="card" style="margin-top:10px"><summary><b>Como a nota é calculada</b></summary><div class="formula">Nota de 0 a 100 no mês, a mesma para os 21:
+  Presença em plenário ....... até 50 = 50 × presenças ÷ sessões avaliadas
+  Leis e cobranças ........... até 30 = 15 por projeto de lei, emenda, resolução ou requerimento ao Executivo (máx. 2)
+  Indicações para bairros .... até 20 =  2 por indicação (máx. 10)
+  Falta sem justificativa .... −5 cada
+  Homenagens (moções, títulos, honra ao mérito) não pontuam.
+
+Sessões avaliadas: presença, falta sem justificativa e ausência justificada por compromisso político ou outro motivo.
+Ausência justificada por saúde ou família e provável licença não contam, nem a favor nem contra.
+Só entram meses fechados com pelo menos ${P.regras.minSessoesMes} sessões, e só vereadores com pelo menos ${P.regras.minSessoesVereador} sessões avaliadas no mês.
+Desempate: menos presenças, depois menos leis e cobranças.
+Custo: salário de ${br(P.subsidio)} por mês, igual para os 21. Assessores e gabinete não entram, porque a Câmara não publica esse custo por vereador.</div></details>
+   <p class="note" style="margin-top:12px">O placar mede só o que fica registrado no portal da Câmara. Não mede trabalho fora do plenário, como atendimento nos bairros. É um retrato do mês, não uma avaliação do mandato inteiro.</p>
+   <p class="source">Fontes: <a href="${esc(P.fonte)}" target="_blank" rel="noopener">SICAM, área pública da Câmara de Maricá</a> (presenças, justificativas e proposições) e <a href="${esc(P.fonteSubsidio)}" target="_blank" rel="noopener">folha da Câmara</a> (salário). Última sessão coletada: ${P.ultimaSessao.split('-').reverse().join('/')}. <b>Direito de resposta:</b> vereador, se algum número estiver errado ou faltar contexto, <a href="${esc(D.meta.contatoErros)}" target="_blank" rel="noopener">envie sua resposta</a> e ela é publicada aqui, com a fonte.</p>`}
+ sel.addEventListener('change',draw);draw();
+})();
 /* ---------- rankings ---------- */
 const IND=[
  {k:'pres',nome:'Presença',desc:'Presença efetiva nas sessões',nota:'Percentual de sessões ordinárias e extraordinárias em que o vereador estava presente, no período em que tinha mandato ativo. Ausência com justificativa do gabinete não conta como presença.',val:v=>v.pct,fmt:v=>fmt(v,1)+'%',stack:true,fonte:'Fonte: presenças e sessões na Área Pública do SICAM.'},

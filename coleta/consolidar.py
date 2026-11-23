@@ -104,6 +104,7 @@ for r in just.itertuples():
 
 # ---------- presença por parlamentar ----------
 pres_rows, licencas = [], []
+status_sessoes = []  # por sessão: P presente, J justificada, F falta, L provável licença (usado no Placar mensal)
 for v in ver.itertuples():
     pid = int(v.id_sicam)
     seq = [s for s in ordem if True]
@@ -137,6 +138,7 @@ for v in ver.itertuples():
             i = j
         else:
             i += 1
+    status_sessoes += [dict(id=pid, data=str(data_sessao[s].date()), st=st, motivo=(jdates[pid][data_sessao[s].normalize()][0] if st == 'J' else None)) for s, st in status]
     c = defaultdict(int)
     for _, st in status:
         c[st] += 1
@@ -270,6 +272,7 @@ rep = (ind.dropna(subset=['rua']).groupby(['rua', 'macro', 'tema'], dropna=False
        .reset_index().query('n >= 3').sort_values('n', ascending=False))
 
 # ---------- saídas ----------
+json.dump(status_sessoes, open(OUT / 'presenca_sessoes.json', 'w'), ensure_ascii=False)
 presenca.to_json(OUT / 'presenca.json', orient='records', force_ascii=False, indent=1)
 votos.to_json(OUT / 'votos.json', orient='records', force_ascii=False, indent=1)
 naos.to_csv(OUT / 'votos_nao_abstencao.csv', index=False)

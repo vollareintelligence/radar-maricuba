@@ -33,6 +33,7 @@ IMP = json.load(open(C / 'imprensa.json')) if (C / 'imprensa.json').exists() els
 if PROM:  # só entra no card o que o Mestre Theo aprovou
     for _i in PROM['itens']:
         _i['imprensa'] = sorted([{k: n[k] for k in ('titulo', 'veiculo', 'data', 'link', 'linkOriginal')} for n in IMP['itens'] if _i['id'] in n['temas']], key=lambda n: n['data'], reverse=True)
+PLACAR = json.load(open(C / 'placar.json', encoding='utf-8')) if (C / 'placar.json').exists() else None
 PMAPA = json.load(open(C / 'problemas_mapa.json')) if (C / 'problemas_mapa.json').exists() else []
 if PREF and (C / 'obras_mapa.json').exists():
     PREF['obrasMapa'] = json.load(open(C / 'obras_mapa.json'))
@@ -106,7 +107,7 @@ gastometro = dict(
     populacao=197277, fontePopulacao='https://www.ibge.gov.br/cidades-e-estados/rj/marica.html',
     dataBase='2026-11-14', diasAno2026=318,
 )
-js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro, problemasMapa=PMAPA, secretarias=SECR, natal=NATAL, promessas=PROM), ensure_ascii=False, separators=(',', ':')) + ';'
+js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro, problemasMapa=PMAPA, secretarias=SECR, natal=NATAL, promessas=PROM, placar=PLACAR), ensure_ascii=False, separators=(',', ':')) + ';'
 (S / 'dados.js').write_text(js, encoding='utf-8')
 print('vereadores', len(out), 'com foto', sum(1 for r in out if r['foto']), '| dados.js', len(js) // 1024, 'KB')
 print('sem foto:', [r['nome'] for r in out if not r['foto']])

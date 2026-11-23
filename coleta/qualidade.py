@@ -55,6 +55,12 @@ if _os.path.exists(_NOT):
     ok(all(set(i.get('temas', [])) <= _ids for i in _n.get('itens', [])), 'noticias: tema que nao e id de promessa')
     ok(not _n.get('falhas'), 'noticias: coleta com consulta sem resposta')
 ok(all(n.get('link','').startswith('https://') and n.get('data') and n.get('veiculo') for i in PR.get('itens', []) for n in i.get('imprensa', [])), 'imprensa: item aprovado sem link https, data ou veiculo')
+PL = D.get('placar') or {}
+ok(bool(PL.get('meses')), 'placar: sem mes fechado')
+for _m in PL.get('meses', []):
+    ok(len(_m['menos']) == 3 and len(_m['mais']) == 3, 'placar: podio incompleto em ' + _m['mes'])
+    ok(_m['sessoes'] >= PL['regras']['minSessoesMes'], 'placar: mes com poucas sessoes ' + _m['mes'])
+    ok(all(0 <= r['nota'] <= 100 for r in _m['linhas'] if r['avaliado']), 'placar: nota fora de 0-100 em ' + _m['mes'])
 N = D.get('natal') or {}
 ok(len(N.get('contratos', [])) == 2 and all(c.get('fonte', '').startswith('https://') and c.get('valor', 0) > 1e6 and c.get('processo') for c in N.get('contratos', [])), 'natal: contratos sem fonte, processo ou valor')
 ok(N.get('pagamentos', {}).get('2025', {}).get('pago', 0) > 1e6 and N.get('pagamentos', {}).get('2026', {}).get('pago', 0) > 1e6 and N['pagamentos'].get('fonte', '').startswith('https://'), 'natal: pagamentos ausentes')
