@@ -723,6 +723,53 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
   .atalhos{grid-template-columns:1fr}
 }
 
+/* ===== CIDADÃO FISCALIZADOR (PC + MOBILE) ===== */
+#cidadao{border-top:3px solid var(--ink);margin-top:clamp(36px,5vw,56px)}
+#cidadao .cf-kick{font-family:var(--disp);letter-spacing:1.1px;text-transform:uppercase;color:var(--hot-text);margin:0 0 6px;font-size:14.5px}
+.cf-layout{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:24px;align-items:start}
+.cf-form-card{background:var(--card);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--hot);padding:clamp(16px,2.4vw,24px)}
+.cf-form-card h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:26px;margin:0 0 6px;line-height:1}
+.cf-field{margin-top:12px}
+.cf-field label{display:block;font-weight:700;font-size:14.5px;margin:0 0 4px;color:var(--ink)}
+.cf-field input[type=text],.cf-field input[type=tel],.cf-field select,.cf-field textarea{
+  width:100%;font:inherit;font-size:15.5px;min-height:44px;padding:8px 12px;
+  border:2px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);
+}
+.cf-field textarea{min-height:92px;resize:vertical}
+.cf-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cf-gps-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}
+.cf-gps-info{font-size:13.5px;color:var(--muted-fg)}
+.cf-preview{margin-top:10px;display:flex;align-items:center;gap:12px;background:var(--paper);border:1.5px solid var(--ink);padding:8px}
+.cf-preview[hidden],.cf-msg[hidden],#cfPrivWrap[hidden]{display:none}
+.cf-preview img{width:68px;height:68px;object-fit:cover;border:1.5px solid var(--ink);flex:none}
+.cf-preview span{font-size:13.5px;color:var(--muted-fg)}
+.cf-priv-box{background:var(--paper);border-left:5px solid var(--ink);padding:10px 12px;margin-top:12px}
+.cf-priv-box p{margin:6px 0 0;font-size:13.5px;color:var(--muted-fg)}
+.cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-msg{margin-top:12px;padding:12px 14px;border:2px solid var(--ink);background:var(--paper);font-size:15px}
+.cf-msg.ok{background:#DCFCE7;border-color:var(--good);color:#14532D}
+.cf-msg.warn{background:#FEF3C7;border-color:#92400E;color:#78350F}
+.cf-msg.err{background:#FEE2E2;border-color:#991B1B;color:#991B1B}
+.cf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.cf-card{background:var(--card);border:2px solid var(--ink);display:flex;flex-direction:column}
+.cf-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:var(--ink);color:var(--paper)}
+.cf-proto{font-family:var(--disp);font-size:20px;letter-spacing:.6px}
+.cf-st{font-size:12px;font-weight:700;text-transform:uppercase;padding:3px 8px}
+.cf-st-aprovado{background:var(--hot);color:#111}
+.cf-st-andamento{background:#1F6FB5;color:#fff}
+.cf-st-resolvido{background:var(--good);color:#fff}
+.cf-imgwrap{display:block;border-bottom:2px solid var(--ink);background:var(--muted)}
+.cf-imgwrap img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.cf-card-body{padding:14px;display:flex;flex-direction:column;gap:8px}
+.cf-meta{font-size:13px;font-weight:700;text-transform:uppercase;color:var(--muted-fg)}
+.cf-card-body h3{margin:0;font-size:19px;line-height:1.2;color:var(--ink)}
+.cf-loc{margin:0;font-size:14.5px;color:var(--ink)}
+.cf-desc{margin:0;font-size:15px;color:var(--secondary);line-height:1.45}
+.cf-resp{background:var(--paper);border-left:4px solid var(--ink);padding:8px 10px;font-size:14px}
+.cf-resp-ver{border-left-color:var(--good)}
+@media (max-width:960px){.cf-layout{grid-template-columns:1fr}}
+@media (max-width:560px){.cf-row2{grid-template-columns:1fr}}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
@@ -747,6 +794,7 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
     <a href="#natal" class="mob-only">Natal</a>
     <a href="#empresas">Empresas</a>
     <a href="#obras">Obras</a>
+    <a href="#cidadao">Fiscalize</a>
     <a href="#metodo" class="mob-only">Como lemos os dados</a>
   </nav>
 </div></header>
@@ -760,7 +808,7 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
       <p class="escopo"><b>Todos os dados são de Maricá (RJ):</b> quanto a Prefeitura pagou, a quem pagou e o que fazem os 21 vereadores da Câmara Municipal — direto dos portais oficiais de transparência, com fonte em cada número.</p>
       <div class="hero-actions">
         <a class="cta-main" href="#gastometro">Explorar o Gastômetro</a>
-        <a class="cta-ghost" href="#metodo">Como lemos os dados</a>
+        <a class="cta-ghost" href="#cidadao">Cidadão Fiscalizador</a>
       </div>
     </div>
     <aside class="hero-panel" aria-label="Destaque financeiro oficial">
@@ -770,7 +818,7 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
       <div class="stamp" id="stamp"></div>
     </aside>
   </div>
-  <div class="atalhos" aria-label="Atalhos"><a href="#gastometro">Gastômetro</a><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
+  <div class="atalhos" aria-label="Atalhos"><a href="#gastometro">Gastômetro</a><a href="#cidadao">Cidadão Fiscalizador</a><a href="#vereadores">Meu vereador</a><a href="#prefeitura">Para onde vai o dinheiro</a><a href="#empresas">Quem mais recebe</a><a href="#obras">Mapa das obras</a><a id="zap" class="zap" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a></div>
 </div></div>
 <div class="wrap"><div class="stats" id="stats" aria-label="Resumo da base"></div></div>
 
@@ -921,11 +969,111 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
   <div class="card" style="margin-top:14px"><h3 class="sh" style="margin-top:0">Todas as obras acompanhadas pela Prefeitura</h3><div id="oAcomp"></div></div>
 </div></section>
 
+<section id="cidadao"><div class="wrap">
+  <p class="cf-kick">Participação popular · sigilo garantido</p>
+  <h2>Cidadão Fiscalizador</h2>
+  <p class="lead">Viu um problema na sua rua, posto de saúde, hospital, escola ou obra em Maricá? Envie o relato com foto de forma anônima ou identificada. Seus dados pessoais <b>nunca são publicados</b>: no portal entram apenas o protocolo, a foto, o local e o problema, com espaço aberto para a Prefeitura responder ou um vereador agir.</p>
+
+  <div class="cf-layout">
+    <div class="cf-form-card">
+      <h3>Reportar um problema</h3>
+      <p class="note" style="margin:0 0 8px">Todo relato passa por conferência antes de ir ao ar. Não envie fotos com rostos de pessoas ou placas de veículos.</p>
+      <form id="cfForm" novalidate>
+        <div class="cf-hp" aria-hidden="true"><label for="cfWebsite">Site</label><input id="cfWebsite" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <div class="cf-field">
+          <label for="cfCat">Tipo do problema *</label>
+          <select id="cfCat" required>
+            <option value="Buraco / Asfalto">Buraco / Asfalto</option>
+            <option value="Iluminação pública">Iluminação pública</option>
+            <option value="Saúde (Hospital / Posto)">Saúde (Hospital / Posto)</option>
+            <option value="Educação (Escola / Creche)">Educação (Escola / Creche)</option>
+            <option value="Água / Esgoto / Drenagem">Água / Esgoto / Drenagem</option>
+            <option value="Obra parada ou inacabada">Obra parada ou inacabada</option>
+            <option value="Transporte / Trânsito">Transporte / Trânsito</option>
+            <option value="Lixo / Limpeza urbana">Lixo / Limpeza urbana</option>
+            <option value="Outro problema público">Outro problema público</option>
+          </select>
+        </div>
+
+        <div class="cf-field">
+          <label for="cfTitulo">Título do problema *</label>
+          <input id="cfTitulo" type="text" maxlength="120" required placeholder="Ex.: Buraco fundo na pista principal">
+        </div>
+
+        <div class="cf-row2">
+          <div class="cf-field">
+            <label for="cfBairro">Bairro *</label>
+            <input id="cfBairro" type="text" maxlength="80" required placeholder="Ex.: Itaipuaçu, Centro, Inoã...">
+          </div>
+          <div class="cf-field">
+            <label for="cfLocal">Rua ou local *</label>
+            <input id="cfLocal" type="text" maxlength="160" required placeholder="Ex.: Rua 34 ou Hospital Conde Modesto">
+          </div>
+        </div>
+
+        <div class="cf-gps-row">
+          <button class="btn" id="cfGps" type="button" style="font-size:14px">Usar minha localização (GPS)</button>
+          <span class="cf-gps-info" id="cfGpsInfo">Opcional — ajuda a localizar o ponto exato.</span>
+        </div>
+
+        <div class="cf-field">
+          <label for="cfDesc">Descreva o que está acontecendo *</label>
+          <textarea id="cfDesc" maxlength="1200" required placeholder="Conte há quanto tempo o problema existe e como afeta os moradores..."></textarea>
+        </div>
+
+        <div class="cf-field">
+          <label for="cfFoto">Foto do local (opcional, recomendada)</label>
+          <input id="cfFoto" type="file" accept="image/*" style="min-height:44px;padding:6px 0;width:100%">
+          <div class="cf-preview" id="cfPreview" hidden></div>
+        </div>
+
+        <div class="cf-priv-box">
+          <label class="chk" style="margin:0"><input type="checkbox" id="cfAnon" checked> <b>Enviar de forma anônima</b></label>
+          <p>Se quiser deixar seu contato para nossa equipe retornar, desmarque acima. <b>Nome e WhatsApp são sigilosos e nunca aparecem no site.</b></p>
+          <div id="cfPrivWrap" hidden>
+            <div class="cf-field">
+              <label for="cfNome">Seu nome (privado — só a equipe vê)</label>
+              <input id="cfNome" type="text" maxlength="120" placeholder="Opcional">
+            </div>
+            <div class="cf-field">
+              <label for="cfZap">Seu WhatsApp (privado — só a equipe vê)</label>
+              <input id="cfZap" type="tel" maxlength="40" placeholder="(21) 99999-9999">
+            </div>
+          </div>
+        </div>
+
+        <div id="cfMsg" class="cf-msg" hidden></div>
+        <div style="margin-top:16px">
+          <button class="cta-main" id="cfSubmit" type="submit" style="width:100%;cursor:pointer">Enviar relato para conferência</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <h3 class="sh" style="margin-top:0">Problemas registrados pela população</h3>
+      <div class="controls">
+        <div class="seg" id="cfTabs" role="group" aria-label="Filtrar relatos por situação">
+          <button type="button" data-cfst="todos" aria-pressed="true">Todos</button>
+          <button type="button" data-cfst="aprovado" aria-pressed="false">Aguardando solução</button>
+          <button type="button" data-cfst="andamento" aria-pressed="false">Em andamento</button>
+          <button type="button" data-cfst="resolvido" aria-pressed="false">Resolvidos</button>
+        </div>
+      </div>
+      <div class="controls">
+        <label class="sr" for="cfBusca">Buscar relato por bairro, rua ou protocolo</label>
+        <input type="search" id="cfBusca" placeholder="Buscar por bairro, rua ou protocolo (#LM-...)" style="width:100%;max-width:440px">
+      </div>
+      <div id="cfFeed"></div>
+    </div>
+  </div>
+</div></section>
+
 <section id="em-breve"><div class="wrap">
   <h2>O que vem a seguir</h2>
   <div class="soon">
     <div class="card"><h3>Mais da Prefeitura</h3><p class="note" style="margin:0">Empenhos detalhados por fornecedor, dispensas, resultados de licitações e contratos. Em coleta.</p></div>
-        <div class="card"><h3>Relatos de moradores</h3><p class="note" style="margin:0">Em estudo. Exige moderação, proteção de dados e orientação jurídica antes de abrir.</p></div>
+    <div class="card"><h3>Alertas no WhatsApp</h3><p class="note" style="margin:0">Notificações rápidas de novos gastos, atualizações do Placar do Mês e andamento dos relatos do Cidadão Fiscalizador.</p></div>
   </div>
 </div></section>
 
@@ -958,7 +1106,7 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
   </svg>
   <div>
     <h2>Quem faz a Lupa Maricá</h2>
-    <p>Projeto da <b>Volare Intelligence</b>, de Theo Barros. A Volare presta serviços de comunicação e marketing político a clientes, e um deles é parlamentar que aparece nesta base. Por isso as regras são públicas, a mesma régua vale para todos e cada número leva à fonte oficial.</p>
+    <p>Projeto da <b>Vollare Intelligence</b>. A Vollare não presta serviços para nenhum parlamentar ou órgão público presente nesta base. As regras são públicas, a mesma régua vale para todos e cada número leva à fonte oficial.</p>
     <p>Dados públicos de <a href="https://marica.sicam.app/areapublica" target="_blank" rel="noopener">marica.sicam.app</a> e <a href="https://marica.rj.leg.br" target="_blank" rel="noopener">marica.rj.leg.br</a>. Última atualização: <span id="rodAt"></span>.</p>
     <p id="rodErro"></p>
   </div>
@@ -1366,5 +1514,7 @@ drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();dr
  const el=document.getElementById('eLista');if(el){const d=document.createElement('details');d.className='mcol';const sm=document.createElement('summary');sm.textContent='Ver as 100 maiores recebedoras';d.appendChild(sm);const row=document.getElementById('buscaEmp').closest('.row');el.parentNode.insertBefore(d,row);d.appendChild(row);d.appendChild(el);const src=d.parentNode.querySelector('.source');if(src)d.appendChild(src)}
 })();
 </script>
+<script src="cidadao-config.js"></script>
+<script src="cidadao.js"></script>
 </body>
 </html>
