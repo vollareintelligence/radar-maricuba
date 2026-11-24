@@ -71,25 +71,35 @@
     });
   }
 
+  const inputCam = $('#cfCam');
   const inputFoto = $('#cfFoto');
   const prevWrap = $('#cfPreview');
-  if (inputFoto) {
-    inputFoto.addEventListener('change', async () => {
-      const f = inputFoto.files && inputFoto.files[0];
-      fotoBlob = null;
-      if (!f) { prevWrap.hidden = true; prevWrap.innerHTML = ''; return; }
-      try {
-        fotoBlob = await comprimirFoto(f);
-        const kb = Math.round(fotoBlob.size / 1024);
-        const pUrl = URL.createObjectURL(fotoBlob);
-        prevWrap.innerHTML = `<img src="${pUrl}" alt="Prévia da foto selecionada"><span>Foto pronta (${kb} KB · metadados EXIF removidos)</span>`;
-        prevWrap.hidden = false;
-      } catch (err) {
-        prevWrap.innerHTML = `<span>${esc(err.message)}</span>`;
-        prevWrap.hidden = false;
-      }
-    });
+
+  async function onPickFile(inputEl) {
+    const f = inputEl && inputEl.files && inputEl.files[0];
+    if (!f) return;
+    fotoBlob = null;
+    try {
+      fotoBlob = await comprimirFoto(f);
+      const kb = Math.round(fotoBlob.size / 1024);
+      const pUrl = URL.createObjectURL(fotoBlob);
+      prevWrap.innerHTML = `<img src="${pUrl}" alt="Prévia da foto selecionada"><span>Foto pronta (${kb} KB · metadados EXIF removidos)</span><button type="button" class="btn" id="cfRmFoto" style="margin-left:auto;min-height:36px;padding:4px 10px;font-size:13px">Remover</button>`;
+      prevWrap.hidden = false;
+      const rm = $('#cfRmFoto');
+      if (rm) rm.addEventListener('click', () => {
+        fotoBlob = null;
+        if (inputCam) inputCam.value = '';
+        if (inputFoto) inputFoto.value = '';
+        prevWrap.hidden = true;
+        prevWrap.innerHTML = '';
+      });
+    } catch (err) {
+      prevWrap.innerHTML = `<span>${esc(err.message)}</span>`;
+      prevWrap.hidden = false;
+    }
   }
+  if (inputCam) inputCam.addEventListener('change', () => onPickFile(inputCam));
+  if (inputFoto) inputFoto.addEventListener('change', () => onPickFile(inputFoto));
 
   // Botão opcional de GPS (útil no celular)
   const btnGps = $('#cfGps');
