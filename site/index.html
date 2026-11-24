@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lupa Maricá — Prefeitura de Maricá (RJ) e Câmara de Vereadores de Maricá em dados abertos</title>
 <meta name="description" content="Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número.">
-<link rel="canonical" href="https://vollareintelligence.github.io/lupa-marica/">
+<link rel="canonical" href="https://lupamarica.com/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Lupa Maricá — Prefeitura e Câmara de Maricá (RJ) em dados abertos">
 <meta property="og:description" content="Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número.">
-<meta property="og:url" content="https://vollareintelligence.github.io/lupa-marica/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lupa Maricá","alternateName":["Lupa Marica","Portal Lupa Maricá"],"url":"https://vollareintelligence.github.io/lupa-marica/","inLanguage":"pt-BR","about":{"@type":"City","name":"Maricá","containedInPlace":{"@type":"State","name":"Rio de Janeiro"}},"description":"Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número."}</script>
+<meta property="og:url" content="https://lupamarica.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lupa Maricá","alternateName":["Lupa Marica","Portal Lupa Maricá"],"url":"https://lupamarica.com/","inLanguage":"pt-BR","about":{"@type":"City","name":"Maricá","containedInPlace":{"@type":"State","name":"Rio de Janeiro"}},"description":"Dados oficiais de Maricá, Rio de Janeiro: quanto a Prefeitura de Maricá pagou, quanto custam os 21 vereadores da Câmara Municipal de Maricá, empresas, obras e pedidos dos moradores. Fonte oficial em cada número."}</script>
 <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="vendor/MarkerCluster.css">
 <style>
 /* ===== LUPA MARICÁ — TEMA CARTAZ v5 (DESIGN.md / taste-design) ===== */
@@ -1359,7 +1359,7 @@ drawGrid();drawRank();drawMeu();drawTempo();drawProb();drawPref();drawFolha();dr
   byId.forEach((_,id)=>{const s=document.getElementById(id);if(s)io.observe(s)});
  }
  const z=document.getElementById('zap');
- if(z){const url='https://vollareintelligence.github.io/lupa-marica/';z.href='https://wa.me/?text='+encodeURIComponent('Lupa Maricá: o que a Prefeitura e a Câmara de Maricá fazem, com dados oficiais e a fonte em cada número. '+url)}
+ if(z){const url='https://lupamarica.com/';z.href='https://wa.me/?text='+encodeURIComponent('Lupa Maricá: o que a Prefeitura e a Câmara de Maricá fazem, com dados oficiais e a fonte em cada número. '+url)}
  const mb=document.getElementById('mapa');if(mb&&!document.querySelector('.mapdica')){const p=document.createElement('p');p.className='note mapdica';p.textContent='No celular, use dois dedos para mover e dar zoom no mapa. Toque num ponto para ver os detalhes.';mb.parentNode.insertAdjacentElement('afterend',p)}
  if(!window.matchMedia('(max-width:720px)').matches)return;
  document.querySelectorAll('#prefeitura h3.sh').forEach((h,i)=>{const d=document.createElement('details');d.className='mcol';if(i===0)d.open=true;const sm=document.createElement('summary');sm.textContent=h.textContent;d.appendChild(sm);let n=h.nextElementSibling;const mv=[];while(n&&!(n.tagName==='H3'&&n.classList.contains('sh'))){mv.push(n);n=n.nextElementSibling}h.replaceWith(d);mv.forEach(x=>d.appendChild(x))});
