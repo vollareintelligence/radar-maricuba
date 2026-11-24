@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderação — Cidadão Fiscalizador · Lupa Maricá</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+@font-face{font-family:"Anton";src:url(fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{
+  --ink:#111111;--paper:#F1E8D6;--card:#FBF6EA;--muted:#E3D8C0;--muted-fg:#4A4338;
+  --hot:#D93A1E;--hot-text:#B72E14;--good:#1F7A4D;--warn:#B45309;--line:#C9BDA6;
+  --disp:"Anton","Impact",sans-serif;--body:"Atkinson Hyperlegible",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+a{color:var(--hot-text)}
+header{background:var(--ink);color:var(--paper);border-bottom:5px solid var(--hot);padding:12px 0;position:sticky;top:0;z-index:100}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-size:20px;text-transform:uppercase;letter-spacing:.5px;color:var(--paper);text-decoration:none}
+.brand span{color:var(--hot)}
+main{padding:28px 0 60px}
+h1,h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;margin:0 0 12px;line-height:1}
+h1{font-size:clamp(30px,5vw,48px)}
+.card{background:var(--card);border:2px solid var(--ink);padding:18px;margin-bottom:16px}
+.login-box{max-width:440px;margin:36px auto;box-shadow:6px 6px 0 var(--hot)}
+label{display:block;font-weight:700;font-size:14.5px;margin:10px 0 4px}
+input,textarea,select{width:100%;font:inherit;min-height:44px;padding:8px 10px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:0}
+textarea{min-height:76px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 14px;font:inherit;font-weight:700;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--hot);color:#111}
+.btn.primary{background:var(--hot);color:#111;font-family:var(--disp);font-weight:400;font-size:18px;letter-spacing:.5px;text-transform:uppercase}
+.btn.good{background:var(--good);color:#fff;border-color:var(--ink)}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.danger{background:#fff;color:#991B1B;border-color:#991B1B}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.item{background:var(--card);border:2px solid var(--ink);padding:16px;margin-bottom:16px}
+.item-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-bottom:1.5px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.proto{font-family:var(--disp);font-size:24px;letter-spacing:.5px}
+.badge{display:inline-block;padding:3px 9px;font-size:12.5px;font-weight:700;text-transform:uppercase;background:var(--ink);color:var(--paper)}
+.badge.pendente{background:#FEF3C7;color:#7C2D12;border:1px solid #7C2D12}
+.badge.aprovado{background:var(--hot);color:#111}
+.badge.andamento{background:#1F6FB5;color:#fff}
+.badge.resolvido{background:var(--good);color:#fff}
+.badge.rejeitado{background:var(--muted);color:var(--muted-fg)}
+.item-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px;align-items:start}
+.item-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink);background:var(--muted);display:block}
+.priv{background:var(--ink);color:var(--paper);padding:10px 12px;margin:10px 0;border-left:5px solid var(--hot);font-size:14.5px}
+.priv a{color:#FFB199}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.msg{padding:10px 12px;border:2px solid var(--ink);background:#FEF3C7;margin:10px 0;font-weight:700}
+.msg.ok{background:#DCFCE7;border-color:var(--good);color:#14532D}
+.msg.err{background:#FEE2E2;border-color:#991B1B;color:#991B1B}
+@media (max-width:720px){.item-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="index.html">Lupa <span>Maricá</span> · Moderação</a>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a class="btn dark" href="index.html#cidadao" style="border-color:var(--paper);min-height:40px;font-size:14px">Ver site</a>
+    <button class="btn" id="btnSair" type="button" hidden style="min-height:40px;font-size:14px">Sair</button>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+  <div id="cfgWarn" class="msg err" hidden>
+    Supabase ainda não configurado. Preencha <code>SUPABASE_URL</code> e <code>SUPABASE_ANON_KEY</code> em <code>site/cidadao-config.js</code> (veja <code>supabase/README.md</code>).
+  </div>
+
+  <section id="secLogin" class="card login-box" hidden>
+    <h1>Acesso da equipe</h1>
+    <p style="margin:0 0 12px;color:var(--muted-fg)">Painel restrito aos administradores da Lupa Maricá. Dados privados de denunciantes só aparecem aqui.</p>
+    <form id="frmLogin">
+      <label for="email">E-mail de administrador</label>
+      <input id="email" type="email" required autocomplete="username">
+      <label for="pass">Senha</label>
+      <input id="pass" type="password" required autocomplete="current-password">
+      <div id="loginMsg" class="msg err" hidden></div>
+      <div style="margin-top:14px"><button class="btn primary" type="submit" style="width:100%">Entrar</button></div>
+    </form>
+  </section>
+
+  <section id="secApp" hidden>
+    <h1>Fila do Cidadão Fiscalizador</h1>
+    <p style="margin:0 0 14px;color:var(--muted-fg)">Aprove relatos verificados para publicar na Lupa Maricá. Os dados do denunciante abaixo são privados e nunca vão ao ar.</p>
+    <div class="tabs" id="tabs">
+      <button class="btn" data-st="pendente" aria-pressed="true">Pendentes</button>
+      <button class="btn" data-st="aprovado" aria-pressed="false">Aprovados</button>
+      <button class="btn" data-st="andamento" aria-pressed="false">Em andamento</button>
+      <button class="btn" data-st="resolvido" aria-pressed="false">Resolvidos</button>
+      <button class="btn" data-st="rejeitado" aria-pressed="false">Rejeitados</button>
+    </div>
+    <div id="appMsg" class="msg" hidden></div>
+    <div id="lista"></div>
+  </section>
+</div></main>
+
+<script src="cidadao-config.js"></script>
+<script>
+(function(){
+  const CFG = window.LUPA_CIDADAO_CFG || {};
+  const URL = (CFG.SUPABASE_URL || '').replace(/\/+$/, '');
+  const KEY = CFG.SUPABASE_ANON_KEY || '';
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const dt = iso => { try { return new Date(iso).toLocaleString('pt-BR'); } catch { return iso; } };
+
+  if (!URL || !KEY) {
+    $('#cfgWarn').hidden = false;
+    return;
+  }
+
+  let token = sessionStorage.getItem('lupa_admin_token') || '';
+  let filtro = 'pendente';
+
+  async function api(path, opts = {}) {
+    const headers = Object.assign({
+      'apikey': KEY,
+      'Authorization': 'Bearer ' + (token || KEY),
+      'Content-Type': 'application/json'
+    }, opts.headers || {});
+    const r = await fetch(URL + path, Object.assign({}, opts, { headers }));
+    if (r.status === 401) { logout(); throw new Error('Sessão expirada. Faça login novamente.'); }
+    const txt = await r.text();
+    let data = null;
+    try { data = txt ? JSON.parse(txt) : null; } catch { data = txt; }
+    if (!r.ok) throw new Error((data && (data.msg || data.message || data.error_description)) || ('Erro HTTP ' + r.status));
+    return data;
+  }
+
+  function showApp() {
+    $('#secLogin').hidden = true;
+    $('#secApp').hidden = false;
+    $('#btnSair').hidden = false;
+    carregar();
+  }
+  function logout() {
+    token = '';
+    sessionStorage.removeItem('lupa_admin_token');
+    $('#secApp').hidden = true;
+    $('#btnSair').hidden = true;
+    $('#secLogin').hidden = false;
+  }
+  $('#btnSair').addEventListener('click', logout);
+
+  $('#frmLogin').addEventListener('submit', async e => {
+    e.preventDefault();
+    $('#loginMsg').hidden = true;
+    try {
+      const res = await api('/auth/v1/token?grant_type=password', {
+        method: 'POST',
+        body: JSON.stringify({ email: $('#email').value.trim(), password: $('#pass').value })
+      });
+      token = res.access_token;
+      sessionStorage.setItem('lupa_admin_token', token);
+      showApp();
+    } catch (err) {
+      $('#loginMsg').textContent = err.message;
+      $('#loginMsg').hidden = false;
+    }
+  });
+
+  $('#tabs').addEventListener('click', e => {
+    const b = e.target.closest('button[data-st]');
+    if (!b) return;
+    filtro = b.dataset.st;
+    document.querySelectorAll('#tabs button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    carregar();
+  });
+
+  function flash(txt, ok = true) {
+    const m = $('#appMsg');
+    m.textContent = txt;
+    m.className = 'msg ' + (ok ? 'ok' : 'err');
+    m.hidden = false;
+    setTimeout(() => { m.hidden = true; }, 4000);
+  }
+
+  async function carregar() {
+    $('#lista').innerHTML = '<p>Carregando relatos...</p>';
+    try {
+      const rows = await api(`/rest/v1/relatos?select=*,relatos_privados(*)&status=eq.${encodeURIComponent(filtro)}&order=created_at.desc&limit=100`);
+      if (!rows.length) {
+        $('#lista').innerHTML = '<div class="card">Nenhum relato com status <b>' + esc(filtro) + '</b>.</div>';
+        return;
+      }
+      $('#lista').innerHTML = rows.map(r => {
+        const priv = Array.isArray(r.relatos_privados) ? r.relatos_privados[0] : r.relatos_privados;
+        const tel = priv && priv.contato_denunciante ? priv.contato_denunciante.replace(/\D/g, '') : '';
+        const zapLink = tel ? `<a href="https://wa.me/55${tel}" target="_blank" rel="noopener">Abrir WhatsApp</a>` : '';
+        const mapsLink = (r.lat != null && r.lng != null)
+          ? `<a class="btn" href="https://www.google.com/maps?q=${r.lat},${r.lng}" target="_blank" rel="noopener">Abrir no Google Maps</a>`
+          : '';
+        return `<article class="item" data-id="${r.id}">
+          <div class="item-top">
+            <div><span class="proto">#${esc(r.protocolo)}</span> · <b>${esc(r.categoria)}</b> · <small>${esc(dt(r.created_at))}</small></div>
+            <span class="badge ${esc(r.status)}">${esc(r.status)}</span>
+          </div>
+          <div class="item-grid">
+            <div>${r.foto_url ? `<a href="${esc(r.foto_url)}" target="_blank" rel="noopener"><img src="${esc(r.foto_url)}" alt="Foto do relato ${esc(r.protocolo)}"></a>` : '<div style="border:2px dashed var(--line);padding:28px 12px;text-align:center;color:var(--muted-fg)">Sem foto</div>'}</div>
+            <div>
+              <h2 style="font-size:24px;margin:0 0 4px">${esc(r.titulo)}</h2>
+              <p style="margin:0 0 8px"><b>Local:</b> ${esc(r.local_referencia)} — <b>${esc(r.bairro)}</b></p>
+              <p style="margin:0 0 10px">${esc(r.descricao)}</p>
+              <div class="priv">
+                <b>Dados privados (nunca publicados):</b>
+                ${(!priv || priv.anonimo) ? 'Denúncia anônima' : `${esc(priv.nome_denunciante || 'Sem nome')} · ${esc(priv.contato_denunciante || 'Sem contato')} ${zapLink}`}
+              </div>
+              <label>Resposta oficial da Prefeitura (opcional — aparece no site)</label>
+              <textarea class="f-pref" placeholder="Ex.: Em 25/11, a Secretaria de Obras informou que...">${esc(r.resposta_prefeitura || '')}</textarea>
+              <label>Atuação / acompanhamento de vereador ou equipe (opcional — aparece no site)</label>
+              <textarea class="f-ver" placeholder="Ex.: Sargento Simões esteve no local e protocolou pedido...">${esc(r.atuacao_vereador || '')}</textarea>
+              <div class="actions">
+                ${mapsLink}
+                <button class="btn good" data-act="aprovado">Aprovar e publicar</button>
+                <button class="btn dark" data-act="andamento">Marcar Em andamento</button>
+                <button class="btn good" data-act="resolvido">Marcar Resolvido</button>
+                <button class="btn danger" data-act="rejeitado">Rejeitar / Ocultar</button>
+              </div>
+            </div>
+          </div>
+        </article>`;
+      }).join('');
+    } catch (err) {
+      flash(err.message, false);
+    }
+  }
+
+  $('#lista').addEventListener('click', async e => {
+    const b = e.target.closest('button[data-act]');
+    if (!b) return;
+    const art = b.closest('.item');
+    const id = art.dataset.id;
+    const status = b.dataset.act;
+    const resposta_prefeitura = art.querySelector('.f-pref').value.trim() || null;
+    const atuacao_vereador = art.querySelector('.f-ver').value.trim() || null;
+    b.disabled = true;
+    try {
+      await api(`/rest/v1/relatos?id=eq.${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ status, resposta_prefeitura, atuacao_vereador, atualizado_em: new Date().toISOString() })
+      });
+      flash('Relato atualizado para "' + status + '".');
+      carregar();
+    } catch (err) {
+      flash(err.message, false);
+      b.disabled = false;
+    }
+  });
+
+  if (token) showApp(); else logout();
+})();
+</script>
+</body>
+</html>
