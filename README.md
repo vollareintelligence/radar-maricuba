@@ -1,4 +1,4 @@
-# Radar da Gastança · Maricúba
+# Lupa Maricá
 
 Site de acompanhamento da Câmara e da Prefeitura de Maricá, feito só com dados públicos oficiais.
 Mostra fatos com a fonte ao lado de cada número. Não faz acusação; a mesma régua vale para todos.
