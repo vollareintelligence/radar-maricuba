@@ -1,4 +1,4 @@
-# DESIGN.md — Radar da Gastança · Maricúba
+# DESIGN.md — Lupa Maricá
 
 > Fonte única de verdade visual e responsiva, construída segundo os padrões de **`taste-design`** (`google-labs-code/stitch-skills`) adaptados para jornalismo de dados cívico em **PC e dispositivos móveis**.
 
