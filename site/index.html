@@ -1023,8 +1023,13 @@ footer p{margin:0 0 10px;max-width:66ch;line-height:1.55}
         </div>
 
         <div class="cf-field">
-          <label for="cfFoto">Foto do local (opcional, recomendada)</label>
-          <input id="cfFoto" type="file" accept="image/*" style="min-height:44px;padding:6px 0;width:100%">
+          <label>Foto do local (opcional, recomendada)</label>
+          <div class="cf-photo-btns" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+            <label for="cfCam" class="btn primary" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;margin:0;cursor:pointer;flex:1;min-width:170px">Tirar foto do problema</label>
+            <label for="cfFoto" class="btn" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;margin:0;cursor:pointer;flex:1;min-width:170px">Escolher da galeria / PC</label>
+          </div>
+          <input id="cfCam" type="file" accept="image/*" capture="environment" class="sr">
+          <input id="cfFoto" type="file" accept="image/*" class="sr">
           <div class="cf-preview" id="cfPreview" hidden></div>
         </div>
 
