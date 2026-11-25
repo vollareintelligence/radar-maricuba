@@ -91,8 +91,10 @@ problemas = sorted(prob, key=lambda x: -x['n'])[:40]
 for x in problemas:
     x.pop('ids', None)
 
+STATUS_AUTO = json.load(open(C / 'status_automacao.json', encoding='utf-8')) if (C / 'status_automacao.json').exists() else None
 meta = dict(
     atualizado='2026-11-14', coletaAte=str(pc.d.max().date()),
+    verificadoEm=(STATUS_AUTO.get('verificadoEm') if STATUS_AUTO else None),
     sessoes=int(max(p['sessoes'] for p in pres.values())),
     proposicoes=int(len(pc)), votosNominais=int(sum(v['votos'] for v in votos.values())),
     justSemSessao=sum(len(v) if hasattr(v, '__len__') else 1 for v in jsem.values()) if isinstance(jsem, dict) else len(jsem),
@@ -109,6 +111,12 @@ gastometro = dict(
 )
 js = 'window.DADOS=' + json.dumps(dict(meta=meta, vereadores=out, mensal=mensal, problemas=problemas, prefeitura=PREF, gastometro=gastometro, problemasMapa=PMAPA, secretarias=SECR, natal=NATAL, promessas=PROM, placar=PLACAR), ensure_ascii=False, separators=(',', ':')) + ';'
 (S / 'dados.js').write_text(js, encoding='utf-8')
+if STATUS_AUTO and STATUS_AUTO.get('verificadoData') and (S / 'sitemap.xml').exists():
+    sm_path = S / 'sitemap.xml'
+    sm_txt = sm_path.read_text(encoding='utf-8')
+    sm_new = re.sub(r'<lastmod>\d{4}-\d{2}-\d{2}</lastmod>', f"<lastmod>{STATUS_AUTO['verificadoData']}</lastmod>", sm_txt)
+    if sm_new != sm_txt:
+        sm_path.write_text(sm_new, encoding='utf-8')
 print('vereadores', len(out), 'com foto', sum(1 for r in out if r['foto']), '| dados.js', len(js) // 1024, 'KB')
 print('sem foto:', [r['nome'] for r in out if not r['foto']])
 print('em exercício:', sum(r['emExercicio'] for r in out), '| meta', meta)
