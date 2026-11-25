@@ -1,5 +1,15 @@
 # Ativação do Cidadão Fiscalizador (Supabase — 2 minutos)
 
+## Status atual (25/11/2026)
+- [x] Passo 1 — Projeto `lupa-marica` criado (org `vollareintelligence`, região São Paulo).
+- [x] Passo 3 — Site conectado ao Supabase (`site/cidadao-config.js`).
+- [x] Passo 2 — Login do moderador principal criado e testado em `lupamarica.com/moderar.html`.
+- [x] Cadastro público de usuários **desligado** (*Allow new users to sign up* = off).
+- [ ] Criar o login do Sargento Simões (com **Auto Confirm User** marcado, porque *Confirm email* segue ligado).
+- [ ] Teste ponta a ponta: enviar um relato falso, aprovar e conferir que nome/WhatsApp do denunciante **não** aparecem no site.
+
+> Os e-mails dos moderadores não ficam neste repositório, que é público. Consulte-os no painel do Supabase (Authentication → Users).
+
 O módulo **Cidadão Fiscalizador** já está pronto no site (`site/index.html`) e no painel de moderação (`site/moderar.html`). Para ativá-lo gratuitamente:
 
 ## Passo 1 — Criar projeto gratuito no Supabase
