@@ -18,7 +18,7 @@ BRUTOS = ROOT / 'dados' / 'brutos'
 CONSOLIDADO = ROOT / 'dados' / 'consolidado'
 ALVOS = ['sessoes.csv', 'presencas.csv', 'votacoes.csv', 'votos_nominais.csv', 'proposicoes.csv', 'apelidos.csv']
 COLETA = ['camara/coletar_sessoes.py', 'camara/coletar_votacoes.py', 'camara/coletar_proposicoes.py']
-POS = ['consolidar.py', 'placar.py', 'build_dados.py', 'qualidade.py']
+POS = ['consolidar.py', 'geocodificar_problemas.py', 'placar.py', 'build_dados.py', 'qualidade.py']
 
 
 def linhas(p: Path) -> int:
