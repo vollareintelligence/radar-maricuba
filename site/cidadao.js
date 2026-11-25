@@ -275,12 +275,14 @@
     }
     try {
       const r = await fetch(
-        `${SB_URL}/rest/v1/relatos?select=id,protocolo,created_at,categoria,titulo,bairro,local_referencia,descricao,foto_url,status,resposta_prefeitura,atuacao_vereador&status=in.(aprovado,andamento,resolvido)&order=created_at.desc&limit=60`,
+        `${SB_URL}/rest/v1/relatos?select=id,protocolo,created_at,categoria,titulo,bairro,local_referencia,descricao,foto_url,status,resposta_prefeitura,atuacao_vereador,lat,lng&status=in.(aprovado,andamento,resolvido)&order=created_at.desc&limit=60`,
         { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
       );
       if (!r.ok) throw new Error();
       allRows = await r.json();
       renderFeed();
+      window.LUPA_RELATOS = allRows;
+      if (window.lupaRedrawMapa) window.lupaRedrawMapa();
     } catch {
       boxFeed.innerHTML = '<div class="card"><p class="note" style="margin:0">Não foi possível carregar os relatos públicos no momento.</p></div>';
     }

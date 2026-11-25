@@ -624,6 +624,7 @@ details.emp .rk{display:inline-block;min-width:28px;color:var(--muted-fg);font-w
 .mk.problema{background:#D32F2F;color:#fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
 .mk.problema span{transform:rotate(45deg)}
 .mk.problema.apx{background:#fff;color:#D32F2F;border-color:#D32F2F}
+.mk.relato{background:#6A1B9A;color:#fff;border-radius:50%}.sw.relato{background:#6A1B9A}
 .sw{display:inline-block;width:18px;height:18px;border:2px solid #111;vertical-align:-4px;margin-right:6px}
 .sw.concluida{background:#1E8E3E;border-radius:50%}
 .sw.andamento{background:#1F6FB5;border-radius:2px;transform:rotate(45deg) scale(.8)}
@@ -1386,6 +1387,10 @@ function drawObras(){
 let mSit='todas';
 const SYM={concluida:'✓',andamento:'●',paralisada:'!'},SITNOME={concluida:'Concluída',andamento:'Em andamento',paralisada:'Paralisada'};
 function popObra(o){return `<b>${esc(o.bairro||'Maricá')}</b><br>${esc(o.obj||'Obra')}<br><span class="note">${esc(o.local)}</span><br><b>${SITNOME[o.sit]}</b> (como declarado pela Prefeitura: ${esc(o.situacaoOriginal)})${o.pct?'<br>Executado: '+esc(o.pct)+'%':''}${o.empresa?'<br>Executor: '+esc(o.empresa):''}${o.inicio?'<br>Início: '+esc(o.inicio):''}${o.prev?' · Previsão: '+esc(o.prev):''}${o.motivo?'<br><b>Motivo declarado:</b> '+esc(o.motivo):''}${o.reinicio?'<br>Reinício: '+esc(o.reinicio==='SEM PREVISÃO'?'sem previsão':o.reinicio):''}<br><a href="${esc(o.fonte)}" target="_blank" rel="noopener">Fonte oficial</a>`}
+const RLMAP=()=>(window.LUPA_RELATOS||[]).filter(r=>r.lat!=null&&r.lng!=null);
+const RLST={aprovado:'Aguardando solução',andamento:'Em andamento',resolvido:'Resolvido'};
+function popRel(r){return `<b>#${esc(r.protocolo)}</b> · ${esc(RLST[r.status]||r.status)}<br><b>${esc(r.titulo)}</b><br>${esc(r.categoria)}<br><span class="note">${esc(r.bairro)} — ${esc(r.local_referencia)}</span>${r.foto_url?`<br><img src="${esc(r.foto_url)}" alt="Foto do relato ${esc(r.protocolo)}" style="max-width:180px;margin-top:6px;border:2px solid #111">`:''}${r.resposta_prefeitura?`<br><b>Resposta da Prefeitura:</b> ${esc(r.resposta_prefeitura)}`:''}<br><span class="note">Relato de morador, conferido pela equipe da Lupa Maricá antes de entrar no mapa.</span>`}
+window.lupaRedrawMapa=()=>{try{drawSit();drawObras()}catch(e){}};
 const PMAP=()=>(window.DADOS.problemasMapa||[]).filter(x=>x.lat!=null&&x.lng!=null);
 const TEMA2=Object.assign({drenagem:'Drenagem',saude:'Saúde',esgoto:'Esgoto'},TEMA);
 function popProb(x){const ap=x.precisao!=='rua';const f=d=>d.split('-').reverse().join('/');
@@ -1402,6 +1407,7 @@ function drawMapa(arr){
     oLayer.clearLayers();const pts=[];
     vis.forEach(o=>{const m=L.marker([o.lat,o.lng],{icon:L.divIcon({className:'',html:`<span class="mk ${o.sit}"><span>${lab(o)}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${SITNOME[o.sit]}: ${o.bairro}`,keyboard:true,sit:o.sit,zIndexOffset:o.sit==='paralisada'?1000:o.sit==='andamento'?500:0}).addTo(oLayer);m.bindPopup(popObra(o));m.on('click',()=>{if(o.sit==='paralisada'){oSel=+o.id;markSel()}});pts.push([o.lat,o.lng]);o._m=m});
     if(mSit==='todas'||mSit==='problema')PMAP().forEach(x=>{const ap=x.precisao!=='rua';const m=L.marker([x.lat,x.lng],{icon:L.divIcon({className:'',html:`<span class="mk problema${ap?' apx':''}"><span>${x.n}</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`Pedidos repetidos: ${x.rua}${ap?' (posição aproximada)':''}`,keyboard:true,sit:'problema',zIndexOffset:800}).addTo(oLayer);m.bindPopup(popProb(x));pts.push([x.lat,x.lng])});
+    if(mSit==='todas'||mSit==='relato')RLMAP().forEach(r=>{const m=L.marker([r.lat,r.lng],{icon:L.divIcon({className:'',html:`<span class="mk relato"><span>●</span></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`Relato dos moradores: ${r.categoria} em ${r.bairro}`,keyboard:true,sit:'relato',zIndexOffset:900}).addTo(oLayer);m.bindPopup(popRel(r));pts.push([r.lat,r.lng])});
     setTimeout(()=>{oMap.invalidateSize();if(pts.length)oMap.fitBounds(pts,{padding:[30,30],maxZoom:14})},60);return;
   }
   const all=M.obras,la=all.map(o=>o.lat),lo=all.map(o=>o.lng);
@@ -1411,8 +1417,8 @@ function drawMapa(arr){
 }
 function drawSit(){
   const M=PF.obrasMapa;if(!M)return;const c=M.contagem;
-  $('#oSit').innerHTML=[['todas','Todas ('+M.obras.length+')'],['concluida','Concluídas ('+(c.concluida||0)+')'],['andamento','Em andamento ('+(c.andamento||0)+')'],['paralisada','Paralisadas ('+(c.paralisada||0)+')'],['problema','Pedidos repetidos ('+PMAP().length+')']].map(([k,l])=>`<button data-ms="${k}" aria-pressed="${k===mSit}">${l}</button>`).join('');
-  $('#oLeg').innerHTML=`<span><i class="sw concluida"></i>✓ Concluída</span><span><i class="sw andamento"></i>● Em andamento</span><span><i class="sw paralisada"></i>! Paralisada (número = lista ao lado)</span><span><i class="sw problema"></i>Número = pedidos sobre o mesmo tema na mesma rua (3 ou mais). Marca vazada: posição aproximada (bairro)</span>`;
+  $('#oSit').innerHTML=[['todas','Todas ('+M.obras.length+')'],['concluida','Concluídas ('+(c.concluida||0)+')'],['andamento','Em andamento ('+(c.andamento||0)+')'],['paralisada','Paralisadas ('+(c.paralisada||0)+')'],['problema','Pedidos repetidos ('+PMAP().length+')']].concat(RLMAP().length?[['relato','Relatos dos moradores ('+RLMAP().length+')']]:[]).map(([k,l])=>`<button data-ms="${k}" aria-pressed="${k===mSit}">${l}</button>`).join('');
+  $('#oLeg').innerHTML=`<span><i class="sw concluida"></i>✓ Concluída</span><span><i class="sw andamento"></i>● Em andamento</span><span><i class="sw paralisada"></i>! Paralisada (número = lista ao lado)</span><span><i class="sw problema"></i>Número = pedidos sobre o mesmo tema na mesma rua (3 ou mais). Marca vazada: posição aproximada (bairro)</span>${RLMAP().length?'<span><i class="sw relato"></i>Relato de morador conferido pela equipe</span>':''}`;
   $('#oSit').onclick=e=>{const b=e.target.closest('[data-ms]');if(!b)return;mSit=b.dataset.ms;drawSit();drawObras()};
 }
 function markSel(){document.querySelectorAll('#oLista button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.os===oSel));const b=document.querySelector(`#oLista button[data-os="${oSel}"]`);if(b)b.scrollIntoView({block:'nearest'})}
