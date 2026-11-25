@@ -1,0 +1,33 @@
+{
+  "verificadoEm": "2026-11-25 13:21 BRT",
+  "verificadoData": "2026-11-25",
+  "noticias": {
+    "ok": true,
+    "codigo": 0,
+    "resumo": "NOTICIAS: 47 itens; falhas: 0",
+    "erro": ""
+  },
+  "fontes": {
+    "prefeitura_transparencia": {
+      "url": "https://transparencia.marica.rj.gov.br/dados-abertos",
+      "ok": false,
+      "status": 404,
+      "erro": "HTTP 404"
+    },
+    "camara_sicam": {
+      "url": "https://marica.sicam.app/areapublica",
+      "ok": true,
+      "status": 200
+    },
+    "camara_site": {
+      "url": "https://marica.rj.leg.br",
+      "ok": true,
+      "status": 200
+    },
+    "camara_eloweb": {
+      "url": "https://cmmarica.eloweb.net/portaltransparencia/1/servidores",
+      "ok": true,
+      "status": 200
+    }
+  }
+}
