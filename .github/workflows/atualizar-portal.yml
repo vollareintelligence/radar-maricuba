@@ -12,6 +12,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: atualizar-lupa-marica
@@ -44,6 +45,24 @@ jobs:
 
       - name: Porta de qualidade obrigatória
         run: python3 -I coleta/qualidade.py
+
+      - name: Alertar dados defasados ou fonte fora do ar
+        id: alerta
+        run: python3 -I coleta/alerta_defasagem.py
+
+      - name: Abrir Issue de aviso (uma por dia, sem duplicar)
+        if: steps.alerta.outputs.alerta == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITULO="Alerta automático: dados defasados ou fonte fora do ar"
+          EXISTE=$(gh issue list --state open --search "\"$TITULO\" in:title" --json number --jq '.[0].number')
+          if [ -n "$EXISTE" ]; then
+            gh issue comment "$EXISTE" --body-file alerta.md
+          else
+            gh issue create --title "$TITULO" --body-file alerta.md
+          fi
+          rm -f alerta.md
 
       - name: Checar fila de moderação do Cidadão Fiscalizador (quando Supabase estiver ativo)
         env:

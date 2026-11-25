@@ -3,7 +3,8 @@
 Executa coleta resiliente das fontes oficiais e notícias:
 1. Coleta notícias recentes de Maricá e promessas (coleta/buscar_noticias.py).
 2. Verifica disponibilidade das fontes oficiais (Prefeitura, Câmara/SICAM, Eloweb)
-   e procura arquivos CSV mais recentes no catálogo de Dados Abertos da Prefeitura.
+   (a coleta dos CSVs oficiais NÃO é feita aqui; a defasagem é sinalizada por
+   coleta/alerta_defasagem.py).
 3. Grava dados/consolidado/status_automacao.json com o horário de Brasília (UTC-3).
 
 Regra de ouro: se qualquer portal público estiver temporariamente fora do ar ou mudar
@@ -25,7 +26,11 @@ BRT = timezone(timedelta(hours=-3))
 USER_AGENT = 'Mozilla/5.0 (compatible; LupaMaricaBot/1.0; +https://lupamarica.com/)'
 
 FONTES = {
-    'prefeitura_transparencia': 'https://transparencia.marica.rj.gov.br/dados-abertos',
+    # URLs reais usadas pelo site (as mesmas citadas como fonte em site/index.html).
+    # A antiga /dados-abertos nunca foi fonte do projeto e dava 404 (falso alarme).
+    'prefeitura_despesas': 'https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao',
+    'prefeitura_servidores': 'https://transparencia.marica.rj.gov.br/e-cidade/servidores',
+    'prefeitura_sancoes': 'https://transparencia.marica.rj.gov.br/sancoes-administrativas',
     'camara_sicam': 'https://marica.sicam.app/areapublica',
     'camara_site': 'https://marica.rj.leg.br',
     'camara_eloweb': 'https://cmmarica.eloweb.net/portaltransparencia/1/servidores',
