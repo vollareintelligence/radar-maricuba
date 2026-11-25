@@ -26,8 +26,9 @@ BRT = timezone(timedelta(hours=-3))
 USER_AGENT = 'Mozilla/5.0 (compatible; LupaMaricaBot/1.0; +https://lupamarica.com/)'
 
 FONTES = {
-    # URLs reais usadas pelo site (as mesmas citadas como fonte em site/index.html).
-    # A antiga /dados-abertos nunca foi fonte do projeto e dava 404 (falso alarme).
+    # O catálogo de Dados Abertos mudou de /dados-abertos (404 desde que o portal foi reorganizado)
+    # para o endereço abaixo. As demais são as telas do e-Cidade citadas como fonte em site/index.html.
+    'prefeitura_dados_abertos': 'https://transparencia.marica.rj.gov.br/governo-digital/dados-abertos/links-e-arquivos',
     'prefeitura_despesas': 'https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao',
     'prefeitura_servidores': 'https://transparencia.marica.rj.gov.br/e-cidade/servidores',
     'prefeitura_sancoes': 'https://transparencia.marica.rj.gov.br/sancoes-administrativas',
