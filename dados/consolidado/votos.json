@@ -1,39 +1,39 @@
 [
  {
   "id":1,
-  "votos":885,
-  "sim":882,
+  "votos":912,
+  "sim":909,
   "nao":3,
   "abstencao":0,
-  "votos_executivo":143,
-  "sim_executivo":141
+  "votos_executivo":145,
+  "sim_executivo":143
  },
  {
   "id":2,
-  "votos":50,
-  "sim":49,
+  "votos":77,
+  "sim":76,
   "nao":1,
   "abstencao":0,
-  "votos_executivo":4,
-  "sim_executivo":4
+  "votos_executivo":6,
+  "sim_executivo":6
  },
  {
   "id":3,
-  "votos":1169,
-  "sim":1167,
+  "votos":1196,
+  "sim":1194,
   "nao":1,
   "abstencao":1,
-  "votos_executivo":196,
-  "sim_executivo":195
+  "votos_executivo":198,
+  "sim_executivo":197
  },
  {
   "id":5,
-  "votos":1083,
-  "sim":1017,
+  "votos":1096,
+  "sim":1030,
   "nao":51,
   "abstencao":15,
-  "votos_executivo":182,
-  "sim_executivo":125
+  "votos_executivo":183,
+  "sim_executivo":126
  },
  {
   "id":6,
@@ -46,39 +46,39 @@
  },
  {
   "id":8,
-  "votos":1038,
-  "sim":1030,
+  "votos":1065,
+  "sim":1057,
   "nao":6,
   "abstencao":2,
-  "votos_executivo":176,
-  "sim_executivo":176
+  "votos_executivo":178,
+  "sim_executivo":178
  },
  {
   "id":11,
-  "votos":1203,
-  "sim":1201,
+  "votos":1230,
+  "sim":1228,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":215,
-  "sim_executivo":215
+  "votos_executivo":217,
+  "sim_executivo":217
  },
  {
   "id":14,
-  "votos":70,
-  "sim":69,
+  "votos":97,
+  "sim":96,
   "nao":1,
   "abstencao":0,
-  "votos_executivo":6,
-  "sim_executivo":6
+  "votos_executivo":8,
+  "sim_executivo":8
  },
  {
   "id":15,
-  "votos":1278,
-  "sim":1175,
-  "nao":81,
+  "votos":1305,
+  "sim":1201,
+  "nao":82,
   "abstencao":22,
-  "votos_executivo":200,
-  "sim_executivo":120
+  "votos_executivo":202,
+  "sim_executivo":122
  },
  {
   "id":16,
@@ -91,21 +91,21 @@
  },
  {
   "id":17,
-  "votos":912,
-  "sim":910,
+  "votos":939,
+  "sim":937,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":155,
-  "sim_executivo":155
+  "votos_executivo":157,
+  "sim_executivo":157
  },
  {
   "id":22,
-  "votos":89,
-  "sim":88,
+  "votos":116,
+  "sim":115,
   "nao":1,
   "abstencao":0,
-  "votos_executivo":8,
-  "sim_executivo":8
+  "votos_executivo":10,
+  "sim_executivo":10
  },
  {
   "id":23,
@@ -118,21 +118,21 @@
  },
  {
   "id":25,
-  "votos":1110,
-  "sim":1108,
+  "votos":1124,
+  "sim":1122,
   "nao":1,
   "abstencao":1,
-  "votos_executivo":173,
-  "sim_executivo":173
+  "votos_executivo":174,
+  "sim_executivo":174
  },
  {
   "id":28,
-  "votos":1068,
-  "sim":1064,
+  "votos":1081,
+  "sim":1077,
   "nao":4,
   "abstencao":0,
-  "votos_executivo":180,
-  "sim_executivo":180
+  "votos_executivo":181,
+  "sim_executivo":181
  },
  {
   "id":29,
@@ -154,57 +154,57 @@
  },
  {
   "id":32,
-  "votos":1071,
-  "sim":1069,
+  "votos":1085,
+  "sim":1083,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":180,
-  "sim_executivo":180
+  "votos_executivo":181,
+  "sim_executivo":181
  },
  {
   "id":34,
-  "votos":1369,
-  "sim":1367,
+  "votos":1396,
+  "sim":1394,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":223,
-  "sim_executivo":223
+  "votos_executivo":225,
+  "sim_executivo":225
  },
  {
   "id":37,
-  "votos":1227,
-  "sim":1225,
+  "votos":1254,
+  "sim":1252,
   "nao":0,
   "abstencao":2,
-  "votos_executivo":198,
-  "sim_executivo":197
+  "votos_executivo":200,
+  "sim_executivo":199
  },
  {
   "id":38,
-  "votos":1362,
-  "sim":1358,
+  "votos":1389,
+  "sim":1385,
   "nao":4,
   "abstencao":0,
-  "votos_executivo":214,
-  "sim_executivo":213
+  "votos_executivo":216,
+  "sim_executivo":215
  },
  {
   "id":39,
-  "votos":972,
-  "sim":962,
-  "nao":5,
+  "votos":999,
+  "sim":988,
+  "nao":6,
   "abstencao":5,
-  "votos_executivo":138,
-  "sim_executivo":130
+  "votos_executivo":140,
+  "sim_executivo":132
  },
  {
   "id":40,
-  "votos":952,
-  "sim":948,
+  "votos":979,
+  "sim":975,
   "nao":4,
   "abstencao":0,
-  "votos_executivo":149,
-  "sim_executivo":149
+  "votos_executivo":151,
+  "sim_executivo":151
  },
  {
   "id":41,
@@ -217,29 +217,29 @@
  },
  {
   "id":42,
-  "votos":1177,
-  "sim":1175,
+  "votos":1191,
+  "sim":1189,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":199,
-  "sim_executivo":198
+  "votos_executivo":200,
+  "sim_executivo":199
  },
  {
   "id":44,
-  "votos":926,
-  "sim":924,
+  "votos":953,
+  "sim":951,
   "nao":2,
   "abstencao":0,
-  "votos_executivo":134,
-  "sim_executivo":134
+  "votos_executivo":136,
+  "sim_executivo":136
  },
  {
   "id":45,
-  "votos":224,
-  "sim":220,
+  "votos":251,
+  "sim":247,
   "nao":2,
   "abstencao":2,
-  "votos_executivo":20,
-  "sim_executivo":19
+  "votos_executivo":22,
+  "sim_executivo":21
  }
 ]

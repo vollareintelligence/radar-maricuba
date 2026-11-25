@@ -93,7 +93,7 @@ for x in problemas:
 
 STATUS_AUTO = json.load(open(C / 'status_automacao.json', encoding='utf-8')) if (C / 'status_automacao.json').exists() else None
 meta = dict(
-    atualizado='2026-11-14', coletaAte=str(pc.d.max().date()),
+    atualizado=__import__('datetime').date.today().isoformat(), coletaAte=str(pc.d.max().date()),
     verificadoEm=(STATUS_AUTO.get('verificadoEm') if STATUS_AUTO else None),
     sessoes=int(max(p['sessoes'] for p in pres.values())),
     proposicoes=int(len(pc)), votosNominais=int(sum(v['votos'] for v in votos.values())),
