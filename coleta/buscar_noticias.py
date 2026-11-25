@@ -30,7 +30,7 @@ TIMEOUT = 20
 TENTATIVAS = 3
 PAUSA_ENTRE_CONSULTAS = 3.0   # segundos; evita bloqueio por excesso de pedidos
 VEICULOS_BLOQUEADOS = {'lrcadefenseconsulting.com'}  # fonte sem credibilidade editorial
-USER_AGENT = 'Mozilla/5.0 (compatible; RadarMaricuba/1.0; +https://vollareintelligence.github.io/radar-maricuba/)'
+USER_AGENT = 'Mozilla/5.0 (compatible; LupaMarica/1.0; +https://lupamarica.com/)'
 
 # Cada consulta serve a UMA promessa de dados/consolidado/promessas.json: o 'tema' é o id dela.
 # Não há tema genérico (ex.: 'Prefeito'): notícia sem promessa correspondente não entra.
