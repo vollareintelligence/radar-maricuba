@@ -92,7 +92,7 @@ for x in problemas:
     x.pop('ids', None)
 
 meta = dict(
-    atualizado='2026-11-14', coletaAte=str(pc.d.max().date()),
+    atualizado=__import__('datetime').date.today().isoformat(), coletaAte=str(pc.d.max().date()),
     sessoes=int(max(p['sessoes'] for p in pres.values())),
     proposicoes=int(len(pc)), votosNominais=int(sum(v['votos'] for v in votos.values())),
     justSemSessao=sum(len(v) if hasattr(v, '__len__') else 1 for v in jsem.values()) if isinstance(jsem, dict) else len(jsem),

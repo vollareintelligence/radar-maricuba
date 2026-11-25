@@ -4,19 +4,20 @@
   "nome":"Adelso Pereira",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":100,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":101,
   "justificadas":28,
-  "faltas":1,
+  "faltas":2,
   "licenca_provavel":0,
-  "pct_presenca":77.5,
+  "pct_presenca":77.1,
   "motivos":{
    "compromisso político":27,
    "outro \/ não informado":1
   },
   "faltas_datas":[
-   "2025-10-30"
+   "2025-10-30",
+   "2026-11-24"
   ]
  },
  {
@@ -24,20 +25,21 @@
   "nome":"Adriana Costa",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":111,
-  "justificadas":17,
-  "faltas":1,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":113,
+  "justificadas":16,
+  "faltas":2,
   "licenca_provavel":0,
-  "pct_presenca":86.0,
+  "pct_presenca":86.3,
   "motivos":{
-   "compromisso político":13,
+   "compromisso político":12,
    "outro \/ não informado":1,
    "pessoal (saúde ou família)":3
   },
   "faltas_datas":[
-   "2026-11-03"
+   "2026-11-03",
+   "2026-11-17"
   ]
  },
  {
@@ -45,13 +47,13 @@
   "nome":"Aldair Nunes Elias",
   "titular":true,
   "inicio":"2025-02-17",
-  "fim":"2026-11-12",
-  "sessoes":127,
-  "presencas":78,
+  "fim":"2026-11-24",
+  "sessoes":129,
+  "presencas":80,
   "justificadas":44,
   "faltas":5,
   "licenca_provavel":0,
-  "pct_presenca":61.4,
+  "pct_presenca":62.0,
   "motivos":{
    "pessoal (saúde ou família)":16,
    "compromisso político":28
@@ -69,17 +71,17 @@
   "nome":"Andrea Cunha",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":124,
-  "presencas":93,
-  "justificadas":29,
+  "fim":"2026-11-24",
+  "sessoes":126,
+  "presencas":94,
+  "justificadas":30,
   "faltas":2,
   "licenca_provavel":5,
-  "pct_presenca":75.0,
+  "pct_presenca":74.6,
   "motivos":{
    "compromisso político":14,
    "outro \/ não informado":3,
-   "pessoal (saúde ou família)":12
+   "pessoal (saúde ou família)":13
   },
   "faltas_datas":[
    "2025-09-11",
@@ -91,13 +93,13 @@
   "nome":"Bubute",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":103,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":105,
   "justificadas":26,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":79.8,
+  "pct_presenca":80.2,
   "motivos":{
    "compromisso político":23,
    "pessoal (saúde ou família)":3
@@ -111,15 +113,15 @@
   "nome":"Chiquinho",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":107,
-  "justificadas":22,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":108,
+  "justificadas":23,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":82.9,
+  "pct_presenca":82.4,
   "motivos":{
-   "compromisso político":18,
+   "compromisso político":19,
    "pessoal (saúde ou família)":4
   },
   "faltas_datas":[
@@ -131,13 +133,13 @@
   "nome":"Chris Corrêa",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":87,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":89,
   "justificadas":42,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":67.4,
+  "pct_presenca":67.9,
   "motivos":{
    "compromisso político":27,
    "pessoal (saúde ou família)":15
@@ -151,13 +153,13 @@
   "nome":"Deil Machado",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":123,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":125,
   "justificadas":4,
   "faltas":2,
   "licenca_provavel":0,
-  "pct_presenca":95.3,
+  "pct_presenca":95.4,
   "motivos":{
    "compromisso político":2,
    "pessoal (saúde ou família)":2
@@ -172,13 +174,13 @@
   "nome":"Felipe Paiva de Oliveira",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":98,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":100,
   "justificadas":30,
   "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":76.0,
+  "pct_presenca":76.3,
   "motivos":{
    "compromisso político":18,
    "pessoal (saúde ou família)":9,
@@ -193,13 +195,13 @@
   "nome":"Frank Costa",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":112,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":114,
   "justificadas":17,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":86.8,
+  "pct_presenca":87.0,
   "motivos":{
    "compromisso político":11,
    "pessoal (saúde ou família)":4,
@@ -214,13 +216,13 @@
   "nome":"Hadesh",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":97,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":98,
   "justificadas":27,
-  "faltas":5,
+  "faltas":6,
   "licenca_provavel":0,
-  "pct_presenca":75.2,
+  "pct_presenca":74.8,
   "motivos":{
    "compromisso político":25,
    "pessoal (saúde ou família)":2
@@ -230,7 +232,8 @@
    "2025-10-30",
    "2026-09-22",
    "2026-10-01",
-   "2026-11-03"
+   "2026-11-03",
+   "2026-11-17"
   ]
  },
  {
@@ -238,13 +241,13 @@
   "nome":"Igor Corrêa",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":123,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":125,
   "justificadas":6,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":95.3,
+  "pct_presenca":95.4,
   "motivos":{
    "compromisso político":6
   },
@@ -257,16 +260,16 @@
   "nome":"Kelly Bernardos",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":108,
-  "justificadas":20,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":109,
+  "justificadas":21,
   "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":83.7,
+  "pct_presenca":83.2,
   "motivos":{
    "compromisso político":15,
-   "pessoal (saúde ou família)":5
+   "pessoal (saúde ou família)":6
   },
   "faltas_datas":[
    "2025-05-12"
@@ -277,9 +280,9 @@
   "nome":"LUCIANO RANGEL JUNIOR",
   "titular":true,
   "inicio":"2026-08-04",
-  "fim":"2026-11-12",
-  "sessoes":25,
-  "presencas":25,
+  "fim":"2026-11-24",
+  "sessoes":27,
+  "presencas":27,
   "justificadas":0,
   "faltas":0,
   "licenca_provavel":0,
@@ -296,13 +299,13 @@
   "nome":"Marcinho da Construção",
   "titular":true,
   "inicio":"2026-09-08",
-  "fim":"2026-11-12",
-  "sessoes":16,
-  "presencas":14,
+  "fim":"2026-11-24",
+  "sessoes":18,
+  "presencas":16,
   "justificadas":2,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":87.5,
+  "pct_presenca":88.9,
   "motivos":{
    "compromisso político":2
   },
@@ -315,13 +318,13 @@
   "nome":"Marcus Bambam",
   "titular":true,
   "inicio":"2026-09-08",
-  "fim":"2026-11-12",
-  "sessoes":16,
-  "presencas":11,
+  "fim":"2026-11-24",
+  "sessoes":18,
+  "presencas":13,
   "justificadas":5,
   "faltas":0,
   "licenca_provavel":0,
-  "pct_presenca":68.8,
+  "pct_presenca":72.2,
   "motivos":{
    "compromisso político":5
   },
@@ -334,20 +337,21 @@
   "nome":"Netuno",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":116,
-  "justificadas":12,
-  "faltas":1,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":118,
+  "justificadas":11,
+  "faltas":2,
   "licenca_provavel":0,
-  "pct_presenca":89.9,
+  "pct_presenca":90.1,
   "motivos":{
    "outro \/ não informado":9,
    "pessoal (saúde ou família)":1,
-   "compromisso político":2
+   "compromisso político":1
   },
   "faltas_datas":[
-   "2026-09-22"
+   "2026-09-22",
+   "2026-11-17"
   ]
  },
  {
@@ -355,13 +359,13 @@
   "nome":"Rita Rocha",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":91,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":93,
   "justificadas":28,
   "faltas":10,
   "licenca_provavel":0,
-  "pct_presenca":70.5,
+  "pct_presenca":71.0,
   "motivos":{
    "compromisso político":17,
    "pessoal (saúde ou família)":10,
@@ -377,7 +381,7 @@
    "2026-09-17",
    "2026-10-01",
    "2026-11-03",
-   "2026-11-12"
+   "2026-11-17"
   ]
  },
  {
@@ -385,13 +389,13 @@
   "nome":"Rony Peterson",
   "titular":true,
   "inicio":"2026-09-08",
-  "fim":"2026-11-12",
-  "sessoes":16,
-  "presencas":15,
+  "fim":"2026-11-24",
+  "sessoes":18,
+  "presencas":17,
   "justificadas":0,
   "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":93.8,
+  "pct_presenca":94.4,
   "motivos":{
 
   },
@@ -404,13 +408,13 @@
   "nome":"Tatai",
   "titular":true,
   "inicio":"2025-01-23",
-  "fim":"2026-11-12",
-  "sessoes":129,
-  "presencas":88,
+  "fim":"2026-11-24",
+  "sessoes":131,
+  "presencas":90,
   "justificadas":39,
   "faltas":2,
   "licenca_provavel":0,
-  "pct_presenca":68.2,
+  "pct_presenca":68.7,
   "motivos":{
    "compromisso político":16,
    "pessoal (saúde ou família)":23
@@ -425,20 +429,21 @@
   "nome":"Thiago Fonseca",
   "titular":true,
   "inicio":"2025-04-14",
-  "fim":"2026-11-12",
-  "sessoes":97,
-  "presencas":73,
-  "justificadas":22,
-  "faltas":2,
+  "fim":"2026-11-24",
+  "sessoes":99,
+  "presencas":75,
+  "justificadas":21,
+  "faltas":3,
   "licenca_provavel":16,
-  "pct_presenca":75.3,
+  "pct_presenca":75.8,
   "motivos":{
    "pessoal (saúde ou família)":2,
-   "compromisso político":20
+   "compromisso político":19
   },
   "faltas_datas":[
    "2026-10-22",
-   "2026-11-03"
+   "2026-11-03",
+   "2026-11-17"
   ]
  },
  {

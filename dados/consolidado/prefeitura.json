@@ -375,66 +375,66 @@
   },
   "2026": {
    "total": {
-    "empenhado": 8374.8,
-    "anulado": 827.8,
-    "liquidado": 6099.9,
-    "pago": 6072.6
+    "empenhado": 8578.6,
+    "anulado": 883.5,
+    "liquidado": 6191.0,
+    "pago": 6166.8
    },
    "instituicoes": [
     {
      "nome": "Prefeitura Municipal De Marica",
-     "empenhado": 3494.3,
-     "pago": 2429.0
+     "empenhado": 3568.7,
+     "pago": 2466.7
     },
     {
      "nome": "Fundo Municipal De Saude",
-     "empenhado": 1222.5,
-     "pago": 982.5
+     "empenhado": 1229.7,
+     "pago": 992.7
     },
     {
      "nome": "Somar",
-     "empenhado": 1175.3,
-     "pago": 853.6
+     "empenhado": 1193.9,
+     "pago": 877.3
     },
     {
      "nome": "Companhia Desenvolvimento Marica",
-     "empenhado": 1028.4,
-     "pago": 726.5
+     "empenhado": 1046.3,
+     "pago": 729.0
     },
     {
      "nome": "Companhia De Saneamento De Marica S A",
-     "empenhado": 344.9,
-     "pago": 285.4
+     "empenhado": 401.5,
+     "pago": 287.1
     },
     {
      "nome": "Fundo Municipal De Proteção E Conservação Ambiental",
-     "empenhado": 215.6,
-     "pago": 174.7
-    },
-    {
-     "nome": "Empresa Publica De Transporte",
-     "empenhado": 173.7,
-     "pago": 132.6
+     "empenhado": 217.0,
+     "pago": 177.9
     },
     {
      "nome": "Instituto De Seguro Social De Maricá",
-     "empenhado": 192.6,
-     "pago": 129.5
+     "empenhado": 200.2,
+     "pago": 135.0
+    },
+    {
+     "nome": "Empresa Publica De Transporte",
+     "empenhado": 181.9,
+     "pago": 133.0
     },
     {
      "nome": "Instituto De Ciência Tec E Inov De Maricá",
-     "empenhado": 119.8,
-     "pago": 99.0
+     "empenhado": 127.0,
+     "pago": 104.7
     },
     {
      "nome": "Companhia De Cultura E Turismo De Maricá",
-     "empenhado": 106.1,
-     "pago": 78.9
+     "empenhado": 108.6,
+     "pago": 79.3
     },
     {
      "nome": "Camara Municipal De Marica",
-     "empenhado": 97.3,
-     "pago": 49.3
+     "empenhado": 98.5,
+     "pago": 49.9
     },
     {
      "nome": "Fundo Municipal De Assistencia Social De Marica",
@@ -448,49 +448,49 @@
     },
     {
      "nome": "Companhia Marica Alimentos",
-     "empenhado": 36.8,
-     "pago": 28.0
+     "empenhado": 36.9,
+     "pago": 30.5
     },
     {
      "nome": "Maricá Global Invest Sa",
-     "empenhado": 35.6,
+     "empenhado": 35.7,
      "pago": 18.2
     },
     {
      "nome": "Inst Mun De Informação E Pesquisa Darcy Ribeiro",
      "empenhado": 11.4,
-     "pago": 7.8
+     "pago": 7.9
     },
     {
      "nome": "Fundo Especial Da Procuradoria Geral Do Município De Maricá",
-     "empenhado": 1.4,
+     "empenhado": 2.4,
      "pago": 0.7
     }
    ],
    "elementos": [
     {
      "nome": "Outros servicos de terceiros pj",
-     "pago": 1722.8,
-     "empenhado": 2487.7
+     "pago": 1772.0,
+     "empenhado": 2531.6
     },
     {
      "nome": "Transf por meio de contratos de gestão",
-     "pago": 1127.4,
-     "empenhado": 1296.3
+     "pago": 1139.5,
+     "empenhado": 1308.2
     },
     {
      "nome": "Vencimentos e vantagens fixas - pessoal civil",
-     "pago": 852.9,
-     "empenhado": 889.8
+     "pago": 853.0,
+     "empenhado": 892.9
     },
     {
      "nome": "Obras e instalações",
      "pago": 442.5,
-     "empenhado": 891.4
+     "empenhado": 1009.7
     },
     {
      "nome": "Outros auxílios financeiros a pessoas físicas",
-     "pago": 226.1,
+     "pago": 227.7,
      "empenhado": 437.0
     },
     {
@@ -500,23 +500,23 @@
     },
     {
      "nome": "Outras desp. pessoal decor. cont. terceirização",
-     "pago": 121.6,
-     "empenhado": 190.7
+     "pago": 122.2,
+     "empenhado": 193.3
     },
     {
      "nome": "Proventos pessoal civil - inativos",
-     "pago": 99.0,
-     "empenhado": 145.5
+     "pago": 101.5,
+     "empenhado": 152.5
     },
     {
      "nome": "Material de consumo",
-     "pago": 90.6,
-     "empenhado": 145.0
+     "pago": 95.9,
+     "empenhado": 146.5
     },
     {
      "nome": "Obrigações patronais",
-     "pago": 76.7,
-     "empenhado": 91.4
+     "pago": 83.2,
+     "empenhado": 91.9
     },
     {
      "nome": "Despesas de exercicio anteriores",
@@ -525,8 +525,8 @@
     },
     {
      "nome": "Obrigacoes tributarias e contributivas",
-     "pago": 65.3,
-     "empenhado": 88.5
+     "pago": 67.7,
+     "empenhado": 88.6
     },
     {
      "nome": "Contratacao por tempo determinado",
@@ -539,22 +539,22 @@
      "empenhado": 69.9
     }
    ],
-   "credoresN": 3397,
+   "credoresN": 3431,
    "porClasse": {
     "encargos": {
      "n": 3,
-     "pago": 144.9,
-     "empenhado": 188.6
+     "pago": 153.9,
+     "empenhado": 188.8
     },
     "ente": {
      "n": 10,
-     "pago": 1117.9,
-     "empenhado": 1218.1
+     "pago": 1123.3,
+     "empenhado": 1227.9
     },
     "outros": {
-     "n": 3384,
-     "pago": 4809.9,
-     "empenhado": 6968.2
+     "n": 3418,
+     "pago": 4889.6,
+     "empenhado": 7161.9
     }
    },
    "topOutros": [
@@ -562,13 +562,13 @@
      "nome": "INSTITUTO JURIDICO P E CIDADANIA E SAUDE",
      "doc": "03.893.350/0001-12",
      "empenhado": 384.2,
-     "pago": 329.5
+     "pago": 339.4
     },
     {
      "nome": "ASSOCIAÇÃO BANCO COMUNITÁRIO POPULAR DE",
      "doc": "28.793.346/0001-03",
      "empenhado": 532.2,
-     "pago": 284.1
+     "pago": 285.8
     },
     {
      "nome": "CEMPES CENTRO DE MEDIC E PROJ ESPECIAIS",
@@ -579,7 +579,7 @@
     {
      "nome": "CENTRO DE E E P C F ANTONIO DE SALLES",
      "doc": "33.927.377/0001-40",
-     "empenhado": 279.4,
+     "empenhado": 279.8,
      "pago": 244.5
     },
     {
@@ -591,20 +591,20 @@
     {
      "nome": "UNIAO NORTE FLU ENG E COMERCIO LTDA",
      "doc": "02.354.917/0001-10",
-     "empenhado": 202.1,
-     "pago": 166.6
+     "empenhado": 203.6,
+     "pago": 174.6
     },
     {
      "nome": "PRIMOTECH LOGISTICA LTDA ME",
      "doc": "08.847.399/0001-52",
-     "empenhado": 152.3,
+     "empenhado": 165.8,
      "pago": 141.2
     },
     {
      "nome": "PERFIL X CONSTRUTORA S.A",
      "doc": "08.733.497/0001-69",
-     "empenhado": 173.8,
-     "pago": 127.2
+     "empenhado": 175.3,
+     "pago": 130.4
     },
     {
      "nome": "SAGA CONSTRUTORA LTDA",
@@ -616,7 +616,7 @@
      "nome": "DESTAQ COMERCIO E SERVICOS LTDA",
      "doc": "07.015.433/0001-60",
      "empenhado": 106.6,
-     "pago": 87.9
+     "pago": 88.8
     },
     {
      "nome": "MRC ENTRETENIMENTO PROMOCOES E EVENTOS L",
@@ -627,7 +627,7 @@
     {
      "nome": "VIACAO NOSSA SENHORA DO AMPARO LTDA",
      "doc": "28.509.164/0001-68",
-     "empenhado": 93.6,
+     "empenhado": 97.4,
      "pago": 76.5
     },
     {
@@ -639,14 +639,14 @@
     {
      "nome": "CONSORCIO SANEANDO MARICA",
      "doc": "64.869.865/0001-71",
-     "empenhado": 72.1,
+     "empenhado": 122.1,
      "pago": 72.1
     },
     {
      "nome": "ESPAÇO SERVIÇOS ESPECIALIZADOS LTDA",
      "doc": "06.159.080/0001-09",
      "empenhado": 67.0,
-     "pago": 65.7
+     "pago": 65.8
     },
     {
      "nome": "HOSPITAL PSIQ ESPIRITA MAHATMA GANDHI",
@@ -657,20 +657,32 @@
     {
      "nome": "CONSORCIO CONSERVACAO ECONORTE SOLUTIONS",
      "doc": "57.157.050/0001-02",
-     "empenhado": 51.6,
+     "empenhado": 60.3,
      "pago": 51.5
-    },
-    {
-     "nome": "MGS CLEAN SOLUCOES E SERVICOS LTDA",
-     "doc": "19.088.605/0001-04",
-     "empenhado": 63.4,
-     "pago": 46.6
     },
     {
      "nome": "RICARDO RAMOS SOCIEDADE DE ADVOGADOS",
      "doc": "28.925.891/0001-06",
      "empenhado": 50.8,
-     "pago": 42.8
+     "pago": 50.8
+    },
+    {
+     "nome": "MGS CLEAN SOLUCOES E SERVICOS LTDA",
+     "doc": "19.088.605/0001-04",
+     "empenhado": 67.0,
+     "pago": 47.9
+    },
+    {
+     "nome": "ARPOADOR SERVICOS LTDA",
+     "doc": "02.780.143/0001-99",
+     "empenhado": 58.7,
+     "pago": 44.4
+    },
+    {
+     "nome": "GENERAL CONTRACTOR CONSTRUTORA EIRELI",
+     "doc": "73.509.440/0001-42",
+     "empenhado": 58.4,
+     "pago": 44.3
     },
     {
      "nome": "PEDRA DE INOÃ MARICÁ EMPREENDIMENTOS IM",
@@ -679,16 +691,16 @@
      "pago": 42.7
     },
     {
-     "nome": "GENERAL CONTRACTOR CONSTRUTORA EIRELI",
-     "doc": "73.509.440/0001-42",
-     "empenhado": 54.7,
-     "pago": 41.9
-    },
-    {
      "nome": "CONTECK COM E SERV DE INST DE EQUIP LTDA",
      "doc": "30.598.395/0001-37",
      "empenhado": 66.8,
      "pago": 41.4
+    },
+    {
+     "nome": "AGENCIA UM BCA PROPAGANDA LTDA",
+     "doc": "03.598.189/0001-54",
+     "empenhado": 62.3,
+     "pago": 40.5
     },
     {
      "nome": "FUNDAÇÃO EDUCACIONAL SEVERINO SOMBRA",
@@ -697,16 +709,10 @@
      "pago": 39.8
     },
     {
-     "nome": "ARPOADOR SERVICOS LTDA",
-     "doc": "02.780.143/0001-99",
-     "empenhado": 58.7,
-     "pago": 39.6
-    },
-    {
      "nome": "INOVA INFRAESTRUTURA LTDA",
      "doc": "11.099.079/0001-76",
      "empenhado": 57.5,
-     "pago": 37.5
+     "pago": 38.8
     },
     {
      "nome": "INICIATIVAS E DES. IMOB. - IDB BR LTDA",
@@ -715,31 +721,25 @@
      "pago": 37.5
     },
     {
-     "nome": "AGENCIA UM BCA PROPAGANDA LTDA",
-     "doc": "03.598.189/0001-54",
-     "empenhado": 62.3,
-     "pago": 36.3
-    },
-    {
      "nome": "ENGEBIO ENGENHARIA DO MEIO AMBIENTE LTDA",
      "doc": "01.792.153/0001-81",
-     "empenhado": 43.6,
-     "pago": 34.1
+     "empenhado": 47.5,
+     "pago": 35.5
     },
     {
      "nome": "AMPLA ENERGIA E SERVICOS S A",
      "doc": "33.050.071/0001-58",
      "empenhado": 41.4,
-     "pago": 33.5
+     "pago": 34.6
     },
     {
      "nome": "FEDERACAO DE CONVENTION & VISITORS BUREA",
      "doc": "08.518.149/0001-79",
      "empenhado": 37.9,
-     "pago": 32.8
+     "pago": 34.0
     }
    ],
-   "top20OutrosPct": 52.5
+   "top20OutrosPct": 52.4
   }
  },
  "folha": {
