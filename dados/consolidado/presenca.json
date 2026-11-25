@@ -27,19 +27,18 @@
   "inicio":"2025-01-23",
   "fim":"2026-11-24",
   "sessoes":131,
-  "presencas":113,
+  "presencas":114,
   "justificadas":16,
-  "faltas":2,
+  "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":86.3,
+  "pct_presenca":87.0,
   "motivos":{
    "compromisso político":12,
    "outro \/ não informado":1,
    "pessoal (saúde ou família)":3
   },
   "faltas_datas":[
-   "2026-11-03",
-   "2026-11-17"
+   "2026-11-03"
   ]
  },
  {
@@ -218,11 +217,11 @@
   "inicio":"2025-01-23",
   "fim":"2026-11-24",
   "sessoes":131,
-  "presencas":98,
+  "presencas":99,
   "justificadas":27,
-  "faltas":6,
+  "faltas":5,
   "licenca_provavel":0,
-  "pct_presenca":74.8,
+  "pct_presenca":75.6,
   "motivos":{
    "compromisso político":25,
    "pessoal (saúde ou família)":2
@@ -232,8 +231,7 @@
    "2025-10-30",
    "2026-09-22",
    "2026-10-01",
-   "2026-11-03",
-   "2026-11-17"
+   "2026-11-03"
   ]
  },
  {
@@ -262,14 +260,14 @@
   "inicio":"2025-01-23",
   "fim":"2026-11-24",
   "sessoes":131,
-  "presencas":109,
-  "justificadas":21,
+  "presencas":108,
+  "justificadas":22,
   "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":83.2,
+  "pct_presenca":82.4,
   "motivos":{
    "compromisso político":15,
-   "pessoal (saúde ou família)":6
+   "pessoal (saúde ou família)":7
   },
   "faltas_datas":[
    "2025-05-12"
@@ -339,19 +337,18 @@
   "inicio":"2025-01-23",
   "fim":"2026-11-24",
   "sessoes":131,
-  "presencas":118,
+  "presencas":119,
   "justificadas":11,
-  "faltas":2,
+  "faltas":1,
   "licenca_provavel":0,
-  "pct_presenca":90.1,
+  "pct_presenca":90.8,
   "motivos":{
    "outro \/ não informado":9,
    "pessoal (saúde ou família)":1,
    "compromisso político":1
   },
   "faltas_datas":[
-   "2026-09-22",
-   "2026-11-17"
+   "2026-09-22"
   ]
  },
  {
@@ -361,11 +358,11 @@
   "inicio":"2025-01-23",
   "fim":"2026-11-24",
   "sessoes":131,
-  "presencas":93,
+  "presencas":94,
   "justificadas":28,
-  "faltas":10,
+  "faltas":9,
   "licenca_provavel":0,
-  "pct_presenca":71.0,
+  "pct_presenca":71.8,
   "motivos":{
    "compromisso político":17,
    "pessoal (saúde ou família)":10,
@@ -380,8 +377,7 @@
    "2026-03-05",
    "2026-09-17",
    "2026-10-01",
-   "2026-11-03",
-   "2026-11-17"
+   "2026-11-03"
   ]
  },
  {
@@ -431,19 +427,18 @@
   "inicio":"2025-04-14",
   "fim":"2026-11-24",
   "sessoes":99,
-  "presencas":75,
+  "presencas":76,
   "justificadas":21,
-  "faltas":3,
+  "faltas":2,
   "licenca_provavel":16,
-  "pct_presenca":75.8,
+  "pct_presenca":76.8,
   "motivos":{
    "pessoal (saúde ou família)":2,
    "compromisso político":19
   },
   "faltas_datas":[
    "2026-10-22",
-   "2026-11-03",
-   "2026-11-17"
+   "2026-11-03"
   ]
  },
  {
