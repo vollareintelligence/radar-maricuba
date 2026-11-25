@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /moderar.html
+
+Sitemap: https://lupamarica.com/sitemap.xml
