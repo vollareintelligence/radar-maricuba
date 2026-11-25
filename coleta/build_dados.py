@@ -17,26 +17,26 @@ def norm(s):
 
 vv = pd.read_csv(B / 'vereadores.csv')
 site = pd.read_csv(B / 'vereadores_site_camara.csv')
-pres = {r['id']: r for r in json.load(open(C / 'presenca.json'))}
-votos = {r['id']: r for r in json.load(open(C / 'votos.json'))}
+pres = {r['id']: r for r in json.load(open(C / 'presenca.json', encoding='utf-8'))}
+votos = {r['id']: r for r in json.load(open(C / 'votos.json', encoding='utf-8'))}
 pc = pd.read_csv(C / 'proposicoes_classificadas.csv')
 pc['d'] = pd.to_datetime(pc.data, dayfirst=True)
-prob = json.load(open(C / 'problemas_que_nao_somem.json'))
-jsem = json.load(open(C / 'justificativas_sem_sessao.json'))
-PREF = json.load(open(C / 'prefeitura.json')) if (C / 'prefeitura.json').exists() else None
+prob = json.load(open(C / 'problemas_que_nao_somem.json', encoding='utf-8'))
+jsem = json.load(open(C / 'justificativas_sem_sessao.json', encoding='utf-8'))
+PREF = json.load(open(C / 'prefeitura.json', encoding='utf-8')) if (C / 'prefeitura.json').exists() else None
 if PREF and (C / 'empresas.json').exists():
-    PREF['empresas'] = json.load(open(C / 'empresas.json'))
-SECR = json.load(open(C / 'secretarias.json')) if (C / 'secretarias.json').exists() else None
-NATAL = json.load(open(C / 'natal.json')) if (C / 'natal.json').exists() else None
-PROM = json.load(open(C / 'promessas.json')) if (C / 'promessas.json').exists() else None
-IMP = json.load(open(C / 'imprensa.json')) if (C / 'imprensa.json').exists() else {'itens': []}
+    PREF['empresas'] = json.load(open(C / 'empresas.json', encoding='utf-8'))
+SECR = json.load(open(C / 'secretarias.json', encoding='utf-8')) if (C / 'secretarias.json').exists() else None
+NATAL = json.load(open(C / 'natal.json', encoding='utf-8')) if (C / 'natal.json').exists() else None
+PROM = json.load(open(C / 'promessas.json', encoding='utf-8')) if (C / 'promessas.json').exists() else None
+IMP = json.load(open(C / 'imprensa.json', encoding='utf-8')) if (C / 'imprensa.json').exists() else {'itens': []}
 if PROM:  # só entra no card o que o Mestre Theo aprovou
     for _i in PROM['itens']:
         _i['imprensa'] = sorted([{k: n[k] for k in ('titulo', 'veiculo', 'data', 'link', 'linkOriginal')} for n in IMP['itens'] if _i['id'] in n['temas']], key=lambda n: n['data'], reverse=True)
 PLACAR = json.load(open(C / 'placar.json', encoding='utf-8')) if (C / 'placar.json').exists() else None
-PMAPA = json.load(open(C / 'problemas_mapa.json')) if (C / 'problemas_mapa.json').exists() else []
+PMAPA = json.load(open(C / 'problemas_mapa.json', encoding='utf-8')) if (C / 'problemas_mapa.json').exists() else []
 if PREF and (C / 'obras_mapa.json').exists():
-    PREF['obrasMapa'] = json.load(open(C / 'obras_mapa.json'))
+    PREF['obrasMapa'] = json.load(open(C / 'obras_mapa.json', encoding='utf-8'))
 
 # junta pelo nome civil (o id do roster do site estava incompleto)
 site['k'] = site.nome_civil.map(norm)

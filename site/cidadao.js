@@ -27,6 +27,18 @@
   let allRows = [];
   let stFilter = 'todos';
 
+  // Sem Supabase configurado: avisa antes do envio e desativa o botão
+  if (!READY) {
+    const btn0 = $('#cfSubmit');
+    if (btn0) { btn0.disabled = true; btn0.style.opacity = '.55'; btn0.style.cursor = 'not-allowed'; btn0.textContent = 'Envio em ativação'; }
+    const aviso = document.createElement('p');
+    aviso.className = 'note';
+    aviso.setAttribute('role', 'status');
+    aviso.style.cssText = 'margin:0 0 10px;font-weight:700';
+    aviso.textContent = 'O envio de relatos ainda não está ativo. Em breve este canal será aberto.';
+    form.insertBefore(aviso, form.firstChild);
+  }
+
   // Toggle campos privados quando anônimo estiver desmarcado
   const chkAnon = $('#cfAnon');
   const privWrap = $('#cfPrivWrap');

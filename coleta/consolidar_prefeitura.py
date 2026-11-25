@@ -166,7 +166,7 @@ res = dict(despesas=desp, folha=folha, obras=obras, secretarias=secr, sancoes=sa
            fontes=dict(portal=FONTE, despesas=FONTE + '/e-cidade/despesas/padrao', folha=FONTE + '/e-cidade/servidores',
                        obras=FONTE + '/obras', sancoes=FONTE + '/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/sancoes-administrativas-aplicadas-pela-prefeitura-de-marica/links-e-arquivos',
                        secretarias='https://www.marica.rj.gov.br/secretarias/', consulta='2026-11-14'))
-json.dump(res, open(OUT / 'prefeitura.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(res, open(OUT / 'prefeitura.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('\nobras motivos:', obras['motivosGrupo'])
 print('folha mensal:', [(m['ano'], m['mes'], m['vinculosAtivos'], m['bruto']) for m in mens][-9:])
 print('ok ->', OUT / 'prefeitura.json')

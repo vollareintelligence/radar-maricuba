@@ -272,14 +272,14 @@ rep = (ind.dropna(subset=['rua']).groupby(['rua', 'macro', 'tema'], dropna=False
        .reset_index().query('n >= 3').sort_values('n', ascending=False))
 
 # ---------- saídas ----------
-json.dump(status_sessoes, open(OUT / 'presenca_sessoes.json', 'w'), ensure_ascii=False)
+json.dump(status_sessoes, open(OUT / 'presenca_sessoes.json', 'w', encoding='utf-8'), ensure_ascii=False)
 presenca.to_json(OUT / 'presenca.json', orient='records', force_ascii=False, indent=1)
 votos.to_json(OUT / 'votos.json', orient='records', force_ascii=False, indent=1)
 naos.to_csv(OUT / 'votos_nao_abstencao.csv', index=False)
 pr.drop(columns=['d']).to_csv(OUT / 'proposicoes_classificadas.csv', index=False)
 rep.assign(d0=rep.d0.dt.date.astype(str), d1=rep.d1.dt.date.astype(str)).to_json(OUT / 'problemas_que_nao_somem.json', orient='records', force_ascii=False, indent=1)
 pd.DataFrame(licencas).to_csv(OUT / 'licencas_provaveis.csv', index=False)
-json.dump(orfas, open(OUT / 'justificativas_sem_sessao.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(orfas, open(OUT / 'justificativas_sem_sessao.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 # ---------- resumo ----------
 g = pr.groupby(['autor_filtrado_id', 'grupo']).size().unstack(fill_value=0)
