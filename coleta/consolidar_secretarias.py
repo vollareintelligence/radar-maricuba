@@ -35,5 +35,5 @@ out = dict(
     fonte='https://transparencia.marica.rj.gov.br/e-cidade/despesas/padrao',
     regra='Órgãos da Prefeitura com nome de secretaria, mais Saúde, Assistência Social e Meio Ambiente, que operam por fundo. Fora: Encargos Financeiros, Procuradoria, Gabinete, Ouvidoria, assessorias, Câmara e Fundo Soberano.',
 )
-json.dump(out, open(OUT / 'secretarias.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(out, open(OUT / 'secretarias.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(len(itens), out['totalPago'], itens[:3])

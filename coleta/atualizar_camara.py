@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BRUTOS = ROOT / 'dados' / 'brutos'
+CONSOLIDADO = ROOT / 'dados' / 'consolidado'
 ALVOS = ['sessoes.csv', 'presencas.csv', 'votacoes.csv', 'votos_nominais.csv', 'proposicoes.csv', 'apelidos.csv']
 COLETA = ['camara/coletar_sessoes.py', 'camara/coletar_votacoes.py', 'camara/coletar_proposicoes.py']
 POS = ['consolidar.py', 'placar.py', 'build_dados.py', 'qualidade.py']
@@ -38,9 +39,13 @@ def main() -> int:
             shutil.copy2(BRUTOS / n, backup / n)
             antes[n] = linhas(BRUTOS / n)
 
+    shutil.copytree(CONSOLIDADO, backup / 'consolidado')
+
     def restaurar():
         for n in antes:
             shutil.copy2(backup / n, BRUTOS / n)
+        shutil.rmtree(CONSOLIDADO)
+        shutil.copytree(backup / 'consolidado', CONSOLIDADO)
         print('Dados anteriores restaurados.')
 
     for s in COLETA:
