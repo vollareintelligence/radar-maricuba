@@ -1,10 +1,10 @@
 {
- "coletadoEm": "2026-11-26T19:44:58Z",
+ "coletadoEm": "2026-11-27T02:59:50Z",
  "janelaDias": 730,
  "fonte": "Google News RSS (não oficial)",
  "consultas": 11,
  "falhas": [],
- "total": 49,
+ "total": 55,
  "itens": [
   {
    "id": "a7623c6694",
@@ -31,6 +31,42 @@
    ]
   },
   {
+   "id": "837c8b26ce",
+   "titulo": "Maricá intensifica obras de pavimentação e drenagem no Jardim Atlântico Leste, em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQS2xwaHhKN1l1dlU4T3M4dWdqdnprVG9OQ0o3ellpakhvNy1wZEdQZnE0RWVmRkt6TVRzbFRhaFNJdmM3dWg5X3g3dkhHa19YeG94TUx6N05Fb0g4TnFYb2lmai15YzlDV0dRQmtrdUtxdHkzSjJUdnNsNDdJVHVtM0E3VFlHSW1RVzlKZkZ3V3lKeXpfTG1hQ1JhRXMtYXZXSFlYM016YnZ6UklrSHdkbGM2OG9DZE05ZGZlUDRLcGtMNW04VlFZ?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-intensifica-obras-de-pavimentacao-e-drenagem-no-jardim-atlantico-leste-em-itaipuacu/",
+   "data": "2026-10-29",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "7d194eea52",
+   "titulo": "Maricá asfalta e faz novas calçadas no Jardim Atlântico Leste, em Itaipuaçu - O Dia",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxON0JQN1JrbXE1QnJodEViQU1uT2RQNUlFckdLUHRxRGEta0ZuNzNUZEpOQ3NDcnp3Y2htV25uV200ZGtaMnItSHdxaS1wSk9iX2lfb1hoOVhhT2xXR1BIal9nVmRxNWNWODJpRzV5VTdXWHFxaEpmMnZvbmNtaW45Wk92U29XNzdsTFkxVWdnY25ET3Z6MktrdDNxTVdILVgwcGNkVzNmbGpUbzVINEpJSlpzdnRpTk1LTGZqMjNMcmJTcVXSAcgBQVVfeXFMTlV6QWRaU3lmaHhvNEFsQXNHcUI0VmN5dG5kNV8yVTZKWjFwazRlQjdUU1lXWU0wc1ZUV0xrOF9IcmxzQ1k5S1ZudzZvUm56NzNKZ1dHVEwxaW12VkxVNE96OHFDdEdGTFd1MThIak9YRURzM3RleDNjWEp0eGdmZTJyQmR1dEhRNFVzZnFLQUZRb3JiUmEtdTAyU0NMcGlUOWpRZDVnOFIwcENLNkY5TE96SmdIZVRVMTNCYzB0OUw3eUVwNXdBak4?oc=5",
+   "linkOriginal": "https://odia.ig.com.br/marica/2026/10/7313003-marica-asfalta-e-faz-novas-calcadas-no-jardim-atlantico-leste-em-itaipuacu.html",
+   "data": "2026-10-16",
+   "veiculo": "O Dia",
+   "dominioVeiculo": "https://odia.ig.com.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "3c22ae39be",
+   "titulo": "Maricá avança com asfalto e novas calçadas no Jardim Atlântico Leste, em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVHJNMUtVLXZSSVJ0bW9melBwYUw2ZVQzS2pXVlo5RVdvbGNfU3ZseFFzVkFJajhpNkJaUDJRaGp4SHhLTDY4aXBpbm5yU1NFaDh1dV9JcVlQX2s5dHFUMW5YbXNzSjdBd045cWxwNkMtOW91Y2tlaktWT1lOZWtWZlB1QWJMYWt2NHlzakhwR1ZBMENQN3BUY3ZhWDJhaXRLNzRkYVQtVjVJaDV2cHhfZVZrZzNEbXZoQ1dN?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-com-asfalto-e-novas-calcadas-no-jardim-atlantico-leste-em-itaipuacu/",
+   "data": "2026-10-16",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
    "id": "798f15a00a",
    "titulo": "Quaquá reforça meta de concluir pavimentação de todas as ruas de Maricá até 2028: “maior pacote de obras da história” - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbFhnUnRNSXBGaFZfOUs2NGJwTG9BMzNVWnMwWGtjbUh2UEg4RTlKa1ZwbjRpMG9XVHl3XzlrN3lqSnM1RGp5MmtQSmJSTnJEM25TWFJDdUcwRjQ2R2NJSDBZR3hpMld4T1p5V1RCcnZsM2ZaZmxvLTdCcU9ieWl3VklzRDB1N21tdjZWQTZlYks4WWx3MFN4VDQzb3AwYjJfWnd2LV9TVktsenBKc0hHN1FoRVRNM3U4bkpPck93bVkyNXVNMndRMU4xWUw4ZExWZkdjSEdsODJQR0Np?oc=5",
@@ -40,42 +76,6 @@
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
     "asfalto"
-   ]
-  },
-  {
-   "id": "7fadb2488f",
-   "titulo": "Vazamento de esgoto há semanas causa transtornos no Centro de Maricá - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNHhqWHBGMm1kYXRMRlZpWWFhZEhsaXRUeFc0MlJ3b3gyQjVVaTJpZmZsSERVcXJ5b2J6WXlwQV9UMHZiRjFOTFRJQy1OaXJodE9hVW01ZEFtdVctbEU4Qlg2V1JZZm90QmRXV1lQd1djWG1NcGNnbVgyMURyUk9kZHpEbGlYd0hGcm5CSWQwN0Vfc2VFU2NCOHRfNlpiMVhsS3hRblAtYXpSYWhVUVJpSg?oc=5",
-   "linkOriginal": "https://maricainfo.com/noticias-de-marica/vazamento-de-esgoto-ha-semanas-causa-transtornos-no-centro-de-marica/",
-   "data": "2026-09-25",
-   "veiculo": "Maricá Info",
-   "dominioVeiculo": "https://maricainfo.com",
-   "temas": [
-    "esgoto"
-   ]
-  },
-  {
-   "id": "116f685832",
-   "titulo": "Maricá avança no saneamento com nova rede de esgoto em Santa Paula - Prefeitura de Maricá",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPLWliNElPSzJYa2RZREN4c18tQzZTYzhHTjhpalRKUEJHN2V3Mm1aYXVlNkFjR3VERnpmcldpc3ZqZW5DRHFYS3RfSDN6WDA0ZUstZlZ4MmpmTFJvUHNJSmFGZFczVUNFdzlBRFhNYTZBWmZTdlpsdWZ3eVg0azZqUFQzQ29BajZHVGx3a05kaVVNSnU1ZTRsNDEtbnVfQUxKN1dPMGZkOA?oc=5",
-   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-no-saneamento-com-nova-rede-de-esgoto-em-santa-paula/",
-   "data": "2026-09-02",
-   "veiculo": "Prefeitura de Maricá",
-   "dominioVeiculo": "https://www.marica.rj.gov.br",
-   "temas": [
-    "esgoto"
-   ]
-  },
-  {
-   "id": "9195908601",
-   "titulo": "Projeto Lagoa Viva: bioinsumos ajudam, mas saneamento é crucial para Maricá - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNanBjM1ViOFBYeFdYdjQzU3h6YzNUVVdzMW1aNUFBa3M1QlkzOGxLS2kybDRnYjRwMnRxeEQ4QlVyUWJfTXNwd3pjTWU2T0dORkxlMmhIbFBCcWl1ZTFKbHRxYkVQcllqNDRTMFRWUlQxelVDUmowczA3aDF4RjhSZTRQbm1MWWxYQXJZM2hraW1kNXFLRkdZVVk3VGFjXy1vdnZ4RW1xSE5KLTI2dGlnUXl4OUdSUVN1SjJCRnRMQ3BFUnpU?oc=5",
-   "linkOriginal": "https://maricainfo.com/noticias-de-marica/bioinsumos-nao-substituem-saneamento-basico-em-marica-alerta-coordenador-do-projeto/",
-   "data": "2026-08-26",
-   "veiculo": "Maricá Info",
-   "dominioVeiculo": "https://maricainfo.com",
-   "temas": [
-    "esgoto"
    ]
   },
   {
@@ -199,6 +199,18 @@
    ]
   },
   {
+   "id": "fe4fe629cc",
+   "titulo": "Quaquá diz ter retirado traficantes do Aeroporto de Maricá - LSM Notícias",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ1YwLTVnVGRBcXNZNlJGLUZfclBYWmw1VnloTEN4QXdWbF9fMkxQWE1uejF3NXZKZHh4cmRXU0FISGdTdXdQa2pwcWdvZ0dYMmtESnhjS0dSeXhJU1F0LVM3YmRWRnY3Sm9qM1AwVzBUM2kxR0gteXprWmlRVDNzQ1JncTlrcVN6TXRpbU16bDRlT211MVhTVGJobFVPWFVUb2x2cXdvUTdvRlBGa0lqTmFUMThQZw?oc=5",
+   "linkOriginal": "https://lsmnoticias.com.br/cidades/marica/noticias-de-marica/quaqua-aeroporto-marica-fernandinho-beira-mar-trafico/",
+   "data": "2026-07-01",
+   "veiculo": "LSM Notícias",
+   "dominioVeiculo": "https://lsmnoticias.com.br",
+   "temas": [
+    "aeroporto"
+   ]
+  },
+  {
    "id": "90a267d5a0",
    "titulo": "Grupo português negocia construção de novo hotel resort em Maricá - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOXpZX1N4SWtmc05ZMlEzbDFBV0Y0ckNtTHB3ZTd0ZkgyQVNpQUxDVXlLbDlORDFsM2hXY096MEg2NDVaeWRocWRaV3NVeGEzLWx2QzlYSWpnbUM3allfSmtSUEtkbjhOM083SmtRdkxZOTBmak1qSlZmZ1R1ZUhUVkg5ZjlVSkY4S25UaEktSTUxSFptR2d0eE9WWm5xekp1emtsQVNJNmpfdGZN?oc=5",
@@ -235,18 +247,6 @@
    ]
   },
   {
-   "id": "570a852881",
-   "titulo": "Maricá inicia cobrança da \"taxa de esgoto\" em locais com rede de coleta e tratamento; entenda! - Maricá Info",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPanVLTUVUbTNaaExFc0V5anNpLXNOWVVSNWlOVkoteEpWTjZWQlpFZE9tem9yRXhvM3dBXzRfSWtuLWhfVld4aER5R0loamxQYm1hbXMzcUNiRFpPNUt1TkRWRWp0ZWRUMGxabFRxT3hGcm1RLTVLNlk4Ty1yTFNNSmdqNk1QZTZrWm1ydm10Nk9QaGdXVGlBUklDaGpscXVvX0JGT3VTdFZPbjBUWG0zNXNLakZBOS11aU4yaWtsVThyTjVib1ZGVmNGNTBQQQ?oc=5",
-   "linkOriginal": "https://maricainfo.com/noticias-de-marica/marica-inicia-cobranca-da-taxa-de-esgoto-em-locais-com-rede-de-coleta-e-tratamento-entenda/",
-   "data": "2026-04-07",
-   "veiculo": "Maricá Info",
-   "dominioVeiculo": "https://maricainfo.com",
-   "temas": [
-    "esgoto"
-   ]
-  },
-  {
    "id": "064dcabf96",
    "titulo": "Maricá firma parceria inédita para produzir aeronaves no município - Prefeitura de Maricá",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQc01SUEZDQ2V5VzFkZ2F1dV9MUlpXWnJsM0VBX3FKMUcyVGNMTlhYZTVzcktTYWZySVE3YTVxT3IwVUZpVzQxRkw2N1RlMG1GeEM1S0pqaGdUUmZNeUtMUldSQk5EbjZGWUllY3VBQXNJOEpzQ3l4RzlFMklHMHFGREUxU01oNzd4OGNncGRxeXZmZFNsMHJ3WnYyekU4OEV0NUc0WDlJMA?oc=5",
@@ -268,6 +268,18 @@
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
     "esgoto"
+   ]
+  },
+  {
+   "id": "49b4664e49",
+   "titulo": "Prefeitura de Maricá inicia obras de pavimentação em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdmpCZjM4bzRDRVNSX1FGWDRtZWc1TW1ZOUhtZFRYNE5aQlVKRXEwQVg4S2liTVNzb1VTNGxrT3NwMS1uT0FLdUhZSUJGUGc3Y3R1SER6WE9rQ0E0SVhxOHpkSDFvVjJfUENRcUxqZUFXMU1YVzN3b09meDNUV0ViYndQSEp4emJFS1R5UTBiMFdnT0luYVFyd180ZmhHYmpBSkE?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/prefeitura-de-marica-inicia-obras-de-pavimentacao-em-itaipuacu/",
+   "data": "2026-02-13",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
    ]
   },
   {
@@ -499,6 +511,18 @@
    ]
   },
   {
+   "id": "798a0b7373",
+   "titulo": "Aeroporto de Maricá (RJ) bate recorde de 40 mil movimentações e cresce como polo logístico na região - AEROIN",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNN1N3VDZOeWVpbUx3Njh1M1YwcUpMdzExdWpFdHpqY0IxczVPOUQyNXZBWC1STnpNa1BJSFNOMHlPYW5mUWJ0d3QwMGh2OVRFSkkzbDViZnFhcEZlaG5NcGhEeTdJaDNYUmtXSVdwQ1czdGM3cHpES3Q2NzFrZW50OXRaemhQUnhUNXFvbk9sQnQ1Zm1UbUdIYmc0VktIS2o2UFZLWnFPZ1ppdU0tcDlhRWVQckl2NHg5QXfSAboBQVVfeXFMTTdTd1Q2TnllaW1MdzY4dTNWMHFKTHcxMXVqRXR6amNCMXM1TzlEMjV2QVgtUk56TWtQSUhTTjB5T2FuZlFidHd0MDBodjlURUpJM2w1YmZxYXBGZWhuTXBoRHk3SWgzWFJrV0lXcENXM3RjN3B6REt0Njcxa2VudDl0WnpoUFJ4VDVxb25PbEJ0NWZtVG1HSGJnNFZLSEtqNlBWS1pxT2daaXVNLXA5YUVlUHJJdjR4OUF3?oc=5",
+   "linkOriginal": "https://aeroin.net/aeroporto-de-marica-rj-bate-recorde-de-40-mil-movimentacoes-e-cresce-como-polo-logistico-na-regiao/",
+   "data": "2025-05-26",
+   "veiculo": "AEROIN",
+   "dominioVeiculo": "https://aeroin.net",
+   "temas": [
+    "aeroporto"
+   ]
+  },
+  {
    "id": "da567236ee",
    "titulo": "Aeroporto de Maricá terá pista de pouso e decolagem coberta com grafeno - AEROIN",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWkJzUkxLYlltQ2k1bHQxZzlzYTdfUFJBNDcydlJfaVU4OTJTTGtYZXhBWlY4R1d4STFVb09MWTBmMkx6dEdfVnBsT3Q0NnowX0V0c2tKa2RydWw0WTR3TmE1Q3dmR2sxYUxiOWlncFZjbExOTnNjN01mYWZNaTNsM1llQkI4QjE0dHZqQkRsSmZ0cG82X1HSAZYBQVVfeXFMT1pCc1JMS2JZbUNpNWx0MWc5c2E3X1BSQTQ3MnZSX2lVODkyU0xrWGV4QVpWOEdXeEkxVW9PTFkwZjJMenRHX1ZwbE90NDZ6MF9FdHNrSmtkcnVsNFk0d05hNUN3ZkdrMWFMYjlpZ3BWY2xMTk5zYzdNZmFmTWkzbDNZZUJCOEIxNHR2akJEbEpmdHBvNl9R?oc=5",
@@ -547,6 +571,30 @@
    ]
   },
   {
+   "id": "3e70c8adf8",
+   "titulo": "Quaquá anuncia que vai comprar casas perto do Aeroporto de Maricá - Tempo Real",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOT3F0TXFzaHEtMm5oTFI5RU5jOUQyWmx6MTNkWXZxNGx6MFUteTVZYmpuQXAzdDJlWUVWSExrSE1DZ3J2d1R6blFWMFdCaUl1c2gtc2VFRUF2SjFBdHBiYXY2bmNKX2hFMmpmaVFYaGh5ejVnZFg4cTJIcHdFSExiMENWOVdJMHQyWUQydGJqRDlxWmph?oc=5",
+   "linkOriginal": "https://temporealrj.com/quaqua-anuncia-que-vai-comprar-casas-perto-do-aeroporto-de-marica/",
+   "data": "2025-04-14",
+   "veiculo": "Tempo Real",
+   "dominioVeiculo": "https://temporealrj.com",
+   "temas": [
+    "aeroporto"
+   ]
+  },
+  {
+   "id": "af4784e1ad",
+   "titulo": "Quaquá anuncia compra de casas próximo ao aeroporto de Maricá - Enfoco",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWkQtMzlmYjBrNEJQSzZ3M1dldFI4cDdmTVhGdlVMR2FjM1l0SGpQQ2NmUnRlZWNaUS04MFBxMGZTV19VT3RUQnJCNWsxeXoteFFIc2tfYm5QZHBpUVhROXJKNUpSQndKMDJyTDBJWVU4RGkwLU5WN2NodUJtcVd1QUFHZ3RqM0pDSnRtYzR2Vko3R0Y5YlZWTGFNVUdZZUpVWDQ3bVdsa1dTSWwtLUN3aHdvdnRLMFhFbWd6bnFyLWhZUQ?oc=5",
+   "linkOriginal": "https://enfoco.com.br/noticias/brasil-e-mundo/politica/quaqua-anuncia-compra-de-casas-proximo-ao-aeroporto-de-marica-128910/",
+   "data": "2025-04-14",
+   "veiculo": "Enfoco",
+   "dominioVeiculo": "https://enfoco.com.br",
+   "temas": [
+    "aeroporto"
+   ]
+  },
+  {
    "id": "e50ab0c215",
    "titulo": "'Nova Embraer' brasileira mira fábrica em Maricá, no Rio de Janeiro - AIRWAY",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUmI0bHg4UjdLTlNBSzRJU3ZadUFnbk9TODdHN1UzUjNHVTVzSUlhU3hEN1ZfY01qMFZCV25pUF85N2kyTkhRNmR0NHZTUnlQbld0SFZTY0duWXBkM2owRWR1YmQ2QU45QUt1T0VSRjNGN0xibjg4d2plaEx3U0hhOUxwTUJXQ3FhaVduMGZIOXE0QmtqQmc?oc=5",
@@ -583,6 +631,18 @@
    ]
   },
   {
+   "id": "cc60ccceba",
+   "titulo": "Com avião da Azul em tela, cantor Morcego faz música temática no aeroporto de Maricá, no Rio de Janeiro - AEROIN",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOT3FoQjZ5ek1fcXpxcllMdmhfY2pxTllQSF9SQjVBUlJUUEpXbndwNW05NVR0VnJHZUR3aFhJTDRMWE11Sm9jVVktRC1lc1owWnlrcEF3ZGItTm5HMWtyeFBtQTk2MXFDVURvQ1NnT2thZVpwYU1FU0xZM2FDT1o2RzYyeDRSUDN5anpvYVhFWXU2MlN0S2l2eGdRUV9zMm1ycTB4YzU5WjlpVldRR09rOWd3M3lPYU5JcnVOeVRR0gG-AUFVX3lxTE5PcWhCNnl6TV9xenFyWUx2aF9janFOWVBIX1JCNUFSUlRQSldud3A1bTk1VHRWckdlRHdoWElMNExYTXVKb2NVWS1ELWVzWjBaeWtwQXdkYi1Obkcxa3J4UG1BOTYxcUNVRG9DU2dPa2FlWnBhTUVTTFkzYUNPWjZHNjJ4NFJQM3lqem9hWEVZdTYyU3RLaXZ4Z1FRX3MybXJxMHhjNTlaOWlWV1FHT2s5Z3czeU9hTklydU55VFE?oc=5",
+   "linkOriginal": null,
+   "data": "2025-01-17",
+   "veiculo": "AEROIN",
+   "dominioVeiculo": "https://aeroin.net",
+   "temas": [
+    "aeroporto"
+   ]
+  },
+  {
    "id": "338013801a",
    "titulo": "Cidade das Utopias: Novo governo de Maricá apresenta projeto futurístico de urbanização com mergulhão, teleféricos e VLT; confira! [vídeo] - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPcGItN0N0X2JFN2JLWi1CemJrc1VHaFpSdVhNbkctOXBHdWRFNlgwenBQdGtVNEtjZUtla2ZmckIzSWpVZUdlZDZhNl9jSzFqWnN5NDhPQ2JFM1pob3o4Mmx6bkc1bElWVzd3MTNOdlNDeUNzM1dyQzFaZU9LRnN4YTZjV1kyTm8za2hKd3d4elQ0QnZjYUdrZlk5T0hKRVNnZ1VpQTBkank1a2ZIRUt3NkRZYm5GSkVxVXI2QVVtX2JFYjBfYk9zcUE1N0pqZGtFbnJGeHpXVVloMDZiTnIxTmtqc25VZG42Nk5abl9CbHg5OGw2RVdfTnA0U3FTSzgtQ0xsSE1R?oc=5",
@@ -592,6 +652,18 @@
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
     "vlt"
+   ]
+  },
+  {
+   "id": "cfec7726e5",
+   "titulo": "Papai Noel embarca em AS350 Esquilo no Aeroporto de Maricá (RJ) para entregar presentes a 400 crianças - AEROIN",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQb1g5UHZYVWNpOGRZaS1yd1I2UE5DUTFnbk1RTjdhRTNkNkRxNEtIdVRlUmtUUHBfUEpuSmRwdTBYNFFEOWZJM2Z4QVNHa0JlbnMwZnQ3NzROQUh0YV9JUGpfVkV6eVhEb3lqQmM0WHg2U1Jyd3R2UnRPSjdsUnd1TVB1Z181akFhOUxtTTJ1bnJ5NTZOYVU1Mk9uZXUwNzVSMk5uekVKS1BkX3JaTjlaSmtDYzRCTzlWcERybdIBvAFBVV95cUxQb1g5UHZYVWNpOGRZaS1yd1I2UE5DUTFnbk1RTjdhRTNkNkRxNEtIdVRlUmtUUHBfUEpuSmRwdTBYNFFEOWZJM2Z4QVNHa0JlbnMwZnQ3NzROQUh0YV9JUGpfVkV6eVhEb3lqQmM0WHg2U1Jyd3R2UnRPSjdsUnd1TVB1Z181akFhOUxtTTJ1bnJ5NTZOYVU1Mk9uZXUwNzVSMk5uekVKS1BkX3JaTjlaSmtDYzRCTzlWcERybQ?oc=5",
+   "linkOriginal": "https://aeroin.net/papai-noel-embarca-em-as350-esquilo-no-aeroporto-de-marica-rj-para-entregar-presentes-a-400-criancas/",
+   "data": "2024-12-17",
+   "veiculo": "AEROIN",
+   "dominioVeiculo": "https://aeroin.net",
+   "temas": [
+    "aeroporto"
    ]
   }
  ]
