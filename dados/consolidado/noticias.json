@@ -1,10 +1,10 @@
 {
- "coletadoEm": "2026-11-27T19:34:49Z",
+ "coletadoEm": "2026-11-28T02:50:57Z",
  "janelaDias": 730,
  "fonte": "Google News RSS (não oficial)",
  "consultas": 11,
  "falhas": [],
- "total": 48,
+ "total": 62,
  "itens": [
   {
    "id": "a7623c6694",
@@ -16,6 +16,66 @@
    "dominioVeiculo": "https://www.firjan.com.br",
    "temas": [
     "foguetes"
+   ]
+  },
+  {
+   "id": "67404629ab",
+   "titulo": "Plaza Maricá Shopping deve ser inaugurado em 2028 e terá cinema, hotel e cerca de 100 lojas - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaGU3N0w3SFlmU09aUmE0bG1GemNWYUs3ZkFmTlVCOU4wMmdjQ0VHd3oyem5PSXN2LVJWa1RCclNLSTNzal9xdGtKTkIyM05TSFVwalNhX0JkM05tY2dpX0FEaXpDUTdwenNXUnlmc3IwVU1HcXZCUDNUb0lKOFdDdFk1SmZvclFiVUY4dmgzY3FXSHR5NVozZ19PZm1nWER2c2RaeV8xdXA5SGVTR0RHT3dibmdNNTNYVVdULWs4WFE?oc=5",
+   "linkOriginal": "https://maricainfo.com/economia/plaza-marica-shopping-deve-ser-inaugurado-em-2028-e-tera-cinema-hotel-e-cerca-de-100-lojas/",
+   "data": "2026-11-06",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
+   "id": "837c8b26ce",
+   "titulo": "Maricá intensifica obras de pavimentação e drenagem no Jardim Atlântico Leste, em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQS2xwaHhKN1l1dlU4T3M4dWdqdnprVG9OQ0o3ellpakhvNy1wZEdQZnE0RWVmRkt6TVRzbFRhaFNJdmM3dWg5X3g3dkhHa19YeG94TUx6N05Fb0g4TnFYb2lmai15YzlDV0dRQmtrdUtxdHkzSjJUdnNsNDdJVHVtM0E3VFlHSW1RVzlKZkZ3V3lKeXpfTG1hQ1JhRXMtYXZXSFlYM016YnZ6UklrSHdkbGM2OG9DZE05ZGZlUDRLcGtMNW04VlFZ?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-intensifica-obras-de-pavimentacao-e-drenagem-no-jardim-atlantico-leste-em-itaipuacu/",
+   "data": "2026-10-29",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "7d194eea52",
+   "titulo": "Maricá asfalta e faz novas calçadas no Jardim Atlântico Leste, em Itaipuaçu - O Dia",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxON0JQN1JrbXE1QnJodEViQU1uT2RQNUlFckdLUHRxRGEta0ZuNzNUZEpOQ3NDcnp3Y2htV25uV200ZGtaMnItSHdxaS1wSk9iX2lfb1hoOVhhT2xXR1BIal9nVmRxNWNWODJpRzV5VTdXWHFxaEpmMnZvbmNtaW45Wk92U29XNzdsTFkxVWdnY25ET3Z6MktrdDNxTVdILVgwcGNkVzNmbGpUbzVINEpJSlpzdnRpTk1LTGZqMjNMcmJTcVXSAcgBQVVfeXFMTlV6QWRaU3lmaHhvNEFsQXNHcUI0VmN5dG5kNV8yVTZKWjFwazRlQjdUU1lXWU0wc1ZUV0xrOF9IcmxzQ1k5S1ZudzZvUm56NzNKZ1dHVEwxaW12VkxVNE96OHFDdEdGTFd1MThIak9YRURzM3RleDNjWEp0eGdmZTJyQmR1dEhRNFVzZnFLQUZRb3JiUmEtdTAyU0NMcGlUOWpRZDVnOFIwcENLNkY5TE96SmdIZVRVMTNCYzB0OUw3eUVwNXdBak4?oc=5",
+   "linkOriginal": "https://odia.ig.com.br/marica/2026/10/7313003-marica-asfalta-e-faz-novas-calcadas-no-jardim-atlantico-leste-em-itaipuacu.html",
+   "data": "2026-10-16",
+   "veiculo": "O Dia",
+   "dominioVeiculo": "https://odia.ig.com.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "3c22ae39be",
+   "titulo": "Maricá avança com asfalto e novas calçadas no Jardim Atlântico Leste, em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVHJNMUtVLXZSSVJ0bW9melBwYUw2ZVQzS2pXVlo5RVdvbGNfU3ZseFFzVkFJajhpNkJaUDJRaGp4SHhLTDY4aXBpbm5yU1NFaDh1dV9JcVlQX2s5dHFUMW5YbXNzSjdBd045cWxwNkMtOW91Y2tlaktWT1lOZWtWZlB1QWJMYWt2NHlzakhwR1ZBMENQN3BUY3ZhWDJhaXRLNzRkYVQtVjVJaDV2cHhfZVZrZzNEbXZoQ1dN?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-com-asfalto-e-novas-calcadas-no-jardim-atlantico-leste-em-itaipuacu/",
+   "data": "2026-10-16",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "e196891e97",
+   "titulo": "Desaer reúne 40 profissionais em Marica-RJ e planeja matriz para desenvolver aeronaves no município - AEROIN",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRWFwMVlvRzNWUVBDWFRYMmZJZnZtX2U5OG9uSExXRU5xQ1NSUmhjV1hzU05EcEhHQ1lZYXQ0aTN2d1JrN3p4UmtHUzBLYTFoYWh0RllRbktjcmNTRzZFVDJvQTAtTW5CdWlnZjFKdk9IV1FrS2ZFalEyaGhNVm1rVVZMQ0h1NUxIMDQtRzI4bWc3NGs1bS1HRlZhZzdRSlZvVC1jQ0ItMHBCYXN6X05LZFlha0h6RURSRk5v0gG7AUFVX3lxTFBFYXAxWW9HM1ZRUENYVFgyZklmdm1fZTk4b25ITFdFTnFDU1JSaGNXWHNTTkRwSEdDWVlhdDRpM3Z3Ums3enhSa0dTMEthMWhhaHRGWVFuS2NyY1NHNkVUMm9BMC1NbkJ1aWdmMUp2T0hXUWtLZkVqUTJoaE1WbWtVVkxDSHU1TEgwNC1HMjhtZzc0azVtLUdGVmFnN1FKVm9ULWNDQi0wcEJhc3pfTktkWWFrSHpFRFJGTm8?oc=5",
+   "linkOriginal": "https://aeroin.net/desaer-reune-40-profissionais-em-marica-rj-e-planeja-matriz-para-desenvolver-aeronaves-no-municipio/",
+   "data": "2026-10-07",
+   "veiculo": "AEROIN",
+   "dominioVeiculo": "https://aeroin.net",
+   "temas": [
+    "aviões"
    ]
   },
   {
@@ -79,6 +139,18 @@
    ]
   },
   {
+   "id": "9f4618d3a1",
+   "titulo": "Maricá, cidade dormitório já era; vem aí Plaza Shopping, MARAEY e Hotel - News",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQN2pWTDNuX0VqRFlZMFhsY0J5MFBJblpsdkZIVHVuN3ZENUNtejd4QXI3al96WXZRQzdzd3JiX2xWd0JYQm16ZF95NjNGZU9CdXNGYVNjUE5CTVU0RG9kOFhrekU2MGRxWXBfOE11aEswdm1iT1hYd1lpNHpYQzdOYTJ1NzZncDdBb0lxbHBtRmJpSE82N1Rvdk5NemFmTkpPNmdsaE1OTmloUGhGbG5aLXhPN2Q3anZ1TGhITFB3VXdUTUpP?oc=5",
+   "linkOriginal": "https://www.gbnews.com.br/single-post/maric%C3%A1-cidade-dormit%C3%B3rio-j%C3%A1-era-vem-a%C3%AD-plaza-shopping-maraey-e-hotel",
+   "data": "2026-08-18",
+   "veiculo": "News",
+   "dominioVeiculo": "https://www.gbnews.com.br",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
    "id": "612ab5b684",
    "titulo": "Maricá anuncia hotel de 25 andares projetado por Niemeyer - Poder360",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONzdmTXFYeXlwS2RiSGYzZ0tsZU9rd0dXWW0yVHo5eE9ucDRqM09KVWpuTVczeGU2d2pNYWpaTjA5RVltQXV2c0NOU25yX29lUVlVa09Fek9IbVRITklRWnBvcm5kZmdVLUl5bXd1NFo4Uzg1NTE2WlZ3Qm9qaTBFMTFpUjIwZWl0cjlwTG1OTUUwVXdzYy1sR0ozSE9SSEtO?oc=5",
@@ -120,6 +192,18 @@
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmd4d3JSdDNzcVUtNnpWU3FtNUlPT3RZQlItT1FUZlh4Rm9vZzJBSVdDMVdCVzVveHNLaW9PN3o2VjJtWlg4cUUxVU92Q0Fya182NkxjQzR3WTdQXzhlWUhSWmZuMkZtRWc1VGY2eUpIdjg1RzVFeXl4R05Ud043Z01BbkxHSTFjaGdHcUpTYnl0R3VleFh0YlZQbmUwNjhuaXcyMGFuWm1IckRaLTFxQ2s0VTgtenNQOVVCb1JJM2xJVVdsWlQxcEl3?oc=5",
    "linkOriginal": "https://maricainfo.com/noticias-de-marica/quaqua-afirma-que-obras-do-hotel-n13-projetado-por-oscar-niemeyer-comecam-ainda-em-2026/",
    "data": "2026-08-06",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
+   "id": "9e918058d0",
+   "titulo": "“Veja e creia”: Quaquá mostra obras do MARAEY e anuncia novas contratações - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSzRjazVjV3JzeUg0eUVxTGtTY0x5TExaZkhuYU96ZUMyVmRYc1BaZFRES3NMaFBFQnJHQkk3T0wtTnRHdUxoSjBpMlE0dzBFT2ZQZ2U0NEFTN3h1VmREOEZHOTVTZGs1SURjQ1l2NmxfNURfNzdUdkhveEdPQ2hLb2w1T0MwSWpza291bjhQRV9ROVc1ZUNybHcyS2hueHJMOE9VdExPaWl5U2w2MjNzaV8zUTQ?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/veja-e-creia-quaqua-mostra-obras-do-maraey-e-anuncia-novas-contratacoes/",
+   "data": "2026-08-03",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
@@ -187,6 +271,30 @@
    ]
   },
   {
+   "id": "2b485b5e9a",
+   "titulo": "Maraey, em Maricá (RJ), acelera obras da primeira fase com aporte de R$ 4,5 bilhões - Panrotas",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPRnNfUFdzclZibTZ6eUtZT1ZPVXV4RUgzenc1RzF3Qld3WEN6WjNUcF93Z1lhdnhJSElqSmxiT0dSQld2R0tQUUQxUGpKd3poeWN0Qldjb0NjaFduZ1NRYnhFajlIeHp6YzVRRXlTUXMtSWpSWmx1WVBscFNUdE1yeDA3WldhWmUzc2pzb205TjN4U09Za25EbVozaXhuY2prUW9kdVNWd0NQMUVBZUZlclYyNGF1WkFPREwtZjE2aWM4NzN1VWRvNVVZLWF5bjFITnJXTno3YjMtb3Z0eFpUTDJhWk1uUQ?oc=5",
+   "linkOriginal": "https://www.panrotas.com.br/viagens-de-luxo/hotelaria/2026/06/maraey-em-marica-rj-acelera-obras-da-primeira-fase-com-aporte-de-r-45-bilhoes_229838.html",
+   "data": "2026-06-29",
+   "veiculo": "Panrotas",
+   "dominioVeiculo": "https://www.panrotas.com.br",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
+   "id": "90a267d5a0",
+   "titulo": "Grupo português negocia construção de novo hotel resort em Maricá - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOXpZX1N4SWtmc05ZMlEzbDFBV0Y0ckNtTHB3ZTd0ZkgyQVNpQUxDVXlLbDlORDFsM2hXY096MEg2NDVaeWRocWRaV3NVeGEzLWx2QzlYSWpnbUM3allfSmtSUEtkbjhOM083SmtRdkxZOTBmak1qSlZmZ1R1ZUhUVkg5ZjlVSkY4S25UaEktSTUxSFptR2d0eE9WWm5xekp1emtsQVNJNmpfdGZN?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/grupo-portugues-negocia-construcao-de-novo-hotel-resort-em-marica/",
+   "data": "2026-06-12",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
    "id": "653140f1a2",
    "titulo": "Maricá vai ter voos internacionais? Entenda o que o projeto do aeroporto realmente prevê - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd1lFemNDLU5QQ3JHeGp2TnAxcmljOENCQWxtd0p4aEt5b3ZwcF9oNmlNY2ZEdWZPSDdPUFM5aEM3ZjBKTUdDSUdwX3pvUjVFR2hFNTBNVjhkRy1xTEhrcVFmR1QyZ1BXR2Z1WmotQ0lzc2ktYlA2OUNoU3MxY094RzNuUVh4Qjg2cjhhOXFKOHplOURLYWk5OWQtSGdUVy1UeWNFMzY0YmE5djlCeGZsdzljTGlCV29ERkg3Qm1rbjM1djB2TjlpY2hB?oc=5",
@@ -199,10 +307,22 @@
    ]
   },
   {
+   "id": "a1b9806703",
+   "titulo": "Maricá: Moradores denunciam esgoto a céu aberto em Ponta Negra - Maricá Info",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYmxKYzNyd2dPYjR4RWcyWkltN0M1SDdCLWhOZHltSHpjcHFRVDhYVUY5UTRhRkRhWjI3UE9LbHRINnBBVW0xMGxXcjBtcFhzQ3ZsQ1VfcUxpUDZnQnVzNkFPbWNQOTc4em5NTHcyOEdpNFE0N2Zrc2V4RHFKaDdUVTRVbURSWTltajVaOUhjZk5HNWVOSFY2aFNicERjYTVzS1F2Y1UtNA?oc=5",
+   "linkOriginal": "https://maricainfo.com/noticias-de-marica/marica-moradores-denunciam-esgoto-a-ceu-aberto-em-ponta-negra/",
+   "data": "2026-04-29",
+   "veiculo": "Maricá Info",
+   "dominioVeiculo": "https://maricainfo.com",
+   "temas": [
+    "esgoto"
+   ]
+  },
+  {
    "id": "e6465b3aa2",
    "titulo": "Maricá quer triplicar rede de esgoto até 2028 e chegar a 54% de cobertura - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWnpEcjJVYXJMejMxZlZHQzhTLVV3SUhmQm5mZzk1MHdEUHQ3WFpQcXhuM0NjbDhWa0tMTUFublpxTklhakhMT3FJUC0wc3poaG80V1laZE1FZ05jZ2l0eFJseVF5djR6Zzc5em1vV1dBVzFyWi1iSGdWQkNWSnFpQktVWmlpVUF1ZkxoLVpvaUpBMjd4dU9taVJ5ZHdBRXFXV1l2bm01dXAzb1ZJN2hZQkRUTHVZUQ?oc=5",
-   "linkOriginal": "https://maricainfo.com/noticias-de-marica/marica-quer-triplicar-rede-de-esgoto-ate-2028-e-chegar-a-54-de-cobertura/",
+   "linkOriginal": null,
    "data": "2026-04-18",
    "veiculo": "Maricá Info",
    "dominioVeiculo": "https://maricainfo.com",
@@ -244,6 +364,30 @@
    "dominioVeiculo": "https://maricainfo.com",
    "temas": [
     "esgoto"
+   ]
+  },
+  {
+   "id": "49b4664e49",
+   "titulo": "Prefeitura de Maricá inicia obras de pavimentação em Itaipuaçu - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdmpCZjM4bzRDRVNSX1FGWDRtZWc1TW1ZOUhtZFRYNE5aQlVKRXEwQVg4S2liTVNzb1VTNGxrT3NwMS1uT0FLdUhZSUJGUGc3Y3R1SER6WE9rQ0E0SVhxOHpkSDFvVjJfUENRcUxqZUFXMU1YVzN3b09meDNUV0ViYndQSEp4emJFS1R5UTBiMFdnT0luYVFyd180ZmhHYmpBSkE?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/prefeitura-de-marica-inicia-obras-de-pavimentacao-em-itaipuacu/",
+   "data": "2026-02-13",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "asfalto"
+   ]
+  },
+  {
+   "id": "2b01a48886",
+   "titulo": "Maricá apresenta em Cannes projeto de hotel inspirado no legado de Oscar Niemeyer - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNN3VtM0hQbHBrc2tpSUVxY3BOdVc3dnZCQ3JIUGdCYVhnMDgwalVMWkUxNWlJQkZyTXlnR2lMcEMydC1IOWgyYUR1eUxxdmVRSDREOHI1QW82UXJJZmNUOVZLYWZIUG8zbW8xQU11dFFXaEFzT1ZzalZhdWJka0hPdGxId2o3eXhyb0l3bGhtU1lNTlNxUC1sSG4zVm83bVQ3dVRpdUM4ZG5JSEwtQU12ZWtaM2JlbU5rbUtR?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-apresenta-em-cannes-projeto-de-hotel-inspirado-no-legado-de-oscar-niemeyer/",
+   "data": "2026-01-28",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "hoteis"
    ]
   },
   {
@@ -367,6 +511,18 @@
    ]
   },
   {
+   "id": "6fae88277a",
+   "titulo": "Prefeitura de Maricá e MARAEY assinam parceria que dá início ao maior projeto turístico-residencial sustentável do Brasil - Prefeitura de Maricá",
+   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQQXA2WmZpc2lfdFdMRUQzeWo1WlZYTmNqWVNEVnZtYUY0ZV8xRHhTM0wyTk1UaERiMUtUU0hYODBUMHBwdFk2cW9hUkIzTUppZVFibjVTdlVMZXBFLWdsXzQ1Rk1JeHg3UlAwOWIzV1pmVEFBNm5PSzM4VDU2NUU5dldwaHdFWm5nNjlEVkFMMUZhZ3AwdkFzRlpfMUJ2TnlJcEdPVXFXdF9hSlJ5OFl5NHo2RTdfZ3Uwakpnd1EtcU8xM284RjNia09DSTV3dE1DSlNHLXRWcHJtcTh6NXBNUDBtNlktTE9OdWRtN2pScnM?oc=5",
+   "linkOriginal": "https://www.marica.rj.gov.br/noticia/prefeitura-de-marica-e-maraey-assinam-parceria-que-da-inicio-ao-maior-projeto-turistico-residencial-sustentavel-do-brasil/",
+   "data": "2025-09-24",
+   "veiculo": "Prefeitura de Maricá",
+   "dominioVeiculo": "https://www.marica.rj.gov.br",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
    "id": "2eaa5f9b84",
    "titulo": "Maricá investe no futuro: projeto de base de lançamento de satélites ganha força na cidade - ErreJota Notícias",
    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPa3NYMTVVWTZQcHZHRVFPVllkNnFQT0QxaFpNUlozNy1sb1VMQVJ3NVF6U2VMSTNEN1pIZXZKalY5S0x0NHQzNWZUUmdwMkZNUU5Sakc2M0E2SWxvNEN4ZUlnUEt4Rk1LN1FxbXdoZlA0c0VkNDVEVXlkdVdPWmZ6c1pEdWw4eURxQnphZEktVFlJb2JfeVFkWkgtdG93cVRKTGFpTThZR3hpYTEwX0YtWExWLUJMdlZPRFV1VmVfdw?oc=5",
@@ -388,18 +544,6 @@
    "dominioVeiculo": "https://aeroin.net",
    "temas": [
     "aeroporto"
-   ]
-  },
-  {
-   "id": "b246c47451",
-   "titulo": "Maricá avança em projeto de construção de base para lançamento de foguetes - Prefeitura de Maricá",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNU5FenlQMGl4ZF9YQS03WkxhTFVpUXFab2NhYXR3Mk9sRWp6WHprYUdOS1A2RkV2SkFXTGVTXzNOQWNSdmRDVjZ6azVuWjFlSWRXaV9sUW5rdkhQd2tYeDdpaTdLX1RHQncybWRTeG1WT0xtZ1c1aHdSRkdReXJQeE9QNHlSRHRJVnpiOTF2UnpKNEpzemhKcHZweXNRWUM4Q19qS1l0TGxxR1hDWEdRcXdR?oc=5",
-   "linkOriginal": "https://www.marica.rj.gov.br/noticia/marica-avanca-em-projeto-de-construcao-de-base-para-lancamento-de-foguetes/",
-   "data": "2025-08-21",
-   "veiculo": "Prefeitura de Maricá",
-   "dominioVeiculo": "https://www.marica.rj.gov.br",
-   "temas": [
-    "foguetes"
    ]
   },
   {
@@ -487,6 +631,18 @@
    ]
   },
   {
+   "id": "a03f25535c",
+   "titulo": "Maricá na rota do vinho? Quaquá anuncia rótulo com nome da cidade e a construção de uma vinícola-hotel - Extra online",
+   "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPQ29BYk9lUUJtb1o4ZlR3VVhjaVNCaXlXanB2OXRHbXlHTVY1YTAtRUdma3ZlZk9GcEI3WkVYcHZ6MEtVWHplUkNZS1FlenFsUmtqMWdOeGlSWG9OU0Y0UmQxQm0zeHJVbHNtYUxXX0hnOC1ndHM5M2ZmV2llaFRmSmphTUN1QlpNeENIbjRpdm1UcGhhU1BiVjlPVFd0Y2lHYWR0NmJ4cHVWU2ZIbS1KemdPd3ZfRjA2a0lzeUliMnYtUTFGb01jRmxvdGY0T2R4dTdEeUhhYzk1emNFMzRLcFNGTHpqQmstaVV6QjRMNU5RZGZIRWlWXy1n0gGIAkFVX3lxTFBOb1BBYlJMMm85VUhqX3VlVWZjRWhEYTQ3YXE1RnZ4dEw3Uk1EWFI2MFYwZGRIT3lXUDlvdjREa2g3dXJaNU1zZGRNV0c1VGVQZTl0dmJxLU5PbXpqQXp6N0ttVXRYU0hSYlBDNzdETFYyTnpuUGxNUG5IWHdaYzlVbDhNU1dKU1VNZFY3MnZtbUVtelUzaUxCOWtHSnduLTdWcXpybUw5WmdHVXhqNTlpQ0NNQkpDbFlRdWZReEhWTzVjelZzVWRKZ25rUExDTTEyVTF4cVV2cDJOTzd0U3o1Y2Nvb010NzlVYW10Y3IyYk9uUDRwZUVPVkI5NkFfbU92a3JCbDh0UQ?oc=5",
+   "linkOriginal": "https://extra.globo.com/rio/cidades/marica/noticia/2025/05/marica-na-rota-do-vinho-quaqua-anuncia-rotulo-com-nome-da-cidade-e-a-construcao-de-uma-vinicola-hotel.ghtml",
+   "data": "2025-05-02",
+   "veiculo": "Extra online",
+   "dominioVeiculo": "https://extra.globo.com",
+   "temas": [
+    "hoteis"
+   ]
+  },
+  {
    "id": "9eca568e90",
    "titulo": "Maricá (RJ) inicia estudo para viabilidade do Teleférico na Pedra de Inoã - Maricá Info",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMVNVTmVSY2tlVm1leXZrZEc2bkd3YzQ5SUZYMnE2ZjZ3VVMyUlo4d0RhRXJEY1NMUXlMVy1LVWpvTGh3WGc2c3Nmc21NLXBCWVR5ck9pOXVaMkJ6NV9mejdoc0ZZNzR3dloyX1dib1VNbWZfb3V5bkVJbEFWcFBYMlFXRUpyZ2Rlb2hsWVp5Y1VLcnBMdnJhM1J2RjBPOF9HQm5wT1NoQVRKTExHVXRYZUdrU3g?oc=5",
@@ -544,6 +700,18 @@
    "dominioVeiculo": "https://www.airway.com.br",
    "temas": [
     "aviões"
+   ]
+  },
+  {
+   "id": "7ab57f2322",
+   "titulo": "Maricá (RJ) pretende construir hotel de luxo projetado por Niemeyer - ABIH-RJ",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeVIzTUxUR2NsR0NjNW5aVnJERVJVN3BFeWxKUkhlQVFwYXprUFEtTlViZlhhelhxUXlOa25odVVsOXpkbWdiTmRJLWRLNm9fZnRYTGZhc21ZOFdqalB5Rk5mYXg4R2RNQkFGTmNLX1RSMmlUdGJUUkRjR3Zpa1RwcEhyMkp4cDhpVnNyT2dGQ3Z4b25FVmwtcnhUdVE?oc=5",
+   "linkOriginal": "https://abihrj.com.br/noticias/marica-rj-pretende-construir-hotel-de-luxo-projetado-por-niemeyer",
+   "data": "2025-03-31",
+   "veiculo": "ABIH-RJ",
+   "dominioVeiculo": "https://abihrj.com.br",
+   "temas": [
+    "hoteis"
    ]
   },
   {
